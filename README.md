@@ -26,7 +26,5 @@ GitHub will provide the public site URL after deployment.
 
 ## Recommended edits
 
-- Add your GitHub profile URL to `contact.html`.
-- Add a public email address only if desired.
 - Replace the reading-list placeholders with your full existing reading list.
 - Expand the projects page as projects become ready for public presentation.
