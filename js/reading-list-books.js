@@ -292,8 +292,4 @@
   if (progressText) progressText.textContent = `${rows.filter(row => normalize(row.dataset.progress).includes('finished')).length} of ${total} finished`;
   const heroCopy = document.querySelector('.page-hero p:last-child');
   if (heroCopy) heroCopy.textContent = heroCopy.textContent.replace(/\d+ enduring/, `${total} enduring`);
-
-  // This script is parser-blocking, so document.write loads and executes the
-  // deduplication pass before the original inline initializer captures rows.
-  document.write('<script src="js/reading-list-dedupe.js"></script>');
 })();
