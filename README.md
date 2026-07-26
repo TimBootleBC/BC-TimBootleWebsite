@@ -24,6 +24,14 @@ A responsive static personal website built with plain HTML, CSS, and JavaScript.
 
 GitHub will provide the public site URL after deployment.
 
+### HTTPS
+
+After the custom domain's DNS records have been verified and its TLS certificate is
+available, enable **Enforce HTTPS** under **Settings → Pages**. That server-side
+setting is the primary HTTPS enforcement mechanism. The site also redirects HTTP
+visitors to the equivalent HTTPS URL in the browser and upgrades insecure
+subresource requests as a fallback; local HTTP development remains supported.
+
 ## Recommended edits
 
 - Replace the reading-list placeholders with your full existing reading list.
