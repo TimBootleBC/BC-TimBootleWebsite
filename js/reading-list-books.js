@@ -259,7 +259,7 @@
     }
     const row = document.createElement('tr');
     const id = `${slugify(book.domain)}-${slugify(book.title)}`;
-    Object.assign(row.dataset, {author: book.author, domain: book.domain, favorite: 'false', isbn: book.isbn, priority: 'Medium', progress: '○ Not Started', title: book.title});
+    Object.assign(row.dataset, {author: book.author, domain: book.domain, favorite: 'false', isbn: book.isbn, impact: '3', progress: '○ Not Started', title: book.title});
     row.id = id;
     [book.domain, book.title, book.author].forEach((value, index) => {
       const cell = document.createElement('td');
@@ -275,8 +275,8 @@
     const progress = document.createElement('span'); progress.className = 'progress-pill progress-not'; progress.textContent = '○ Not Started'; progressCell.append(progress); row.append(progressCell);
     const favoriteCell = document.createElement('td'); favoriteCell.className = 'favorite-cell'; favoriteCell.dataset.label = 'Favorite';
     const favorite = document.createElement('button'); favorite.type = 'button'; favorite.className = 'favorite-toggle'; favorite.title = 'Toggle favorite'; favorite.setAttribute('aria-label', `Mark ${book.title} as a favorite`); favorite.setAttribute('aria-pressed', 'false'); favorite.textContent = '☆'; favoriteCell.append(favorite); row.append(favoriteCell);
-    const priorityCell = document.createElement('td'); priorityCell.dataset.label = 'Priority';
-    const priority = document.createElement('span'); priority.className = 'badge priority-medium'; priority.textContent = 'Medium'; priorityCell.append(priority); row.append(priorityCell);
+    const impactCell = document.createElement('td'); impactCell.dataset.label = 'Impact';
+    const impact = document.createElement('button'); impact.type = 'button'; impact.className = 'badge impact-toggle impact-3'; impact.textContent = '3'; impactCell.append(impact); row.append(impactCell);
     const domainRows = [...tbody.rows].filter(existing => existing.dataset.domain === book.domain);
     domainRows.at(-1).after(row);
   });
@@ -285,8 +285,8 @@
   const summaryValues = document.querySelectorAll('.reading-summary-card strong');
   if (summaryValues.length >= 4) {
     summaryValues[0].textContent = total;
-    summaryValues[2].textContent = rows.filter(row => row.dataset.priority === 'High').length;
-    summaryValues[3].textContent = rows.filter(row => row.dataset.priority === 'Medium').length;
+    summaryValues[2].textContent = rows.filter(row => row.dataset.impact === '4').length;
+    summaryValues[3].textContent = rows.filter(row => row.dataset.impact === '3').length;
   }
   const progressText = document.getElementById('progressText');
   if (progressText) progressText.textContent = `${rows.filter(row => normalize(row.dataset.progress).includes('finished')).length} of ${total} finished`;

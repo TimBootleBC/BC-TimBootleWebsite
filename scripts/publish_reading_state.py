@@ -11,6 +11,7 @@ from pathlib import Path
 
 MARKER = re.compile(r"<!-- reading-list-update\s*\n(.*?)\n-->", re.DOTALL)
 VALID_STATUSES = {"not-started", "reading", "finished"}
+VALID_IMPACTS = {1, 2, 3, 4, 5}
 MAX_BOOKS = 1000
 
 
@@ -66,7 +67,7 @@ def main() -> None:
     for book_id, book_state in sorted(books.items()):
         if book_id not in known_ids:
             fail(f"unknown book identifier: {book_id}")
-        if not isinstance(book_state, dict) or not book_state or not set(book_state) <= {"status", "favorite"}:
+        if not isinstance(book_state, dict) or not book_state or not set(book_state) <= {"status", "favorite", "impact"}:
             fail(f"invalid state for {book_id}")
         clean: dict[str, object] = {}
         if "status" in book_state:
@@ -77,6 +78,10 @@ def main() -> None:
             if not isinstance(book_state["favorite"], bool):
                 fail(f"favorite must be true or false for {book_id}")
             clean["favorite"] = book_state["favorite"]
+        if "impact" in book_state:
+            if book_state["impact"] not in VALID_IMPACTS or isinstance(book_state["impact"], bool):
+                fail(f"impact must be an integer from 1 to 5 for {book_id}")
+            clean["impact"] = book_state["impact"]
         clean_books[book_id] = clean
 
     published = {
