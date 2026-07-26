@@ -1,10 +1,13 @@
 {
   "schemaVersion": 1,
-  "revision": 1,
-  "updatedAt": "2026-07-26T00:00:00Z",
+  "revision": 2,
+  "updatedAt": "2026-07-26T03:05:27Z",
   "books": {
-    "philosophy-the-republic": {
-      "status": "finished"
+    "management-good-to-great": {
+      "favorite": true
+    },
+    "management-the-first-90-days": {
+      "favorite": true
     }
   }
 }
