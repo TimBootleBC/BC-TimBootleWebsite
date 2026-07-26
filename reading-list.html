@@ -3089,8 +3089,8 @@ color:#5f6c7b;
     impactButton.textContent = IMPACT[state.impact];
     impactButton.classList.remove(...IMPACT_ORDER.map(level => `impact-${level}`));
     impactButton.classList.add(`impact-${state.impact}`);
-    impactButton.title = `${state.impact} — ${IMPACT[state.impact]}`;
-    impactButton.setAttribute('aria-label', `${row.dataset.title}: impact ${state.impact}, ${IMPACT[state.impact]}. Click to change impact.`);
+    impactButton.title = IMPACT[state.impact];
+    impactButton.setAttribute('aria-label', `${row.dataset.title}: ${IMPACT[state.impact]} impact. Click to change impact.`);
   }
 
   function renderAllRows() {
@@ -3308,9 +3308,11 @@ color:#5f6c7b;
     if (th.classList.contains('favorite-header')) return;
     let ascending = true;
     th.addEventListener('click', () => {
+      const isImpactColumn = normalize(th.textContent) === 'impact';
       const sorted = [...baseRows].sort((a, b) => {
-        const av = normalize(a.cells[index].innerText);
-        const bv = normalize(b.cells[index].innerText);
+        const av = isImpactColumn ? Number(a.dataset.impact) : normalize(a.cells[index].innerText);
+        const bv = isImpactColumn ? Number(b.dataset.impact) : normalize(b.cells[index].innerText);
+        if (isImpactColumn) return ascending ? av - bv : bv - av;
         return ascending ? av.localeCompare(bv) : bv.localeCompare(av);
       });
       ascending = !ascending;
