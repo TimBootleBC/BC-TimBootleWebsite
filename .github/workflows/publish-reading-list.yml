@@ -1,0 +1,51 @@
+name: Publish reading list update
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: reading-list-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: >-
+      github.event.issue.user.login == 'TimBootleBC' &&
+      contains(github.event.issue.body, '<!-- reading-list-update')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Validate and apply the submitted state
+        run: >-
+          python scripts/publish_reading_state.py
+          "$GITHUB_EVENT_PATH"
+          reading-list-state.json
+          reading-list.html
+
+      - name: Commit the published state
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+        run: |
+          if git diff --quiet -- reading-list-state.json; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add reading-list-state.json
+          git commit -m "Publish reading list update from issue #${ISSUE_NUMBER}"
+          git push
+
+      - name: Close the processed issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: gh issue close "$ISSUE_URL" --comment "Reading-list revision published successfully. GitHub Pages will reflect it after the next deployment."

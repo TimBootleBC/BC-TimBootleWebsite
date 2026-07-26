@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "revision": 4,
+  "updatedAt": "2026-07-26T05:03:14Z",
+  "books": {
+    "leadership-team-of-teams": {
+      "status": "finished",
+      "favorite": true
+    },
+    "management-accelerate": {
+      "status": "finished"
+    },
+    "management-execution": {
+      "status": "finished"
+    },
+    "management-good-to-great": {
+      "status": "finished",
+      "favorite": true
+    },
+    "management-great-by-choice": {
+      "status": "finished"
+    },
+    "management-the-devops-handbook": {
+      "status": "finished"
+    },
+    "management-the-first-90-days": {
+      "favorite": true
+    },
+    "management-the-five-dysfunctions-of-a-team": {
+      "status": "finished"
+    },
+    "management-the-lean-startup": {
+      "status": "finished"
+    },
+    "management-the-phoenix-project": {
+      "status": "finished"
+    },
+    "management-turn-the-ship-around": {
+      "status": "finished"
+    }
+  }
+}
