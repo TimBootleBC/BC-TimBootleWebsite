@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Tim Bootle's Great Books and Executive Knowledge Library, containing 304 works across 19 multidisciplinary domains." name="description"/>
+<meta content="Tim Bootle's Great Books and Executive Knowledge Library, containing 315 works across 19 multidisciplinary domains." name="description"/>
 <meta content="upgrade-insecure-requests" http-equiv="Content-Security-Policy"/>
 <title>Reading List | Tim Bootle</title>
 <script src="js/https-redirect.js"></script>
@@ -138,14 +138,6 @@
     color: #375a7f;
   }
 
-  .reading-table .priority-high {
-    color: #a72a22;
-  }
-
-  .reading-table .priority-medium {
-    color: #9a5b0a;
-  }
-
   @media (max-width: 760px) {
     .reading-summary {
       grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -271,7 +263,8 @@ color:#5f6c7b;
 #bookSearch,
 #progressFilter,
 #favoritesOnly,
-#collapseDomains {
+#collapseDomains,
+#publishReadingChanges {
   min-height: 44px;
   border: 1px solid #cfd6df;
   border-radius: 10px;
@@ -291,10 +284,51 @@ color:#5f6c7b;
 }
 
 #favoritesOnly,
-#collapseDomains {
+#collapseDomains,
+#publishReadingChanges {
   padding: 0 14px;
   cursor: pointer;
   font-weight: 700;
+}
+
+#publishReadingChanges {
+  padding: 0 16px;
+  border-color: #1769aa;
+  background: #1769aa;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+#publishReadingChanges:disabled {
+  border-color: #cfd6df;
+  background: #e8edf4;
+  color: #667587;
+  cursor: not-allowed;
+}
+
+.sync-status {
+  flex: 1 0 100%;
+  margin: 0;
+  color: var(--reading-muted);
+  font-size: .9rem;
+}
+
+.sync-status.has-changes {
+  color: #9a5700;
+  font-weight: 700;
+}
+
+.progress-toggle {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.progress-toggle:hover,
+.progress-toggle:focus-visible {
+  outline: 2px solid #2b84ea;
+  outline-offset: 2px;
 }
 
 #favoritesOnly[aria-pressed="true"],
@@ -361,6 +395,23 @@ color:#5f6c7b;
 
 .favorite-toggle[aria-pressed="true"] {
   color: #d99a00;
+}
+
+.read-again-cell { text-align: center; }
+.read-again-toggle {
+  min-width: 3.5rem;
+  padding: .45rem .75rem;
+  border: 1px solid #cfd6df;
+  border-radius: 999px;
+  background: #f4f5f7;
+  color: #5f6c7b;
+  font-weight: 800;
+  cursor: pointer;
+}
+.read-again-toggle[aria-pressed="true"] {
+  border-color: #77c58d;
+  background: #e8f7ec;
+  color: #1d6f42;
 }
 
 .domain-divider td {
@@ -592,7 +643,7 @@ color:#5f6c7b;
 </nav>
 </div>
 </header>
-<main><section class="page-hero"><div class="container narrow"><p class="eyebrow">Reading List</p><h1>Great Books &amp; Executive Knowledge Library</h1><p>A curated queue of 304 enduring and executive-relevant works across management, leadership, philosophy, psychology, history, economics, law, politics, science, technology, strategy, finance, architecture, and literature.</p></div></section><section class="section section-light"><div class="container reading-library"><div aria-label="Reading list summary" class="reading-summary"><div class="reading-summary-card"><strong>304</strong><span>Total works</span></div><div class="reading-summary-card"><strong>19</strong><span>Domains</span></div><div class="reading-summary-card"><strong>152</strong><span>High priority</span></div><div class="reading-summary-card"><strong>152</strong><span>Medium priority</span></div></div><div class="reading-intro"><h2>Complete Library</h2><p>The works below are grouped by domain and include their tier, author, reading status, and priority. The list is designed as a long-term multidisciplinary program rather than a short-term reading queue.</p>
+<main><section class="page-hero"><div class="container narrow"><p class="eyebrow">Reading List</p><h1>Great Books &amp; Executive Knowledge Library</h1><p>A curated queue of 315 enduring and executive-relevant works across management, leadership, philosophy, psychology, history, economics, law, politics, science, technology, strategy, finance, architecture, and literature.</p></div></section><section class="section section-light"><div class="container reading-library"><div aria-label="Reading list summary" class="reading-summary"><div class="reading-summary-card"><strong>315</strong><span>Total works</span></div><div class="reading-summary-card"><strong>19</strong><span>Domains</span></div><div class="reading-summary-card"><strong id="finishedSummary">1</strong><span>Finished</span></div><div class="reading-summary-card"><strong id="readAgainSummary">0</strong><span>Read again</span></div></div><div class="reading-intro"><h2>Complete Library</h2><p>The works below are grouped by domain and include their tier, author, reading status, favorites, and whether you would read them again. The list is designed as a long-term multidisciplinary program rather than a short-term reading queue.</p>
 <div class="progress-legend">
 <strong>Legend:</strong>
 <span class="progress-pill progress-finished">✓ Finished</span>
@@ -624,7 +675,9 @@ color:#5f6c7b;
 </select>
 <button aria-pressed="false" id="favoritesOnly" type="button">☆ Favorites</button>
 <button aria-pressed="false" id="collapseDomains" type="button">Collapse domains</button>
+<button disabled id="publishReadingChanges" type="button">Publish changes</button>
 <span aria-live="polite" id="bookCount"></span>
+<p aria-live="polite" class="sync-status" id="readingSyncStatus">Loading published reading status…</p>
 </div>
 <div aria-label="Filter by domain" class="domain-filters">
 <button class="domain-chip active" data-domain="all" type="button">All</button>
@@ -632,7 +685,7 @@ color:#5f6c7b;
 </div>
 </div>
 </div><section aria-label="Books queued for reading" class="reading-table-wrap">
-<table aria-describedby="bookCount" class="reading-table" data-labels="Domain|Title|Author|Progress|Favorite|Priority">
+<table aria-describedby="bookCount" class="reading-table" data-labels="Domain|Title|Author|Progress|Favorite|Read Again">
 <caption class="reading-caption">Reading progress across the Executive Knowledge Library.</caption>
 <thead>
 <tr>
@@ -640,7 +693,7 @@ color:#5f6c7b;
 <th class="sortable" scope="col">Title</th>
 <th class="sortable" scope="col">Author</th>
 <th class="sortable" scope="col">Progress</th>
-<th class="sortable favorite-header" scope="col">Favorite</th><th class="sortable" scope="col">Priority</th>
+<th class="sortable favorite-header" scope="col">Favorite</th><th class="sortable read-again-header" scope="col">Read Again?</th>
 </tr>
 </thead>
 <tbody>
@@ -1344,6 +1397,13 @@ color:#5f6c7b;
 <td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
 <td class="favorite-cell" data-label="Favorite"><button aria-label="Mark Unleashed as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-medium">Medium</span></td>
 </tr>
+<tr data-author="Dale Carnegie" data-domain="Leadership" data-favorite="false" data-priority="High" data-progress="○ Not Started" data-title="How to Win Friends and Influence People" id="leadership-how-to-win-friends-and-influence-people">
+<td data-label="Domain">Leadership</td>
+<td class="title" data-label="Title"><a class="book-link" href="#leadership-how-to-win-friends-and-influence-people">How to Win Friends and Influence People</a></td>
+<td data-label="Author">Dale Carnegie</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark How to Win Friends and Influence People as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-high">High</span></td>
+</tr>
 <tr data-author="Plato" data-domain="Philosophy" data-favorite="false" data-priority="High" data-progress="✓ Finished" data-title="The Republic" id="philosophy-the-republic">
 <td data-label="Domain">Philosophy</td>
 <td class="title" data-label="Title"><a class="book-link" href="#philosophy-the-republic">The Republic</a></td>
@@ -1428,6 +1488,13 @@ color:#5f6c7b;
 <td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
 <td class="favorite-cell" data-label="Favorite"><button aria-label="Mark Beyond Good and Evil as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-medium">Medium</span></td>
 </tr>
+<tr data-author="Epicurus" data-domain="Philosophy" data-favorite="false" data-priority="Medium" data-progress="○ Not Started" data-title="The Art of Happiness" id="philosophy-the-art-of-happiness">
+<td data-label="Domain">Philosophy</td>
+<td class="title" data-label="Title"><a class="book-link" href="#philosophy-the-art-of-happiness">The Art of Happiness</a></td>
+<td data-label="Author">Epicurus</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark The Art of Happiness as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-medium">Medium</span></td>
+</tr>
 <tr data-author="William James" data-domain="Psychology" data-favorite="false" data-priority="High" data-progress="○ Not Started" data-title="The Principles of Psychology" id="psychology-the-principles-of-psychology">
 <td data-label="Domain">Psychology</td>
 <td class="title" data-label="Title"><a class="book-link" href="#psychology-the-principles-of-psychology">The Principles of Psychology</a></td>
@@ -1511,6 +1578,55 @@ color:#5f6c7b;
 <td data-label="Author">John Bowlby</td>
 <td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
 <td class="favorite-cell" data-label="Favorite"><button aria-label="Mark Attachment as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-medium">Medium</span></td>
+</tr>
+<tr data-author="Maxwell Maltz" data-domain="Psychology" data-favorite="false" data-priority="High" data-progress="○ Not Started" data-title="Psycho-Cybernetics" id="psychology-psycho-cybernetics">
+<td data-label="Domain">Psychology</td>
+<td class="title" data-label="Title"><a class="book-link" href="#psychology-psycho-cybernetics">Psycho-Cybernetics</a></td>
+<td data-label="Author">Maxwell Maltz</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark Psycho-Cybernetics as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-high">High</span></td>
+</tr>
+<tr data-author="Robert Greene" data-domain="Psychology" data-favorite="false" data-priority="High" data-progress="○ Not Started" data-title="The Laws of Human Nature" id="psychology-the-laws-of-human-nature">
+<td data-label="Domain">Psychology</td>
+<td class="title" data-label="Title"><a class="book-link" href="#psychology-the-laws-of-human-nature">The Laws of Human Nature</a></td>
+<td data-label="Author">Robert Greene</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark The Laws of Human Nature as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-high">High</span></td>
+</tr>
+<tr data-author="James Clear" data-domain="Psychology" data-favorite="false" data-priority="High" data-progress="○ Not Started" data-title="Atomic Habits" id="psychology-atomic-habits">
+<td data-label="Domain">Psychology</td>
+<td class="title" data-label="Title"><a class="book-link" href="#psychology-atomic-habits">Atomic Habits</a></td>
+<td data-label="Author">James Clear</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark Atomic Habits as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-high">High</span></td>
+</tr>
+<tr data-author="Gabor Maté" data-domain="Psychology" data-favorite="false" data-priority="Medium" data-progress="○ Not Started" data-title="When the Body Says No" id="psychology-when-the-body-says-no">
+<td data-label="Domain">Psychology</td>
+<td class="title" data-label="Title"><a class="book-link" href="#psychology-when-the-body-says-no">When the Body Says No</a></td>
+<td data-label="Author">Gabor Maté</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark When the Body Says No as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-medium">Medium</span></td>
+</tr>
+<tr data-author="Eckhart Tolle" data-domain="Psychology" data-favorite="false" data-priority="Medium" data-progress="○ Not Started" data-title="The Power of Now" id="psychology-the-power-of-now">
+<td data-label="Domain">Psychology</td>
+<td class="title" data-label="Title"><a class="book-link" href="#psychology-the-power-of-now">The Power of Now</a></td>
+<td data-label="Author">Eckhart Tolle</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark The Power of Now as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-medium">Medium</span></td>
+</tr>
+<tr data-author="Alice Miller" data-domain="Psychology" data-favorite="false" data-priority="Medium" data-progress="○ Not Started" data-title="The Drama of the Gifted Child" id="psychology-the-drama-of-the-gifted-child">
+<td data-label="Domain">Psychology</td>
+<td class="title" data-label="Title"><a class="book-link" href="#psychology-the-drama-of-the-gifted-child">The Drama of the Gifted Child</a></td>
+<td data-label="Author">Alice Miller</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark The Drama of the Gifted Child as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-medium">Medium</span></td>
+</tr>
+<tr data-author="Bessel van der Kolk" data-domain="Psychology" data-favorite="false" data-priority="High" data-progress="○ Not Started" data-title="The Body Keeps the Score" id="psychology-the-body-keeps-the-score">
+<td data-label="Domain">Psychology</td>
+<td class="title" data-label="Title"><a class="book-link" href="#psychology-the-body-keeps-the-score">The Body Keeps the Score</a></td>
+<td data-label="Author">Bessel van der Kolk</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark The Body Keeps the Score as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-high">High</span></td>
 </tr>
 <tr data-author="Herodotus" data-domain="History" data-favorite="false" data-priority="High" data-progress="○ Not Started" data-title="The Histories" id="history-the-histories">
 <td data-label="Domain">History</td>
@@ -2604,6 +2720,20 @@ color:#5f6c7b;
 <td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
 <td class="favorite-cell" data-label="Favorite"><button aria-label="Mark The Most Important Thing as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-medium">Medium</span></td>
 </tr>
+<tr data-author="Charles T. Munger" data-domain="Finance" data-favorite="false" data-priority="High" data-progress="○ Not Started" data-title="Poor Charlie’s Almanack" id="finance-poor-charlie-s-almanack">
+<td data-label="Domain">Finance</td>
+<td class="title" data-label="Title"><a class="book-link" href="#finance-poor-charlie-s-almanack">Poor Charlie’s Almanack</a></td>
+<td data-label="Author">Charles T. Munger</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark Poor Charlie’s Almanack as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-high">High</span></td>
+</tr>
+<tr data-author="Peter Lynch" data-domain="Finance" data-favorite="false" data-priority="Medium" data-progress="○ Not Started" data-title="One Up on Wall Street" id="finance-one-up-on-wall-street">
+<td data-label="Domain">Finance</td>
+<td class="title" data-label="Title"><a class="book-link" href="#finance-one-up-on-wall-street">One Up on Wall Street</a></td>
+<td data-label="Author">Peter Lynch</td>
+<td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
+<td class="favorite-cell" data-label="Favorite"><button aria-label="Mark One Up on Wall Street as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Priority"><span class="badge priority-medium">Medium</span></td>
+</tr>
 <tr data-author="Vitruvius" data-domain="Architecture" data-favorite="false" data-priority="High" data-progress="○ Not Started" data-title="De Architectura" id="architecture-de-architectura">
 <td data-label="Domain">Architecture</td>
 <td class="title" data-label="Title"><a class="book-link" href="#architecture-de-architectura">De Architectura</a></td>
@@ -2783,6 +2913,16 @@ color:#5f6c7b;
 
 <script>
 (() => {
+  const REPOSITORY = 'TimBootleBC/BC-TimBootleWebsite';
+  const STATE_URL = 'reading-list-state.json';
+  const DRAFT_KEY = 'readingListDraftV1';
+  const STATUS = {
+    'not-started': { text: '○ Not Started', className: 'progress-not' },
+    reading: { text: '📖 Reading', className: 'progress-reading' },
+    finished: { text: '✓ Finished', className: 'progress-finished' }
+  };
+  const STATUS_ORDER = ['not-started', 'reading', 'finished'];
+
   const table = document.querySelector('.reading-table');
   const tbody = table.tBodies[0];
   const baseRows = [...tbody.rows];
@@ -2791,31 +2931,188 @@ color:#5f6c7b;
   const progressFilter = document.getElementById('progressFilter');
   const favoritesOnly = document.getElementById('favoritesOnly');
   const collapseButton = document.getElementById('collapseDomains');
+  const publishButton = document.getElementById('publishReadingChanges');
+  const syncStatus = document.getElementById('readingSyncStatus');
   const chips = [...document.querySelectorAll('.domain-chip')];
   const progressText = document.getElementById('progressText');
   const progressPercent = document.getElementById('progressPercent');
   const progressBar = document.getElementById('progressBar');
+  const finishedSummary = document.getElementById('finishedSummary');
+  const readAgainSummary = document.getElementById('readAgainSummary');
+
+  // Keep the source markup merge-friendly, then progressively enhance status
+  // labels into accessible controls when JavaScript is available.
+  baseRows.forEach(row => {
+    const label = row.querySelector('.progress-pill');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `${label.className} progress-toggle`;
+    button.textContent = label.textContent;
+    label.replaceWith(button);
+
+    // Priority remains in the source rows to avoid conflicts with edits to the
+    // book catalogue. JavaScript replaces that legacy cell with the owner's
+    // Read Again choice before the table is displayed.
+    const readAgainCell = row.cells[row.cells.length - 1];
+    const readAgainButton = document.createElement('button');
+    readAgainCell.className = 'read-again-cell';
+    readAgainCell.dataset.label = 'Read Again?';
+    readAgainButton.type = 'button';
+    readAgainButton.className = 'read-again-toggle';
+    readAgainButton.title = 'Toggle read again';
+    readAgainCell.replaceChildren(readAgainButton);
+  });
 
   let activeDomain = 'all';
   let showFavoritesOnly = false;
   let allCollapsed = false;
+  let publishedState = { schemaVersion: 1, revision: 0, books: {} };
   const collapsedDomains = new Set();
-
-  const savedFavorites = new Set(JSON.parse(localStorage.getItem('readingFavorites') || '[]'));
+  const defaultState = new Map();
 
   function normalize(value) {
     return value.toLowerCase().trim();
   }
 
-  function refreshFavorites() {
-    baseRows.forEach(row => {
-      const button = row.querySelector('.favorite-toggle');
-      const isFavorite = savedFavorites.has(row.id);
-      row.dataset.favorite = String(isFavorite);
-      button.setAttribute('aria-pressed', String(isFavorite));
-      button.textContent = isFavorite ? '★' : '☆';
+  function statusFromText(value) {
+    const normalized = normalize(value);
+    if (normalized.includes('finished')) return 'finished';
+    if (normalized.includes('reading')) return 'reading';
+    return 'not-started';
+  }
+
+  function readJsonStorage(key, fallback) {
+    const stored = localStorage.getItem(key);
+    if (!stored) return fallback;
+    try {
+      return JSON.parse(stored);
+    } catch (error) {
+      console.warn(`Ignoring invalid ${key} data.`, error);
+      return fallback;
+    }
+  }
+
+  baseRows.forEach(row => {
+    defaultState.set(row.id, {
+      status: statusFromText(row.dataset.progress),
+      favorite: false,
+      readAgain: false
     });
-    localStorage.setItem('readingFavorites', JSON.stringify([...savedFavorites]));
+  });
+
+  const draft = readJsonStorage(DRAFT_KEY, { books: {} });
+  if (!draft.books || typeof draft.books !== 'object' || Array.isArray(draft.books)) draft.books = {};
+
+  // Preserve favorites saved by the earlier version of this page.
+  const legacyFavorites = readJsonStorage('readingFavorites', []);
+  if (Array.isArray(legacyFavorites)) {
+    legacyFavorites.forEach(id => {
+      if (defaultState.has(id)) draft.books[id] = { ...draft.books[id], favorite: true };
+    });
+    localStorage.removeItem('readingFavorites');
+  }
+
+  function publishedBook(id) {
+    const defaults = defaultState.get(id);
+    const saved = publishedState.books[id] || {};
+    return {
+      status: STATUS[saved.status] ? saved.status : defaults.status,
+      favorite: typeof saved.favorite === 'boolean' ? saved.favorite : defaults.favorite,
+      readAgain: typeof saved.readAgain === 'boolean' ? saved.readAgain : defaults.readAgain
+    };
+  }
+
+  function effectiveBook(id) {
+    return { ...publishedBook(id), ...(draft.books[id] || {}) };
+  }
+
+  function saveDraft() {
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+    refreshPublishStatus();
+  }
+
+  function recordDraft(id, field, value) {
+    const published = publishedBook(id);
+    const change = { ...(draft.books[id] || {}) };
+    if (value === published[field]) delete change[field];
+    else change[field] = value;
+    if (Object.keys(change).length) draft.books[id] = change;
+    else delete draft.books[id];
+    saveDraft();
+  }
+
+  function renderRow(row) {
+    const state = effectiveBook(row.id);
+    const progressButton = row.querySelector('.progress-toggle');
+    const status = STATUS[state.status];
+    row.dataset.progress = status.text;
+    progressButton.textContent = status.text;
+    progressButton.classList.remove('progress-not', 'progress-reading', 'progress-finished');
+    progressButton.classList.add(status.className);
+    progressButton.setAttribute('aria-label', `${row.dataset.title}: ${status.text}. Click to change status.`);
+
+    const favoriteButton = row.querySelector('.favorite-toggle');
+    row.dataset.favorite = String(state.favorite);
+    favoriteButton.setAttribute('aria-pressed', String(state.favorite));
+    favoriteButton.textContent = state.favorite ? '★' : '☆';
+    favoriteButton.setAttribute('aria-label', state.favorite
+      ? `Remove ${row.dataset.title} from favorites`
+      : `Mark ${row.dataset.title} as a favorite`);
+
+    const readAgainButton = row.querySelector('.read-again-toggle');
+    row.dataset.readAgain = String(state.readAgain);
+    readAgainButton.setAttribute('aria-pressed', String(state.readAgain));
+    readAgainButton.textContent = state.readAgain ? 'Yes' : 'No';
+    readAgainButton.setAttribute('aria-label', `${row.dataset.title}: read again ${state.readAgain ? 'yes' : 'no'}`);
+  }
+
+  function renderAllRows() {
+    baseRows.forEach(renderRow);
+    updateProgress();
+    applyFilters();
+  }
+
+  function refreshPublishStatus(message) {
+    const changes = Object.keys(draft.books).length;
+    publishButton.disabled = changes === 0;
+    publishButton.textContent = changes ? `Publish ${changes} change${changes === 1 ? '' : 's'}` : 'Publish changes';
+    syncStatus.classList.toggle('has-changes', changes > 0);
+    syncStatus.textContent = message || (changes
+      ? `${changes} book${changes === 1 ? '' : 's'} changed in this browser and not yet published.`
+      : `Reading status is synced with published revision ${publishedState.revision}.`);
+  }
+
+  function reconcileDraft() {
+    Object.entries(draft.books).forEach(([id, change]) => {
+      if (!defaultState.has(id)) {
+        delete draft.books[id];
+        return;
+      }
+      const published = publishedBook(id);
+      Object.keys(change).forEach(field => {
+        if (change[field] === published[field]) delete change[field];
+      });
+      if (!Object.keys(change).length) delete draft.books[id];
+    });
+    saveDraft();
+  }
+
+  async function loadPublishedState() {
+    try {
+      const response = await fetch(`${STATE_URL}?v=${Date.now()}`, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const state = await response.json();
+      if (state.schemaVersion !== 1 || !Number.isInteger(state.revision) || !state.books || typeof state.books !== 'object') {
+        throw new Error('The published state has an unsupported format.');
+      }
+      publishedState = state;
+      reconcileDraft();
+      renderAllRows();
+    } catch (error) {
+      console.warn('Could not load published reading state.', error);
+      refreshPublishStatus('Published status could not be loaded. Local changes will remain in this browser.');
+      renderAllRows();
+    }
   }
 
   function addDomainDividers() {
@@ -2851,6 +3148,8 @@ color:#5f6c7b;
     progressText.textContent = `${finished} of ${baseRows.length} finished`;
     progressPercent.textContent = `${pct}%`;
     progressBar.style.width = `${pct}%`;
+    finishedSummary.textContent = String(finished);
+    readAgainSummary.textContent = String(baseRows.filter(row => row.dataset.readAgain === 'true').length);
   }
 
   function applyFilters() {
@@ -2858,7 +3157,7 @@ color:#5f6c7b;
     const selectedProgress = normalize(progressFilter.value);
 
     baseRows.forEach(row => {
-      const searchable = normalize(`${row.dataset.domain} ${row.dataset.title} ${row.dataset.author} ${row.dataset.progress} ${row.dataset.priority}`);
+      const searchable = normalize(`${row.dataset.domain} ${row.dataset.title} ${row.dataset.author} ${row.dataset.progress}`);
       const domainMatch = activeDomain === 'all' || row.dataset.domain === activeDomain;
       const progressMatch = selectedProgress === 'all' || normalize(row.dataset.progress).includes(selectedProgress);
       const favoriteMatch = !showFavoritesOnly || row.dataset.favorite === 'true';
@@ -2870,16 +3169,11 @@ color:#5f6c7b;
     });
 
     addDomainDividers();
-
     tbody.querySelectorAll('.domain-divider').forEach(divider => {
       const domain = divider.dataset.domain;
-      const matchingRows = baseRows.filter(row =>
-        row.dataset.domain === domain &&
-        row.style.display !== 'none'
-      );
+      const matchingRows = baseRows.filter(row => row.dataset.domain === domain && row.style.display !== 'none');
       divider.style.display = matchingRows.length ? '' : 'none';
-      const countEl = divider.querySelector('.domain-count');
-      countEl.textContent = `(${matchingRows.length})`;
+      divider.querySelector('.domain-count').textContent = `(${matchingRows.length})`;
       divider.querySelector('.domain-arrow').textContent = collapsedDomains.has(domain) ? '▸' : '▾';
     });
 
@@ -2919,18 +3213,60 @@ color:#5f6c7b;
   });
 
   baseRows.forEach(row => {
-    row.querySelector('.favorite-toggle').addEventListener('click', event => {
-      const button = event.currentTarget;
-      if (savedFavorites.has(row.id)) savedFavorites.delete(row.id);
-      else savedFavorites.add(row.id);
-      button.setAttribute('aria-label',
-        savedFavorites.has(row.id)
-          ? `Remove ${row.dataset.title} from favorites`
-          : `Mark ${row.dataset.title} as a favorite`
-      );
-      refreshFavorites();
+    row.querySelector('.favorite-toggle').addEventListener('click', () => {
+      recordDraft(row.id, 'favorite', !effectiveBook(row.id).favorite);
+      renderRow(row);
       applyFilters();
     });
+
+    row.querySelector('.progress-toggle').addEventListener('click', () => {
+      const current = effectiveBook(row.id).status;
+      const next = STATUS_ORDER[(STATUS_ORDER.indexOf(current) + 1) % STATUS_ORDER.length];
+      recordDraft(row.id, 'status', next);
+      renderRow(row);
+      updateProgress();
+      applyFilters();
+    });
+
+    row.querySelector('.read-again-toggle').addEventListener('click', () => {
+      recordDraft(row.id, 'readAgain', !effectiveBook(row.id).readAgain);
+      renderRow(row);
+      updateProgress();
+      applyFilters();
+    });
+  });
+
+  publishButton.addEventListener('click', () => {
+    const books = {};
+    baseRows.forEach(row => {
+      const current = effectiveBook(row.id);
+      const defaults = defaultState.get(row.id);
+      const saved = {};
+      if (current.status !== defaults.status) saved.status = current.status;
+      if (current.favorite !== defaults.favorite) saved.favorite = current.favorite;
+      if (current.readAgain !== defaults.readAgain) saved.readAgain = current.readAgain;
+      if (Object.keys(saved).length) books[row.id] = saved;
+    });
+
+    const payload = {
+      schemaVersion: 1,
+      baseRevision: publishedState.revision,
+      books
+    };
+    const marker = `<!-- reading-list-update\n${JSON.stringify(payload, null, 2)}\n-->`;
+    const body = [
+      '## Reading list update',
+      '',
+      `Publish ${Object.keys(draft.books).length} locally edited book record(s).`,
+      '',
+      '> This issue was generated by the reading list. A GitHub Action will validate and publish it.',
+      '',
+      marker
+    ].join('\n');
+    const url = new URL(`https://github.com/${REPOSITORY}/issues/new`);
+    url.searchParams.set('title', `Publish reading list changes (revision ${publishedState.revision})`);
+    url.searchParams.set('body', body);
+    window.open(url, '_blank', 'noopener,noreferrer');
   });
 
   [...table.tHead.rows[0].cells].forEach((th, index) => {
@@ -2952,16 +3288,13 @@ color:#5f6c7b;
   function applyDeepLink() {
     const hash = decodeURIComponent(location.hash.slice(1));
     if (!hash) return;
-
     const exactBook = document.getElementById(hash);
     if (exactBook) {
       exactBook.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
-
     const domain = [...new Set(baseRows.map(row => row.dataset.domain))]
       .find(name => name.toLowerCase().replace(/[^a-z0-9]+/g, '-') === hash);
-
     if (domain) {
       activeDomain = domain;
       chips.forEach(c => c.classList.toggle('active', c.dataset.domain === domain));
@@ -2969,11 +3302,12 @@ color:#5f6c7b;
     }
   }
 
-  refreshFavorites();
-  updateProgress();
-  applyFilters();
+  renderAllRows();
+  refreshPublishStatus();
+  loadPublishedState();
   applyDeepLink();
   window.addEventListener('hashchange', applyDeepLink);
 })();
-</script></body>
+</script>
+</body>
 </html>
