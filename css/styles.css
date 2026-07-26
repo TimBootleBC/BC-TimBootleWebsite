@@ -312,6 +312,7 @@ a {
 }
 
 .capability p {
+  min-height: 4.5em;
   margin: 0;
   color: #b9c6d4;
   font-size: 0.95rem;
@@ -582,6 +583,10 @@ a {
   .capability {
     border-right: 0;
     border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .capability p {
+    min-height: 0;
   }
 
   .capability:last-child {
