@@ -305,19 +305,14 @@ a {
   border-right: 0;
 }
 
-.capability-number {
-  color: var(--blue-400);
-  font-size: 0.82rem;
-  letter-spacing: 0.16em;
-}
-
 .capability h2 {
-  margin: 18px 0 8px;
+  margin: 0 0 10px;
   color: #fff;
   font-size: 1.12rem;
 }
 
 .capability p {
+  min-height: 4.5em;
   margin: 0;
   color: #b9c6d4;
   font-size: 0.95rem;
@@ -632,6 +627,10 @@ a {
   .capability {
     border-right: 0;
     border-bottom: 1px solid rgba(255,255,255,0.12);
+  }
+
+  .capability p {
+    min-height: 0;
   }
 
   .capability:last-child {
