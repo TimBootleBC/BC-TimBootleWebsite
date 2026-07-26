@@ -292,8 +292,11 @@ a {
 }
 
 .capability {
-  min-height: 210px;
-  padding: 30px;
+  min-height: 178px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 32px 30px;
   color: #d8e2ed;
   border-right: 1px solid rgba(255,255,255,0.12);
 }
@@ -302,14 +305,8 @@ a {
   border-right: 0;
 }
 
-.capability-number {
-  color: var(--blue-400);
-  font-size: 0.82rem;
-  letter-spacing: 0.16em;
-}
-
 .capability h2 {
-  margin: 18px 0 8px;
+  margin: 0 0 10px;
   color: #fff;
   font-size: 1.12rem;
 }
