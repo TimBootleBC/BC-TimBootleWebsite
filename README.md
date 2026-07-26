@@ -36,3 +36,13 @@ subresource requests as a fallback; local HTTP development remains supported.
 
 - Replace the reading-list placeholders with your full existing reading list.
 - Expand the projects page as projects become ready for public presentation.
+
+## Publishing reading progress
+
+The reading list stores edits in the visitor's browser until **Publish changes**
+is selected. That button opens a prefilled GitHub issue. When the issue is
+submitted by `TimBootleBC`, the `Publish reading list update` workflow validates
+the book identifiers and allowed values, updates `reading-list-state.json`, and
+closes the issue. Change both the `REPOSITORY` constant in `reading-list.html`
+and the allowed account in `.github/workflows/publish-reading-list.yml` if the
+repository is transferred to another GitHub account.

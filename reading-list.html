@@ -271,7 +271,8 @@ color:#5f6c7b;
 #bookSearch,
 #progressFilter,
 #favoritesOnly,
-#collapseDomains {
+#collapseDomains,
+#publishReadingChanges {
   min-height: 44px;
   border: 1px solid #cfd6df;
   border-radius: 10px;
@@ -291,10 +292,51 @@ color:#5f6c7b;
 }
 
 #favoritesOnly,
-#collapseDomains {
+#collapseDomains,
+#publishReadingChanges {
   padding: 0 14px;
   cursor: pointer;
   font-weight: 700;
+}
+
+#publishReadingChanges {
+  padding: 0 16px;
+  border-color: #1769aa;
+  background: #1769aa;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+#publishReadingChanges:disabled {
+  border-color: #cfd6df;
+  background: #e8edf4;
+  color: #667587;
+  cursor: not-allowed;
+}
+
+.sync-status {
+  flex: 1 0 100%;
+  margin: 0;
+  color: var(--reading-muted);
+  font-size: .9rem;
+}
+
+.sync-status.has-changes {
+  color: #9a5700;
+  font-weight: 700;
+}
+
+.progress-toggle {
+  border: 0;
+  font: inherit;
+  cursor: pointer;
+}
+
+.progress-toggle:hover,
+.progress-toggle:focus-visible {
+  outline: 2px solid #2b84ea;
+  outline-offset: 2px;
 }
 
 #favoritesOnly[aria-pressed="true"],
@@ -624,7 +666,9 @@ color:#5f6c7b;
 </select>
 <button aria-pressed="false" id="favoritesOnly" type="button">☆ Favorites</button>
 <button aria-pressed="false" id="collapseDomains" type="button">Collapse domains</button>
+<button disabled id="publishReadingChanges" type="button">Publish changes</button>
 <span aria-live="polite" id="bookCount"></span>
+<p aria-live="polite" class="sync-status" id="readingSyncStatus">Loading published reading status…</p>
 </div>
 <div aria-label="Filter by domain" class="domain-filters">
 <button class="domain-chip active" data-domain="all" type="button">All</button>
@@ -2860,6 +2904,16 @@ color:#5f6c7b;
 
 <script>
 (() => {
+  const REPOSITORY = 'TimBootleBC/BC-TimBootleWebsite';
+  const STATE_URL = 'reading-list-state.json';
+  const DRAFT_KEY = 'readingListDraftV1';
+  const STATUS = {
+    'not-started': { text: '○ Not Started', className: 'progress-not' },
+    reading: { text: '📖 Reading', className: 'progress-reading' },
+    finished: { text: '✓ Finished', className: 'progress-finished' }
+  };
+  const STATUS_ORDER = ['not-started', 'reading', 'finished'];
+
   const table = document.querySelector('.reading-table');
   const tbody = table.tBodies[0];
   const baseRows = [...tbody.rows];
@@ -2868,31 +2922,166 @@ color:#5f6c7b;
   const progressFilter = document.getElementById('progressFilter');
   const favoritesOnly = document.getElementById('favoritesOnly');
   const collapseButton = document.getElementById('collapseDomains');
+  const publishButton = document.getElementById('publishReadingChanges');
+  const syncStatus = document.getElementById('readingSyncStatus');
   const chips = [...document.querySelectorAll('.domain-chip')];
   const progressText = document.getElementById('progressText');
   const progressPercent = document.getElementById('progressPercent');
   const progressBar = document.getElementById('progressBar');
 
+  // Keep the source markup merge-friendly, then progressively enhance status
+  // labels into accessible controls when JavaScript is available.
+  baseRows.forEach(row => {
+    const label = row.querySelector('.progress-pill');
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `${label.className} progress-toggle`;
+    button.textContent = label.textContent;
+    label.replaceWith(button);
+  });
+
   let activeDomain = 'all';
   let showFavoritesOnly = false;
   let allCollapsed = false;
+  let publishedState = { schemaVersion: 1, revision: 0, books: {} };
   const collapsedDomains = new Set();
-
-  const savedFavorites = new Set(JSON.parse(localStorage.getItem('readingFavorites') || '[]'));
+  const defaultState = new Map();
 
   function normalize(value) {
     return value.toLowerCase().trim();
   }
 
-  function refreshFavorites() {
-    baseRows.forEach(row => {
-      const button = row.querySelector('.favorite-toggle');
-      const isFavorite = savedFavorites.has(row.id);
-      row.dataset.favorite = String(isFavorite);
-      button.setAttribute('aria-pressed', String(isFavorite));
-      button.textContent = isFavorite ? '★' : '☆';
+  function statusFromText(value) {
+    const normalized = normalize(value);
+    if (normalized.includes('finished')) return 'finished';
+    if (normalized.includes('reading')) return 'reading';
+    return 'not-started';
+  }
+
+  function readJsonStorage(key, fallback) {
+    const stored = localStorage.getItem(key);
+    if (!stored) return fallback;
+    try {
+      return JSON.parse(stored);
+    } catch (error) {
+      console.warn(`Ignoring invalid ${key} data.`, error);
+      return fallback;
+    }
+  }
+
+  baseRows.forEach(row => {
+    defaultState.set(row.id, {
+      status: statusFromText(row.dataset.progress),
+      favorite: false
     });
-    localStorage.setItem('readingFavorites', JSON.stringify([...savedFavorites]));
+  });
+
+  const draft = readJsonStorage(DRAFT_KEY, { books: {} });
+  if (!draft.books || typeof draft.books !== 'object' || Array.isArray(draft.books)) draft.books = {};
+
+  // Preserve favorites saved by the earlier version of this page.
+  const legacyFavorites = readJsonStorage('readingFavorites', []);
+  if (Array.isArray(legacyFavorites)) {
+    legacyFavorites.forEach(id => {
+      if (defaultState.has(id)) draft.books[id] = { ...draft.books[id], favorite: true };
+    });
+    localStorage.removeItem('readingFavorites');
+  }
+
+  function publishedBook(id) {
+    const defaults = defaultState.get(id);
+    const saved = publishedState.books[id] || {};
+    return {
+      status: STATUS[saved.status] ? saved.status : defaults.status,
+      favorite: typeof saved.favorite === 'boolean' ? saved.favorite : defaults.favorite
+    };
+  }
+
+  function effectiveBook(id) {
+    return { ...publishedBook(id), ...(draft.books[id] || {}) };
+  }
+
+  function saveDraft() {
+    localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
+    refreshPublishStatus();
+  }
+
+  function recordDraft(id, field, value) {
+    const published = publishedBook(id);
+    const change = { ...(draft.books[id] || {}) };
+    if (value === published[field]) delete change[field];
+    else change[field] = value;
+    if (Object.keys(change).length) draft.books[id] = change;
+    else delete draft.books[id];
+    saveDraft();
+  }
+
+  function renderRow(row) {
+    const state = effectiveBook(row.id);
+    const progressButton = row.querySelector('.progress-toggle');
+    const status = STATUS[state.status];
+    row.dataset.progress = status.text;
+    progressButton.textContent = status.text;
+    progressButton.classList.remove('progress-not', 'progress-reading', 'progress-finished');
+    progressButton.classList.add(status.className);
+    progressButton.setAttribute('aria-label', `${row.dataset.title}: ${status.text}. Click to change status.`);
+
+    const favoriteButton = row.querySelector('.favorite-toggle');
+    row.dataset.favorite = String(state.favorite);
+    favoriteButton.setAttribute('aria-pressed', String(state.favorite));
+    favoriteButton.textContent = state.favorite ? '★' : '☆';
+    favoriteButton.setAttribute('aria-label', state.favorite
+      ? `Remove ${row.dataset.title} from favorites`
+      : `Mark ${row.dataset.title} as a favorite`);
+  }
+
+  function renderAllRows() {
+    baseRows.forEach(renderRow);
+    updateProgress();
+    applyFilters();
+  }
+
+  function refreshPublishStatus(message) {
+    const changes = Object.keys(draft.books).length;
+    publishButton.disabled = changes === 0;
+    publishButton.textContent = changes ? `Publish ${changes} change${changes === 1 ? '' : 's'}` : 'Publish changes';
+    syncStatus.classList.toggle('has-changes', changes > 0);
+    syncStatus.textContent = message || (changes
+      ? `${changes} book${changes === 1 ? '' : 's'} changed in this browser and not yet published.`
+      : `Reading status is synced with published revision ${publishedState.revision}.`);
+  }
+
+  function reconcileDraft() {
+    Object.entries(draft.books).forEach(([id, change]) => {
+      if (!defaultState.has(id)) {
+        delete draft.books[id];
+        return;
+      }
+      const published = publishedBook(id);
+      Object.keys(change).forEach(field => {
+        if (change[field] === published[field]) delete change[field];
+      });
+      if (!Object.keys(change).length) delete draft.books[id];
+    });
+    saveDraft();
+  }
+
+  async function loadPublishedState() {
+    try {
+      const response = await fetch(`${STATE_URL}?v=${Date.now()}`, { cache: 'no-store' });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const state = await response.json();
+      if (state.schemaVersion !== 1 || !Number.isInteger(state.revision) || !state.books || typeof state.books !== 'object') {
+        throw new Error('The published state has an unsupported format.');
+      }
+      publishedState = state;
+      reconcileDraft();
+      renderAllRows();
+    } catch (error) {
+      console.warn('Could not load published reading state.', error);
+      refreshPublishStatus('Published status could not be loaded. Local changes will remain in this browser.');
+      renderAllRows();
+    }
   }
 
   function addDomainDividers() {
@@ -2947,16 +3136,11 @@ color:#5f6c7b;
     });
 
     addDomainDividers();
-
     tbody.querySelectorAll('.domain-divider').forEach(divider => {
       const domain = divider.dataset.domain;
-      const matchingRows = baseRows.filter(row =>
-        row.dataset.domain === domain &&
-        row.style.display !== 'none'
-      );
+      const matchingRows = baseRows.filter(row => row.dataset.domain === domain && row.style.display !== 'none');
       divider.style.display = matchingRows.length ? '' : 'none';
-      const countEl = divider.querySelector('.domain-count');
-      countEl.textContent = `(${matchingRows.length})`;
+      divider.querySelector('.domain-count').textContent = `(${matchingRows.length})`;
       divider.querySelector('.domain-arrow').textContent = collapsedDomains.has(domain) ? '▸' : '▾';
     });
 
@@ -2996,18 +3180,52 @@ color:#5f6c7b;
   });
 
   baseRows.forEach(row => {
-    row.querySelector('.favorite-toggle').addEventListener('click', event => {
-      const button = event.currentTarget;
-      if (savedFavorites.has(row.id)) savedFavorites.delete(row.id);
-      else savedFavorites.add(row.id);
-      button.setAttribute('aria-label',
-        savedFavorites.has(row.id)
-          ? `Remove ${row.dataset.title} from favorites`
-          : `Mark ${row.dataset.title} as a favorite`
-      );
-      refreshFavorites();
+    row.querySelector('.favorite-toggle').addEventListener('click', () => {
+      recordDraft(row.id, 'favorite', !effectiveBook(row.id).favorite);
+      renderRow(row);
       applyFilters();
     });
+
+    row.querySelector('.progress-toggle').addEventListener('click', () => {
+      const current = effectiveBook(row.id).status;
+      const next = STATUS_ORDER[(STATUS_ORDER.indexOf(current) + 1) % STATUS_ORDER.length];
+      recordDraft(row.id, 'status', next);
+      renderRow(row);
+      updateProgress();
+      applyFilters();
+    });
+  });
+
+  publishButton.addEventListener('click', () => {
+    const books = {};
+    baseRows.forEach(row => {
+      const current = effectiveBook(row.id);
+      const defaults = defaultState.get(row.id);
+      const saved = {};
+      if (current.status !== defaults.status) saved.status = current.status;
+      if (current.favorite !== defaults.favorite) saved.favorite = current.favorite;
+      if (Object.keys(saved).length) books[row.id] = saved;
+    });
+
+    const payload = {
+      schemaVersion: 1,
+      baseRevision: publishedState.revision,
+      books
+    };
+    const marker = `<!-- reading-list-update\n${JSON.stringify(payload, null, 2)}\n-->`;
+    const body = [
+      '## Reading list update',
+      '',
+      `Publish ${Object.keys(draft.books).length} locally edited book record(s).`,
+      '',
+      '> This issue was generated by the reading list. A GitHub Action will validate and publish it.',
+      '',
+      marker
+    ].join('\n');
+    const url = new URL(`https://github.com/${REPOSITORY}/issues/new`);
+    url.searchParams.set('title', `Publish reading list changes (revision ${publishedState.revision})`);
+    url.searchParams.set('body', body);
+    window.open(url, '_blank', 'noopener,noreferrer');
   });
 
   [...table.tHead.rows[0].cells].forEach((th, index) => {
@@ -3029,16 +3247,13 @@ color:#5f6c7b;
   function applyDeepLink() {
     const hash = decodeURIComponent(location.hash.slice(1));
     if (!hash) return;
-
     const exactBook = document.getElementById(hash);
     if (exactBook) {
       exactBook.scrollIntoView({ behavior: 'smooth', block: 'center' });
       return;
     }
-
     const domain = [...new Set(baseRows.map(row => row.dataset.domain))]
       .find(name => name.toLowerCase().replace(/[^a-z0-9]+/g, '-') === hash);
-
     if (domain) {
       activeDomain = domain;
       chips.forEach(c => c.classList.toggle('active', c.dataset.domain === domain));
@@ -3046,11 +3261,12 @@ color:#5f6c7b;
     }
   }
 
-  refreshFavorites();
-  updateProgress();
-  applyFilters();
+  renderAllRows();
+  refreshPublishStatus();
+  loadPublishedState();
   applyDeepLink();
   window.addEventListener('hashchange', applyDeepLink);
 })();
-</script></body>
+</script>
+</body>
 </html>
