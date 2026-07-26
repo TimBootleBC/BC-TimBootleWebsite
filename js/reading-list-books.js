@@ -242,27 +242,6 @@
   const normalize = value => value.toLowerCase().replaceAll('’', "'").replace(/[^a-z0-9]+/g, ' ').trim();
   const aliases = new Map([[normalize('Influence: The Psychology of Persuasion'), normalize('Influence')]]);
   const slugify = value => normalize(value).replaceAll(' ', '-');
-  const preferredDomains = new Map(Object.entries({
-    'Good to Great': 'Management',
-    'The First 90 Days': 'Leadership',
-    'The Five Dysfunctions of a Team': 'Leadership',
-    'The Hard Thing About Hard Things': 'Management',
-    'Radical Candor': 'Leadership',
-    'No Rules Rules': 'Management',
-    'Multipliers': 'Leadership',
-    'The Lean Startup': 'Business strategy',
-    'Execution': 'Management',
-    'Turn the Ship Around!': 'Leadership',
-    'Trillion Dollar Coach': 'Leadership',
-    'Principles': 'Management',
-    'Good Strategy/Bad Strategy': 'Business strategy',
-    'Blue Ocean Strategy': 'Business strategy',
-    'The Innovator’s Solution': 'Business strategy',
-    'The Outsiders': 'Management',
-    'Creativity, Inc.': 'Management',
-    'History of the Peloponnesian War': 'Military history',
-    'De Architectura': 'Architecture'
-  }).map(([title, domain]) => [normalize(title), domain]));
 
   requestedBooks.forEach(book => {
     const acceptedTitles = new Set([normalize(book.title), aliases.get(normalize(book.title))]);
@@ -300,25 +279,6 @@
     const priority = document.createElement('span'); priority.className = 'badge priority-medium'; priority.textContent = 'Medium'; priorityCell.append(priority); row.append(priorityCell);
     const domainRows = [...tbody.rows].filter(existing => existing.dataset.domain === book.domain);
     domainRows.at(-1).after(row);
-  });
-
-  // A work belongs to exactly one category. Resolve the catalogue's historical
-  // cross-category duplicates after adding the requested titles and before the
-  // page's filtering, sorting, favorite, and progress code captures its rows.
-  const rowsByTitle = new Map();
-  [...tbody.rows].forEach(row => {
-    const title = normalize(row.dataset.title || '');
-    const matches = rowsByTitle.get(title) || [];
-    matches.push(row);
-    rowsByTitle.set(title, matches);
-  });
-  rowsByTitle.forEach((matches, title) => {
-    if (matches.length < 2) return;
-    const preferredDomain = preferredDomains.get(title);
-    const keeper = matches.find(row => row.dataset.domain === preferredDomain) || matches[0];
-    matches.forEach(row => {
-      if (row !== keeper) row.remove();
-    });
   });
 
   const rows = [...tbody.rows]; const total = rows.length;
