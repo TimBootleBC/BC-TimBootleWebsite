@@ -233,186 +233,6 @@
     "author": "Michael Lewis",
     "domain": "Finance",
     "isbn": "9780393338690"
-  },
-  {
-    "title": "The Box: How the Shipping Container Made the World Smaller and the World Economy Bigger",
-    "author": "Marc Levinson",
-    "domain": "Navy Reading",
-    "isbn": "9780691170817"
-  },
-  {
-    "title": "Freedom’s Forge: How American Business Produced Victory in World War II",
-    "author": "Arthur Herman",
-    "domain": "Navy Reading",
-    "isbn": "9780812982046"
-  },
-  {
-    "title": "Skunk Works",
-    "author": "Ben R. Rich and Leo Janos",
-    "domain": "Navy Reading",
-    "isbn": "9780316743006"
-  },
-  {
-    "title": "The Origins of Victory: How Disruptive Military Innovation Determines the Fates of Great Powers",
-    "author": "Andrew F. Krepinevich Jr.",
-    "domain": "Navy Reading",
-    "isbn": "9780300234091"
-  },
-  {
-    "title": "Innovating Victory: Naval Technology in Three Wars",
-    "author": "Vincent P. O’Hara and Leonard R. Heinz",
-    "domain": "Navy Reading",
-    "isbn": "9781682477328"
-  },
-  {
-    "title": "Six Frigates: The Epic History of the Founding of the U.S. Navy",
-    "author": "Ian W. Toll",
-    "domain": "Navy Reading",
-    "isbn": "9780393330328"
-  },
-  {
-    "title": "The Last Stand of the Tin Can Sailors",
-    "author": "James D. Hornfischer",
-    "domain": "Navy Reading",
-    "isbn": "9780553381481"
-  },
-  {
-    "title": "A Brief Guide to Maritime Strategy",
-    "author": "James R. Holmes",
-    "domain": "Navy Reading",
-    "isbn": "9781682473351"
-  },
-  {
-    "title": "Deterrence",
-    "author": "Lawrence Freedman",
-    "domain": "Navy Reading",
-    "isbn": "9780745641133"
-  },
-  {
-    "title": "The Eurasian Century: Hot Wars, Cold Wars, and the Making of the Modern World",
-    "author": "Hal Brands",
-    "domain": "Navy Reading",
-    "isbn": "9781324035862"
-  },
-  {
-    "title": "Under the Southern Cross: The South Pacific Air Campaign Against Rabaul",
-    "author": "Thomas McKelvey Cleaver",
-    "domain": "Navy Reading",
-    "isbn": "9781472846334"
-  },
-  {
-    "title": "The Battle of Tassafaronga",
-    "author": "Russell Crenshaw Jr.",
-    "domain": "Navy Reading",
-    "isbn": "9781591141457"
-  },
-  {
-    "title": "Fleet Tactics and Naval Operations, Third Edition",
-    "author": "Wayne P. Hughes Jr. and Robert P. Girrier",
-    "domain": "Navy Reading",
-    "isbn": "9781682473375"
-  },
-  {
-    "title": "AI at War: How Big Data, Artificial Intelligence, and Machine Learning Are Changing Naval Warfare",
-    "author": "Sam J. Tangredi and George Galdorisi",
-    "domain": "Navy Reading",
-    "isbn": "9781682476062"
-  },
-  {
-    "title": "The Neptune Factor: Alfred Thayer Mahan and the Concept of Sea Power",
-    "author": "Nicholas A. Lambert",
-    "domain": "Navy Reading",
-    "isbn": "9780300270051"
-  },
-  {
-    "title": "Meditations",
-    "author": "Marcus Aurelius; adapted by James Harris",
-    "domain": "Navy Reading",
-    "isbn": "9781956791761"
-  },
-  {
-    "title": "Legacy",
-    "author": "James Kerr",
-    "domain": "Navy Reading",
-    "isbn": "9781472103536"
-  },
-  {
-    "title": "Man’s Search for Meaning",
-    "author": "Viktor E. Frankl",
-    "domain": "Navy Reading",
-    "isbn": "9780807014295"
-  },
-  {
-    "title": "So Good They Can’t Ignore You",
-    "author": "Cal Newport",
-    "domain": "Navy Reading",
-    "isbn": "9781455509126"
-  },
-  {
-    "title": "The Design of Everyday Things",
-    "author": "Don Norman",
-    "domain": "Navy Reading",
-    "isbn": "9780465050659"
-  },
-  {
-    "title": "The Talent Code",
-    "author": "Daniel Coyle",
-    "domain": "Navy Reading",
-    "isbn": "9780553806847"
-  },
-  {
-    "title": "Thinking in Bets",
-    "author": "Annie Duke",
-    "domain": "Navy Reading",
-    "isbn": "9780735216358"
-  },
-  {
-    "title": "Farsighted",
-    "author": "Steven Johnson",
-    "domain": "Navy Reading",
-    "isbn": "9781594488214"
-  },
-  {
-    "title": "Predictably Irrational, Revised and Expanded Edition",
-    "author": "Dan Ariely",
-    "domain": "Navy Reading",
-    "isbn": "9780061353246"
-  },
-  {
-    "title": "Peak: The New Science of Athletic Performance That Is Revolutionizing Sports",
-    "author": "Marc Bubbs",
-    "domain": "Navy Reading",
-    "isbn": "9781603588096"
-  },
-  {
-    "title": "The Performance Cortex",
-    "author": "Zach Schonbrun",
-    "domain": "Navy Reading",
-    "isbn": "9781101870426"
-  },
-  {
-    "title": "Why We Sleep",
-    "author": "Matthew Walker",
-    "domain": "Navy Reading",
-    "isbn": "9781501144325"
-  },
-  {
-    "title": "Grit",
-    "author": "Angela Duckworth",
-    "domain": "Navy Reading",
-    "isbn": "9781501111105"
-  },
-  {
-    "title": "Can’t Hurt Me",
-    "author": "David Goggins",
-    "domain": "Navy Reading",
-    "isbn": "9781544512280"
-  },
-  {
-    "title": "Endurance: Shackleton’s Incredible Voyage",
-    "author": "Alfred Lansing",
-    "domain": "Navy Reading",
-    "isbn": "9780465062881"
   }
 ];
 
@@ -422,17 +242,6 @@
   const normalize = value => value.toLowerCase().replaceAll('’', "'").replace(/[^a-z0-9]+/g, ' ').trim();
   const aliases = new Map([[normalize('Influence: The Psychology of Persuasion'), normalize('Influence')]]);
   const slugify = value => normalize(value).replaceAll(' ', '-');
-
-  const navyDomain = 'Navy Reading';
-  const domainFilters = document.querySelector('.domain-filters');
-  if (domainFilters && !domainFilters.querySelector(`[data-domain="${navyDomain}"]`)) {
-    const navyFilter = document.createElement('button');
-    navyFilter.type = 'button';
-    navyFilter.className = 'domain-chip';
-    navyFilter.dataset.domain = navyDomain;
-    navyFilter.textContent = navyDomain;
-    domainFilters.append(navyFilter);
-  }
 
   requestedBooks.forEach(book => {
     const acceptedTitles = new Set([normalize(book.title), aliases.get(normalize(book.title))]);
@@ -469,15 +278,13 @@
     const priorityCell = document.createElement('td'); priorityCell.dataset.label = 'Priority';
     const priority = document.createElement('span'); priority.className = 'badge priority-medium'; priority.textContent = 'Medium'; priorityCell.append(priority); row.append(priorityCell);
     const domainRows = [...tbody.rows].filter(existing => existing.dataset.domain === book.domain);
-    if (domainRows.length) domainRows.at(-1).after(row);
-    else tbody.append(row);
+    domainRows.at(-1).after(row);
   });
 
   const rows = [...tbody.rows]; const total = rows.length;
   const summaryValues = document.querySelectorAll('.reading-summary-card strong');
   if (summaryValues.length >= 4) {
     summaryValues[0].textContent = total;
-    summaryValues[1].textContent = new Set(rows.map(row => row.dataset.domain)).size;
     summaryValues[2].textContent = rows.filter(row => row.dataset.priority === 'High').length;
     summaryValues[3].textContent = rows.filter(row => row.dataset.priority === 'Medium').length;
   }
