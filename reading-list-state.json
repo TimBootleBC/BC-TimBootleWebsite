@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 5,
-  "updatedAt": "2026-07-26T05:58:21Z",
+  "revision": 6,
+  "updatedAt": "2026-07-26T06:08:25Z",
   "books": {
     "leadership-team-of-teams": {
       "status": "finished",
@@ -43,10 +43,12 @@
       "status": "finished"
     },
     "management-the-first-90-days": {
-      "favorite": true
+      "favorite": true,
+      "impact": 1
     },
     "management-the-five-dysfunctions-of-a-team": {
-      "status": "finished"
+      "status": "finished",
+      "impact": 5
     },
     "management-the-lean-startup": {
       "status": "finished"
