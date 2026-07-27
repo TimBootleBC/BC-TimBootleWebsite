@@ -47,8 +47,96 @@
     ["The Everything Store", "Chronicles the rise of Amazon and the principles behind its relentless customer focus and long‑term thinking. Reveals how bold bets shaped the company."],
     ["Creativity, Inc.", "Explores how creative cultures balance artistry and discipline. Offers lessons on leadership, candor, and protecting creative processes."],
     ["The Amazon Management System", "Breaks down Amazon’s operating principles, including mechanisms, metrics, and leadership behaviors. Shows how disciplined systems drive innovation."],
-    ["Remote", "Advocates for remote work and explains how distributed teams can be productive, aligned, and engaged. Offers practical guidance for modern work environments."]
+    ["Remote", "Explains how distributed teams can work effectively without losing alignment or productivity. Offers practical guidance for communication, culture, and workflow in remote environments."],
+    ["The Alliance", "Proposes a new employer‑employee relationship built on trust, transparency, and mutually beneficial “tours of duty.” Helps organizations retain and grow talent in a fast‑changing world."],
+    ["Humanocracy", "Argues for dismantling bureaucratic structures and empowering people through autonomy and experimentation. Provides a blueprint for more adaptive, human‑centered organizations."],
+    ["In Search of Excellence", "Identifies traits of successful companies through empirical research. Highlights customer focus, people orientation, and value‑driven leadership."],
+    ["Business Adventures", "A collection of business stories illustrating timeless lessons about risk, leadership, and decision‑making. Offers insights into corporate behavior and market dynamics."],
+    ["Who Moved My Cheese?", "A simple parable about adapting to change. Encourages flexibility, awareness, and proactive behavior when circumstances shift."],
+    ["The Leadership Challenge", "Presents a model for effective leadership built around five core practices. Helps leaders inspire, motivate, and guide others through shared values and vision."],
+    ["Leaders Eat Last", "Explores how leaders create environments of trust and safety. Shows how prioritizing people leads to stronger teams and better performance."],
+    ["Dare to Lead", "Focuses on courage, vulnerability, and empathy as essential leadership skills. Encourages leaders to build cultures of trust and authenticity."],
+    ["Extreme Ownership", "Teaches that leaders must take full responsibility for outcomes. Uses battlefield lessons to illustrate accountability, discipline, and clear communication."],
+    ["Team of Teams", "Shows how small, empowered teams outperform rigid hierarchies in complex environments. Emphasizes adaptability, trust, and shared consciousness."],
+    ["Primal Leadership", "Explains how emotional intelligence drives effective leadership. Shows how leaders influence organizational climate through resonance."],
+    ["Leadership on the Line", "Describes the dangers and challenges of leading change. Offers strategies for staying grounded while navigating resistance and conflict."],
+    ["The 21 Irrefutable Laws of Leadership", "Outlines foundational principles of leadership that apply across contexts. Focuses on influence, vision, and personal growth."],
+    ["On Becoming a Leader", "Explores the qualities and experiences that shape effective leaders. Encourages self‑reflection and personal development."],
+    ["The Effective Executive", "Highlights the habits and disciplines that make executives productive. Focuses on time management, decision‑making, and prioritization."],
+    ["Start with Why", "Shows how great leaders inspire action by communicating purpose. Emphasizes clarity of mission as a driver of loyalty and performance."],
+    ["The Culture Code", "Examines how strong cultures are built through safety, vulnerability, and purpose. Provides practical examples from high‑performing teams."],
+    ["Legacy", "Draws leadership lessons from the All Blacks rugby team. Focuses on humility, discipline, and continuous improvement."],
+    ["The Captain Class", "Identifies traits of elite team captains who drive sustained excellence. Highlights resilience, selflessness, and quiet leadership."],
+    ["Wooden on Leadership", "Shares leadership principles based on character, discipline, and consistency. Offers practical guidance for building winning teams."],
+    ["The Score Takes Care of Itself", "Presents a leadership philosophy centered on preparation, discipline, and high standards. Shows how focusing on process leads to results."],
+    ["Winning", "Provides practical advice for achieving success in business through clarity, candor, and relentless execution. Emphasizes accountability and performance."],
+    ["True North", "Encourages leaders to discover and follow their authentic leadership compass. Focuses on values, purpose, and self‑awareness."],
+    ["Leadership in War", "Profiles leaders in wartime to illustrate decision‑making under extreme pressure. Highlights courage, strategy, and moral complexity."],
+    ["The Ride of a Lifetime", "Shares leadership lessons from building and transforming a major company. Emphasizes optimism, courage, and long‑term thinking."],
+    ["Shoe Dog", "A memoir about building a global brand through persistence, risk‑taking, and unconventional decisions. Highlights the messy reality behind entrepreneurial success."],
+    ["Hit Refresh", "Explores organizational transformation through empathy, culture change, and innovation. Shows how reinvention drives long‑term relevance."],
+    ["My Life in Full", "A memoir about leadership, resilience, and navigating global business challenges. Highlights the importance of values and determination."],
+    ["Act Like a Leader, Think Like a Leader", "Encourages leaders to step into new roles by redefining their identity and behaviors. Focuses on experimentation and learning."],
+    ["Immunity to Change", "Explains why people resist change even when they want it. Provides tools for uncovering hidden assumptions and unlocking growth."],
+    ["The Practice of Adaptive Leadership", "Offers a framework for leading through complexity and uncertainty. Focuses on experimentation, learning, and mobilizing people."],
+    ["Conscious Business", "Teaches how awareness, integrity, and responsibility improve leadership and organizational performance. Encourages mindful communication and decision‑making."],
+    ["The Infinite Game", "Argues that leadership is an infinite game focused on long‑term purpose, not short‑term wins. Encourages resilience and ethical decision‑making."],
+    ["Think Again", "Explores the power of rethinking and unlearning. Encourages intellectual humility and curiosity."],
+    ["Originals", "Examines how non‑conformists drive innovation and change. Highlights the behaviors that help new ideas succeed."],
+    ["Give and Take", "Shows how generosity can be a competitive advantage when practiced wisely. Explores different reciprocity styles and their impact on success."],
+    ["Quiet", "Explores the strengths of introverts and how they contribute to leadership and creativity. Encourages environments where all personality types thrive."],
+    ["Presence", "Shows how body language and mindset influence confidence and performance. Encourages practices that build personal presence."],
+    ["The Obstacle Is the Way", "Uses Stoic philosophy to show how adversity becomes a path to growth. Encourages resilience and perspective."],
+    ["Ego Is the Enemy", "Explores how ego undermines success and how humility drives long‑term achievement. Encourages discipline and self‑awareness."],
+    ["The Motive", "Challenges leaders to examine why they lead and how their motives shape organizational health. Encourages responsibility over reward."],
+    ["Unleashed", "Shows how leaders empower others by removing barriers and building trust. Focuses on inclusion and shared success."],
+    ["How to Win Friends and Influence People", "A classic guide to interpersonal effectiveness through empathy, listening, and positive influence. Offers timeless principles for building relationships."],
+    ["Directors That Work", "Explores how boards operate and how directors contribute to organizational governance. Focuses on accountability, oversight, and strategic guidance."]
   ]);
+
+  const domainDescriptions = new Map([
+    ['Management', 'examines how organizations can be led, structured, and improved, connecting management principles with practical choices about people, execution, and results'],
+    ['Leadership', 'explores the judgment, character, and relationships involved in leading others, with lessons for building trust and helping teams perform'],
+    ['Psychology', 'investigates how people think, feel, and behave, offering a useful lens for understanding motivation, relationships, and decision-making'],
+    ['Finance', 'explains ideas that shape investing, markets, and financial judgment, helping readers evaluate risk, value, and long-term outcomes'],
+    ['Philosophy', 'engages enduring questions about knowledge, ethics, meaning, and the good life, inviting readers to test assumptions and reason more carefully'],
+    ['History', 'uses the people and events of the past to explain how societies change, revealing patterns that continue to inform present-day choices'],
+    ['Economics', 'examines how incentives, institutions, trade-offs, and markets shape human behavior and the allocation of scarce resources'],
+    ['Law', 'explores the rules, institutions, and reasoning that structure legal systems, clarifying how law affects rights, responsibilities, and public life'],
+    ['Political science', 'studies power, government, and political institutions, offering context for how collective decisions are made and contested'],
+    ['Mathematics', 'develops mathematical ideas and ways of reasoning, showing how abstraction, proof, and quantitative thinking illuminate complex problems'],
+    ['Physics', 'explores the principles that govern matter, energy, space, and time, connecting scientific discovery with a deeper picture of the physical world'],
+    ['Biology', 'examines living systems and evolution, showing how organisms adapt, interact, and produce the complexity found in nature'],
+    ['Engineering', 'shows how scientific principles and disciplined design turn constraints into reliable solutions to real-world problems'],
+    ['Computer science', 'explores computation, software, and information, linking foundational concepts with the systems that shape modern life'],
+    ['Artificial intelligence', 'examines the methods, possibilities, and consequences of intelligent machines, connecting technical progress with strategic and social questions'],
+    ['Literature', 'uses narrative, character, and language to illuminate human experience, inviting reflection on identity, society, and moral choice'],
+    ['Military history', 'examines conflict through strategy, leadership, technology, and human experience, drawing lessons from the causes and consequences of war'],
+    ['Architecture', 'explores how design, materials, place, and human needs come together in the built environment'],
+    ['Builders and Innovators', 'traces how ambitious people turn ideas into institutions, technologies, and lasting change through invention and execution'],
+    ['Business strategy', 'examines how organizations choose where to compete, create differentiated value, and sustain an advantage over time'],
+    ['Intelligence & Espionage', 'explores intelligence gathering, secrecy, analysis, and covert action, revealing how incomplete information shapes national decisions'],
+    ['Decision Making', 'offers tools for making sound choices under uncertainty, including ways to recognize bias, weigh evidence, and manage risk'],
+    ['Communication', 'explores how ideas are expressed, heard, and understood, with lessons for persuasion, clarity, and stronger professional relationships'],
+    ['Enterprise Architecture', 'connects business goals with organizational and technology design, showing how coherent systems support change at scale'],
+    ['Site Reliability and IT Operations', 'explains practices for operating dependable technology services, balancing reliability, speed, automation, and continuous learning'],
+    ['Engineering History', 'traces the people, inventions, and systems behind engineering progress, showing how technical breakthroughs reshape economies and daily life'],
+    ['Public Administration', 'examines how public institutions turn policy into action, with attention to governance, accountability, and effective service'],
+    ['Organizational Politics', 'explores power, influence, and competing interests inside organizations, helping readers navigate informal dynamics more thoughtfully'],
+    ['Constitutional Government', 'examines the principles, institutions, and debates that define constitutional democracy and protect individual liberty']
+  ]);
+
+  function descriptionFor(title) {
+    const existingDescription = bookDescriptions.get(title.textContent.trim());
+    if (existingDescription) return existingDescription;
+
+    const row = title.closest('tr');
+    const bookTitle = row?.dataset.title || title.textContent.trim();
+    const author = row?.dataset.author || 'its author';
+    const domain = row?.dataset.domain;
+    const subject = domainDescriptions.get(domain) || 'offers important ideas and perspectives for readers to consider';
+    return `${bookTitle}, by ${author}, ${subject}.`;
+  }
 
   const requestedBooks = [
   {
@@ -345,9 +433,7 @@
   if (heroCopy) heroCopy.textContent = heroCopy.textContent.replace(/\d+ enduring/, `${total} enduring`);
 
   tbody.querySelectorAll('.book-link').forEach(title => {
-    const description = bookDescriptions.get(title.textContent.trim());
-    if (!description) return;
-    title.dataset.description = description;
+    title.dataset.description = descriptionFor(title);
     title.classList.add('has-description');
   });
 
@@ -374,6 +460,22 @@
     button.setAttribute('aria-expanded', 'false');
     button.textContent = 'i';
     title.after(button);
+
+    title.addEventListener('pointerenter', event => {
+      showTooltip(title, title, event);
+    });
+    title.addEventListener('pointermove', event => {
+      if (activeTitle === title) positionTooltip(title, event);
+    });
+    title.addEventListener('pointerleave', () => {
+      if (activeTitle === title && !activeButton) hideTooltip();
+    });
+    title.addEventListener('focus', () => {
+      showTooltip(title);
+    });
+    title.addEventListener('blur', () => {
+      if (activeTitle === title && !activeButton) hideTooltip();
+    });
   });
 
   function hideTooltip() {
@@ -413,31 +515,6 @@
     if (button) button.setAttribute('aria-expanded', 'true');
     positionTooltip(anchor, pointer);
   }
-
-  document.addEventListener('pointerenter', event => {
-    const title = event.target.closest?.('.book-link[data-description]');
-    if (title) showTooltip(title, title, event);
-  }, true);
-
-  document.addEventListener('pointermove', event => {
-    if (activeTitle && event.target.closest?.('.book-link[data-description]') === activeTitle) {
-      positionTooltip(activeTitle, event);
-    }
-  });
-
-  document.addEventListener('pointerleave', event => {
-    const title = event.target.closest?.('.book-link[data-description]');
-    if (title && title === activeTitle && !activeButton) hideTooltip();
-  }, true);
-
-  document.addEventListener('focusin', event => {
-    const title = event.target.closest?.('.book-link[data-description]');
-    if (title) showTooltip(title);
-  });
-
-  document.addEventListener('focusout', event => {
-    if (event.target === activeTitle && !activeButton) hideTooltip();
-  });
 
   document.addEventListener('click', event => {
     const button = event.target.closest?.('.description-toggle');
