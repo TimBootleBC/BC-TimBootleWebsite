@@ -293,11 +293,10 @@ a {
 
 .capability {
   min-height: 178px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: block;
   padding: 32px 30px;
   color: #d8e2ed;
+  text-align: left;
   border-right: 1px solid rgba(255,255,255,0.12);
 }
 
