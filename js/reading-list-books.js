@@ -374,6 +374,22 @@
     button.setAttribute('aria-expanded', 'false');
     button.textContent = 'i';
     title.after(button);
+
+    title.addEventListener('pointerenter', event => {
+      showTooltip(title, title, event);
+    });
+    title.addEventListener('pointermove', event => {
+      if (activeTitle === title) positionTooltip(title, event);
+    });
+    title.addEventListener('pointerleave', () => {
+      if (activeTitle === title && !activeButton) hideTooltip();
+    });
+    title.addEventListener('focus', () => {
+      showTooltip(title);
+    });
+    title.addEventListener('blur', () => {
+      if (activeTitle === title && !activeButton) hideTooltip();
+    });
   });
 
   function hideTooltip() {
@@ -413,31 +429,6 @@
     if (button) button.setAttribute('aria-expanded', 'true');
     positionTooltip(anchor, pointer);
   }
-
-  document.addEventListener('pointerenter', event => {
-    const title = event.target.closest?.('.book-link[data-description]');
-    if (title) showTooltip(title, title, event);
-  }, true);
-
-  document.addEventListener('pointermove', event => {
-    if (activeTitle && event.target.closest?.('.book-link[data-description]') === activeTitle) {
-      positionTooltip(activeTitle, event);
-    }
-  });
-
-  document.addEventListener('pointerleave', event => {
-    const title = event.target.closest?.('.book-link[data-description]');
-    if (title && title === activeTitle && !activeButton) hideTooltip();
-  }, true);
-
-  document.addEventListener('focusin', event => {
-    const title = event.target.closest?.('.book-link[data-description]');
-    if (title) showTooltip(title);
-  });
-
-  document.addEventListener('focusout', event => {
-    if (event.target === activeTitle && !activeButton) hideTooltip();
-  });
 
   document.addEventListener('click', event => {
     const button = event.target.closest?.('.description-toggle');
