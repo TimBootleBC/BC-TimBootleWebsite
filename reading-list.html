@@ -206,6 +206,9 @@ color:#5f6c7b;
 
 :root {
   color-scheme: light dark;
+  --reading-tooltip-background: #10243a;
+  --reading-tooltip-border: #33465d;
+  --reading-tooltip-text: #ffffff;
 }
 
 .reading-dashboard {
@@ -459,6 +462,12 @@ color:#5f6c7b;
 }
 
 @media (prefers-color-scheme: dark) {
+  :root {
+    --reading-tooltip-background: #e8f0f8;
+    --reading-tooltip-border: #aebdcd;
+    --reading-tooltip-text: #07111d;
+  }
+
   .reading-library {
     --reading-border: #33465d;
     --reading-surface: #172435;
