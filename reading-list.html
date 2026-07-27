@@ -18,37 +18,6 @@
     --reading-navy: #10243a;
   }
 
-  .reading-summary {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 18px;
-    margin-bottom: 42px;
-  }
-
-  .reading-summary-card {
-    padding: 24px;
-    border: 1px solid var(--reading-border);
-    border-radius: 14px;
-    background: var(--reading-surface);
-    box-shadow: 0 10px 30px rgba(19, 32, 51, 0.05);
-    text-align: center;
-  }
-
-  .reading-summary-card strong {
-    display: block;
-    color: var(--reading-blue);
-    font-size: 2rem;
-    line-height: 1.1;
-  }
-
-  .reading-summary-card span {
-    display: block;
-    margin-top: 8px;
-    color: var(--reading-muted);
-    font-size: 0.92rem;
-    font-weight: 700;
-  }
-
   .reading-intro {
     max-width: 820px;
     margin-bottom: 28px;
@@ -178,18 +147,8 @@
   }
 
   @media (max-width: 760px) {
-    .reading-summary {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .reading-table th {
       top: 72px;
-    }
-  }
-
-  @media (max-width: 460px) {
-    .reading-summary {
-      grid-template-columns: 1fr;
     }
   }
 
@@ -253,38 +212,6 @@ color:#5f6c7b;
   display: grid;
   gap: 18px;
   margin-top: 24px;
-}
-
-.progress-overview {
-  padding: 18px 20px;
-  border: 1px solid var(--reading-border);
-  border-radius: 14px;
-  background: var(--reading-surface);
-  box-shadow: 0 10px 26px rgba(19, 32, 51, 0.05);
-}
-
-.progress-copy {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 10px;
-  color: var(--reading-navy);
-}
-
-.progress-track {
-  height: 12px;
-  overflow: hidden;
-  border-radius: 999px;
-  background: #e8edf4;
-}
-
-.progress-track span {
-  display: block;
-  width: 0;
-  height: 100%;
-  border-radius: inherit;
-  background: linear-gradient(90deg, #2b84ea, #18a66a);
-  transition: width .25s ease;
 }
 
 .reading-tools {
@@ -504,8 +431,6 @@ color:#5f6c7b;
     background: #0f1926;
   }
 
-  .reading-summary-card,
-  .progress-overview,
   .reading-table-wrap {
     background: #172435;
   }
@@ -536,10 +461,6 @@ color:#5f6c7b;
     background: #71b4ff;
     border-color: #71b4ff;
     color: #07111d;
-  }
-
-  .progress-track {
-    background: #2b3c50;
   }
 
   .domain-divider td {
@@ -665,7 +586,7 @@ color:#5f6c7b;
 </nav>
 </div>
 </header>
-<main><section class="page-hero"><div class="container narrow"><p class="eyebrow">Reading List</p><h1>Great Books &amp; Executive Knowledge Library</h1><p>A curated queue of 353 enduring and executive-relevant works across management, leadership, philosophy, psychology, history, economics, law, politics, science, technology, strategy, finance, architecture, and literature.</p></div></section><section class="section section-light"><div class="container reading-library"><div aria-label="Reading list summary" class="reading-summary"><div class="reading-summary-card"><strong>353</strong><span>Total works</span></div><div class="reading-summary-card"><strong>29</strong><span>Domains</span></div><div class="reading-summary-card"><strong>205</strong><span>High leverage</span></div><div class="reading-summary-card"><strong>148</strong><span>Useful</span></div></div><div class="reading-intro"><h2>Complete Library</h2><p>The works below are grouped by domain and include their tier, author, reading status, and impact. The list is designed as a long-term multidisciplinary program rather than a short-term reading queue.</p>
+<main><section class="page-hero"><div class="container narrow"><p class="eyebrow">Reading List</p><h1>Great Books &amp; Executive Knowledge Library</h1><p>A curated queue of 353 enduring and executive-relevant works across management, leadership, philosophy, psychology, history, economics, law, politics, science, technology, strategy, finance, architecture, and literature.</p></div></section><section class="section section-light"><div class="container reading-library"><div class="reading-intro"><h2>Complete Library</h2><p>The works below are grouped by domain and include their tier, author, reading status, and impact. The list is designed as a long-term multidisciplinary program rather than a short-term reading queue.</p>
 <div class="progress-legend">
 <strong>Legend:</strong>
 <span class="progress-pill progress-finished">✓ Finished</span>
@@ -683,15 +604,6 @@ color:#5f6c7b;
 
 
 <div aria-label="Reading list controls" class="reading-dashboard">
-<div class="progress-overview">
-<div class="progress-copy">
-<strong id="progressText">1 of 353 finished</strong>
-<span id="progressPercent">0%</span>
-</div>
-<div aria-hidden="true" class="progress-track">
-<span id="progressBar"></span>
-</div>
-</div>
 <div class="reading-tools">
 <label class="search-wrap" for="bookSearch">
 <span class="visually-hidden">Search the reading list</span>
@@ -3239,9 +3151,6 @@ color:#5f6c7b;
   const publishButton = document.getElementById('publishReadingChanges');
   const syncStatus = document.getElementById('readingSyncStatus');
   const chips = [...document.querySelectorAll('.domain-chip')];
-  const progressText = document.getElementById('progressText');
-  const progressPercent = document.getElementById('progressPercent');
-  const progressBar = document.getElementById('progressBar');
 
   // Keep the source markup merge-friendly, then progressively enhance status
   // labels into accessible controls when JavaScript is available.
@@ -3361,16 +3270,7 @@ color:#5f6c7b;
 
   function renderAllRows() {
     baseRows.forEach(renderRow);
-    updateProgress();
-    updateImpactSummary();
     applyFilters();
-  }
-
-  function updateImpactSummary() {
-    const summaryValues = document.querySelectorAll('.reading-summary-card strong');
-    if (summaryValues.length < 4) return;
-    summaryValues[2].textContent = baseRows.filter(row => row.dataset.impact === '4').length;
-    summaryValues[3].textContent = baseRows.filter(row => row.dataset.impact === '3').length;
   }
 
   function refreshPublishStatus(message) {
@@ -3441,14 +3341,6 @@ color:#5f6c7b;
       }
       priorDomain = domain;
     });
-  }
-
-  function updateProgress() {
-    const finished = baseRows.filter(row => normalize(row.dataset.progress).includes('finished')).length;
-    const pct = Math.round((finished / baseRows.length) * 100);
-    progressText.textContent = `${finished} of ${baseRows.length} finished`;
-    progressPercent.textContent = `${pct}%`;
-    progressBar.style.width = `${pct}%`;
   }
 
   function applyFilters() {
@@ -3523,7 +3415,6 @@ color:#5f6c7b;
       const next = STATUS_ORDER[(STATUS_ORDER.indexOf(current) + 1) % STATUS_ORDER.length];
       recordDraft(row.id, 'status', next);
       renderRow(row);
-      updateProgress();
       applyFilters();
     });
 
@@ -3532,7 +3423,6 @@ color:#5f6c7b;
       const next = IMPACT_ORDER[(IMPACT_ORDER.indexOf(current) + 1) % IMPACT_ORDER.length];
       recordDraft(row.id, 'impact', next);
       renderRow(row);
-      updateImpactSummary();
       applyFilters();
     });
   });
