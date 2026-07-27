@@ -675,7 +675,7 @@
 
   tbody.querySelectorAll('.book-link').forEach(title => {
     const description = bookDescriptions.get(title.textContent.trim());
-    if (!description) throw new Error(`Missing description for ${title.textContent.trim()}`);
+    if (!description) return;
     title.dataset.description = description;
     title.classList.add('has-description');
   });
