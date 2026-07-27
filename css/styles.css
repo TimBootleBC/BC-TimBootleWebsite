@@ -338,18 +338,12 @@ a {
   letter-spacing: -0.035em;
 }
 
-.profile-grid,
 .project-grid,
 .category-grid {
   display: grid;
   gap: 22px;
 }
 
-.profile-grid {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.card,
 .project-card,
 .category-card,
 .contact-card,
@@ -363,7 +357,6 @@ a {
 }
 
 .current-focus {
-  margin-top: 22px;
   padding: 28px;
 }
 
@@ -399,30 +392,17 @@ a {
   font-weight: 800;
 }
 
-.profile-grid .card {
-  display: flex;
-  flex-direction: column;
-}
-
-.profile-grid .button {
-  align-self: flex-start;
-  margin-top: auto;
-}
-
-.card,
 .project-card,
 .category-card {
   min-height: 260px;
   padding: 28px;
 }
 
-.card h3,
 .project-card h2,
 .category-card h2 {
   margin: 0 0 14px;
 }
 
-.card p,
 .project-card p,
 .category-card p {
   color: var(--ink-700);
@@ -555,7 +535,6 @@ a {
   }
 
   .capabilities,
-  .profile-grid,
   .focus-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -612,7 +591,6 @@ a {
   }
 
   .capabilities,
-  .profile-grid,
   .focus-grid,
   .project-grid,
   .category-grid,
