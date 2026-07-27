@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 6,
-  "updatedAt": "2026-07-26T06:08:25Z",
+  "revision": 7,
+  "updatedAt": "2026-07-27T02:20:03Z",
   "books": {
     "leadership-team-of-teams": {
       "status": "finished",
@@ -47,8 +47,7 @@
       "impact": 1
     },
     "management-the-five-dysfunctions-of-a-team": {
-      "status": "finished",
-      "impact": 5
+      "status": "finished"
     },
     "management-the-lean-startup": {
       "status": "finished"
