@@ -406,6 +406,46 @@ color:#5f6c7b;
   text-decoration: underline;
 }
 
+.book-description-tooltip {
+  position: fixed;
+  z-index: 10000;
+  max-width: min(300px, calc(100vw - 24px));
+  padding: 10px 12px;
+  border: 1px solid var(--reading-border);
+  border-radius: 9px;
+  background: var(--reading-navy);
+  color: var(--reading-surface);
+  box-shadow: 0 8px 24px rgba(19, 32, 51, .22);
+  font-size: .88rem;
+  font-weight: 500;
+  line-height: 1.45;
+  pointer-events: none;
+}
+
+.description-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  padding: 0;
+  border: 1px solid var(--reading-border);
+  border-radius: 50%;
+  background: var(--reading-surface);
+  color: var(--reading-blue);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .description-toggle {
+    display: inline-flex;
+  }
+}
+
 .visually-hidden {
   position: absolute !important;
   width: 1px !important;
@@ -478,6 +518,12 @@ color:#5f6c7b;
     border-color: #3c8c64;
     color: #a9e3bf;
   }
+
+  .book-description-tooltip {
+    background: #e8f0f8;
+    color: #07111d;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .45);
+  }
 }
 
 @media (max-width: 760px) {
@@ -540,6 +586,11 @@ color:#5f6c7b;
 
   .reading-table .title {
     min-width: 0;
+    grid-template-columns: 110px minmax(0, 1fr) auto;
+  }
+
+  .description-toggle {
+    display: inline-flex;
   }
 
   .favorite-cell {
@@ -641,7 +692,7 @@ color:#5f6c7b;
 <tbody>
 <tr data-author="Jim Collins" data-domain="Management" data-favorite="false" data-impact="4" data-progress="○ Not Started" data-title="Good to Great" id="management-good-to-great">
 <td data-label="Domain">Management</td>
-<td class="title" data-label="Title"><a class="book-link" href="#management-good-to-great">Good to Great</a></td>
+<td class="title" data-label="Title"><a class="book-link has-description" data-description="Explores why some companies make a sustained leap from good performance to exceptional performance." href="#management-good-to-great">Good to Great</a></td>
 <td data-label="Author">Jim Collins</td>
 <td data-label="Progress"><span class="progress-pill progress-not">○ Not Started</span></td>
 <td class="favorite-cell" data-label="Favorite"><button aria-label="Mark Good to Great as a favorite" aria-pressed="false" class="favorite-toggle" title="Toggle favorite" type="button">☆</button></td><td data-label="Impact"><button class="badge impact-toggle impact-4" type="button">High leverage</button></td>
