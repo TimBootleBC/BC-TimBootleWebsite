@@ -1,4 +1,55 @@
 (() => {
+  const bookDescriptions = new Map([
+    ["Good to Great", "Explains why certain companies break away from the pack and sustain exceptional performance. Highlights disciplined leadership, focused strategy, and the flywheel effect as core drivers of long‑term success."],
+    ["The First 90 Days", "Provides a structured plan for leaders entering new roles. Focuses on accelerating learning, building credibility, and securing early wins to establish momentum."],
+    ["The Five Dysfunctions of a Team", "Identifies the core behavioral issues that undermine team performance. Offers a practical model for building trust, embracing conflict, committing to decisions, and driving results."],
+    ["Essentialism", "A guide to eliminating non‑essential work and focusing on what truly matters. Encourages intentional decision‑making and disciplined simplicity to improve clarity and impact."],
+    ["Measure What Matters", "Introduces the OKR goal‑setting framework and shows how clear objectives drive alignment and execution. Uses real‑world examples to illustrate how organizations stay focused on what matters most."],
+    ["The Hard Thing About Hard Things", "A candid look at the toughest challenges leaders face, from layoffs to pivots to existential crises. Offers practical advice for navigating uncertainty and making painful decisions."],
+    ["Radical Candor", "Teaches leaders how to give direct, honest feedback while maintaining genuine care for their people. Helps build trust, improve communication, and avoid toxic workplace behaviors."],
+    ["No Rules Rules", "Explores Netflix’s unconventional culture built on freedom, responsibility, and radical transparency. Shows how removing unnecessary controls can increase innovation and accountability."],
+    ["Rework", "Challenges traditional business assumptions and promotes simplicity, speed, and pragmatism. Encourages building only what’s essential and avoiding corporate busywork."],
+    ["The Culture Map", "Provides a framework for understanding how cultural differences shape communication, leadership, and decision‑making. Helps global teams collaborate more effectively."],
+    ["Multipliers", "Shows how great leaders amplify the intelligence and capability of their teams. Identifies behaviors that unlock potential and avoid unintentionally diminishing others."],
+    ["The Advantage", "Argues that organizational health is the ultimate competitive advantage. Offers a practical approach to building clarity, alignment, and cohesive leadership teams."],
+    ["The Making of a Manager", "A practical guide for new managers learning how to lead, give feedback, and grow into leadership. Shares real‑world lessons from early management experiences."],
+    ["The Manager’s Path", "A roadmap for engineering leadership, covering mentorship, tech lead roles, management, and organizational leadership. Explains how technical leaders evolve through each stage."],
+    ["Drive", "Reveals that autonomy, mastery, and purpose—not rewards—are the true drivers of motivation. Reframes how leaders should inspire performance and engagement."],
+    ["The Fearless Organization", "Explains psychological safety and why it’s essential for innovation and learning. Provides tools for creating environments where people feel safe speaking up."],
+    ["Reinventing Organizations", "Explores self‑managed, purpose‑driven organizational models. Presents a vision for more adaptive, human‑centered workplaces."],
+    ["An Everyone Culture", "Describes organizations that embed employee development into daily work. Blends psychology with organizational strategy to create continuous growth environments."],
+    ["Work Rules!", "Shares principles for building high‑performing cultures through transparency, empowerment, and data‑driven people practices. Highlights lessons from modern talent‑driven organizations."],
+    ["Powerful", "Advocates for treating employees like adults and removing unnecessary processes. Focuses on candor, accountability, and building high‑trust environments."],
+    ["Scrum", "Explains the origins and principles of Scrum and how iterative work increases productivity. Provides practical guidance for implementing agile practices."],
+    ["The Lean Startup", "Introduces rapid experimentation, validated learning, and build‑measure‑learn cycles. Helps teams reduce waste and build products that customers actually want."],
+    ["Scaling Up Excellence", "Examines how organizations scale behaviors, not just processes. Highlights the cultural and operational challenges of growth."],
+    ["Execution", "Argues that execution is a discipline requiring clear goals, accountability, and follow‑through. Shows how leaders connect strategy to daily actions."],
+    ["Decisive", "Provides a framework for making better decisions by widening options, testing assumptions, and preparing for uncertainty. Helps reduce common cognitive traps."],
+    ["Nine Lies About Work", "Challenges popular management myths and reframes how organizations should measure performance and build teams. Emphasizes strengths‑based leadership."],
+    ["Team Topologies", "Presents a model for structuring software teams to improve flow, reduce cognitive load, and scale effectively. Focuses on clear interaction modes and team boundaries."],
+    ["The Phoenix Project", "A novel that illustrates DevOps principles through a fictional IT rescue mission. Shows how workflow, bottlenecks, and collaboration shape organizational performance."],
+    ["Accelerate", "Summarizes research on high‑performing technology organizations and identifies key practices that drive speed and stability. Provides evidence‑based guidance for DevOps transformation."],
+    ["The DevOps Handbook", "A comprehensive guide to implementing DevOps practices across development and operations. Focuses on flow, feedback, and continuous learning."],
+    ["The 4 Disciplines of Execution", "Introduces a system for achieving strategic goals through focus, leverage, engagement, and accountability. Helps teams execute on their most important priorities."],
+    ["Great by Choice", "Examines companies that thrive in uncertainty and identifies behaviors that drive consistent performance. Highlights discipline, empirical decision‑making, and productive paranoia."],
+    ["Turn the Ship Around!", "Shows how empowering people at every level transforms performance. Demonstrates how intent‑based leadership builds ownership and accountability."],
+    ["The Coaching Habit", "Teaches simple coaching questions that help leaders guide others more effectively. Encourages curiosity over advice‑giving."],
+    ["Trillion Dollar Coach", "Shares leadership lessons focused on trust, candor, and team cohesion. Highlights coaching as a force multiplier."],
+    ["Principles", "Outlines a system of decision‑making and life management built on clear principles. Encourages radical transparency and thoughtful reflection."],
+    ["The Checklist Manifesto", "Shows how checklists improve reliability in complex environments. Demonstrates their impact in medicine, aviation, and business."],
+    ["Thinking in Systems", "Introduces systems thinking and explains how feedback loops, delays, and structures shape behavior. Helps leaders understand complex dynamics."],
+    ["Good Strategy/Bad Strategy", "Explains what makes strategy effective and why many plans fail. Emphasizes clear diagnosis, guiding policies, and coherent actions."],
+    ["Blue Ocean Strategy", "Shows how companies create uncontested market space by shifting focus from competition to value innovation. Provides tools for strategic differentiation."],
+    ["Playing to Win", "Presents a practical strategy framework built around choices about where to play and how to win. Helps leaders make clear, decisive strategic decisions."],
+    ["Competing Against Luck", "Introduces Jobs‑to‑Be‑Done theory and explains how understanding customer motivations drives innovation. Helps teams build products that solve real problems."],
+    ["The Innovator’s Solution", "Explores how companies can create and sustain disruptive innovation. Provides guidance for identifying new growth opportunities."],
+    ["The Outsiders", "Profiles unconventional CEOs who delivered exceptional returns through disciplined capital allocation. Highlights independent thinking and decentralized management."],
+    ["The Everything Store", "Chronicles the rise of Amazon and the principles behind its relentless customer focus and long‑term thinking. Reveals how bold bets shaped the company."],
+    ["Creativity, Inc.", "Explores how creative cultures balance artistry and discipline. Offers lessons on leadership, candor, and protecting creative processes."],
+    ["The Amazon Management System", "Breaks down Amazon’s operating principles, including mechanisms, metrics, and leadership behaviors. Shows how disciplined systems drive innovation."],
+    ["Remote", "Advocates for remote work and explains how distributed teams can be productive, aligned, and engaged. Offers practical guidance for modern work environments."]
+  ]);
+
   const requestedBooks = [
   {
     "title": "Principles",
@@ -292,6 +343,13 @@
   if (progressText) progressText.textContent = `${rows.filter(row => normalize(row.dataset.progress).includes('finished')).length} of ${total} finished`;
   const heroCopy = document.querySelector('.page-hero p:last-child');
   if (heroCopy) heroCopy.textContent = heroCopy.textContent.replace(/\d+ enduring/, `${total} enduring`);
+
+  tbody.querySelectorAll('.book-link').forEach(title => {
+    const description = bookDescriptions.get(title.textContent.trim());
+    if (!description) return;
+    title.dataset.description = description;
+    title.classList.add('has-description');
+  });
 
   const describedTitles = [...tbody.querySelectorAll('.book-link[data-description]')];
   if (!describedTitles.length) return;
