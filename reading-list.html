@@ -412,16 +412,18 @@ color:#5f6c7b;
 .book-description-tooltip {
   position: fixed;
   z-index: 10000;
-  max-width: min(300px, calc(100vw - 24px));
-  padding: 10px 12px;
-  border: 1px solid var(--reading-border);
-  border-radius: 9px;
-  background: var(--reading-navy);
-  color: var(--reading-surface);
-  box-shadow: 0 8px 24px rgba(19, 32, 51, .22);
-  font-size: .88rem;
+  width: max-content;
+  max-width: min(440px, calc(100vw - 24px));
+  padding: 18px 20px;
+  border: 1px solid #dce3ec;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #10243a;
+  box-shadow: 0 10px 30px rgba(19, 32, 51, .28);
+  font-size: 1.05rem;
   font-weight: 500;
-  line-height: 1.45;
+  line-height: 1.55;
+  opacity: 1;
   pointer-events: none;
 }
 
@@ -529,9 +531,9 @@ color:#5f6c7b;
   }
 
   .book-description-tooltip {
-    background: #e8f0f8;
-    color: #07111d;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, .45);
+    background: #ffffff;
+    color: #10243a;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
   }
 }
 
