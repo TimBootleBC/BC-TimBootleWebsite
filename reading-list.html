@@ -3499,7 +3499,6 @@ color:#5f6c7b;
   function refreshPublishStatus(message) {
     const changes = Object.keys(draft.books).length;
     publishButton.disabled = changes === 0;
-    publishButton.textContent = changes ? `Publish ${changes} change${changes === 1 ? '' : 's'}` : 'Publish changes';
     syncStatus.classList.toggle('has-changes', changes > 0);
     syncStatus.textContent = message || (changes
       ? `${changes} book${changes === 1 ? '' : 's'} changed in this browser and not yet published.`
@@ -3651,21 +3650,12 @@ color:#5f6c7b;
   });
 
   publishButton.addEventListener('click', () => {
-    const books = {};
-    baseRows.forEach(row => {
-      const current = effectiveBook(row.id);
-      const defaults = defaultState.get(row.id);
-      const saved = {};
-      if (current.status !== defaults.status) saved.status = current.status;
-      if (current.favorite !== defaults.favorite) saved.favorite = current.favorite;
-      if (current.impact !== defaults.impact) saved.impact = current.impact;
-      if (Object.keys(saved).length) books[row.id] = saved;
-    });
-
     const payload = {
       schemaVersion: 1,
       baseRevision: publishedState.revision,
-      books
+      // Send only this browser's edits. The publisher merges them with the
+      // current revision and writes a complete record for every book.
+      books: draft.books
     };
     const marker = `<!-- reading-list-update\n${JSON.stringify(payload, null, 2)}\n-->`;
     const body = [
