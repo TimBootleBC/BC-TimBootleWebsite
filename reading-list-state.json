@@ -1,8 +1,11 @@
 {
   "schemaVersion": 1,
-  "revision": 7,
-  "updatedAt": "2026-07-27T02:20:03Z",
+  "revision": 8,
+  "updatedAt": "2026-07-28T00:38:43Z",
   "books": {
+    "engineering-history-longitude-the-true-story-of-a-lone-genius-who-solved-the-greatest-scientific-problem-of-his-time": {
+      "status": "finished"
+    },
     "leadership-team-of-teams": {
       "status": "finished",
       "favorite": true
@@ -43,7 +46,6 @@
       "status": "finished"
     },
     "management-the-first-90-days": {
-      "favorite": true,
       "impact": 1
     },
     "management-the-five-dysfunctions-of-a-team": {
