@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 10,
-  "updatedAt": "2026-07-28T01:00:51Z",
+  "revision": 11,
+  "updatedAt": "2026-07-28T01:07:49Z",
   "books": {
     "architecture-101-things-i-learned-in-architecture-school": {
       "status": "not-started",
@@ -1340,7 +1340,7 @@
     },
     "management-the-five-dysfunctions-of-a-team": {
       "status": "finished",
-      "favorite": false,
+      "favorite": true,
       "impact": 4
     },
     "management-the-hard-thing-about-hard-things": {
