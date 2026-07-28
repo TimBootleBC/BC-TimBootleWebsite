@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 11,
-  "updatedAt": "2026-07-28T01:07:49Z",
+  "revision": 12,
+  "updatedAt": "2026-07-28T01:45:59Z",
   "books": {
     "architecture-101-things-i-learned-in-architecture-school": {
       "status": "not-started",
@@ -494,7 +494,7 @@
       "impact": 4
     },
     "engineering-history-longitude-the-true-story-of-a-lone-genius-who-solved-the-greatest-scientific-problem-of-his-time": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
@@ -994,8 +994,8 @@
       "impact": 4
     },
     "leadership-team-of-teams": {
-      "status": "finished",
-      "favorite": true,
+      "status": "not-started",
+      "favorite": false,
       "impact": 4
     },
     "leadership-the-21-irrefutable-laws-of-leadership": {
@@ -1079,7 +1079,7 @@
       "impact": 4
     },
     "literature-don-quixote": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
@@ -1089,7 +1089,7 @@
       "impact": 3
     },
     "literature-hamlet": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 3
     },
@@ -1099,12 +1099,12 @@
       "impact": 3
     },
     "literature-pride-and-prejudice": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 3
     },
     "literature-the-aeneid": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
@@ -1119,12 +1119,12 @@
       "impact": 4
     },
     "literature-the-iliad": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
     "literature-the-odyssey": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
@@ -1139,7 +1139,7 @@
       "impact": 3
     },
     "management-accelerate": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 3
     },
@@ -1179,12 +1179,12 @@
       "impact": 4
     },
     "management-essentialism": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
     "management-execution": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
@@ -1194,12 +1194,12 @@
       "impact": 3
     },
     "management-good-to-great": {
-      "status": "finished",
-      "favorite": true,
+      "status": "not-started",
+      "favorite": false,
       "impact": 5
     },
     "management-great-by-choice": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 3
     },
@@ -1214,7 +1214,7 @@
       "impact": 3
     },
     "management-measure-what-matters": {
-      "status": "reading",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
@@ -1319,7 +1319,7 @@
       "impact": 4
     },
     "management-the-devops-handbook": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 3
     },
@@ -1339,12 +1339,12 @@
       "impact": 1
     },
     "management-the-five-dysfunctions-of-a-team": {
-      "status": "finished",
-      "favorite": true,
+      "status": "not-started",
+      "favorite": false,
       "impact": 4
     },
     "management-the-hard-thing-about-hard-things": {
-      "status": "reading",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
@@ -1354,7 +1354,7 @@
       "impact": 3
     },
     "management-the-lean-startup": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
@@ -1374,7 +1374,7 @@
       "impact": 3
     },
     "management-the-phoenix-project": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 3
     },
@@ -1389,7 +1389,7 @@
       "impact": 3
     },
     "management-turn-the-ship-around": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 3
     },
@@ -1599,7 +1599,7 @@
       "impact": 3
     },
     "philosophy-the-republic": {
-      "status": "finished",
+      "status": "not-started",
       "favorite": false,
       "impact": 4
     },
