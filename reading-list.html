@@ -276,18 +276,6 @@ color:#5f6c7b;
   cursor: not-allowed;
 }
 
-.sync-status {
-  flex: 1 0 100%;
-  margin: 0;
-  color: var(--reading-muted);
-  font-size: .9rem;
-}
-
-.sync-status.has-changes {
-  color: #9a5700;
-  font-weight: 700;
-}
-
 .progress-toggle {
   border: 0;
   font: inherit;
@@ -681,7 +669,6 @@ color:#5f6c7b;
 <button aria-pressed="false" id="collapseDomains" type="button">Collapse domains</button>
 <button disabled id="publishReadingChanges" type="button">Publish changes</button>
 <span aria-live="polite" id="bookCount"></span>
-<p aria-live="polite" class="sync-status" id="readingSyncStatus">Loading published reading status…</p>
 </div>
 <div aria-label="Filter by domain" class="domain-filters">
 <button class="domain-chip active" data-domain="all" type="button">All</button>
@@ -690,7 +677,7 @@ color:#5f6c7b;
 </div>
 </div><section aria-label="Books queued for reading" class="reading-table-wrap">
 <table aria-describedby="bookCount" class="reading-table" data-labels="Domain|Title|Author|Progress|Favorite|Impact">
-<caption class="reading-caption">Reading progress across the Executive Knowledge Library.</caption>
+<caption class="reading-caption">Non-Fiction Knowledge Library</caption>
 <thead>
 <tr>
 <th class="sortable" scope="col">Domain</th>
@@ -3372,7 +3359,6 @@ color:#5f6c7b;
   const favoritesOnly = document.getElementById('favoritesOnly');
   const collapseButton = document.getElementById('collapseDomains');
   const publishButton = document.getElementById('publishReadingChanges');
-  const syncStatus = document.getElementById('readingSyncStatus');
   const chips = [...document.querySelectorAll('.domain-chip')];
 
   // Keep the source markup merge-friendly, then progressively enhance status
@@ -3451,7 +3437,7 @@ color:#5f6c7b;
 
   function saveDraft() {
     localStorage.setItem(DRAFT_KEY, JSON.stringify(draft));
-    refreshPublishStatus();
+    updatePublishButton();
   }
 
   function recordDraft(id, field, value) {
@@ -3496,7 +3482,7 @@ color:#5f6c7b;
     applyFilters();
   }
 
-  function refreshPublishStatus(message) {
+  function updatePublishButton() {
     const changes = Object.keys(draft.books).length;
     publishButton.disabled = changes === 0;
     syncStatus.classList.toggle('has-changes', changes > 0);
@@ -3533,7 +3519,6 @@ color:#5f6c7b;
       renderAllRows();
     } catch (error) {
       console.warn('Could not load published reading state.', error);
-      refreshPublishStatus('Published status could not be loaded. Local changes will remain in this browser.');
       renderAllRows();
     }
   }
@@ -3709,7 +3694,7 @@ color:#5f6c7b;
   }
 
   renderAllRows();
-  refreshPublishStatus();
+  updatePublishButton();
   loadPublishedState();
   applyDeepLink();
   window.addEventListener('hashchange', applyDeepLink);
