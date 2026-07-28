@@ -3485,6 +3485,10 @@ color:#5f6c7b;
   function updatePublishButton() {
     const changes = Object.keys(draft.books).length;
     publishButton.disabled = changes === 0;
+    syncStatus.classList.toggle('has-changes', changes > 0);
+    syncStatus.textContent = message || (changes
+      ? `${changes} book${changes === 1 ? '' : 's'} changed in this browser and not yet published.`
+      : `Reading status is synced with published revision ${publishedState.revision}.`);
   }
 
   function reconcileDraft() {
