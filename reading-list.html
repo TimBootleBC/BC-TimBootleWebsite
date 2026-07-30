@@ -204,7 +204,6 @@ color:#5f6c7b;
 .reading-table th.sortable:hover{text-decoration:underline}
 
 :root {
-  color-scheme: light dark;
   --reading-tooltip-background: #10243a;
   --reading-tooltip-border: #33465d;
   --reading-tooltip-text: #ffffff;
@@ -455,81 +454,48 @@ color:#5f6c7b;
   border: 0 !important;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --reading-tooltip-background: #e8f0f8;
-    --reading-tooltip-border: #aebdcd;
-    --reading-tooltip-text: #07111d;
+
+@media (max-width: 760px) {
+  .page-hero {
+    padding: 64px 0 72px;
   }
 
-  .reading-library {
-    --reading-border: #33465d;
-    --reading-surface: #172435;
-    --reading-muted: #aebdcd;
-    --reading-blue: #71b4ff;
-    --reading-navy: #edf5ff;
+  .page-hero h1 {
+    font-size: clamp(2.15rem, 10vw, 3rem);
+    overflow-wrap: anywhere;
   }
 
-  .section-light {
-    background: #0f1926;
+  .section {
+    padding: 58px 0;
   }
 
-  .reading-table-wrap {
-    background: #172435;
+  .reading-caption {
+    padding: 14px;
   }
 
-  .reading-table tbody tr:nth-child(even) {
-    background: #1c2c40;
-  }
-
-  .reading-table tbody tr:hover {
-    background: #233a53;
-  }
-
-  .reading-table th {
-    background: #07111d;
+  .reading-library,
+  .reading-table-wrap,
+  .reading-dashboard,
+  .reading-tools,
+  .search-wrap {
+    width: 100%;
+    min-width: 0;
   }
 
   #bookSearch,
   #progressFilter,
   #impactFilter,
   #favoritesOnly,
-  .domain-chip {
-    background: #132132;
-    border-color: #40546b;
-    color: #e8f0f8;
+  #publishReadingChanges {
+    width: 100%;
   }
 
-  .domain-chip.active {
-    background: #71b4ff;
-    border-color: #71b4ff;
-    color: #07111d;
+  .reading-table {
+    width: 100%;
+    min-width: 0;
+    table-layout: fixed;
   }
 
-  .domain-divider td {
-    background: #22384f !important;
-  }
-
-  .progress-not {
-    background: #243344;
-    border-color: #4b5d71;
-    color: #cad4df;
-  }
-
-  .progress-finished {
-    background: #153829;
-    border-color: #3c8c64;
-    color: #a9e3bf;
-  }
-
-  .book-description-tooltip {
-    background: #ffffff;
-    color: #10243a;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
-  }
-}
-
-@media (max-width: 760px) {
   .reading-table-wrap {
     overflow: visible;
     border: 0;
@@ -568,9 +534,10 @@ color:#5f6c7b;
 
   .reading-table td {
     display: grid;
-    grid-template-columns: 110px minmax(0, 1fr);
-    gap: 12px;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 10px;
     padding: 11px 14px;
+    overflow-wrap: anywhere;
     border-bottom: 1px solid var(--reading-border);
   }
 
@@ -589,7 +556,7 @@ color:#5f6c7b;
 
   .reading-table .title {
     min-width: 0;
-    grid-template-columns: 110px minmax(0, 1fr) auto;
+    grid-template-columns: 90px minmax(0, 1fr) auto;
   }
 
   .description-toggle {
@@ -640,7 +607,7 @@ color:#5f6c7b;
 </nav>
 </div>
 </header>
-<main><section class="page-hero"><div class="container narrow"><p class="eyebrow">Reading List</p><h1>Great Books &amp; Executive Knowledge Library</h1><p>A curated queue of 400 enduring and executive-relevant works across management, leadership, philosophy, psychology, history, economics, law, politics, science, technology, strategy, finance, architecture, and literature.</p></div></section><section class="section section-light"><div class="container reading-library"><div class="reading-intro"><h2>Complete Library</h2><p>The works below are grouped by domain and include their tier, author, reading status, and impact. The list is designed as a long-term multidisciplinary program rather than a short-term reading queue.</p>
+<main><section class="page-hero"><div class="container narrow"><p class="eyebrow">Reading List</p><h1>Great Books &amp; Executive Knowledge Library</h1><p>A curated queue of 400 enduring and executive-relevant works across management, leadership, philosophy, psychology, history, economics, law, politics, science, technology, strategy, finance, architecture, and literature.</p></div></section><section class="section section-light"><div class="container reading-library"><div class="reading-intro"><h2>Complete Library</h2><p>The works below are grouped by domain and include their author, reading progress, favorite status, and expected impact. The list is designed as a long-term multidisciplinary program rather than a short-term reading queue.</p>
 <div class="progress-legend">
 <strong>Legend:</strong>
 <span class="progress-pill progress-finished">✓ Finished</span>
