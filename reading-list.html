@@ -216,6 +216,12 @@ color:#5f6c7b;
   margin-top: 24px;
 }
 
+.filter-heading {
+  margin: 0;
+  color: var(--reading-navy);
+  font-weight: 800;
+}
+
 .reading-tools {
   display: flex;
   gap: 10px;
@@ -230,8 +236,8 @@ color:#5f6c7b;
 
 #bookSearch,
 #progressFilter,
+#impactFilter,
 #favoritesOnly,
-#collapseDomains,
 #publishReadingChanges {
   min-height: 44px;
   border: 1px solid #cfd6df;
@@ -247,12 +253,12 @@ color:#5f6c7b;
   padding: 0 14px;
 }
 
-#progressFilter {
+#progressFilter,
+#impactFilter {
   padding: 0 36px 0 12px;
 }
 
 #favoritesOnly,
-#collapseDomains,
 #publishReadingChanges {
   padding: 0 14px;
   cursor: pointer;
@@ -287,8 +293,7 @@ color:#5f6c7b;
   outline-offset: 2px;
 }
 
-#favoritesOnly[aria-pressed="true"],
-#collapseDomains[aria-pressed="true"] {
+#favoritesOnly[aria-pressed="true"] {
   background: #edf5ff;
   border-color: #7cafea;
   color: #175fae;
@@ -487,8 +492,8 @@ color:#5f6c7b;
 
   #bookSearch,
   #progressFilter,
+  #impactFilter,
   #favoritesOnly,
-  #collapseDomains,
   .domain-chip {
     background: #132132;
     border-color: #40546b;
@@ -653,6 +658,7 @@ color:#5f6c7b;
 
 
 <div aria-label="Reading list controls" class="reading-dashboard">
+<div class="filter-heading">Filter by</div>
 <div class="reading-tools">
 <label class="search-wrap" for="bookSearch">
 <span class="visually-hidden">Search the reading list</span>
@@ -665,7 +671,14 @@ color:#5f6c7b;
 <option value="not started">Not started</option>
 </select>
 <button aria-pressed="false" id="favoritesOnly" type="button">☆ Favorites</button>
-<button aria-pressed="false" id="collapseDomains" type="button">Collapse domains</button>
+<select aria-label="Filter by impact" id="impactFilter">
+<option value="all">All impacts</option>
+<option value="5">Transformative</option>
+<option value="4">High leverage</option>
+<option value="3">Useful</option>
+<option value="2">Niche</option>
+<option value="1">Optional</option>
+</select>
 <button disabled id="publishReadingChanges" type="button">Publish changes</button>
 <span aria-live="polite" id="bookCount"></span>
 </div>
@@ -3529,8 +3542,8 @@ color:#5f6c7b;
   const search = document.getElementById('bookSearch');
   const count = document.getElementById('bookCount');
   const progressFilter = document.getElementById('progressFilter');
+  const impactFilter = document.getElementById('impactFilter');
   const favoritesOnly = document.getElementById('favoritesOnly');
-  const collapseButton = document.getElementById('collapseDomains');
   const publishButton = document.getElementById('publishReadingChanges');
   const chips = [...document.querySelectorAll('.domain-chip')];
 
@@ -3547,7 +3560,6 @@ color:#5f6c7b;
 
   let activeDomain = 'all';
   let showFavoritesOnly = false;
-  let allCollapsed = false;
   let publishedState = { schemaVersion: 1, revision: 0, books: {} };
   const collapsedDomains = new Set();
   const defaultState = new Map();
@@ -3722,16 +3734,18 @@ color:#5f6c7b;
   function applyFilters() {
     const query = normalize(search.value);
     const selectedProgress = normalize(progressFilter.value);
+    const selectedImpact = impactFilter.value;
 
     baseRows.forEach(row => {
       const searchable = normalize(`${row.dataset.domain} ${row.dataset.title} ${row.dataset.author} ${row.dataset.progress} impact ${row.dataset.impact} ${IMPACT[row.dataset.impact]}`);
       const domainMatch = activeDomain === 'all' || row.dataset.domain === activeDomain;
       const progressMatch = selectedProgress === 'all' || normalize(row.dataset.progress).includes(selectedProgress);
+      const impactMatch = selectedImpact === 'all' || row.dataset.impact === selectedImpact;
       const favoriteMatch = !showFavoritesOnly || row.dataset.favorite === 'true';
       const searchMatch = !query || searchable.includes(query);
       const collapsed = collapsedDomains.has(row.dataset.domain);
 
-      row.style.display = domainMatch && progressMatch && favoriteMatch && searchMatch ? '' : 'none';
+      row.style.display = domainMatch && progressMatch && impactMatch && favoriteMatch && searchMatch ? '' : 'none';
       row.classList.toggle('is-collapsed-book', collapsed && row.style.display !== 'none');
     });
 
@@ -3750,6 +3764,7 @@ color:#5f6c7b;
 
   search.addEventListener('input', applyFilters);
   progressFilter.addEventListener('change', applyFilters);
+  impactFilter.addEventListener('change', applyFilters);
 
   favoritesOnly.addEventListener('click', () => {
     showFavoritesOnly = !showFavoritesOnly;
@@ -3758,15 +3773,6 @@ color:#5f6c7b;
     applyFilters();
   });
 
-  collapseButton.addEventListener('click', () => {
-    allCollapsed = !allCollapsed;
-    const domains = [...new Set(baseRows.map(row => row.dataset.domain))];
-    collapsedDomains.clear();
-    if (allCollapsed) domains.forEach(domain => collapsedDomains.add(domain));
-    collapseButton.setAttribute('aria-pressed', String(allCollapsed));
-    collapseButton.textContent = allCollapsed ? 'Expand domains' : 'Collapse domains';
-    applyFilters();
-  });
 
   chips.forEach(chip => {
     chip.addEventListener('click', () => {
