@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 17,
-  "updatedAt": "2026-07-31T00:23:37Z",
+  "revision": 18,
+  "updatedAt": "2026-07-31T00:31:58Z",
   "books": {
     "architecture-101-things-i-learned-in-architecture-school": {
       "status": "not-started",
@@ -1290,7 +1290,7 @@
     },
     "management-the-advantage": {
       "status": "not-started",
-      "favorite": false,
+      "favorite": true,
       "impact": 3
     },
     "management-the-alliance": {
