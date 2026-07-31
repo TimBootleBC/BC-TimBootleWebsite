@@ -292,13 +292,21 @@ color:#5f6c7b;
   margin: 0;
 }
 
-.reading-intro-heading #publishReadingChanges {
-  flex: 0 0 auto;
-  width: auto;
+.reading-intro-heading #publishReadingChanges,
+.reading-intro-heading #publishReadingChanges:disabled {
+  flex: 0 0 44px;
+  width: 44px;
   height: 44px;
   min-height: 44px;
   margin-left: auto;
-  white-space: nowrap;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: transparent;
+  opacity: 0;
+  cursor: default;
 }
 
 .progress-toggle {
@@ -627,7 +635,7 @@ color:#5f6c7b;
 </nav>
 </div>
 </header>
-<main><section class="page-hero"><div class="container narrow"><p class="eyebrow">Reading List</p><h1>Great Books &amp; Executive Knowledge Library</h1><p>A curated queue of 400 enduring and executive-relevant works across management, leadership, philosophy, psychology, history, economics, law, politics, science, technology, strategy, finance, architecture, and literature.</p></div></section><section class="section section-light"><div class="container reading-library"><div class="reading-intro"><div class="reading-intro-heading"><h2>Complete Library</h2><button aria-label="Publish reading list changes" disabled id="publishReadingChanges" type="button">Publish changes</button></div><p>The works below are grouped by domain and include their author, reading progress, favorite status, and expected impact. The list is designed as a long-term multidisciplinary program rather than a short-term reading queue.</p>
+<main><section class="page-hero"><div class="container narrow"><p class="eyebrow">Reading List</p><h1>Great Books &amp; Executive Knowledge Library</h1><p>A curated queue of 400 enduring and executive-relevant works across management, leadership, philosophy, psychology, history, economics, law, politics, science, technology, strategy, finance, architecture, and literature.</p></div></section><section class="section section-light"><div class="container reading-library"><div class="reading-intro"><div class="reading-intro-heading"><h2>Complete Library</h2><button aria-label="Publish reading list changes" disabled id="publishReadingChanges" tabindex="-1" type="button">Publish changes</button></div><p>The works below are grouped by domain and include their author, reading progress, favorite status, and expected impact. The list is designed as a long-term multidisciplinary program rather than a short-term reading queue.</p>
 <div class="progress-legend">
 <strong>Legend:</strong>
 <span class="progress-pill progress-finished">✓ Finished</span>
