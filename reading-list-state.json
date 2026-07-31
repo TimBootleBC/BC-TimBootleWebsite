@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "revision": 18,
-  "updatedAt": "2026-07-31T00:31:58Z",
+  "revision": 19,
+  "updatedAt": "2026-07-31T01:05:38Z",
   "books": {
     "architecture-101-things-i-learned-in-architecture-school": {
       "status": "not-started",
@@ -124,7 +124,7 @@
       "impact": 2
     },
     "biology-on-the-origin-of-species": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -139,7 +139,7 @@
       "impact": 4
     },
     "biology-the-double-helix": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -184,7 +184,7 @@
       "impact": 5
     },
     "builders-and-innovators-benjamin-franklin-an-american-life": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -199,7 +199,7 @@
       "impact": 4
     },
     "builders-and-innovators-steve-jobs": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -229,7 +229,7 @@
       "impact": 5
     },
     "business-strategy-built-to-last": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -249,7 +249,7 @@
       "impact": 5
     },
     "business-strategy-the-fifth-discipline": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -274,7 +274,7 @@
       "impact": 4
     },
     "communication-hbr-guide-to-better-business-writing": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -359,7 +359,7 @@
       "impact": 2
     },
     "computer-science-the-mythical-man-month": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -389,12 +389,12 @@
       "impact": 4
     },
     "decision-making-superforecasting-the-art-and-science-of-prediction": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
     "decision-making-the-black-swan-the-impact-of-the-highly-improbable": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -429,7 +429,7 @@
       "impact": 5
     },
     "economics-freakonomics": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 3
     },
@@ -469,12 +469,12 @@
       "impact": 5
     },
     "economics-the-wealth-of-nations": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
     "economics-why-nations-fail": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -484,7 +484,7 @@
       "impact": 4
     },
     "engineering-history-empires-of-light-edison-tesla-westinghouse-and-the-race-to-electrify-the-world": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -494,7 +494,7 @@
       "impact": 4
     },
     "engineering-history-longitude-the-true-story-of-a-lone-genius-who-solved-the-greatest-scientific-problem-of-his-time": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -504,7 +504,7 @@
       "impact": 4
     },
     "engineering-history-the-box-how-the-shipping-container-made-the-world-smaller-and-the-world-economy-bigger": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -534,7 +534,7 @@
       "impact": 4
     },
     "engineering-the-design-of-everyday-things": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -559,7 +559,7 @@
       "impact": 5
     },
     "engineering-to-engineer-is-human": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -634,7 +634,7 @@
       "impact": 2
     },
     "finance-liar-s-poker": {
-      "status": "not-started",
+      "status": "reading",
       "favorite": false,
       "impact": 4
     },
@@ -729,7 +729,7 @@
       "impact": 5
     },
     "history-history-of-the-peloponnesian-war": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -739,7 +739,7 @@
       "impact": 4
     },
     "history-sapiens-a-brief-history-of-humankind": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -849,7 +849,7 @@
       "impact": 2
     },
     "law-on-the-duty-of-civil-disobedience": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 3
     },
@@ -864,7 +864,7 @@
       "impact": 3
     },
     "law-the-federalist-papers": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -924,7 +924,7 @@
       "impact": 4
     },
     "leadership-how-to-win-friends-and-influence-people": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -934,7 +934,7 @@
       "impact": 4
     },
     "leadership-leaders-eat-last": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -959,7 +959,7 @@
       "impact": 4
     },
     "leadership-on-becoming-a-leader": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -974,7 +974,7 @@
       "impact": 3
     },
     "leadership-primal-leadership": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -989,17 +989,17 @@
       "impact": 4
     },
     "leadership-start-with-why": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
     "leadership-team-of-teams": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
     "leadership-the-21-irrefutable-laws-of-leadership": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 3
     },
@@ -1009,12 +1009,12 @@
       "impact": 4
     },
     "leadership-the-culture-code": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
     "leadership-the-effective-executive": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1024,7 +1024,7 @@
       "impact": 3
     },
     "leadership-the-leadership-challenge": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -1079,7 +1079,7 @@
       "impact": 4
     },
     "literature-don-quixote": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1089,7 +1089,7 @@
       "impact": 5
     },
     "literature-hamlet": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1099,7 +1099,7 @@
       "impact": 4
     },
     "literature-pride-and-prejudice": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 3
     },
@@ -1109,7 +1109,7 @@
       "impact": 4
     },
     "literature-the-canterbury-tales": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 3
     },
@@ -1119,12 +1119,12 @@
       "impact": 5
     },
     "literature-the-iliad": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
     "literature-the-odyssey": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1139,8 +1139,8 @@
       "impact": 5
     },
     "management-accelerate": {
-      "status": "not-started",
-      "favorite": false,
+      "status": "finished",
+      "favorite": true,
       "impact": 3
     },
     "management-an-everyone-culture": {
@@ -1199,7 +1199,7 @@
       "impact": 5
     },
     "management-great-by-choice": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -1319,8 +1319,8 @@
       "impact": 4
     },
     "management-the-devops-handbook": {
-      "status": "not-started",
-      "favorite": false,
+      "status": "finished",
+      "favorite": true,
       "impact": 3
     },
     "management-the-everything-store": {
@@ -1374,8 +1374,8 @@
       "impact": 4
     },
     "management-the-phoenix-project": {
-      "status": "not-started",
-      "favorite": false,
+      "status": "finished",
+      "favorite": true,
       "impact": 3
     },
     "management-thinking-in-systems": {
@@ -1464,7 +1464,7 @@
       "impact": 5
     },
     "metaphysics-an-enquiry-concerning-human-understanding": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1489,7 +1489,7 @@
       "impact": 5
     },
     "metaphysics-metaphysics": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1599,12 +1599,12 @@
       "impact": 4
     },
     "military-history-on-war": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
     "military-history-the-art-of-war": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1634,7 +1634,7 @@
       "impact": 5
     },
     "military-history-the-second-world-war": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -1669,12 +1669,12 @@
       "impact": 5
     },
     "philosophy-confessions": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 3
     },
     "philosophy-critique-of-pure-reason": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1719,12 +1719,12 @@
       "impact": 3
     },
     "philosophy-the-republic": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
     "physics-a-brief-history-of-time": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -1744,7 +1744,7 @@
       "impact": 5
     },
     "physics-relativity": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 4
     },
@@ -1789,7 +1789,7 @@
       "impact": 4
     },
     "political-science-politics": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1804,7 +1804,7 @@
       "impact": 5
     },
     "political-science-second-treatise-of-government": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1814,7 +1814,7 @@
       "impact": 5
     },
     "political-science-the-communist-manifesto": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1834,7 +1834,7 @@
       "impact": 5
     },
     "political-science-the-prince": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
@@ -1939,7 +1939,7 @@
       "impact": 5
     },
     "psychology-thinking-fast-and-slow": {
-      "status": "not-started",
+      "status": "finished",
       "favorite": false,
       "impact": 5
     },
