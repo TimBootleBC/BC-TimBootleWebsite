@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "revision": 19,
+  "revision": 20,
   "updatedAt": "2026-07-31T01:05:38Z",
   "books": {
     "architecture-101-things-i-learned-in-architecture-school": {
@@ -1468,20 +1468,10 @@
       "favorite": false,
       "impact": 5
     },
-    "metaphysics-consciousness-explained": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 4
-    },
     "metaphysics-ethics": {
       "status": "not-started",
       "favorite": false,
       "impact": 5
-    },
-    "metaphysics-i-am-a-strange-loop": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 4
     },
     "metaphysics-meditations-on-first-philosophy": {
       "status": "not-started",
@@ -1493,67 +1483,17 @@
       "favorite": false,
       "impact": 5
     },
-    "metaphysics-mind-and-world": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 4
-    },
     "metaphysics-naming-and-necessity": {
       "status": "not-started",
       "favorite": false,
       "impact": 5
-    },
-    "metaphysics-neurophilosophy": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 3
-    },
-    "metaphysics-on-the-plurality-of-worlds": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 5
-    },
-    "metaphysics-reality-is-not-what-it-seems": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 4
-    },
-    "metaphysics-the-big-picture": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 4
     },
     "metaphysics-the-conscious-mind": {
       "status": "not-started",
       "favorite": false,
       "impact": 5
     },
-    "metaphysics-the-consciousness-instinct": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 3
-    },
-    "metaphysics-the-ego-tunnel": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 4
-    },
     "metaphysics-the-fabric-of-reality": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 4
-    },
-    "metaphysics-the-hidden-reality": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 4
-    },
-    "metaphysics-the-order-of-time": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 4
-    },
-    "metaphysics-the-origins-of-consciousness-in-the-breakdown-of-the-bicameral-mind": {
       "status": "not-started",
       "favorite": false,
       "impact": 4
@@ -1563,25 +1503,10 @@
       "favorite": false,
       "impact": 4
     },
-    "metaphysics-the-self-illusion": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 3
-    },
     "metaphysics-the-structure-of-scientific-revolutions": {
       "status": "not-started",
       "favorite": false,
       "impact": 5
-    },
-    "metaphysics-the-tao-of-physics": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 3
-    },
-    "metaphysics-what-does-it-all-mean": {
-      "status": "not-started",
-      "favorite": false,
-      "impact": 3
     },
     "military-history-a-history-of-warfare": {
       "status": "not-started",
