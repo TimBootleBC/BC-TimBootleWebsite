@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conversation Cards</title>
+<style>
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #232734;
+  --text: #e8eaed;
+  --muted: #9aa0a6;
+  --accent: #6b9fff;
+  --accent-hover: #5a8ae8;
+  --follow: #a8b8ff;
+  --border: #2e3340;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+h1 { margin: 0 0 4px; font-size: 1.5rem; }
+.subtitle { color: var(--muted); margin-bottom: 20px; font-size: 0.9rem; text-align: center; }
+.container { width: 100%; max-width: 640px; }
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 16px;
+}
+.card-box {
+  background: var(--surface2);
+  border-radius: 12px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 36px 28px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  transition: background 0.15s;
+}
+.card-box:active { background: #2a2f3d; }
+.question {
+  font-size: 1.35rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+.followup {
+  margin-top: 20px;
+  font-size: 1.05rem;
+  color: var(--follow);
+  line-height: 1.4;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.25s, max-height 0.3s;
+}
+.followup.visible {
+  opacity: 1;
+  max-height: 200px;
+}
+.side-label {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; justify-content: center; }
+button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+button:hover { background: var(--accent-hover); }
+button.secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
+button.secondary:hover { background: #2a2f3d; }
+.stats { color: var(--muted); font-size: 0.88rem; text-align: center; margin-bottom: 10px; }
+.progress-bar {
+  height: 5px;
+  background: var(--border);
+  border-radius: 3px;
+  margin: 8px 0 14px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  width: 0%;
+  transition: width 0.2s;
+}
+.hidden { display: none !important; }
+textarea {
+  width: 100%;
+  min-height: 100px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  padding: 10px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Conversation Cards</h1>
+  <p class="subtitle">Open-ended questions to get talking. No right answers.</p>
+
+  <!-- Import (hidden by default once loaded) -->
+  <div id="importPanel" class="panel hidden">
+    <label><strong>Import your own cards (CSV or text)</strong></label>
+    <p style="color:var(--muted);font-size:0.85rem;margin:6px 0 10px;">
+      Format: Question,Optional follow-up<br>
+      Or one question per line. Follow-up after a tab or | if you have one.
+    </p>
+    <textarea id="importText" placeholder="What is something you wish adults understood about being 14?,What would you like me to understand better?"></textarea>
+    <div class="controls">
+      <button onclick="loadFromText()">Load & Shuffle</button>
+      <button class="secondary" onclick="loadDefault()">Reset to Default Set</button>
+    </div>
+  </div>
+
+  <!-- Main study view -->
+  <div id="studyPanel" class="panel">
+    <div class="stats" id="stats"></div>
+    <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+
+    <div class="card-box" id="cardBox" onclick="revealFollowup()">
+      <span class="side-label" id="sideLabel">Question</span>
+      <div class="question" id="questionText"></div>
+      <div class="followup" id="followupText"></div>
+    </div>
+
+    <div class="controls">
+      <button onclick="nextCard()">Next</button>
+      <button class="secondary" onclick="prevCard()">Previous</button>
+      <button class="secondary" onclick="shuffleCards()">Shuffle</button>
+      <button class="secondary" onclick="toggleImport()">Import</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Default conversation cards from the provided CSV
+const DEFAULT_CARDS = [
+  { q: "What is something you wish adults understood about being 14?", f: "What would you like me to understand better?" },
+  { q: "What was a small good thing about your week?", f: "What made that moment stand out?" },
+  { q: "If you could plan a day with no obligations, what would you do?", f: "Would you want company, time alone, or some of both?" },
+  { q: "What is something you are interested in that I know very little about?", f: "What would be a good place for me to start learning?" },
+  { q: "When do you feel most like yourself?", f: "What helps you feel that comfortable?" },
+  { q: "What is something you are looking forward to?", f: "What are you most excited about?" },
+  { q: "What kind of humor always makes you laugh?", f: "Is there an example you would like to show me?" },
+  { q: "What is a memory you wish you could experience again?", f: "What part would you most want to relive?" },
+  { q: "What makes someone a good friend to you?", f: "Which quality matters most right now?" },
+  { q: "How can you tell that you can trust someone?", f: "Does trust grow slowly for you, or do you usually know quickly?" },
+  { q: "What helps you feel included in a group?", f: "What do people do that makes a difference?" },
+  { q: "What makes a friendship feel like too much work?", f: "What would a healthier balance look like?" },
+  { q: "When friends disagree, what helps them work things out?", f: "Do you prefer talking right away or having some space first?" },
+  { q: "How do you feel about spending time on your own?", f: "What makes alone time enjoyable or difficult?" },
+  { q: "What would you want a friend to do if someone treated you unfairly?", f: "Would you want them to speak up, check in privately, or do something else?" },
+  { q: "What is something people sometimes assume about you that is wrong?", f: "What do you wish they noticed instead?" },
+  { q: "What is something you like about the person you are becoming?", f: "When did you start noticing that about yourself?" },
+  { q: "What have you done recently that took courage?", f: "What helped you do it?" },
+  { q: "What kind of compliment feels meaningful to you?", f: "What makes it feel sincere?" },
+  { q: "What helps when you start comparing yourself with other people?", f: "Is there anything adults say that makes those comparisons worse?" },
+  { q: "What do you wish people valued more than appearance?", f: "Who does a good job of valuing those things?" },
+  { q: "What is a skill you would like to build just for yourself?", f: "What would make trying it feel fun and low-pressure?" },
+  { q: "When have you surprised yourself in a good way?", f: "Did it change what you thought you could do?" },
+  { q: "What is something you wish you could stop being so hard on yourself about?", f: "What response from me would help?" },
+  { q: "What part of school feels most worthwhile to you?", f: "What makes that part work well?" },
+  { q: "What part of school uses up the most energy?", f: "Is it the work, the people, the schedule, or something else?" },
+  { q: "If you could change one school rule, what would you change?", f: "What would you put in its place?" },
+  { q: "What makes a teacher someone you can learn from?", f: "What do they do that helps you?" },
+  { q: "What do grades show about you, and what do they miss?", f: "What would give a fuller picture of your effort or abilities?" },
+  { q: "When you have too much to do, what helps you get started?", f: "Would you prefer help planning, company, or space?" },
+  { q: "What is something you would like to learn that school does not teach?", f: "How would you want to explore it?" },
+  { q: "What does a successful school year mean to you personally?", f: "What would matter besides grades?" },
+  { q: "What online content usually leaves you feeling better?", f: "What do you enjoy or get from it?" },
+  { q: "How can you tell when an app is taking more of your time than you want?", f: "What would help you feel more in control?" },
+  { q: "What makes a group chat enjoyable, and what makes it stressful?", f: "How do you like to handle it when you need a break?" },
+  { q: "What do adults misunderstand about your online life?", f: "What would you want them to ask before judging?" },
+  { q: "What would make it easier to tell me about something uncomfortable online?", f: "What would you want my first response to be?" },
+  { q: "How do you decide what to keep private online?", f: "What helps you feel comfortable with that decision?" },
+  { q: "When you have a difficult day, what kind of support feels best?", f: "Would you like listening, distraction, advice, or something else?" },
+  { q: "How can I tell when you want space and when you want me nearby?", f: "Would a simple signal or phrase help?" },
+  { q: "What is something I do that helps you feel heard?", f: "What could I do more often?" },
+  { q: "What is a household rule you would like us to reconsider?", f: "What would you suggest, and how could we see whether it works?" },
+  { q: "What responsibility would you like more control over?", f: "What support would help you manage it yourself?" },
+  { q: "When we disagree, what could I do to make the conversation more respectful?", f: "What would help us come back to it after a break?" },
+  { q: "What is something you would enjoy doing together?", f: "Would you want to plan it or have me handle the details?" },
+  { q: "What family tradition would you keep, change, or start?", f: "What would make it meaningful to you?" },
+  { q: "What does respectful behavior look like when someone has a crush on you?", f: "What would make attention feel welcome or unwelcome?" },
+  { q: "What makes it easier to say no when you do not want to do something?", f: "How could I support you without taking over?" },
+  { q: "What would help you ask me for a ride out of an uncomfortable situation?", f: "What could we agree on beforehand to make that easier?" },
+  { q: "What is a dream you would like to explore without having to commit to it?", f: "What would be one enjoyable way to try it out?" },
+  { q: "What do you hope everyday life feels like when you are older?", f: "What matters most about that picture?" },
+  { q: "What is a question you wish I would ask you?", f: "Would you like me to answer it too?" }
+];
+
+let cards = [];
+let current = 0;
+let followupRevealed = false;
+
+function shuffleArray(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function loadDefault() {
+  cards = shuffleArray(DEFAULT_CARDS);
+  current = 0;
+  followupRevealed = false;
+  showStudy();
+}
+
+function parseImport(text) {
+  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
+  const result = [];
+  for (const line of lines) {
+    // Skip header if present
+    if (/^question/i.test(line) && /follow/i.test(line)) continue;
+    let q, f = "";
+    if (line.includes('\t')) {
+      const parts = line.split('\t');
+      q = parts[0].trim();
+      f = parts.slice(1).join(' ').trim();
+    } else if (line.includes('|')) {
+      const parts = line.split('|');
+      q = parts[0].trim();
+      f = parts.slice(1).join(' ').trim();
+    } else if (line.includes(',')) {
+      // Basic CSV split (handles simple quoted cases lightly)
+      const match = line.match(/^"?(.*?)"?\s*,\s*"?(.*?)"?$/);
+      if (match) {
+        q = match[1].replace(/""/g, '"').trim();
+        f = match[2].replace(/""/g, '"').trim();
+      } else {
+        const parts = line.split(',');
+        q = parts[0].trim();
+        f = parts.slice(1).join(',').trim();
+      }
+    } else {
+      q = line;
+    }
+    if (q) result.push({ q, f });
+  }
+  return result;
+}
+
+function loadFromText() {
+  const text = document.getElementById('importText').value.trim();
+  const parsed = parseImport(text);
+  if (parsed.length === 0) {
+    alert("No cards found. Paste questions (with optional follow-ups).");
+    return;
+  }
+  cards = shuffleArray(parsed);
+  current = 0;
+  followupRevealed = false;
+  showStudy();
+}
+
+function showStudy() {
+  document.getElementById('importPanel').classList.add('hidden');
+  document.getElementById('studyPanel').classList.remove('hidden');
+  render();
+}
+
+function toggleImport() {
+  document.getElementById('importPanel').classList.toggle('hidden');
+}
+
+function render() {
+  if (cards.length === 0) return;
+  const card = cards[current];
+  document.getElementById('questionText').textContent = card.q;
+  const fu = document.getElementById('followupText');
+  if (card.f) {
+    fu.textContent = card.f;
+    fu.classList.toggle('visible', followupRevealed);
+    document.getElementById('sideLabel').textContent = followupRevealed ? "Follow-up" : "Question · tap for follow-up";
+  } else {
+    fu.textContent = "";
+    fu.classList.remove('visible');
+    document.getElementById('sideLabel').textContent = "Question";
+  }
+  document.getElementById('stats').textContent =
+    `Card ${current + 1} of ${cards.length}`;
+  document.getElementById('progressFill').style.width =
+    `${((current + 1) / cards.length) * 100}%`;
+}
+
+function revealFollowup() {
+  if (!cards[current]?.f) return;
+  followupRevealed = !followupRevealed;
+  render();
+}
+
+function nextCard() {
+  current = (current + 1) % cards.length;
+  followupRevealed = false;
+  render();
+}
+
+function prevCard() {
+  current = (current - 1 + cards.length) % cards.length;
+  followupRevealed = false;
+  render();
+}
+
+function shuffleCards() {
+  cards = shuffleArray(cards);
+  current = 0;
+  followupRevealed = false;
+  render();
+}
+
+// Keyboard
+document.addEventListener('keydown', (e) => {
+  if (document.getElementById('studyPanel').classList.contains('hidden')) return;
+  if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); revealFollowup(); }
+  if (e.key === 'ArrowRight') nextCard();
+  if (e.key === 'ArrowLeft') prevCard();
+  if (e.key === 's' || e.key === 'S') shuffleCards();
+});
+
+// Start with the default set
+loadDefault();
+</script>
+</body>
+</html>
