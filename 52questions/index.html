@@ -129,9 +129,8 @@ textarea {
 <body>
 <div class="container">
   <h1>Conversation Cards</h1>
-  <p class="subtitle">Open-ended questions to get talking. No right answers.</p>
+  <p class="subtitle">Mixed deck (104 cards). Tap for follow-up. No right answers.</p>
 
-  <!-- Import (hidden by default once loaded) -->
   <div id="importPanel" class="panel hidden">
     <label><strong>Import your own cards (CSV or text)</strong></label>
     <p style="color:var(--muted);font-size:0.85rem;margin:6px 0 10px;">
@@ -141,11 +140,10 @@ textarea {
     <textarea id="importText" placeholder="What is something you wish adults understood about being 14?,What would you like me to understand better?"></textarea>
     <div class="controls">
       <button onclick="loadFromText()">Load & Shuffle</button>
-      <button class="secondary" onclick="loadDefault()">Reset to Default Set</button>
+      <button class="secondary" onclick="loadDefault()">Reset to Mixed Deck</button>
     </div>
   </div>
 
-  <!-- Main study view -->
   <div id="studyPanel" class="panel">
     <div class="stats" id="stats"></div>
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
@@ -166,8 +164,9 @@ textarea {
 </div>
 
 <script>
-// Default conversation cards from the provided CSV
+// Combined deck: original 52 conversation cards + 52 ADHD/RSD cards = 104
 const DEFAULT_CARDS = [
+  // Original conversation cards
   { q: "What is something you wish adults understood about being 14?", f: "What would you like me to understand better?" },
   { q: "What was a small good thing about your week?", f: "What made that moment stand out?" },
   { q: "If you could plan a day with no obligations, what would you do?", f: "Would you want company, time alone, or some of both?" },
@@ -219,7 +218,61 @@ const DEFAULT_CARDS = [
   { q: "What would help you ask me for a ride out of an uncomfortable situation?", f: "What could we agree on beforehand to make that easier?" },
   { q: "What is a dream you would like to explore without having to commit to it?", f: "What would be one enjoyable way to try it out?" },
   { q: "What do you hope everyday life feels like when you are older?", f: "What matters most about that picture?" },
-  { q: "What is a question you wish I would ask you?", f: "Would you like me to answer it too?" }
+  { q: "What is a question you wish I would ask you?", f: "Would you like me to answer it too?" },
+
+  // ADHD / RSD processing cards
+  { q: "What does rejection feel like in your body right now?", f: "Where do you notice it first?" },
+  { q: "When did you last feel a wave of RSD?", f: "What happened right before it hit?" },
+  { q: "What story does your brain tell you when someone seems distant?", f: "How often does that story turn out to be true?" },
+  { q: "What would you say to a friend who felt this exact feeling?", f: "Can you offer yourself any of that kindness?" },
+  { q: "Which kind of feedback is hardest for you to hear?", f: "What makes that particular feedback sting?" },
+  { q: "When you feel rejected, what do you usually do next?", f: "Does that response help in the long run?" },
+  { q: "What is one thing you know is true about yourself even when RSD is loud?", f: "How can you remind yourself of it?" },
+  { q: "How do you tell the difference between “they’re upset with me” and “I’m interpreting it that way”?", f: "What helps you check?" },
+  { q: "What support do you wish someone offered when RSD hits?", f: "How could you ask for that next time?" },
+  { q: "When have you recovered from an RSD episode faster than usual?", f: "What was different that time?" },
+  { q: "What part of ADHD makes RSD feel stronger for you?", f: "Is it the intensity, the rumination, or something else?" },
+  { q: "What would “good enough” look like today, even if it isn’t perfect?", f: "Can you name one small version of that?" },
+  { q: "How do you feel about asking for clarification instead of assuming the worst?", f: "What makes that hard or possible?" },
+  { q: "What is a recent moment you took personally that might have had another explanation?", f: "What else could have been going on?" },
+  { q: "What helps your nervous system calm down when the rejection feeling starts?", f: "Is there something physical that works better than thinking?" },
+  { q: "Who in your life usually responds in a way that doesn’t trigger RSD?", f: "What do they do differently?" },
+  { q: "What do you wish people understood about how criticism lands for you?", f: "How could you say that without defending yourself?" },
+  { q: "When you replay a conversation later, what part do you usually focus on?", f: "What part do you tend to skip?" },
+  { q: "What is one boundary that would protect you from unnecessary RSD triggers?", f: "What would enforcing it look like in practice?" },
+  { q: "How do you feel about the idea that other people’s moods are often not about you?", f: "When has that turned out to be true?" },
+  { q: "What does “I did my best with the brain I have today” mean to you?", f: "Can you apply that to something recent?" },
+  { q: "What is a small success you’ve had that RSD later tried to erase?", f: "What would it look like to keep that success?" },
+  { q: "How do you want to respond the next time you notice the RSD spiral starting?", f: "What is one step you could take in the first five minutes?" },
+  { q: "What kind of reassurance actually helps, and what kind makes it worse?", f: "How can you tell the difference?" },
+  { q: "When you feel like you failed someone, what evidence supports that and what doesn’t?", f: "Which list is longer right now?" },
+  { q: "What would it look like to treat an RSD wave as temporary weather instead of a permanent truth?", f: "What might you do while you wait for it to pass?" },
+  { q: "How does sleep, hunger, or sensory overload affect how strongly RSD hits you?", f: "What patterns have you noticed?" },
+  { q: "What is something you appreciate about your sensitivity, even when it hurts?", f: "When has that same sensitivity been a strength?" },
+  { q: "What would you like the people closest to you to do when they see you shutting down?", f: "Have you told them?" },
+  { q: "How do you feel about sharing that you have ADHD and RSD with someone new?", f: "What would make that conversation feel safer?" },
+  { q: "What is a recent interaction you wish you could redo with more self-compassion?", f: "What would you do differently next time, not to be perfect, but to be kinder?" },
+  { q: "When the feeling of “everyone is mad at me” shows up, what usually starts it?", f: "Is there a common trigger you can watch for?" },
+  { q: "What helps you stop the mental replay of a painful moment?", f: "Is there something that interrupts it reliably?" },
+  { q: "How do you want to measure a good day when RSD has been present?", f: "What counts as success on those days?" },
+  { q: "What is one thing you can control when someone else’s reaction feels rejecting?", f: "What is outside your control?" },
+  { q: "How does comparison with other people feed your RSD?", f: "What would it look like to step out of that comparison for a little while?" },
+  { q: "What would “safe enough” feel like in a conversation right now?", f: "What could help create a bit of that safety?" },
+  { q: "When you apologize, do you tend to over-apologize because of RSD?", f: "What would a proportionate apology look like?" },
+  { q: "What is a strength of yours that RSD sometimes makes you forget?", f: "How could you keep that strength more visible to yourself?" },
+  { q: "How do you feel about taking a break from a conversation when the feelings get too big?", f: "What would make that break feel okay to you and the other person?" },
+  { q: "What has someone said to you that helped an RSD episode pass more gently?", f: "Could you say something similar to yourself?" },
+  { q: "What does “progress” look like with RSD for you right now?", f: "Is it fewer spirals, shorter spirals, or something else?" },
+  { q: "How do you want to talk to yourself in the hour after a difficult interaction?", f: "What phrase would you actually believe?" },
+  { q: "What is one low-stakes way you could practice not assuming rejection this week?", f: "What would make that experiment feel doable?" },
+  { q: "When you feel the urge to withdraw completely, what need is that urge trying to meet?", f: "Is there a smaller way to meet that need?" },
+  { q: "What would it mean to you if someone’s criticism was about the task, not about your worth?", f: "How could you test that idea next time?" },
+  { q: "How do you feel about asking “Did I do something that bothered you?” instead of guessing?", f: "What would make that question feel safer to ask?" },
+  { q: "What is something you’ve handled better recently than you would have a year ago?", f: "What does that change tell you about your capacity?" },
+  { q: "What support system do you already have that RSD sometimes makes you doubt?", f: "Who or what is still there even when the feeling says otherwise?" },
+  { q: "How do you want to end a day that included an RSD wave?", f: "What would help you close it without carrying it into tomorrow?" },
+  { q: "What is one thing you can do today that is for you, not for how others will see it?", f: "What would make that feel worthwhile?" },
+  { q: "What do you most want to remember about yourself when the rejection feeling is loudest?", f: "How can you keep that reminder close?" }
 ];
 
 let cards = [];
@@ -246,7 +299,6 @@ function parseImport(text) {
   const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
   const result = [];
   for (const line of lines) {
-    // Skip header if present
     if (/^question/i.test(line) && /follow/i.test(line)) continue;
     let q, f = "";
     if (line.includes('\t')) {
@@ -258,7 +310,6 @@ function parseImport(text) {
       q = parts[0].trim();
       f = parts.slice(1).join(' ').trim();
     } else if (line.includes(',')) {
-      // Basic CSV split (handles simple quoted cases lightly)
       const match = line.match(/^"?(.*?)"?\s*,\s*"?(.*?)"?$/);
       if (match) {
         q = match[1].replace(/""/g, '"').trim();
@@ -344,7 +395,6 @@ function shuffleCards() {
   render();
 }
 
-// Keyboard
 document.addEventListener('keydown', (e) => {
   if (document.getElementById('studyPanel').classList.contains('hidden')) return;
   if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); revealFollowup(); }
@@ -353,7 +403,6 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 's' || e.key === 'S') shuffleCards();
 });
 
-// Start with the default set
 loadDefault();
 </script>
 </body>
