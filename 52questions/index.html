@@ -97,23 +97,28 @@ button:hover { background: var(--accent-hover); }
 button.secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
 button.secondary:hover { background: #2a2f3d; }
 .stats { color: var(--muted); font-size: 0.88rem; text-align: center; margin-bottom: 10px; }
-.deck-select { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
-.deck-btn {
-  background: var(--surface2);
-  color: var(--muted);
+.deck-select { display: flex; flex-direction: column; align-items: stretch; gap: 6px; margin-bottom: 14px; }
+.deck-select label { color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.6px; }
+.deck-dropdown {
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: var(--surface2);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%239aa0a6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  color: var(--text);
   border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 7px 16px;
-  font-size: 0.88rem;
+  border-radius: 10px;
+  padding: 12px 40px 12px 14px;
+  font-size: 1rem;
   font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
 }
-.deck-btn:hover { background: #2a2f3d; color: var(--text); }
-.deck-btn.is-active {
-  background: var(--accent);
-  color: #fff;
-  border-color: var(--accent);
-}
-.deck-btn.is-active:hover { background: var(--accent-hover); }
+.deck-dropdown:hover { background-color: #2a2f3d; }
+.deck-dropdown:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(107, 159, 255, 0.35); }
+.deck-dropdown option { background: var(--surface); color: var(--text); }
 .progress-bar {
   height: 5px;
   background: var(--border);
@@ -136,10 +141,23 @@ button.secondary:hover { background: #2a2f3d; }
   <p class="subtitle" id="subtitle">Conversation deck (52 cards). Tap for follow-up. No right answers.</p>
 
   <div id="studyPanel" class="panel">
-    <div class="deck-select" id="deckSelect" role="group" aria-label="Choose a deck">
-      <button type="button" class="deck-btn is-active" data-deck="conversation" onclick="selectDeck('conversation')">Conversation</button>
-      <button type="button" class="deck-btn" data-deck="rsd" onclick="selectDeck('rsd')">ADHD / RSD</button>
-      <button type="button" class="deck-btn" data-deck="vacation" onclick="selectDeck('vacation')">Vacation</button>
+    <div class="deck-select">
+      <label for="deckSelect">Deck</label>
+      <select id="deckSelect" class="deck-dropdown" onchange="selectDeck(this.value)">
+        <option value="conversation" selected>Conversation</option>
+        <option value="rsd">ADHD / RSD</option>
+        <option value="vacation">Vacation</option>
+        <option value="aging">Aging</option>
+        <option value="childhood-roots">Childhood &amp; Roots</option>
+        <option value="work-purpose">Work &amp; Purpose</option>
+        <option value="love-relationships">Love &amp; Relationships</option>
+        <option value="friendship">Friendship</option>
+        <option value="money-values">Money &amp; Values</option>
+        <option value="what-if">What If</option>
+        <option value="food-table">Food &amp; Table</option>
+        <option value="courage-change">Courage &amp; Change</option>
+        <option value="legacy-meaning">Legacy &amp; Meaning</option>
+      </select>
     </div>
     <div class="stats" id="stats"></div>
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
@@ -159,7 +177,7 @@ button.secondary:hover { background: #2a2f3d; }
 </div>
 
 <script>
-// Two decks: 52 conversation cards + 52 ADHD/RSD cards = 104 combined
+// Built-in decks (embedded so the page works offline). Deck CSVs live in decks/.
 const CONVERSATION_CARDS = [
   { q: "What is something you wish adults understood about being 14?", f: "What would you like me to understand better?" },
   { q: "What was a small good thing about your week?", f: "What made that moment stand out?" },
@@ -327,10 +345,596 @@ const VACATION_CARDS = [
   { q: "If money were no object what is the one trip you would book first?", f: "What makes that one top the list?" }
 ];
 
+// Aging deck (source: decks/aging.csv)
+const AGING_CARDS = [
+  { q: "What is something about getting older that has surprised you in a good way?", f: "When did you first notice it?" },
+  { q: "What part of you feels exactly the same as it did when you were twenty?", f: "Why do you think that part has stayed so steady?" },
+  { q: "What age do you feel like on the inside?", f: "What makes that age fit you?" },
+  { q: "Who is an older person you have admired for the way they aged?", f: "What did they do that you would like to borrow?" },
+  { q: "What do you understand now that you could not have understood ten years ago?", f: "What experience taught it to you?" },
+  { q: "What are you looking forward to about your later years?", f: "What would help make that happen?" },
+  { q: "What worries you most about growing older?", f: "What would make that worry feel lighter?" },
+  { q: "How has your idea of being old changed over time?", f: "Who or what changed your mind?" },
+  { q: "What is a birthday that felt especially meaningful to you?", f: "What made that one different from the rest?" },
+  { q: "What would you tell your younger self about the years ahead?", f: "Which part would they most need to hear?" },
+  { q: "What is something you have stopped caring about as you have gotten older?", f: "How has letting go of it changed your days?" },
+  { q: "What is something you care about more now than you used to?", f: "What made it rise in importance?" },
+  { q: "How do you want to spend an ordinary Tuesday when you are eighty?", f: "Who would you want to share that day with?" },
+  { q: "What habit do you hope you will still have in twenty years?", f: "What does that habit give you now?" },
+  { q: "What did your parents or grandparents teach you about growing older?", f: "How did they teach it through words or example?" },
+  { q: "What is a skill you want to learn while you still have plenty of time?", f: "What has kept you from starting so far?" },
+  { q: "How has your relationship with your body changed over the years?", f: "What do you appreciate about it now?" },
+  { q: "What does a good old age look like to you?", f: "Which part of that picture matters most?" },
+  { q: "What kind of older person do you hope people describe you as?", f: "What are you doing now that points in that direction?" },
+  { q: "What is a piece of wisdom that came to you the hard way?", f: "How do you use it today?" },
+  { q: "What do you think gets easier with age?", f: "When did you first feel it getting easier?" },
+  { q: "What do you think gets harder with age?", f: "How do you hope to handle it when it comes?" },
+  { q: "What would you like to be doing for fun when you are seventy-five?", f: "What would it take to keep that possible?" },
+  { q: "How do you feel about being called wise someday?", f: "What would you want that wisdom to be about?" },
+  { q: "What is a memory you hope you never forget?", f: "What details of it do you treasure most?" },
+  { q: "What is something younger people could teach you?", f: "Who has taught you something like that recently?" },
+  { q: "What is something you hope younger people learn from your generation?", f: "What story would you tell to explain it?" },
+  { q: "How has your sense of time changed as you have gotten older?", f: "What do you do differently because of it?" },
+  { q: "What is a decade of your life you would describe as your favorite so far?", f: "What made those years stand out?" },
+  { q: "What do you hope your friendships look like in your later years?", f: "What are you doing now to tend them?" },
+  { q: "Where would you love to live when you are older?", f: "What draws you to that kind of place?" },
+  { q: "What is something you were afraid of when you were younger that no longer scares you?", f: "What helped you move past it?" },
+  { q: "How do you want to handle changes to your health as you age?", f: "Who would you want by your side for that?" },
+  { q: "What does retirement mean to you?", f: "What would make it feel full rather than empty?" },
+  { q: "What role do you hope to play in the lives of younger family members later on?", f: "What did an older relative do for you that you would like to pass along?" },
+  { q: "What is a song or movie that makes you feel your age?", f: "What does it bring back for you?" },
+  { q: "What is something you want to do before you feel too old to do it?", f: "What would be a first step toward it?" },
+  { q: "How do you feel when you look at old photos of yourself?", f: "What would you say to the person in those pictures?" },
+  { q: "What has aging taught you about patience?", f: "Where do you see that patience show up now?" },
+  { q: "What is one thing you hope stays the same about you no matter how old you get?", f: "Why does that part of you matter so much?" },
+  { q: "What do you think is the secret to staying curious as you age?", f: "Who do you know that seems to have that secret?" },
+  { q: "How has your idea of beauty changed with time?", f: "What do you find beautiful now that you once overlooked?" },
+  { q: "What would you like to be known for in your neighborhood when you are older?", f: "What small thing could start that today?" },
+  { q: "What does slowing down mean to you?", f: "Where in your life would slowing down feel like a gift?" },
+  { q: "What is something you used to rush through that you now savor?", f: "What made you start noticing it?" },
+  { q: "How do you hope to stay connected to the world as things keep changing?", f: "Which changes do you find most interesting?" },
+  { q: "What has gotten better in your life with each passing year?", f: "What do you credit for that?" },
+  { q: "What does it mean to you to grow old gracefully?", f: "What would you add to that phrase or push back on?" },
+  { q: "What kind of grandparent or elder do you imagine being?", f: "What would you want the kids around you to remember?" },
+  { q: "What would make you feel proud looking back from the age of ninety?", f: "What can you do this year that would add to that pride?" },
+  { q: "What is a conversation you want to have with someone before you both get older?", f: "What makes it feel important to have it soon?" },
+  { q: "What are you most grateful for about the age you are right now?", f: "How would you like to celebrate it?" }
+];
+
+// Childhood & Roots deck (source: decks/childhood-roots.csv)
+const CHILDHOOD_ROOTS_CARDS = [
+  { q: "What did the street or road you grew up on look like?", f: "What sounds or smells come back when you picture it?" },
+  { q: "Who was the first adult outside your family who made you feel seen?", f: "What did they do that stuck with you?" },
+  { q: "What family tradition do you remember most clearly from childhood?", f: "Which part of it do you still carry with you?" },
+  { q: "What was your favorite hiding place as a kid?", f: "What did you do when you were there?" },
+  { q: "What did a typical Saturday look like when you were growing up?", f: "Which part of it do you miss?" },
+  { q: "What is a phrase or saying your family used all the time?", f: "Where do you think it came from?" },
+  { q: "What was your bedroom like as a kid?", f: "What was on the walls?" },
+  { q: "Who in your family told the best stories?", f: "What is one of their stories you still remember?" },
+  { q: "What did you want to be when you grew up?", f: "How much of that dream is still in you?" },
+  { q: "What is a smell that instantly takes you back to childhood?", f: "Where does it take you?" },
+  { q: "What was the best gift you received as a child?", f: "Who gave it to you and why did it mean so much?" },
+  { q: "What was a rule in your house growing up that you thought was strange?", f: "How do you see it now as an adult?" },
+  { q: "How did your family celebrate birthdays?", f: "What birthday stands out in your memory?" },
+  { q: "What is something your parents did that you have promised yourself to repeat?", f: "What makes it worth keeping?" },
+  { q: "What is something from your upbringing you decided to do differently?", f: "When did you make that choice?" },
+  { q: "What did you and your friends do for fun when there was nothing to do?", f: "Which of those games would you still play today?" },
+  { q: "Who was your best friend in elementary school?", f: "What do you remember about the two of you together?" },
+  { q: "What did your grandparents' home feel like?", f: "What object from that home do you remember most?" },
+  { q: "What was a time you got in trouble as a kid that makes you laugh now?", f: "How did the adults react?" },
+  { q: "What was the soundtrack of your childhood?", f: "Who was playing that music in your house?" },
+  { q: "What is a place from your childhood you would love to visit again?", f: "What do you think it would feel like to stand there now?" },
+  { q: "What did your family do on holidays?", f: "Which holiday felt most like home?" },
+  { q: "What did you learn about work from watching the adults around you?", f: "How has that shaped the way you work now?" },
+  { q: "Who was a teacher who changed something in you?", f: "What would you say to them if you could?" },
+  { q: "What was the first thing you remember being really good at?", f: "Who noticed and encouraged it?" },
+  { q: "What were you scared of as a child?", f: "How did you cope with it back then?" },
+  { q: "What was your family's car or way of getting around?", f: "What memory do you have from those rides?" },
+  { q: "What chores did you have growing up?", f: "Which one did you secretly not mind?" },
+  { q: "What was a family trip or outing that became a legend in your family?", f: "Who tells that story the best?" },
+  { q: "What books or shows shaped your imagination as a kid?", f: "Which character did you most want to be?" },
+  { q: "Where does your family come from before the place you grew up?", f: "What do you know about how they got there?" },
+  { q: "What was a family recipe or dish that meant home?", f: "Who made it best?" },
+  { q: "How did your family handle disagreements when you were young?", f: "What did you take away from that?" },
+  { q: "What is something about your hometown that outsiders would never understand?", f: "How would you explain it to someone who has never been?" },
+  { q: "What did your parents do for fun when you were young?", f: "How do you see that in yourself now?" },
+  { q: "Who was the funniest person in your family?", f: "What is something they did that still makes you laugh?" },
+  { q: "What was a moment when you felt truly proud as a kid?", f: "Who shared that moment with you?" },
+  { q: "What did your family value most?", f: "How did you know it was important to them?" },
+  { q: "What was summer like for you growing up?", f: "What is one summer day you can still picture clearly?" },
+  { q: "What pet or animal was part of your childhood?", f: "What made them special to you?" },
+  { q: "What was a hard time your family went through that shaped you?", f: "What did it teach you about getting through things?" },
+  { q: "What was your favorite meal to come home to after school?", f: "Who usually made it?" },
+  { q: "What is an heirloom or object from your childhood you still have?", f: "Why have you held on to it?" },
+  { q: "What role did you play in your family as a kid?", f: "How does that role show up in your life today?" },
+  { q: "What did you think the world was like when you were small?", f: "When did that picture start to change?" },
+  { q: "What were you allowed to do as a kid that kids today mostly are not?", f: "What did that freedom give you?" },
+  { q: "What is something you collected as a child?", f: "What happened to the collection?" },
+  { q: "Which relative do you wish you had asked more questions?", f: "What would you ask them now?" },
+  { q: "What made your neighborhood feel like a community or not?", f: "Who were the characters everyone knew?" },
+  { q: "What is a lesson your mother or father figure taught you without saying a word?", f: "When did you realize you had learned it?" },
+  { q: "What part of your childhood do you hope the next generation gets to experience?", f: "How could you help pass it on?" },
+  { q: "How do your roots still show up in who you are today?", f: "Which part of that are you proudest of?" }
+];
+
+// Work & Purpose deck (source: decks/work-purpose.csv)
+const WORK_PURPOSE_CARDS = [
+  { q: "What was your very first job?", f: "What did it teach you that you still use?" },
+  { q: "What kind of work makes you lose track of time?", f: "How often do you get to do it?" },
+  { q: "How do you define success for yourself right now?", f: "How has that definition changed over the years?" },
+  { q: "What is the best boss or mentor you have ever had?", f: "What did they do that made the difference?" },
+  { q: "What part of your work would you do even if nobody paid you?", f: "What does that tell you about yourself?" },
+  { q: "What did you think grown-up work would be like when you were a kid?", f: "How close did that guess turn out to be?" },
+  { q: "What accomplishment are you quietly proud of that most people do not know about?", f: "What did it take to pull off?" },
+  { q: "What is a job you would love to try for just one week?", f: "What do you imagine you would discover?" },
+  { q: "What does a meaningful day of work look like for you?", f: "What usually gets in the way of having more of those days?" },
+  { q: "How do you feel about ambition?", f: "Where does your own ambition come from?" },
+  { q: "What is the hardest work lesson you ever learned?", f: "How did it change the way you work?" },
+  { q: "Who in your life showed you what a strong work ethic looks like?", f: "Which part of their example did you adopt?" },
+  { q: "What is a career path you considered but did not take?", f: "What do you imagine that life would look like?" },
+  { q: "What do you want people to say about working with you?", f: "What do you do that earns that?" },
+  { q: "How do you know when it is time to move on from a job?", f: "What helped you decide the last time?" },
+  { q: "What is a failure at work that turned out to be useful?", f: "What grew out of it?" },
+  { q: "What kind of problem do you love to solve?", f: "When did you first realize you enjoyed it?" },
+  { q: "What does balance between work and life mean to you?", f: "What is one thing that would bring more of it?" },
+  { q: "How do you recharge after a draining week?", f: "What tells you that you need it?" },
+  { q: "What is the most interesting person you have met through work?", f: "What did you learn from them?" },
+  { q: "What would you do with your days if money were not a factor?", f: "What part of that could you start now?" },
+  { q: "What talent do you have that your work does not use?", f: "Where could that talent find a home?" },
+  { q: "How did your family talk about work when you were growing up?", f: "How has that shaped your own attitude?" },
+  { q: "What is a compliment about your work that stayed with you?", f: "Why did it land so deeply?" },
+  { q: "What is something you wish more people understood about what you do?", f: "How would you explain it to a curious ten year old?" },
+  { q: "What gives you a sense of purpose outside of a paycheck?", f: "How do you make room for it?" },
+  { q: "What is the bravest professional decision you have made?", f: "What gave you the nerve to make it?" },
+  { q: "How do you handle a day when you feel unmotivated?", f: "What usually gets you moving again?" },
+  { q: "What does it mean to you to do a job well?", f: "Who taught you that standard?" },
+  { q: "How would you describe your work style to a new teammate?", f: "What would they need to know to work well with you?" },
+  { q: "What is a project you would love to be remembered for?", f: "What would make it lasting?" },
+  { q: "What do you think makes a team really work?", f: "When have you been part of a team like that?" },
+  { q: "How has your relationship with work changed as you have gotten older?", f: "What caused the biggest shift?" },
+  { q: "What is something you would like to get better at professionally?", f: "What would getting better make possible?" },
+  { q: "What kind of recognition matters most to you?", f: "How do you like to recognize others?" },
+  { q: "What job did you have that taught you the most about people?", f: "What is one thing it taught you?" },
+  { q: "If you could start a business tomorrow what would it be?", f: "What would make it different from what already exists?" },
+  { q: "What role does creativity play in your work?", f: "Where would you like more room for it?" },
+  { q: "What work would you want your children or the young people in your life to avoid?", f: "What would you encourage them toward instead?" },
+  { q: "How do you decide when good enough is good enough?", f: "When has that decision served you well?" },
+  { q: "What did you learn from the worst job you ever had?", f: "How would you approach that job differently now?" },
+  { q: "How do you celebrate a win at work?", f: "What is a win that deserved more celebration?" },
+  { q: "What is a way you have helped someone else grow in their career?", f: "What did it feel like to see them succeed?" },
+  { q: "What does rest mean to you in a culture that prizes being busy?", f: "How do you protect it?" },
+  { q: "How do you want your work to make the world a little better?", f: "Where do you already see that happening?" },
+  { q: "What would your ideal workspace look like?", f: "What would it say about you?" },
+  { q: "What part of your career so far has surprised you the most?", f: "How would your younger self react to hearing about it?" },
+  { q: "How do you handle it when someone takes credit for your work?", f: "What have you learned about speaking up?" },
+  { q: "What is a skill you picked up outside of work that made you better at your job?", f: "How did you first notice the connection?" },
+  { q: "What does a calling mean to you?", f: "What did it feel like when one pulled at you?" },
+  { q: "What do you hope the next chapter of your working life looks like?", f: "What could you do this year to move toward it?" },
+  { q: "When you look back on your working years what do you hope you will feel?", f: "What would make that feeling true?" }
+];
+
+// Love & Relationships deck (source: decks/love-relationships.csv)
+const LOVE_RELATIONSHIPS_CARDS = [
+  { q: "How do you most like to show love to someone?", f: "Where do you think you learned that way of showing it?" },
+  { q: "How do you most like to receive love?", f: "What is a small gesture that always lands with you?" },
+  { q: "What did the relationships around you growing up teach you about love?", f: "Which lessons have you kept and which have you let go?" },
+  { q: "What is the most romantic thing anyone has ever done for you?", f: "What made it feel so meaningful?" },
+  { q: "What do you think makes a relationship last?", f: "Where have you seen that up close?" },
+  { q: "What is a lesson a past relationship taught you?", f: "How has it shaped the way you love now?" },
+  { q: "How do you know when you can truly trust someone with your heart?", f: "What builds that trust fastest for you?" },
+  { q: "What does feeling at home with someone mean to you?", f: "When have you felt that most strongly?" },
+  { q: "What is a couple you admire?", f: "What do they do that you would like to borrow?" },
+  { q: "How do you like to repair things after an argument?", f: "What helps you soften when you are upset?" },
+  { q: "What does being a good partner mean to you?", f: "Which part of that comes most naturally to you?" },
+  { q: "What first catches your attention about someone?", f: "What keeps your interest after that first spark?" },
+  { q: "What is something small that makes you feel cared for on a hard day?", f: "Who has done that for you?" },
+  { q: "How has your idea of love changed since you were young?", f: "What changed it?" },
+  { q: "What role does laughter play in your relationships?", f: "What is a moment of shared laughter you treasure?" },
+  { q: "What do you think people get wrong about romance?", f: "What would you replace it with?" },
+  { q: "How do you balance togetherness and time for yourself?", f: "What does the right balance feel like?" },
+  { q: "What is a tradition you would love to build with someone you love?", f: "What makes it meaningful to you?" },
+  { q: "What is a love story from your family that you know well?", f: "What does it say about the people in it?" },
+  { q: "How do you like to celebrate an anniversary or milestone?", f: "Which celebration stands out in your memory?" },
+  { q: "What makes you feel truly listened to?", f: "Who in your life does that best?" },
+  { q: "What do you need most when you are stressed?", f: "How can someone you love tell what you need?" },
+  { q: "What is a quality you have grown to value in a partner over time?", f: "What made you start to value it?" },
+  { q: "How do you keep curiosity alive about someone you know well?", f: "What is something new you have learned about someone close to you lately?" },
+  { q: "What does commitment mean to you?", f: "How do you show it day to day?" },
+  { q: "What song feels like a love song to you?", f: "What memory is attached to it?" },
+  { q: "What is the kindest thing you have seen one partner do for another?", f: "Why did it stay with you?" },
+  { q: "What is something you have had to unlearn about love?", f: "What helped you unlearn it?" },
+  { q: "How do you handle it when you and someone you love want different things?", f: "What has worked well for you before?" },
+  { q: "What is your idea of a perfect date?", f: "What makes it perfect for you?" },
+  { q: "What makes it easier for you to be vulnerable with someone?", f: "What makes it harder?" },
+  { q: "How has a relationship helped you grow into a better version of yourself?", f: "What did that person see in you?" },
+  { q: "What does forgiveness look like in a close relationship?", f: "When has forgiveness changed things for you?" },
+  { q: "What everyday moment with someone you love do you cherish most?", f: "What makes that ordinary moment feel special?" },
+  { q: "What would you want a younger person to know before falling in love?", f: "What do you wish someone had told you?" },
+  { q: "How do you keep a relationship feeling fresh over the years?", f: "What is one idea you would like to try?" },
+  { q: "What do you think is the difference between love and infatuation?", f: "When did you first notice the difference?" },
+  { q: "How do you like to be comforted?", f: "Who has comforted you in just the right way?" },
+  { q: "What is something you find beautiful about long relationships?", f: "Who showed you that beauty?" },
+  { q: "What does a healthy disagreement look like to you?", f: "What do you want to protect even in the middle of one?" },
+  { q: "What is a dealbreaker you have learned to recognize?", f: "What taught you to see it?" },
+  { q: "How do you show appreciation for someone you love?", f: "When was the last time you did it on purpose?" },
+  { q: "What makes you feel like a team with someone?", f: "What is a moment when you felt that clearly?" },
+  { q: "What does love look like on an ordinary weeknight?", f: "What small thing would make those nights better?" },
+  { q: "How do family and friends fit into your idea of a good relationship?", f: "What role do they play for you?" },
+  { q: "What is a love letter or message you have kept?", f: "What does it remind you of?" },
+  { q: "What is something you hope never changes about the way you love?", f: "Why does it feel essential?" },
+  { q: "How do you know when to give someone space and when to lean in?", f: "What signals do you watch for?" },
+  { q: "What does it mean to choose someone again and again?", f: "When have you felt chosen like that?" },
+  { q: "How do you want to grow together with someone over the years?", f: "What would you like to learn side by side?" },
+  { q: "What surprised you most about being in love?", f: "How did it compare with what you had expected?" },
+  { q: "What do you hope people see when they look at the way you love?", f: "What would you want them to learn from it?" }
+];
+
+// Friendship deck (source: decks/friendship.csv)
+const FRIENDSHIP_CARDS = [
+  { q: "How did you meet your oldest friend?", f: "What has kept the friendship going all these years?" },
+  { q: "What makes someone a friend for life in your eyes?", f: "Who in your life fits that description?" },
+  { q: "What is a friendship that started in an unexpected way?", f: "What drew you to each other?" },
+  { q: "Who showed up for you when you really needed it?", f: "What did they do that you will never forget?" },
+  { q: "What is something you do to be a good friend?", f: "Where did you learn to do it?" },
+  { q: "How do you know when a friendship is getting deeper?", f: "What usually happens right before that?" },
+  { q: "What is a friendship that faded that you still think about?", f: "What do you think happened?" },
+  { q: "What is your favorite thing to do with friends?", f: "What makes it better with them than alone?" },
+  { q: "How do you make new friends as an adult?", f: "What has worked best for you?" },
+  { q: "What do you appreciate most about the friends you have now?", f: "How could you let them know?" },
+  { q: "What is the funniest memory you share with a friend?", f: "Who usually brings it up?" },
+  { q: "How do you handle it when a friend lets you down?", f: "What helps you decide whether to talk about it?" },
+  { q: "What makes a friend easy to be around?", f: "Which of your friends feels easiest?" },
+  { q: "What is a friendship that changed the direction of your life?", f: "Where do you think you would be without it?" },
+  { q: "What does a good friend do when you share good news?", f: "Who celebrates you best?" },
+  { q: "How has your idea of friendship changed over the years?", f: "What caused the shift?" },
+  { q: "What friend do you wish you saw more often?", f: "What could make that happen?" },
+  { q: "What is a tradition you have with a friend?", f: "How did it get started?" },
+  { q: "What does it mean to you to be a reliable friend?", f: "When have you been tested on that?" },
+  { q: "What is a quality you look for in a new friend?", f: "When did you first realize it mattered?" },
+  { q: "Who was your first best friend?", f: "What did you two spend your days doing?" },
+  { q: "What is something a friend taught you without meaning to?", f: "How did you pick it up?" },
+  { q: "How do you stay close with friends who live far away?", f: "What makes long distance friendship work for you?" },
+  { q: "What do you think friends owe each other?", f: "Where do you draw the line?" },
+  { q: "What is a friendship that surprised you by lasting?", f: "Why do you think it held on?" },
+  { q: "How do you like friends to check in on you?", f: "What kind of check in feels most caring?" },
+  { q: "What makes you feel like you belong in a group of friends?", f: "When have you felt that most strongly?" },
+  { q: "What role do you usually play in your friend group?", f: "How do you feel about playing that role?" },
+  { q: "What is a kindness from a friend that you still think about?", f: "How did you return it or how might you someday?" },
+  { q: "How do you reconnect with a friend after a long gap?", f: "What makes picking back up feel easy or hard?" },
+  { q: "What friend would you call first in an emergency?", f: "What makes them the first call?" },
+  { q: "What is a conversation with a friend that changed how you see something?", f: "What shifted for you?" },
+  { q: "What makes an evening with friends feel perfect?", f: "Where would that evening happen?" },
+  { q: "How do friendships at work compare with friendships outside of it?", f: "Which work friend became a real friend?" },
+  { q: "What is something you admire about a friend that you wish you had more of?", f: "How could you grow toward it?" },
+  { q: "What is a hard truth a friend once told you?", f: "How did it help you in the end?" },
+  { q: "How do you show up for a friend who is grieving or struggling?", f: "What have you learned about what helps?" },
+  { q: "What adventure would you love to take with a friend?", f: "Which friend would be the perfect partner for it?" },
+  { q: "What does loyalty mean in a friendship?", f: "When have you seen it in action?" },
+  { q: "What friendship from childhood shaped who you are?", f: "What part of it do you still carry?" },
+  { q: "How do you let go of a friendship that no longer fits?", f: "What helped you make peace with it?" },
+  { q: "What makes you laugh hardest with friends?", f: "Who gets you laughing the fastest?" },
+  { q: "How do you know you can be completely yourself with someone?", f: "Who in your life gives you that feeling?" },
+  { q: "What is something you wish you had said to a friend?", f: "What would it take to say it now?" },
+  { q: "What kind of friend do you hope to be in ten years?", f: "What habits would get you there?" },
+  { q: "What role have friends played during big moments in your life?", f: "Which moment would have felt different without them?" },
+  { q: "What is a gift a friend gave you that meant more than its price?", f: "What made it feel so personal?" },
+  { q: "How do you welcome someone new into your circle?", f: "Who once did that for you?" },
+  { q: "What do you think keeps friendships alive through busy seasons of life?", f: "What has helped yours survive?" },
+  { q: "What is a friendship that started with a shared interest?", f: "How did it grow beyond that interest?" },
+  { q: "What would you want to say at a celebration for your closest friend?", f: "What story would you tell?" },
+  { q: "Who is a friend you are grateful for right now?", f: "What would you like them to know?" }
+];
+
+// Money & Values deck (source: decks/money-values.csv)
+const MONEY_VALUES_CARDS = [
+  { q: "What did you learn about money from the adults in your childhood home?", f: "Which of those lessons do you still follow?" },
+  { q: "What was your first memory of earning your own money?", f: "What did you do with it?" },
+  { q: "Where do you fall between spender and saver by nature?", f: "Where do you think that tendency comes from?" },
+  { q: "What does having enough mean to you?", f: "How would you know when you had reached it?" },
+  { q: "What is the best money you have ever spent?", f: "What made it worth every penny?" },
+  { q: "What is a purchase you regret?", f: "What did it teach you about what you value?" },
+  { q: "How did your family talk about money at the dinner table?", f: "How do you talk about it now?" },
+  { q: "What is something you will happily splurge on?", f: "What does it give you that is worth the cost?" },
+  { q: "What is something you refuse to spend much on?", f: "What makes it not worth it to you?" },
+  { q: "Who is the most generous person you know?", f: "What does their generosity look like?" },
+  { q: "What does generosity mean to you beyond money?", f: "How do you practice it?" },
+  { q: "What money habit are you proudest of?", f: "How did you build it?" },
+  { q: "What would you do with an unexpected windfall of a thousand dollars?", f: "What does that choice say about your priorities?" },
+  { q: "What would you do differently with money if you were starting over at twenty?", f: "What would you keep the same?" },
+  { q: "How do you feel about lending money to friends or family?", f: "What experience shaped that feeling?" },
+  { q: "What is a time you felt rich without having much money?", f: "What made you feel that way?" },
+  { q: "What does financial security feel like to you?", f: "What would help you feel more of it?" },
+  { q: "What is something money cannot buy that you value deeply?", f: "How do you make room for it in your life?" },
+  { q: "What is a childhood treat or purchase that felt like a big deal?", f: "Why did it feel so special?" },
+  { q: "How do you decide whether something is a need or a want?", f: "Where does that line get blurry for you?" },
+  { q: "What is a cause you love to give to?", f: "What first connected you to it?" },
+  { q: "How do you want to teach young people about money?", f: "What lesson matters most to pass on?" },
+  { q: "What is the most frugal thing you are secretly proud of?", f: "Who taught you that trick?" },
+  { q: "What would your ideal relationship with money look like?", f: "What is one step toward that?" },
+  { q: "What experience would you rather pay for than a thing?", f: "What makes experiences worth more to you?" },
+  { q: "What is a money mistake that turned out to be a good teacher?", f: "How did you recover from it?" },
+  { q: "How do you think money changes people?", f: "Where have you seen that happen?" },
+  { q: "What would you do with your time if money were never a concern again?", f: "How much of that could you do now?" },
+  { q: "What is something you saved up for that felt amazing to finally buy?", f: "How long did it take you?" },
+  { q: "How do your money values differ from your parents' values?", f: "What caused that difference?" },
+  { q: "What does a rich life mean to you apart from a bank balance?", f: "Who do you know who lives that kind of life?" },
+  { q: "How do you feel when someone picks up the check for you?", f: "How do you like to return the favor?" },
+  { q: "What is a free pleasure that you would not trade for anything?", f: "When did you discover it?" },
+  { q: "How do you handle money conversations with people you love?", f: "What makes those conversations easier?" },
+  { q: "What is a dream that money would make possible for you?", f: "What would it feel like to get there?" },
+  { q: "What do you think is the right amount to spend on a gift?", f: "What is a gift that felt priceless no matter its cost?" },
+  { q: "What did you learn about money from your first apartment or home?", f: "What would you tell yourself back then?" },
+  { q: "How do you think about comfort versus simplicity?", f: "Where do you land on that today?" },
+  { q: "What is a family story about money that gets told again and again?", f: "What do you think it really says?" },
+  { q: "What does wealth look like in the community you grew up in?", f: "How has your view of it changed?" },
+  { q: "How do you reward yourself after a big accomplishment?", f: "What is a reward you still remember?" },
+  { q: "What is something you own that you would never sell?", f: "What makes it so valuable to you?" },
+  { q: "What does it mean to you to live within your means?", f: "When has that been hardest?" },
+  { q: "How do you want to use money to help the people you love?", f: "What would make that feel good rather than stressful?" },
+  { q: "What is the kindest thing anyone has done for you with money?", f: "How did it change things for you?" },
+  { q: "What would you like to stop worrying about when it comes to money?", f: "What might help you let it go?" },
+  { q: "What is something you used to want badly that no longer appeals to you?", f: "What changed your mind?" },
+  { q: "How do you balance enjoying today with planning for tomorrow?", f: "Which side do you tend to lean toward?" },
+  { q: "What do you think it means to be good with money?", f: "Who in your life fits that description?" },
+  { q: "How have your values shaped the way you spend your time?", f: "Where do your time and money tell the same story?" },
+  { q: "What would you want people to understand about your relationship with money?", f: "What experiences are behind it?" },
+  { q: "What does contentment mean to you?", f: "When do you feel it most?" }
+];
+
+// What If deck (source: decks/what-if.csv)
+const WHAT_IF_CARDS = [
+  { q: "What if you could live in any time period for a year?", f: "What would you be most excited to see?" },
+  { q: "What if you woke up tomorrow with a brand new talent?", f: "Which talent would you hope for and what would you do first?" },
+  { q: "What if you could have dinner with any three people from history?", f: "What would you ask them over dessert?" },
+  { q: "What if you could instantly master any language?", f: "Where would you go to use it?" },
+  { q: "What if you could swap lives with someone for a week?", f: "What do you think would surprise you most?" },
+  { q: "What if you opened a small shop on a quiet street?", f: "What would you sell and what would it be called?" },
+  { q: "What if you could relive one day of your life exactly as it was?", f: "Which day and why that one?" },
+  { q: "What if animals could talk for one day?", f: "Which animal would you most want to hear from?" },
+  { q: "What if you were given a year off with all expenses paid?", f: "How would you spend the first month?" },
+  { q: "What if you could be famous for one thing?", f: "What would you want it to be?" },
+  { q: "What if you could build your dream house anywhere?", f: "What room would you design first?" },
+  { q: "What if you had a time machine with only one trip?", f: "Which direction would you go and why?" },
+  { q: "What if you could invent one thing to make daily life easier?", f: "What problem would it solve?" },
+  { q: "What if you were the main character in a movie?", f: "What genre would it be and who would play you?" },
+  { q: "What if you could have any job for one day?", f: "What would you hope to learn from it?" },
+  { q: "What if you could ask your future self one question?", f: "What answer would you hope to hear?" },
+  { q: "What if you could add one holiday to the calendar?", f: "How would people celebrate it?" },
+  { q: "What if you could live inside any book or movie world?", f: "What would you do there first?" },
+  { q: "What if you could master any instrument overnight?", f: "What song would you play first and for whom?" },
+  { q: "What if you had to move to a tiny island with five belongings?", f: "What would you bring?" },
+  { q: "What if you could have a superpower that only works on Sundays?", f: "What would you use it for?" },
+  { q: "What if you could meet any version of yourself from the past?", f: "What would you want to tell them?" },
+  { q: "What if you had a personal theme song that played when you entered a room?", f: "What song would it be?" },
+  { q: "What if you could plan a festival in your hometown?", f: "What would be the main event?" },
+  { q: "What if you could spend a day as a kid again with what you know now?", f: "What would you do differently?" },
+  { q: "What if you could change one thing about how the world works?", f: "What ripple effects would you hope for?" },
+  { q: "What if you could visit any place in the universe?", f: "What would you want to see when you got there?" },
+  { q: "What if you were in charge of your town for a month?", f: "What would be your first project?" },
+  { q: "What if you could know the answer to one mystery?", f: "Which mystery would you pick?" },
+  { q: "What if you could switch places with your pet for a day?", f: "What would you discover about their life?" },
+  { q: "What if every person you met had to tell you one secret talent?", f: "What would yours be?" },
+  { q: "What if you started a band?", f: "What would it be called and what would it sound like?" },
+  { q: "What if you were handed a blank passport and a plane ticket that leaves tonight?", f: "Where would you hope it takes you?" },
+  { q: "What if you could spend a week living in a different culture?", f: "Which one and what would you want to learn?" },
+  { q: "What if you could write a letter that would be read in a hundred years?", f: "What would you say?" },
+  { q: "What if you could have any view outside your window?", f: "What would you look at every morning?" },
+  { q: "What if you could bring back one thing from your childhood?", f: "What would it add to your life now?" },
+  { q: "What if you had to teach a class on something you know well?", f: "What would the first lesson be?" },
+  { q: "What if you could invite anyone to your next birthday party?", f: "Who would be the surprise guest?" },
+  { q: "What if you could live in a treehouse for a year?", f: "What would it look like and what would you name it?" },
+  { q: "What if you could freeze time for one hour every day?", f: "How would you use that hour?" },
+  { q: "What if you won a contest to name a new star?", f: "What would you call it and why?" },
+  { q: "What if you could have one conversation with an animal at the zoo?", f: "What would you ask it?" },
+  { q: "What if you could make one rule everyone had to follow for a day?", f: "What would happen by sunset?" },
+  { q: "What if your life had a narrator?", f: "What would they say about today?" },
+  { q: "What if you could choose your next career with no training needed?", f: "What would you pick and why?" },
+  { q: "What if you found a door in your house you had never noticed?", f: "What would you hope to find behind it?" },
+  { q: "What if you could spend a day with a grandparent at your current age?", f: "What would you do together?" },
+  { q: "What if you could design the perfect day for someone you love?", f: "What would you include?" },
+  { q: "What if you could become an expert in any hobby by next week?", f: "Which hobby would you choose?" },
+  { q: "What if you could witness any moment in history in person?", f: "What would you want to notice that the history books leave out?" },
+  { q: "What if you wrote a memoir?", f: "What would the title be and what would the first chapter cover?" }
+];
+
+// Food & Table deck (source: decks/food-table.csv)
+const FOOD_TABLE_CARDS = [
+  { q: "What meal would you choose for a perfect birthday dinner?", f: "Who would you want at the table?" },
+  { q: "What dish instantly reminds you of home?", f: "Who made it for you?" },
+  { q: "What is a family recipe you wish you had written down?", f: "What do you remember about how it was made?" },
+  { q: "What is the most memorable meal you have ever eaten?", f: "What made it unforgettable beyond the food?" },
+  { q: "Who taught you to cook or tried to?", f: "What is something they showed you that stuck?" },
+  { q: "What did the dinner table look like in your house growing up?", f: "What conversations happened there?" },
+  { q: "What is a food you hated as a kid but love now?", f: "What changed your mind?" },
+  { q: "What is your go to comfort food on a hard day?", f: "What is it about that dish that comforts you?" },
+  { q: "What meal would you cook to impress someone?", f: "What is the story behind that dish?" },
+  { q: "What is a food tradition your family has for holidays?", f: "How did it begin?" },
+  { q: "What is the best thing you have ever eaten while traveling?", f: "Where were you and who were you with?" },
+  { q: "What is a kitchen disaster that became a funny story?", f: "Who still teases you about it?" },
+  { q: "What smell from a kitchen makes you happiest?", f: "What memory comes with it?" },
+  { q: "What would your last meal on earth be?", f: "Why those dishes in particular?" },
+  { q: "What restaurant holds special memories for you?", f: "What happened there that you still think about?" },
+  { q: "What food do you associate with a certain season?", f: "What makes that season taste right?" },
+  { q: "What is a dish you would love to learn to make?", f: "Who would you like to learn it from?" },
+  { q: "How did your family celebrate with food when something good happened?", f: "What would be on the table?" },
+  { q: "What is your favorite meal to share with friends?", f: "What makes it a sharing meal?" },
+  { q: "What do you think makes a meal feel special?", f: "Which matters more to you: the food or the company?" },
+  { q: "What is a snack that takes you right back to childhood?", f: "Where did you usually eat it?" },
+  { q: "What is a food you would happily eat every day for a month?", f: "What would you pair it with?" },
+  { q: "What was a meal that brought people together during a hard time?", f: "What did that meal mean to everyone there?" },
+  { q: "What is your favorite thing to cook when you have all the time in the world?", f: "What do you enjoy about the process?" },
+  { q: "How do you feel about trying unfamiliar foods?", f: "What is the most adventurous thing you have tried?" },
+  { q: "What is the best meal someone else has cooked for you?", f: "What made it feel like an act of love?" },
+  { q: "What breakfast feels like a treat to you?", f: "When do you allow yourself to have it?" },
+  { q: "What is a food that connects you to your heritage?", f: "What story goes with it?" },
+  { q: "What is your favorite kind of picnic or outdoor meal?", f: "Where is the perfect spot for it?" },
+  { q: "What is a meal that marked a big moment in your life?", f: "What do you remember most about that day?" },
+  { q: "What dish would you bring to a potluck to win everyone over?", f: "Where did the recipe come from?" },
+  { q: "What is a dessert that makes any day better?", f: "Who makes the best version of it?" },
+  { q: "What role does food play in how you show care?", f: "Who have you fed when they needed it?" },
+  { q: "What is something about mealtimes you hope to pass on?", f: "Why does it matter to you?" },
+  { q: "What is a street food or fair food you love?", f: "What memory comes with it?" },
+  { q: "What is the strangest food combination you secretly enjoy?", f: "How did you discover it?" },
+  { q: "What was a regular meal at your grandparents' house?", f: "What was the table like?" },
+  { q: "What would your dream dinner party look like?", f: "Who would sit next to whom?" },
+  { q: "What kitchen tool or gadget could you not live without?", f: "What would you cook if you could only use that?" },
+  { q: "What meal tastes better because of who you eat it with?", f: "What do you talk about over that meal?" },
+  { q: "What is a food memory from a holiday that stands out?", f: "Who was there with you?" },
+  { q: "What is the best advice about food or cooking you have ever received?", f: "Who gave it to you?" },
+  { q: "What dish do you make that people always ask for?", f: "How did you perfect it?" },
+  { q: "What is a cuisine you would love to explore more?", f: "What first sparked your interest?" },
+  { q: "How has the way you eat changed over the years?", f: "What prompted those changes?" },
+  { q: "What is a meal you ate in an unusual place?", f: "What made the setting memorable?" },
+  { q: "What are your rules or rituals around eating together?", f: "Where did they come from?" },
+  { q: "What is a dish you would want to teach your grandchildren or the next generation?", f: "What would you tell them about it?" },
+  { q: "What does a perfect Sunday meal look like to you?", f: "Who would be cooking?" },
+  { q: "What food would you bring to welcome a new neighbor?", f: "What do you hope it would say about you?" },
+  { q: "What is a time a stranger shared food with you?", f: "How did it make you feel?" },
+  { q: "What story would you love to tell around the table tonight?", f: "Who would you most want to hear it?" }
+];
+
+// Courage & Change deck (source: decks/courage-change.csv)
+const COURAGE_CHANGE_CARDS = [
+  { q: "What is the biggest decision you have ever made?", f: "How did you know it was the right time to make it?" },
+  { q: "What is a risk you took that paid off?", f: "What almost stopped you from taking it?" },
+  { q: "What is a risk you chose not to take?", f: "How do you feel about that choice today?" },
+  { q: "When have you had to start over?", f: "What helped you find your footing again?" },
+  { q: "What is a turning point in your life that you only recognized later?", f: "When did you realize how much it mattered?" },
+  { q: "What does courage look like in everyday life?", f: "Where have you seen it recently?" },
+  { q: "Who is the bravest person you know?", f: "What have they taught you about facing fear?" },
+  { q: "What is something you did scared?", f: "What did it feel like on the other side?" },
+  { q: "How do you usually make a big decision?", f: "Who do you turn to for advice?" },
+  { q: "What change are you glad you made even though it was hard?", f: "What was the hardest part?" },
+  { q: "What is a fear you have outgrown?", f: "How did you outgrow it?" },
+  { q: "What is a fear you are still working on?", f: "What small step could you take toward it?" },
+  { q: "What does it feel like when you know it is time for a change?", f: "How do you listen to that feeling?" },
+  { q: "What is a move to a new place that changed you?", f: "What surprised you about starting fresh there?" },
+  { q: "What is a time you stood up for something you believed in?", f: "What gave you the strength to do it?" },
+  { q: "How do you handle change you did not choose?", f: "What has helped you adapt in the past?" },
+  { q: "What new beginning are you most proud of?", f: "Who supported you through it?" },
+  { q: "What is a door that closed and led to a better one opening?", f: "How long did it take to see the better door?" },
+  { q: "What would you attempt if you knew you could not fail?", f: "What would you do if you failed but learned something?" },
+  { q: "What is a habit you changed that changed your life?", f: "How did you make it stick?" },
+  { q: "What is something you said yes to that opened up a new path?", f: "What made you say yes?" },
+  { q: "What is something you said no to that you are proud of?", f: "How did saying no protect something important?" },
+  { q: "What did you learn about yourself during a season of big change?", f: "How do you carry that lesson now?" },
+  { q: "What is the most spontaneous thing you have ever done?", f: "What would make you do something like it again?" },
+  { q: "How do you comfort yourself when you are facing the unknown?", f: "Where did you learn that?" },
+  { q: "What is a belief you changed your mind about?", f: "What helped you see it differently?" },
+  { q: "Who encouraged you to be braver than you felt?", f: "What did they say that helped?" },
+  { q: "What is a goal you are working up the courage to pursue?", f: "What would help you take the first step?" },
+  { q: "What does it mean to you to reinvent yourself?", f: "What would your own reinvention look like?" },
+  { q: "What is a moment you surprised yourself with your own strength?", f: "Where did that strength come from?" },
+  { q: "What advice would you give someone standing at a crossroads?", f: "Where did that advice come from in your life?" },
+  { q: "What change in the world have you lived through that reshaped your life?", f: "How did you adjust?" },
+  { q: "What is the hardest goodbye you have ever said?", f: "What helped you move forward afterward?" },
+  { q: "What is a time you asked for help when it was hard to ask?", f: "What happened when you did?" },
+  { q: "How do you know when to hold on and when to let go?", f: "When have you gotten that right?" },
+  { q: "What is something you once thought you could never do but did?", f: "What changed between then and now?" },
+  { q: "What role has failure played in your biggest changes?", f: "Which failure are you most grateful for now?" },
+  { q: "What is a fresh start you would still like to give yourself?", f: "What would the first day look like?" },
+  { q: "What helps you stay steady when everything is shifting?", f: "Who or what is your anchor?" },
+  { q: "What is a time you trusted your gut against the odds?", f: "What did your gut know that you did not?" },
+  { q: "What is a small act of courage you are proud of?", f: "Why did it matter so much to you?" },
+  { q: "How has a loss changed the way you live?", f: "What have you carried forward from it?" },
+  { q: "What would you like to be braver about this year?", f: "What would that bravery look like day to day?" },
+  { q: "What is a change you see coming that you feel ready for?", f: "What has prepared you?" },
+  { q: "How do you celebrate yourself after doing something hard?", f: "How would you like to celebrate more?" },
+  { q: "What is a time someone took a chance on you?", f: "How did it change your path?" },
+  { q: "What is a time you took a chance on someone else?", f: "What did you see in them?" },
+  { q: "What does a fresh chapter mean to you?", f: "What would you like the next chapter to be called?" },
+  { q: "What is a comfort zone you are glad you stepped out of?", f: "What did you find outside it?" },
+  { q: "What would your younger self be surprised you had the courage to do?", f: "Which choice would they find most surprising?" },
+  { q: "What has change taught you about who you really are?", f: "Which part of you stayed constant through it all?" },
+  { q: "What brave thing do you hope to look back on a year from now?", f: "Who could cheer you on along the way?" }
+];
+
+// Legacy & Meaning deck (source: decks/legacy-meaning.csv)
+const LEGACY_MEANING_CARDS = [
+  { q: "What matters most to you in life right now?", f: "How has that changed over time?" },
+  { q: "How would you like to be remembered?", f: "What are you doing today that points toward that?" },
+  { q: "What is a belief that guides the way you live?", f: "Where did that belief come from?" },
+  { q: "What are you most grateful for this year?", f: "How do you show that gratitude?" },
+  { q: "Who has had the biggest influence on the person you are?", f: "What would you want to thank them for?" },
+  { q: "What is something you hope to pass down to the next generation?", f: "Why does it feel important to pass on?" },
+  { q: "What is a small act of kindness that changed your life?", f: "Who was behind it?" },
+  { q: "What gives your life a sense of meaning on an ordinary day?", f: "When do you feel it most?" },
+  { q: "What is a regret that taught you something valuable?", f: "How has it shaped your choices since?" },
+  { q: "What would you want written in a letter to your great-grandchildren?", f: "What story would you include?" },
+  { q: "What do you believe happens when we make a difference in one person's life?", f: "Who made that kind of difference for you?" },
+  { q: "What tradition do you hope outlives you?", f: "What makes it worth keeping alive?" },
+  { q: "What does a life well lived look like to you?", f: "Who do you know that has lived one?" },
+  { q: "What is a value you refuse to compromise on?", f: "When has that value been tested?" },
+  { q: "What are you still hoping to accomplish?", f: "What makes it feel meaningful?" },
+  { q: "What is something you have created that you are proud of?", f: "What would you like it to say about you?" },
+  { q: "What do you want the people you love to know without a doubt?", f: "How do you try to tell them?" },
+  { q: "What do you think gives a person's life meaning?", f: "How has your answer changed over the years?" },
+  { q: "What is a lesson you learned from someone who has passed away?", f: "How do you keep their memory alive?" },
+  { q: "What is a moment you felt deeply connected to something bigger than yourself?", f: "What brought that moment about?" },
+  { q: "What do you hope your friends say about you at your birthday party when you are old?", f: "What story would you want them to tell?" },
+  { q: "What would you want your life story to be called?", f: "What would the key chapters be?" },
+  { q: "What is something you wish you had started sooner?", f: "What would it take to begin now?" },
+  { q: "What are three words you hope describe your life?", f: "Which one feels most true right now?" },
+  { q: "What is a place that holds deep meaning for you?", f: "What happened there that matters so much?" },
+  { q: "What makes you feel peaceful about the future?", f: "Where does that peace come from?" },
+  { q: "What is a piece of advice you would want to leave behind?", f: "Who taught it to you?" },
+  { q: "What do you think the world needs more of?", f: "How do you try to add some of it?" },
+  { q: "What is something you have forgiven that freed you?", f: "How did it change the way you carry things?" },
+  { q: "What object would you want to leave to someone special?", f: "What would you want them to know about it?" },
+  { q: "What has given you the deepest sense of joy in your life?", f: "How can you make more room for it?" },
+  { q: "How do you want to spend the years you have left?", f: "What would you add or remove from your life to do that?" },
+  { q: "What is a story from your life that you want your family to always remember?", f: "Why that story?" },
+  { q: "What do you think is worth sacrificing for?", f: "When have you made a sacrifice like that?" },
+  { q: "What is a way you have quietly made the world better?", f: "What did it mean to you to do it without fanfare?" },
+  { q: "What do you hope people feel after spending time with you?", f: "When have you seen that happen?" },
+  { q: "What would you do differently if you could live your life again?", f: "What would you never change?" },
+  { q: "What is something you have learned about love that you want others to know?", f: "How did you learn it?" },
+  { q: "What role does faith or a sense of wonder play in your life?", f: "When do you feel it most strongly?" },
+  { q: "What is a hard season that gave your life more meaning?", f: "What did you discover in the middle of it?" },
+  { q: "Who do you hope to inspire?", f: "What would you want them to take from your example?" },
+  { q: "What are you proud of that has nothing to do with achievements?", f: "Who would understand that pride best?" },
+  { q: "What is something you want to make peace with?", f: "What might help you get there?" },
+  { q: "What question about life do you keep coming back to?", f: "What is your best answer so far?" },
+  { q: "What do you hope your children or the young people in your life inherit from you?", f: "What do you hope they do not?" },
+  { q: "What simple pleasure would you want included in your perfect last day?", f: "Who would be with you?" },
+  { q: "What is a promise you have kept that you are proud of?", f: "What did it cost to keep it?" },
+  { q: "What does it mean to leave a place better than you found it?", f: "Where have you tried to do that?" },
+  { q: "What would you like to hear someone say about the way you lived?", f: "What would make that true?" },
+  { q: "How do you want to be remembered by people who only met you once?", f: "What small thing could leave that impression?" },
+  { q: "What do you know now that you wish everyone knew?", f: "How did you come to know it?" },
+  { q: "If today were the last page of your story what would you want it to say?", f: "What would you want the next reader to take away?" }
+];
+
 const DECKS = {
   conversation: CONVERSATION_CARDS,
   rsd: RSD_CARDS,
-  vacation: VACATION_CARDS
+  vacation: VACATION_CARDS,
+  'aging': AGING_CARDS,
+  'childhood-roots': CHILDHOOD_ROOTS_CARDS,
+  'work-purpose': WORK_PURPOSE_CARDS,
+  'love-relationships': LOVE_RELATIONSHIPS_CARDS,
+  'friendship': FRIENDSHIP_CARDS,
+  'money-values': MONEY_VALUES_CARDS,
+  'what-if': WHAT_IF_CARDS,
+  'food-table': FOOD_TABLE_CARDS,
+  'courage-change': COURAGE_CHANGE_CARDS,
+  'legacy-meaning': LEGACY_MEANING_CARDS
+};
+
+const DECK_NAMES = {
+  'conversation': "Conversation",
+  'rsd': "ADHD / RSD",
+  'vacation': "Vacation",
+  'aging': "Aging",
+  'childhood-roots': "Childhood & Roots",
+  'work-purpose': "Work & Purpose",
+  'love-relationships': "Love & Relationships",
+  'friendship': "Friendship",
+  'money-values': "Money & Values",
+  'what-if': "What If",
+  'food-table': "Food & Table",
+  'courage-change': "Courage & Change",
+  'legacy-meaning': "Legacy & Meaning"
 };
 
 let cards = [];
@@ -357,15 +961,11 @@ function selectDeck(deck) {
   cards = shuffleArray(DECKS[deck]);
   current = 0;
   followupRevealed = false;
-  document.querySelectorAll('.deck-btn').forEach(btn => {
-    btn.classList.toggle('is-active', btn.dataset.deck === deck);
-  });
-  const labels = {
-    conversation: `Conversation deck (${cards.length} cards). Tap for follow-up. No right answers.`,
-    rsd: `ADHD / RSD deck (${cards.length} cards). Tap for follow-up. No right answers.`,
-    vacation: `Vacation deck (${cards.length} cards). Tap for follow-up. No right answers.`
-  };
-  document.getElementById('subtitle').textContent = labels[deck] || labels.conversation;
+  const sel = document.getElementById('deckSelect');
+  if (sel && sel.value !== deck) sel.value = deck;
+  const name = DECK_NAMES[deck] || deck;
+  document.getElementById('subtitle').textContent =
+    `${name} deck (${cards.length} cards). Tap for follow-up. No right answers.`;
   showStudy();
 }
 
@@ -421,6 +1021,8 @@ function shuffleCards() {
 
 document.addEventListener('keydown', (e) => {
   if (document.getElementById('studyPanel').classList.contains('hidden')) return;
+  const tag = e.target && e.target.tagName;
+  if (tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA') return;
   if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); revealFollowup(); }
   if (e.key === 'ArrowRight') nextCard();
   if (e.key === 'ArrowLeft') prevCard();
