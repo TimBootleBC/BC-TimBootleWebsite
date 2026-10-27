@@ -128,38 +128,12 @@ button.secondary:hover { background: #2a2f3d; }
   transition: width 0.2s;
 }
 .hidden { display: none !important; }
-textarea {
-  width: 100%;
-  min-height: 100px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  color: var(--text);
-  padding: 10px;
-  font-family: inherit;
-  font-size: 0.9rem;
-  resize: vertical;
-  margin-bottom: 10px;
-}
 </style>
 </head>
 <body>
 <div class="container">
   <h1>Conversation Cards</h1>
   <p class="subtitle" id="subtitle">Conversation deck (52 cards). Tap for follow-up. No right answers.</p>
-
-  <div id="importPanel" class="panel hidden">
-    <label><strong>Import your own cards (CSV or text)</strong></label>
-    <p style="color:var(--muted);font-size:0.85rem;margin:6px 0 10px;">
-      Format: Question,Optional follow-up<br>
-      Or one question per line. Follow-up after a tab or | if you have one.
-    </p>
-    <textarea id="importText" placeholder="What is something you wish adults understood about being 14?,What would you like me to understand better?"></textarea>
-    <div class="controls">
-      <button onclick="loadFromText()">Load & Shuffle</button>
-      <button class="secondary" onclick="loadDefault()">Reset to Built-in Decks</button>
-    </div>
-  </div>
 
   <div id="studyPanel" class="panel">
     <div class="deck-select" id="deckSelect" role="group" aria-label="Choose a deck">
@@ -180,7 +154,6 @@ textarea {
       <button onclick="nextCard()">Next</button>
       <button class="secondary" onclick="prevCard()">Previous</button>
       <button class="secondary" onclick="shuffleCards()">Shuffle</button>
-      <button class="secondary" onclick="toggleImport()">Import</button>
     </div>
   </div>
 </div>
@@ -396,63 +369,9 @@ function selectDeck(deck) {
   showStudy();
 }
 
-function parseImport(text) {
-  const lines = text.split(/\r?\n/).map(l => l.trim()).filter(Boolean);
-  const result = [];
-  for (const line of lines) {
-    if (/^question/i.test(line) && /follow/i.test(line)) continue;
-    let q, f = "";
-    if (line.includes('\t')) {
-      const parts = line.split('\t');
-      q = parts[0].trim();
-      f = parts.slice(1).join(' ').trim();
-    } else if (line.includes('|')) {
-      const parts = line.split('|');
-      q = parts[0].trim();
-      f = parts.slice(1).join(' ').trim();
-    } else if (line.includes(',')) {
-      const match = line.match(/^"?(.*?)"?\s*,\s*"?(.*?)"?$/);
-      if (match) {
-        q = match[1].replace(/""/g, '"').trim();
-        f = match[2].replace(/""/g, '"').trim();
-      } else {
-        const parts = line.split(',');
-        q = parts[0].trim();
-        f = parts.slice(1).join(',').trim();
-      }
-    } else {
-      q = line;
-    }
-    if (q) result.push({ q, f });
-  }
-  return result;
-}
-
-function loadFromText() {
-  const text = document.getElementById('importText').value.trim();
-  const parsed = parseImport(text);
-  if (parsed.length === 0) {
-    alert("No cards found. Paste questions (with optional follow-ups).");
-    return;
-  }
-  cards = shuffleArray(parsed);
-  current = 0;
-  followupRevealed = false;
-  currentDeck = 'custom';
-  document.querySelectorAll('.deck-btn').forEach(btn => btn.classList.remove('is-active'));
-  document.getElementById('subtitle').textContent =
-    `Your deck (${cards.length} cards). Tap for follow-up. No right answers.`;
-  showStudy();
-}
-
 function showStudy() {
-  document.getElementById('importPanel').classList.add('hidden');
   document.getElementById('studyPanel').classList.remove('hidden');
   render();
-}
-
-function toggleImport() {
-  document.getElementById('importPanel').classList.toggle('hidden');
 }
 
 function render() {
