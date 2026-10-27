@@ -97,6 +97,23 @@ button:hover { background: var(--accent-hover); }
 button.secondary { background: var(--surface2); color: var(--text); border: 1px solid var(--border); }
 button.secondary:hover { background: #2a2f3d; }
 .stats { color: var(--muted); font-size: 0.88rem; text-align: center; margin-bottom: 10px; }
+.deck-select { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+.deck-btn {
+  background: var(--surface2);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+.deck-btn:hover { background: #2a2f3d; color: var(--text); }
+.deck-btn.is-active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.deck-btn.is-active:hover { background: var(--accent-hover); }
 .progress-bar {
   height: 5px;
   background: var(--border);
@@ -129,7 +146,7 @@ textarea {
 <body>
 <div class="container">
   <h1>Conversation Cards</h1>
-  <p class="subtitle">Mixed deck (104 cards). Tap for follow-up. No right answers.</p>
+  <p class="subtitle" id="subtitle">Mixed deck (104 cards). Tap for follow-up. No right answers.</p>
 
   <div id="importPanel" class="panel hidden">
     <label><strong>Import your own cards (CSV or text)</strong></label>
@@ -145,6 +162,11 @@ textarea {
   </div>
 
   <div id="studyPanel" class="panel">
+    <div class="deck-select" id="deckSelect" role="group" aria-label="Choose a deck">
+      <button type="button" class="deck-btn" data-deck="conversation" onclick="selectDeck('conversation')">Conversation</button>
+      <button type="button" class="deck-btn" data-deck="rsd" onclick="selectDeck('rsd')">ADHD / RSD</button>
+      <button type="button" class="deck-btn is-active" data-deck="mixed" onclick="selectDeck('mixed')">Mixed</button>
+    </div>
     <div class="stats" id="stats"></div>
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
@@ -164,9 +186,8 @@ textarea {
 </div>
 
 <script>
-// Combined deck: original 52 conversation cards + 52 ADHD/RSD cards = 104
-const DEFAULT_CARDS = [
-  // Original conversation cards
+// Two decks: 52 conversation cards + 52 ADHD/RSD cards = 104 combined
+const CONVERSATION_CARDS = [
   { q: "What is something you wish adults understood about being 14?", f: "What would you like me to understand better?" },
   { q: "What was a small good thing about your week?", f: "What made that moment stand out?" },
   { q: "If you could plan a day with no obligations, what would you do?", f: "Would you want company, time alone, or some of both?" },
@@ -218,9 +239,11 @@ const DEFAULT_CARDS = [
   { q: "What would help you ask me for a ride out of an uncomfortable situation?", f: "What could we agree on beforehand to make that easier?" },
   { q: "What is a dream you would like to explore without having to commit to it?", f: "What would be one enjoyable way to try it out?" },
   { q: "What do you hope everyday life feels like when you are older?", f: "What matters most about that picture?" },
-  { q: "What is a question you wish I would ask you?", f: "Would you like me to answer it too?" },
+  { q: "What is a question you wish I would ask you?", f: "Would you like me to answer it too?" }
+];
 
-  // ADHD / RSD processing cards
+// ADHD / RSD processing cards
+const RSD_CARDS = [
   { q: "What does rejection feel like in your body right now?", f: "Where do you notice it first?" },
   { q: "When did you last feel a wave of RSD?", f: "What happened right before it hit?" },
   { q: "What story does your brain tell you when someone seems distant?", f: "How often does that story turn out to be true?" },
@@ -275,9 +298,16 @@ const DEFAULT_CARDS = [
   { q: "What do you most want to remember about yourself when the rejection feeling is loudest?", f: "How can you keep that reminder close?" }
 ];
 
+const DECKS = {
+  conversation: CONVERSATION_CARDS,
+  rsd: RSD_CARDS,
+  mixed: [...CONVERSATION_CARDS, ...RSD_CARDS]
+};
+
 let cards = [];
 let current = 0;
 let followupRevealed = false;
+let currentDeck = 'mixed';
 
 function shuffleArray(arr) {
   const a = [...arr];
@@ -289,9 +319,24 @@ function shuffleArray(arr) {
 }
 
 function loadDefault() {
-  cards = shuffleArray(DEFAULT_CARDS);
+  selectDeck(currentDeck);
+}
+
+function selectDeck(deck) {
+  if (!DECKS[deck]) return;
+  currentDeck = deck;
+  cards = shuffleArray(DECKS[deck]);
   current = 0;
   followupRevealed = false;
+  document.querySelectorAll('.deck-btn').forEach(btn => {
+    btn.classList.toggle('is-active', btn.dataset.deck === deck);
+  });
+  const labels = {
+    conversation: `Conversation deck (${cards.length} cards). Tap for follow-up. No right answers.`,
+    rsd: `ADHD / RSD deck (${cards.length} cards). Tap for follow-up. No right answers.`,
+    mixed: `Mixed deck (${cards.length} cards). Tap for follow-up. No right answers.`
+  };
+  document.getElementById('subtitle').textContent = labels[deck] || labels.mixed;
   showStudy();
 }
 
@@ -337,6 +382,10 @@ function loadFromText() {
   cards = shuffleArray(parsed);
   current = 0;
   followupRevealed = false;
+  currentDeck = 'custom';
+  document.querySelectorAll('.deck-btn').forEach(btn => btn.classList.remove('is-active'));
+  document.getElementById('subtitle').textContent =
+    `Your deck (${cards.length} cards). Tap for follow-up. No right answers.`;
   showStudy();
 }
 
