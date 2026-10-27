@@ -48,12 +48,8 @@ h1 { margin: 0 0 4px; font-size: 1.5rem; }
   justify-content: center;
   text-align: center;
   padding: 36px 28px;
-  cursor: pointer;
-  user-select: none;
   position: relative;
-  transition: background 0.15s;
 }
-.card-box:active { background: #2a2f3d; }
 .question {
   font-size: 1.35rem;
   line-height: 1.45;
@@ -138,7 +134,7 @@ button.secondary:hover { background: #2a2f3d; }
 <body>
 <div class="container">
   <h1>Conversation Cards</h1>
-  <p class="subtitle" id="subtitle">Conversation deck (52 cards). Tap for follow-up. No right answers.</p>
+  <p class="subtitle" id="subtitle">Conversation deck (52 cards). No right or wrong answers.</p>
 
   <div id="studyPanel" class="panel">
     <div class="deck-select">
@@ -162,7 +158,7 @@ button.secondary:hover { background: #2a2f3d; }
     <div class="stats" id="stats"></div>
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
 
-    <div class="card-box" id="cardBox" onclick="revealFollowup()">
+    <div class="card-box" id="cardBox">
       <span class="side-label" id="sideLabel">Question</span>
       <div class="question" id="questionText"></div>
       <div class="followup" id="followupText"></div>
@@ -939,7 +935,6 @@ const DECK_NAMES = {
 
 let cards = [];
 let current = 0;
-let followupRevealed = false;
 let currentDeck = 'conversation';
 
 function shuffleArray(arr) {
@@ -960,12 +955,11 @@ function selectDeck(deck) {
   currentDeck = deck;
   cards = shuffleArray(DECKS[deck]);
   current = 0;
-  followupRevealed = false;
   const sel = document.getElementById('deckSelect');
   if (sel && sel.value !== deck) sel.value = deck;
   const name = DECK_NAMES[deck] || deck;
   document.getElementById('subtitle').textContent =
-    `${name} deck (${cards.length} cards). Tap for follow-up. No right answers.`;
+    `${name} deck (${cards.length} cards). No right or wrong answers.`;
   showStudy();
 }
 
@@ -981,8 +975,8 @@ function render() {
   const fu = document.getElementById('followupText');
   if (card.f) {
     fu.textContent = card.f;
-    fu.classList.toggle('visible', followupRevealed);
-    document.getElementById('sideLabel').textContent = followupRevealed ? "Follow-up" : "Question · tap for follow-up";
+    fu.classList.add('visible');
+    document.getElementById('sideLabel').textContent = "Follow-up";
   } else {
     fu.textContent = "";
     fu.classList.remove('visible');
@@ -994,28 +988,19 @@ function render() {
     `${((current + 1) / cards.length) * 100}%`;
 }
 
-function revealFollowup() {
-  if (!cards[current]?.f) return;
-  followupRevealed = !followupRevealed;
-  render();
-}
-
 function nextCard() {
   current = (current + 1) % cards.length;
-  followupRevealed = false;
   render();
 }
 
 function prevCard() {
   current = (current - 1 + cards.length) % cards.length;
-  followupRevealed = false;
   render();
 }
 
 function shuffleCards() {
   cards = shuffleArray(cards);
   current = 0;
-  followupRevealed = false;
   render();
 }
 
@@ -1023,7 +1008,6 @@ document.addEventListener('keydown', (e) => {
   if (document.getElementById('studyPanel').classList.contains('hidden')) return;
   const tag = e.target && e.target.tagName;
   if (tag === 'SELECT' || tag === 'INPUT' || tag === 'TEXTAREA') return;
-  if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); revealFollowup(); }
   if (e.key === 'ArrowRight') nextCard();
   if (e.key === 'ArrowLeft') prevCard();
   if (e.key === 's' || e.key === 'S') shuffleCards();
