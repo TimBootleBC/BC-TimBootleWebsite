@@ -146,7 +146,7 @@ textarea {
 <body>
 <div class="container">
   <h1>Conversation Cards</h1>
-  <p class="subtitle" id="subtitle">Mixed deck (104 cards). Tap for follow-up. No right answers.</p>
+  <p class="subtitle" id="subtitle">Conversation deck (52 cards). Tap for follow-up. No right answers.</p>
 
   <div id="importPanel" class="panel hidden">
     <label><strong>Import your own cards (CSV or text)</strong></label>
@@ -157,15 +157,15 @@ textarea {
     <textarea id="importText" placeholder="What is something you wish adults understood about being 14?,What would you like me to understand better?"></textarea>
     <div class="controls">
       <button onclick="loadFromText()">Load & Shuffle</button>
-      <button class="secondary" onclick="loadDefault()">Reset to Mixed Deck</button>
+      <button class="secondary" onclick="loadDefault()">Reset to Built-in Decks</button>
     </div>
   </div>
 
   <div id="studyPanel" class="panel">
     <div class="deck-select" id="deckSelect" role="group" aria-label="Choose a deck">
-      <button type="button" class="deck-btn" data-deck="conversation" onclick="selectDeck('conversation')">Conversation</button>
+      <button type="button" class="deck-btn is-active" data-deck="conversation" onclick="selectDeck('conversation')">Conversation</button>
       <button type="button" class="deck-btn" data-deck="rsd" onclick="selectDeck('rsd')">ADHD / RSD</button>
-      <button type="button" class="deck-btn is-active" data-deck="mixed" onclick="selectDeck('mixed')">Mixed</button>
+      <button type="button" class="deck-btn" data-deck="vacation" onclick="selectDeck('vacation')">Vacation</button>
     </div>
     <div class="stats" id="stats"></div>
     <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
@@ -298,16 +298,72 @@ const RSD_CARDS = [
   { q: "What do you most want to remember about yourself when the rejection feeling is loudest?", f: "How can you keep that reminder close?" }
 ];
 
+// Family vacation desires cards
+const VACATION_CARDS = [
+  { q: "What kind of place makes you feel most relaxed on a trip?", f: "Is it the beach the mountains a city or somewhere else?" },
+  { q: "If we could go anywhere next year where would you want to go?", f: "What draws you to that place?" },
+  { q: "What does an ideal vacation day look like from morning to night?", f: "Which part matters most to you?" },
+  { q: "Do you prefer one big trip or several smaller getaways?", f: "What makes that option more appealing?" },
+  { q: "What is a place you have always wanted to see in person?", f: "What first made you curious about it?" },
+  { q: "How much of a trip should be planned versus left open?", f: "What feels like the right balance for you?" },
+  { q: "What kind of weather makes a vacation better for you?", f: "Does heat cold or something in between suit you best?" },
+  { q: "Would you rather explore a new place or return to a favorite?", f: "What do you enjoy about that choice?" },
+  { q: "What is one activity you would love for us to try together?", f: "What makes it appealing to you?" },
+  { q: "How do you feel about long travel days to reach somewhere special?", f: "Is the destination worth the journey for you?" },
+  { q: "What kind of food experiences do you want on a trip?", f: "Do you like trying local dishes or sticking with familiar favorites?" },
+  { q: "What is your idea of the perfect place to stay?", f: "Is it comfort adventure location or something else?" },
+  { q: "How much downtime do you want built into a vacation?", f: "What helps you actually rest?" },
+  { q: "What is a memory from a past trip you would love to recreate?", f: "What made that moment special?" },
+  { q: "Would you rather be busy with activities or move at a slow pace?", f: "What does the right pace feel like to you?" },
+  { q: "What is something you would regret not doing on a trip?", f: "Why does it matter to you?" },
+  { q: "How important is being near water on vacation?", f: "What does being by the water give you?" },
+  { q: "What kind of scenery would you most want to wake up to?", f: "What about it appeals to you?" },
+  { q: "Would you enjoy a trip focused on nature or one focused on culture?", f: "What draws you to that kind of experience?" },
+  { q: "What is a dream trip you think is out of reach but wish we could do?", f: "What would make it feel possible?" },
+  { q: "How do you feel about camping or staying somewhere rustic?", f: "What would make that fun or hard for you?" },
+  { q: "What souvenir or keepsake actually means something to you?", f: "What makes it worth holding onto?" },
+  { q: "What is one thing that would make travel less stressful for you?", f: "How could we plan around that?" },
+  { q: "Would you rather have a packed itinerary or just a few anchor plans?", f: "What helps you enjoy the day either way?" },
+  { q: "What is a season you think would be the best time to travel?", f: "What makes that time of year special to you?" },
+  { q: "How do you feel about trips that involve a lot of walking or hiking?", f: "What amount feels enjoyable rather than tiring?" },
+  { q: "What is a place from a book movie or show you want to visit?", f: "What about that place stuck with you?" },
+  { q: "Who would you most want to share a special trip with?", f: "What makes their company matter?" },
+  { q: "What is one comfort from home you would want to bring along?", f: "Why does it help you feel settled?" },
+  { q: "Would you prefer a trip that teaches you something or one that just lets you unwind?", f: "What are you craving more of right now?" },
+  { q: "What is the first thing you would want to do when we arrive somewhere new?", f: "What makes that a good start for you?" },
+  { q: "How do you feel about surprises versus knowing the plan ahead of time?", f: "What makes a surprise fun or stressful for you?" },
+  { q: "What kind of trip would help you feel more connected as a family?", f: "What would that closeness look like?" },
+  { q: "What is a small luxury that would make a trip feel extra special?", f: "What makes it worth it to you?" },
+  { q: "Would you rather spend a vacation outdoors or indoors most of the time?", f: "What makes that more enjoyable for you?" },
+  { q: "What is a fear or worry about travel you would like us to plan around?", f: "How could we make it easier?" },
+  { q: "What is a tradition you would want to start on our trips?", f: "What would make it worth repeating?" },
+  { q: "How do you feel about visiting somewhere with a different language or culture?", f: "What would you be most curious to learn?" },
+  { q: "What is the best way for you to capture memories on a trip?", f: "Photos journaling video or just being present?" },
+  { q: "What is a place that feels meaningful because of our family history?", f: "What would it mean to visit it together?" },
+  { q: "Would you rather have adventure and excitement or calm and quiet?", f: "What are you drawn to right now?" },
+  { q: "What is one thing that always makes a trip better for you?", f: "Why does it make such a difference?" },
+  { q: "How do you want to feel when we get home from a vacation?", f: "What kind of trip would leave you feeling that way?" },
+  { q: "What is a type of trip you have never taken but want to try?", f: "What makes it appealing to explore?" },
+  { q: "What is the ideal length for a trip in your opinion?", f: "What makes that amount of time feel right?" },
+  { q: "Would you rather travel somewhere popular or somewhere off the beaten path?", f: "What appeals to you about that choice?" },
+  { q: "What is something new you would be willing to try while traveling?", f: "What would help you feel ready for it?" },
+  { q: "How do you picture our family spending evenings on a trip?", f: "What would make those evenings feel special?" },
+  { q: "What is a place you would want to go back to someday?", f: "What would you do differently next time?" },
+  { q: "If you planned the whole trip yourself what would it look like?", f: "What is the one thing you would absolutely include?" },
+  { q: "What is a moment on a trip when you felt truly happy?", f: "What was happening around you then?" },
+  { q: "If money were no object what is the one trip you would book first?", f: "What makes that one top the list?" }
+];
+
 const DECKS = {
   conversation: CONVERSATION_CARDS,
   rsd: RSD_CARDS,
-  mixed: [...CONVERSATION_CARDS, ...RSD_CARDS]
+  vacation: VACATION_CARDS
 };
 
 let cards = [];
 let current = 0;
 let followupRevealed = false;
-let currentDeck = 'mixed';
+let currentDeck = 'conversation';
 
 function shuffleArray(arr) {
   const a = [...arr];
@@ -334,9 +390,9 @@ function selectDeck(deck) {
   const labels = {
     conversation: `Conversation deck (${cards.length} cards). Tap for follow-up. No right answers.`,
     rsd: `ADHD / RSD deck (${cards.length} cards). Tap for follow-up. No right answers.`,
-    mixed: `Mixed deck (${cards.length} cards). Tap for follow-up. No right answers.`
+    vacation: `Vacation deck (${cards.length} cards). Tap for follow-up. No right answers.`
   };
-  document.getElementById('subtitle').textContent = labels[deck] || labels.mixed;
+  document.getElementById('subtitle').textContent = labels[deck] || labels.conversation;
   showStudy();
 }
 
