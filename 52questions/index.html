@@ -128,6 +128,29 @@ button.secondary:hover { background: #2a2f3d; }
   width: 0%;
   transition: width 0.2s;
 }
+.quote {
+  margin: 6px 0 22px;
+  padding: 0 4px 18px;
+  max-width: 100%;
+  font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+  font-style: italic;
+  font-size: 1.12rem;
+  line-height: 1.55;
+  color: #d4d8e0;
+  border-bottom: 1px solid var(--border);
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+.quote::before { content: "\201C"; color: var(--accent); font-size: 1.6em; line-height: 0; vertical-align: -0.35em; margin-right: 2px; }
+.quote::after { content: "\201D"; color: var(--accent); font-size: 1.6em; line-height: 0; vertical-align: -0.35em; margin-left: 2px; }
+.question, .followup { max-width: 100%; overflow-wrap: anywhere; }
+@media (max-width: 480px) {
+  body { padding: 14px; }
+  .panel { padding: 16px; }
+  .card-box { padding: 36px 18px 26px; }
+  .quote { font-size: 1.02rem; }
+  .question { font-size: 1.2rem; }
+}
 .hidden { display: none !important; }
 </style>
 </head>
@@ -154,6 +177,8 @@ button.secondary:hover { background: #2a2f3d; }
         <option value="food-table">Food &amp; Table</option>
         <option value="courage-change">Courage &amp; Change</option>
         <option value="legacy-meaning">Legacy &amp; Meaning</option>
+        <option value="everyday-wisdom">Everyday Wisdom</option>
+        <option value="proverbs">Proverbs</option>
       </select>
     </div>
     <div class="stats" id="stats"></div>
@@ -161,6 +186,7 @@ button.secondary:hover { background: #2a2f3d; }
 
     <div class="card-box" id="cardBox">
       <span class="side-label" id="sideLabel">Question</span>
+      <blockquote class="quote hidden" id="quoteText"></blockquote>
       <div class="question" id="questionText"></div>
       <div class="followup" id="followupText"></div>
     </div>
@@ -957,6 +983,118 @@ const WHO_AM_I_CARDS = [
   { q: "What would you want someone to understand about you before they get close?", f: "What would make it easier for you to tell them that yourself?" }
 ];
 
+// Everyday Wisdom deck: Sadhguru quotes (source: decks/everyday-wisdom.csv)
+const EVERYDAY_WISDOM_CARDS = [
+  { qt: "If you resist change, you resist life.", q: "What is a change you fought hard against that turned out to be good for you?", f: "What finally helped you stop resisting it?" },
+  { qt: "The most beautiful moments in life are moments when you are expressing your joy, not when you are seeking it.", q: "When did you last feel joy simply pouring out of you?", f: "What were you doing and who was there with you?" },
+  { qt: "Learning to listen is the essence of intelligent living.", q: "Who in your life makes you feel truly listened to?", f: "What do they do that others miss?" },
+  { qt: "When pain, misery, or anger happen, it is time to look within you, not around you.", q: "When something upsets you what is your first instinct about where to look for the cause?", f: "What have you learned about yourself from looking inward instead?" },
+  { qt: "Reactivity is enslavement. Responsibility is freedom.", q: "What is a situation where you reacted in the moment and later wished you had paused?", f: "What would responding instead of reacting have looked like that time?" },
+  { qt: "Unless you do the right things, the right things will not happen to you.", q: "What is something good in your life that came from steady right action rather than luck?", f: "Which small habit made the biggest difference?" },
+  { qt: "If instead of trying to manage your time, you clearly set your Priorities, time will arrange itself around them.", q: "What are the two or three priorities you would want your days to arrange themselves around?", f: "What usually crowds them out and how do you push back?" },
+  { qt: "If bitter experiences happen in your life, the Choice is this – you can either become wise or wounded.", q: "What is a painful experience that ended up making you wiser?", f: "What did it take to turn that wound into wisdom?" },
+  { qt: "Do not waste your life comparing yourself to others. Just see if you are one notch better than you were yesterday.", q: "Who do you most often find yourself comparing yourself to?", f: "What would being one notch better than yesterday look like for you this week?" },
+  { qt: "Most people in the world are not busy – they are just preoccupied.", q: "What keeps your mind preoccupied even when you are not actually busy?", f: "What helps you set it down and be present?" },
+  { qt: "The closest and dearest in your life get the worst of you. No stranger on the street gets such a nasty deal.", q: "Who sees the worst of you simply because they are closest to you?", f: "What could you offer them that you usually save for strangers?" },
+  { qt: "What you do should not define who you are. Who you are should define what you do.", q: "How would you describe who you are without mentioning your job?", f: "How does that inner self show up in the work you do?" },
+  { qt: "Very few people are Living their lives. The rest are just making a living.", q: "When do you feel most fully alive rather than just getting through the day?", f: "What would it take to have more of those moments?" },
+  { qt: "People always try to meet the most wonderful person in the world. Why not be that wonderful person yourself.", q: "What quality do you admire in others that you would most like to grow in yourself?", f: "What is one small step toward being that kind of person?" },
+  { qt: "For someone who is Joyful, life is brief. For someone who is miserable, it is bloody long.", q: "When has time flown by because you were so happy?", f: "What made that stretch of life feel so light?" },
+  { qt: "People are not here to be used. People are here to be loved and shared with. Things are for use – not people.", q: "Who in your life makes you feel genuinely valued as a person?", f: "How do you try to pass that feeling on to others?" },
+  { qt: "A spouse is not a destination but a fellow traveler.", q: "What has a long relationship taught you about travelling alongside someone?", f: "What do you most appreciate about the people who walk beside you?" },
+  { qt: "Trust does not mean that others have to do things the way you expect them to. Trust means being consciously vulnerable.", q: "Who have you trusted even when they did things differently than you would?", f: "What did that trust ask of you?" },
+  { qt: "The same problem recurring means you are the problem.", q: "What problem keeps showing up in your life in different forms?", f: "What part might you be playing in it?" },
+  { qt: "Do not save your Joy for later. When you are joyful, your whole life is a celebration.", q: "What is a joy you have been putting off for some future day?", f: "What would it look like to enjoy it now?" },
+  { qt: "What is a friend? A friend is another confused human being like you. If the two of you can be with each other sincerely, that is when real friendship happens.", q: "Who is a friend you can be your honest and confused self with?", f: "How did that friendship become so real?" },
+  { qt: "If who you are is clearly established within yourself, what people say will not matter.", q: "When have you felt secure enough in yourself that criticism barely touched you?", f: "Where did that steadiness come from?" },
+  { qt: "Life is not about What you do. It is all about How you do it.", q: "What is an ordinary task you take real pride in doing well?", f: "What does doing it with care give back to you?" },
+  { qt: "If you maintain Exuberance of energy, freshness of mind, and a loving heart, every day is a new adventure.", q: "When did a day last feel like a real adventure to you?", f: "What helps you keep a fresh mind and a loving heart?" },
+  { qt: "When people give advice, always look at whether it has worked for them.", q: "What is the best piece of advice you have ever received?", f: "How had it worked in the life of the person who gave it?" },
+  { qt: "To be committed to each other beyond success and failure, health and ill-health, life and death – that is what makes you a Family.", q: "Who has stuck by you through both good and hard times?", f: "What did their loyalty mean to you then and now?" },
+  { qt: "No work is stressful. It is your inability to manage your body, mind, and emotions that makes it stressful.", q: "What part of your work tends to feel most stressful?", f: "What helps you handle it with a steadier body and mind?" },
+  { qt: "Every day, you are gifted with a glorious sunrise and a glorious sunset. Life is happening. You are alive. What more do you want.", q: "What simple everyday moment makes you feel glad to be alive?", f: "How could you make more room for moments like that?" },
+  { qt: "There are two kinds of people: those who make things happen, and those who enjoy it when it happens well, and complain when it does not.", q: "When have you been the one who made something happen instead of waiting for it?", f: "What pushed you to step up that time?" },
+  { qt: "People irritate you simply because they are not the way you expect or want them to be. Essentially, they are not like you.", q: "What kind of person tends to irritate you most?", f: "What might that irritation reveal about your own expectations?" },
+  { qt: "One thing every human being can strive for is to leave this world a little better than it was when you entered it.", q: "What is one way you hope to leave the world a little better?", f: "Who first showed you what that kind of contribution looks like?" },
+  { qt: "One moment of absolute gratitude can transform your whole life.", q: "What is something you are deeply grateful for that you rarely mention?", f: "How has that gratitude shaped the way you live?" },
+  { qt: "With enough attention, just about anything can be mastered.", q: "What skill have you mastered simply by paying close attention over time?", f: "What would you love to give that kind of attention to next?" },
+  { qt: "Fear and anxiety are consequences of your imagination running wild. You are suffering a situation that may never happen.", q: "What worry have you carried that never actually came true?", f: "What helps you rein in your imagination when it runs ahead?" },
+  { qt: "Recognize people around you for the best that you have seen in them. In recognizing the best instead of the worst, you will kindle, nurture, and receive the best of everyone.", q: "Who brings out the best in you by seeing the best in you?", f: "Whose best could you start recognizing more often?" },
+  { qt: "Do not hold back your love, your joy, and your exuberance. Only what you give becomes your quality, not what you hold back.", q: "What is something you tend to hold back that you would like to give more freely?", f: "What makes it feel risky to let it out?" },
+  { qt: "Do not worry about your future. Do your present well, and the future will blossom.", q: "What part of your future do you worry about most right now?", f: "What could you do well today that would serve that future?" },
+  { qt: "To forgive does not mean to forget. To forgive means not to carry any bitterness in you because that destroys your life.", q: "What is something you have forgiven without forgetting?", f: "How did letting go of the bitterness change things for you?" },
+  { qt: "Happiness starts with you – not with your relationships, job, or money.", q: "Where in your life have you found happiness that did not depend on people or things?", f: "How do you return to that place on a hard day?" },
+  { qt: "Whoever you meet, speak to them like it is the last time you may have that opportunity. It will transform your life.", q: "Who is someone you wish you had said more to while you had the chance?", f: "How has that changed the way you talk to people now?" },
+  { qt: "When there are troubles within us, we must address them head-on. Do not look for distractions – distraction is not a solution.", q: "What distraction do you reach for when something is bothering you?", f: "What has helped you face a problem head-on instead?" },
+  { qt: "Competitors are not enemies. They are people who keep reminding you of your own shortcomings. Your quality control.", q: "Who is a rival or competitor who made you better?", f: "What shortcoming did they help you see in yourself?" },
+  { qt: "Whether you have anger, hatred, jealousy, or resentment against someone, essentially, it only works against you.", q: "What is a grudge or resentment you once held that ended up hurting mostly you?", f: "What helped you finally put it down?" },
+  { qt: "For a committed person, there is no such thing as failure – just lessons to be learnt on the way.", q: "What failure turned out to be one of your best lessons?", f: "What did it teach you that success never could?" },
+  { qt: "How much money you make only determines comfort, never the quality of your life.", q: "What did you learn about money and comfort versus a good life?", f: "What matters most to the quality of your days that money cannot buy?" },
+  { qt: "A love affair need not be with any particular person. You could have a great love affair with life itself.", q: "What part of life are you most in love with right now?", f: "How did that love first begin for you?" },
+  { qt: "Whatever you do, you can either do it willingly or unwillingly. If you do it willingly, it will be heaven. If you do it unwillingly, it will be hell.", q: "What is a task you once did grudgingly that later became a pleasure?", f: "What shifted in your attitude toward it?" },
+  { qt: "There is no need to do what others are doing. You must do what truly matters to you.", q: "What is something that truly matters to you even though others do not pursue it?", f: "What keeps you committed to it?" },
+  { qt: "Once your relationships are about sharing your Joy, rather than extracting Joy out of someone else, you will have wonderful relationships with anyone.", q: "How do you share your joy with the people closest to you?", f: "What changes in a relationship when both people come to give rather than get?" },
+  { qt: "What the world throws at you is not always in your hands. What you make of it is one hundred percent in your hands.", q: "What hard situation in your life did you turn into something good?", f: "What helped you decide how to respond to it?" },
+  { qt: "Youthfulness is not a question of years but a sense of Aliveness and Involvement.", q: "Who is the most youthful person you know regardless of their age?", f: "What keeps their spirit so alive and involved?" },
+  { qt: "What truly matters is not that people love you but that you are Loving.", q: "Who taught you what it means to be a loving person?", f: "How do you most like to show love to others?" }
+];
+
+// Proverbs deck: World English Bible verses (source: decks/proverbs.csv)
+const PROVERBS_CARDS = [
+  { qt: "A friend loves at all times; and a brother is born for adversity.", q: "Who has stood by you through a hard season of life?", f: "What did they do that you still remember today?" },
+  { qt: "A gentle answer turns away wrath, but a harsh word stirs up anger.", q: "When has a gentle reply calmed a tense moment you were part of?", f: "What helps you stay soft when someone comes at you hard?" },
+  { qt: "Iron sharpens iron; so a man sharpens his friend’s countenance.", q: "Who is the friend who sharpens you most?", f: "How have they changed the way you think or work?" },
+  { qt: "Anxiety in a man’s heart weighs it down, but a kind word makes it glad.", q: "What kind word lifted you when you were weighed down by worry?", f: "Who could use that same kind word from you this week?" },
+  { qt: "A cheerful heart makes good medicine, but a crushed spirit dries up the bones.", q: "What reliably makes you laugh until you feel better?", f: "When has cheerfulness carried you through something tough?" },
+  { qt: "A glad heart makes a cheerful face, but an aching heart breaks the spirit.", q: "Whose face always seems to light up when they see you?", f: "What would it take for you to be that person for someone else?" },
+  { qt: "A man of many companions may be ruined, but there is a friend who sticks closer than a brother.", q: "Which friend has felt closer to you than family?", f: "How did that friendship grow so deep?" },
+  { qt: "Don’t forsake your friend and your father’s friend. Don’t go to your brother’s house in the day of your disaster. A neighbor who is near is better than a distant brother.", q: "Which neighbor or nearby friend has shown up for you when it mattered?", f: "What makes a good neighbor in your eyes?" },
+  { qt: "Where there is no counsel, plans fail; but in a multitude of counselors they are established.", q: "What plan of yours turned out better because you asked others for input?", f: "Whose advice do you seek first when making a big decision and why?" },
+  { qt: "The way of a fool is right in his own eyes, but he who is wise listens to counsel.", q: "When did listening to someone's advice save you from a mistake?", f: "What makes it hard for you to take advice sometimes?" },
+  { qt: "He who answers before he hears, that is folly and shame to him.", q: "When did you jump to an answer before hearing the whole story?", f: "What helps you slow down and listen fully?" },
+  { qt: "He who pleads his cause first seems right— until another comes and questions him.", q: "When did hearing the other side of a story completely change your mind?", f: "How do you make sure you hear both sides before you judge?" },
+  { qt: "The discretion of a man makes him slow to anger. It is his glory to overlook an offense.", q: "What is an offense you chose to overlook that you are glad you let go?", f: "What makes some hurts easier to let go of than others?" },
+  { qt: "One who is slow to anger is better than the mighty; one who rules his spirit, than he who takes a city.", q: "What is a moment when keeping your cool took more strength than losing it?", f: "What helps you rule your own spirit when you feel provoked?" },
+  { qt: "Joy comes to a man with the reply of his mouth. How good is a word at the right time!", q: "What is the best thing anyone ever said to you at exactly the right time?", f: "How did those words change what happened next?" },
+  { qt: "A word fitly spoken is like apples of gold in settings of silver.", q: "What compliment or encouragement has stayed with you for years?", f: "Why do you think those words landed so well?" },
+  { qt: "Pleasant words are a honeycomb, sweet to the soul, and health to the bones.", q: "Whose words always seem to leave you feeling better?", f: "What do they say or do that makes their words so sweet?" },
+  { qt: "There is one who speaks rashly like the piercing of a sword, but the tongue of the wise heals.", q: "When have someone's words helped heal a hurt in you?", f: "How do you try to use your own words to heal?" },
+  { qt: "Even a fool, when he keeps silent, is counted wise. When he shuts his lips, he is thought to be discerning.", q: "When were you glad you kept quiet instead of speaking up?", f: "How do you decide when to speak and when to stay silent?" },
+  { qt: "Whoever guards his mouth and his tongue keeps his soul from troubles.", q: "What trouble have you avoided simply by holding your tongue?", f: "What is your best trick for pausing before you speak?" },
+  { qt: "In all hard work there is profit, but the talk of the lips leads only to poverty.", q: "What hard work in your life has paid off most?", f: "What kept you going when the work felt endless?" },
+  { qt: "Do you see a man skilled in his work? He will serve kings. He won’t serve obscure men.", q: "What skill have you worked hardest to master?", f: "Who helped you most along the way?" },
+  { qt: "A man’s heart plans his course, but Yahweh directs his steps.", q: "When did life lead you somewhere very different from what you had planned?", f: "What did that detour teach you?" },
+  { qt: "The plans of the diligent surely lead to profit; and everyone who is hasty surely rushes to poverty.", q: "What is something you achieved through careful steady planning?", f: "What part of planning comes naturally to you and what part is a struggle?" },
+  { qt: "Prepare your work outside, and get your fields ready. Afterwards, build your house.", q: "What foundation did you lay early in life that you are thankful for now?", f: "What groundwork are you laying today for your future?" },
+  { qt: "Don’t boast about tomorrow; for you don’t know what a day may bring.", q: "What surprise has a single day brought you that changed everything?", f: "How has that experience shaped the way you think about tomorrow?" },
+  { qt: "Hope deferred makes the heart sick, but when longing is fulfilled, it is a tree of life.", q: "What longing in your life was finally fulfilled after a long wait?", f: "How did you keep hope alive while you waited?" },
+  { qt: "One who walks with wise men grows wise, but a companion of fools suffers harm.", q: "Who are the wise people whose company has made you wiser?", f: "What is one thing you picked up just from being around them?" },
+  { qt: "Let another man praise you, and not your own mouth; a stranger, and not your own lips.", q: "When did someone else's praise of you mean more than anything you could say about yourself?", f: "Why do you think praise from others feels so different?" },
+  { qt: "When pride comes, then comes shame, but with humility comes wisdom.", q: "When did a bit of humility open the door to learning something new?", f: "What helps you stay humble when things are going well?" },
+  { qt: "Pride goes before destruction, and an arrogant spirit before a fall.", q: "What is a time your own pride tripped you up?", f: "What did you learn from that fall?" },
+  { qt: "A good name is more desirable than great riches, and loving favor is better than silver and gold.", q: "What do you hope people say about you when you are not in the room?", f: "What are you doing now to earn that kind of name?" },
+  { qt: "Better is a dinner of herbs, where love is, than a fattened calf with hatred.", q: "What simple meal shared with people you love stands out in your memory?", f: "What made that time around the table so special?" },
+  { qt: "Better is a dry morsel with quietness, than a house full of feasting with strife.", q: "Where do you find the most peace and quiet in your life?", f: "What would you give up to have more of it?" },
+  { qt: "Don’t withhold good from those to whom it is due, when it is in the power of your hand to do it.", q: "When did someone do you a good turn simply because it was in their power?", f: "What good is in your power to do for someone right now?" },
+  { qt: "He who has a generous eye will be blessed, for he shares his food with the poor.", q: "Who is the most generous person you have ever known?", f: "What did their generosity teach you about sharing?" },
+  { qt: "The merciful man does good to his own soul, but he who is cruel troubles his own flesh.", q: "When has showing mercy to someone ended up doing you good as well?", f: "What makes mercy easier or harder for you to give?" },
+  { qt: "Children’s children are the crown of old men; the glory of children is their parents.", q: "What do you treasure most about the generations in your family?", f: "What family story do you hope gets passed down?" },
+  { qt: "The glory of young men is their strength. The splendor of old men is their gray hair.", q: "What strengths of youth and wisdom of age have you seen come together well?", f: "What do you most want to learn from those older than you?" },
+  { qt: "Like cold water to a thirsty soul, so is good news from a far country.", q: "What good news from far away has refreshed you like cold water?", f: "Who far away would love to hear good news from you?" },
+  { qt: "Like water reflects a face, so a man’s heart reflects the man.", q: "What does your heart reveal about you that people might not see at first?", f: "How has your inner life shaped who you have become?" },
+  { qt: "The wounds of a friend are faithful, although the kisses of an enemy are profuse.", q: "When did a friend tell you a hard truth that you needed to hear?", f: "How did that honesty change your friendship?" },
+  { qt: "Perfume and incense bring joy to the heart; so does earnest counsel from a man’s friend.", q: "What earnest advice from a friend brought you joy?", f: "How do you know when a friend's counsel comes from the heart?" },
+  { qt: "Keep your heart with all diligence, for out of it is the wellspring of life.", q: "What do you do to guard your heart and keep it healthy?", f: "What drains your heart and what fills it back up?" },
+  { qt: "An honest answer is like a kiss on the lips.", q: "Who is the most honest person you know?", f: "What does their honesty give you that flattery never could?" },
+  { qt: "Counsel in the heart of man is like deep water, but a man of understanding will draw it out.", q: "Who has drawn out the deep thoughts in your heart?", f: "What questions do they ask that help you open up?" },
+  { qt: "He who covers an offense promotes love; but he who repeats a matter separates best friends.", q: "When has letting a past wrong go helped a relationship grow stronger?", f: "What does forgiving without retelling the story look like for you?" },
+  { qt: "Hatred stirs up strife, but love covers all wrongs.", q: "Where have you seen love cover a wrong and bring people back together?", f: "What makes love strong enough to cover things?" },
+  { qt: "Don’t let kindness and truth forsake you. Bind them around your neck. Write them on the tablet of your heart.", q: "Who in your life best combines kindness and truth?", f: "How do you hold on to both when they seem to pull apart?" },
+  { qt: "The life of the body is a heart at peace, but envy rots the bones.", q: "What brings your heart the deepest sense of peace?", f: "How do you handle envy when it creeps in?" },
+  { qt: "For lack of wood a fire goes out. Without gossip, a quarrel dies down.", q: "When have you seen a quarrel die down because no one kept it going?", f: "What helps you stop feeding gossip or conflict?" },
+  { qt: "One who brings gossip betrays a confidence, but one who is of a trustworthy spirit is one who keeps a secret.", q: "Who do you trust to keep your secrets safe?", f: "What makes someone trustworthy in your eyes?" }
+];
+
 const DECKS = {
   conversation: CONVERSATION_CARDS,
   'who-am-i': WHO_AM_I_CARDS,
@@ -971,7 +1109,9 @@ const DECKS = {
   'what-if': WHAT_IF_CARDS,
   'food-table': FOOD_TABLE_CARDS,
   'courage-change': COURAGE_CHANGE_CARDS,
-  'legacy-meaning': LEGACY_MEANING_CARDS
+  'legacy-meaning': LEGACY_MEANING_CARDS,
+  'everyday-wisdom': EVERYDAY_WISDOM_CARDS,
+  'proverbs': PROVERBS_CARDS
 };
 
 const DECK_NAMES = {
@@ -988,7 +1128,9 @@ const DECK_NAMES = {
   'what-if': "What If",
   'food-table': "Food & Table",
   'courage-change': "Courage & Change",
-  'legacy-meaning': "Legacy & Meaning"
+  'legacy-meaning': "Legacy & Meaning",
+  'everyday-wisdom': "Everyday Wisdom",
+  'proverbs': "Proverbs"
 };
 
 let cards = [];
@@ -1029,6 +1171,14 @@ function showStudy() {
 function render() {
   if (cards.length === 0) return;
   const card = cards[current];
+  const qt = document.getElementById('quoteText');
+  if (card.qt) {
+    qt.textContent = card.qt;
+    qt.classList.remove('hidden');
+  } else {
+    qt.textContent = "";
+    qt.classList.add('hidden');
+  }
   document.getElementById('questionText').textContent = card.q;
   const fu = document.getElementById('followupText');
   if (card.f) {
