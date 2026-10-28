@@ -141,6 +141,7 @@ button.secondary:hover { background: #2a2f3d; }
       <label for="deckSelect">Deck</label>
       <select id="deckSelect" class="deck-dropdown" onchange="selectDeck(this.value)">
         <option value="conversation" selected>Conversation</option>
+        <option value="who-am-i">Who Am I</option>
         <option value="rsd">ADHD / RSD</option>
         <option value="vacation">Vacation</option>
         <option value="aging">Aging</option>
@@ -901,8 +902,64 @@ const LEGACY_MEANING_CARDS = [
   { q: "If today were the last page of your story what would you want it to say?", f: "What would you want the next reader to take away?" }
 ];
 
+const WHO_AM_I_CARDS = [
+  { q: "What kind of moment makes you feel most like yourself?", f: "What would help someone notice when you are in that state?" },
+  { q: "When was the last time you lost track of hours because you were so absorbed in something?", f: "What does that tell you about what feeds you?" },
+  { q: "What drains your energy faster than people might guess?", f: "How could someone spot that you are running low?" },
+  { q: "What does real rest look like for you as opposed to simply stopping?", f: "What would a friend need to know to give you that kind of space?" },
+  { q: "What is a trait people notice in you right away?", f: "How close is that first impression to who you really are?" },
+  { q: "What is something about you that people usually only learn after years?", f: "Why do you think it takes so long to show?" },
+  { q: "What is a story of a time you surprised yourself with how you handled pressure?", f: "What were you drawing on in that moment?" },
+  { q: "When you are stressed what is the first thing you tend to do?", f: "What helps you most when you are in that place?" },
+  { q: "How do you usually act when you are hurt but not ready to say so?", f: "What would help someone reach you gently then?" },
+  { q: "What is your natural instinct when a conflict starts to brew?", f: "Where did you learn to respond that way?" },
+  { q: "What is a story of an argument that ended up bringing you closer to someone?", f: "What made the difference that time?" },
+  { q: "How do you make a big decision when your head and your gut disagree?", f: "Which one has steered you better over the years?" },
+  { q: "What is a decision you made quickly that you are still proud of?", f: "What did you trust about yourself in that moment?" },
+  { q: "What is a small choice that you overthink far more than it deserves?", f: "What do you think is underneath that?" },
+  { q: "What makes you feel truly cared for by someone?", f: "How could someone show you that on an ordinary day?" },
+  { q: "What do you need from people that you find hard to ask for?", f: "What would make it easier to ask?" },
+  { q: "What kind of praise actually lands for you?", f: "What kind tends to slide right off?" },
+  { q: "What are you good at that you rarely give yourself credit for?", f: "Where has it quietly helped the people around you?" },
+  { q: "What strength of yours can tip over into a weakness when you are tired?", f: "What does that look like from the outside?" },
+  { q: "What is a blind spot a close friend has pointed out to you?", f: "How did it feel to hear it?" },
+  { q: "What would the people who love you say you are stubborn about?", f: "How much of that stubbornness do you want to keep?" },
+  { q: "What is a quirk of yours that you have grown to love?", f: "When did you stop trying to hide it?" },
+  { q: "What is a habit or ritual that keeps you steady?", f: "What happens to you when you skip it?" },
+  { q: "How do you act in a room full of strangers?", f: "What helps you feel at ease there?" },
+  { q: "What role do you tend to play in a group of friends?", f: "When did you first notice yourself in that role?" },
+  { q: "What role do you wish you could play more often?", f: "What keeps you from stepping into it?" },
+  { q: "When was a time you felt deeply misunderstood by someone close to you?", f: "What do you wish they had seen in you?" },
+  { q: "How do you think your family sees you compared with how your friends see you?", f: "Which version feels closest to the real you?" },
+  { q: "What value would you defend even if it cost you something?", f: "When has it already cost you?" },
+  { q: "What is something you used to believe about yourself that turned out not to be true?", f: "What finally changed your mind?" },
+  { q: "What really motivates you when no one is watching?", f: "How does that show up in your everyday life?" },
+  { q: "What kind of challenge lights you up?", f: "What kind makes you want to walk away?" },
+  { q: "What makes you lose patience faster than almost anything else?", f: "What does that impatience protect in you?" },
+  { q: "What makes you laugh harder than it probably should?", f: "What does that say about your sense of humor?" },
+  { q: "What is something you are quietly competitive about?", f: "Where do you think that drive comes from?" },
+  { q: "How do you behave when you are genuinely excited about something?", f: "How can people tell even when you play it cool?" },
+  { q: "What sort of environment brings out the best in you?", f: "What could someone do to help create it?" },
+  { q: "What sort of environment brings out your worst?", f: "How do you protect yourself from it?" },
+  { q: "What is the story of a time you changed your mind about something important?", f: "What did that process feel like for you?" },
+  { q: "What does a good day look like when it is completely up to you?", f: "What part of it could you have more often?" },
+  { q: "How do you show love when words do not come easily?", f: "What would you like people to notice about how you show it?" },
+  { q: "What do you find yourself thinking about when your mind is free to wander?", f: "What does that reveal about what you care about?" },
+  { q: "What kind of compliment would mean the most coming from someone close to you?", f: "Why that one in particular?" },
+  { q: "What is a fear that has shaped more of your choices than you would like?", f: "What would you do differently without it?" },
+  { q: "When was a time you stood up for yourself and felt good about it afterward?", f: "What made that moment possible?" },
+  { q: "How do you handle it when plans suddenly change?", f: "What helps you adjust more easily?" },
+  { q: "What do you need in order to trust someone?", f: "How can someone earn that trust with you?" },
+  { q: "What does it look like when you are at your most generous?", f: "What brings that side of you out?" },
+  { q: "What is something you are still learning about how you work?", f: "Who has helped you see it more clearly?" },
+  { q: "What is a part of your personality you got from someone in your family?", f: "How do you feel about carrying it?" },
+  { q: "What is a version of yourself you are slowly growing into?", f: "How can the people around you support that growth?" },
+  { q: "What would you want someone to understand about you before they get close?", f: "What would make it easier for you to tell them that yourself?" }
+];
+
 const DECKS = {
   conversation: CONVERSATION_CARDS,
+  'who-am-i': WHO_AM_I_CARDS,
   rsd: RSD_CARDS,
   vacation: VACATION_CARDS,
   'aging': AGING_CARDS,
@@ -919,6 +976,7 @@ const DECKS = {
 
 const DECK_NAMES = {
   'conversation': "Conversation",
+  'who-am-i': "Who Am I",
   'rsd': "ADHD / RSD",
   'vacation': "Vacation",
   'aging': "Aging",
