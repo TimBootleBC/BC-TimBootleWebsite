@@ -46,9 +46,10 @@ Replace the in-memory fixtures and action handlers in `app.js` with a typed API 
 
 ## Lowcountry pilot configuration
 
-- Independent fictional customer: **HVAC of the Lowcountry LLC**. It is not owned by Tim Bootle, American Ibis Services LLC, or American Ibis HVAC Services LLC.
-- Software owner/provider: **American Ibis Services LLC (Montana)**.
-- **American Ibis HVAC Services LLC (South Carolina)** is a separate operating company and intended software licensee, not the fictional customer.
+- Independent fictional customer: **HVAC of the Lowcountry LLC**. It is not owned by Tim Bootle or the software service provider.
+- Customer-facing software provider and service relationship: **American Ibis HVAC Services LLC (South Carolina)**.
+- Customer-facing settings, workspace details, and footer identify only this service provider. Internal corporate ownership and licensing arrangements do not appear in the customer experience.
+- The HVAC customer's own name remains on its homeowner-facing quotes, messages, and payment previews.
 - Service areas: **Charleston, North Charleston, Mount Pleasant, Summerville, Hanahan, and Goose Creek, South Carolina**.
 - Office: **Monday–Friday, 8 a.m.–5 p.m., America/New_York**. After-hours intake captures requests and flags urgent cases for human review; no automatic dispatch or arrival-time guarantee.
 - Default diagnostic fee: **$99**. Standard tune-up: **$129**. No repair pricing is invented.
