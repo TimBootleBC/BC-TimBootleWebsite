@@ -4,6 +4,11 @@
   padding: 72px 0 80px;
 }
 
+/* Sit the disclaimer close under the hero on every /prep page. */
+.prep-page main > .section {
+  padding-top: 20px;
+}
+
 .prep-page .page-hero h1 {
   font-size: clamp(2rem, 4.4vw, 3.6rem);
 }
