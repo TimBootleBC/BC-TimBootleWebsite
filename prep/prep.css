@@ -668,6 +668,19 @@
   }
 }
 
+
+.prep-supply-calc .prep-calc-results {
+  margin-top: 16px;
+}
+
+.prep-supply-calc caption {
+  caption-side: top;
+  text-align: left;
+  padding: 0 0 10px;
+  font-weight: 650;
+  color: var(--ink-700);
+}
+
 /* Print */
 @media print {
   .site-header,
@@ -675,7 +688,8 @@
   .prep-start-here,
   .prep-print-bar,
   .prep-print-button,
-  .prep-calc,
+  .prep-calc:not(.prep-supply-calc),
+  .prep-supply-calc-form,
   .prep-toc,
   .prep-bob-actions,
   .prep-bob-reset,
