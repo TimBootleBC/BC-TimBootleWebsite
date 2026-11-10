@@ -292,3 +292,340 @@
     min-width: 24rem;
   }
 }
+
+/* Last reviewed */
+.prep-reviewed {
+  margin: 18px 0 0;
+  color: #c6d1de;
+  font-size: 0.95rem;
+}
+
+.prep-reviewed strong {
+  color: var(--blue-400);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  margin-right: 8px;
+}
+
+/* Start here callout */
+.prep-start-here {
+  margin: 0 0 28px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--blue-500);
+  border-radius: var(--radius-md);
+  background: #eaf3ff;
+}
+
+.prep-start-here-home {
+  padding: 24px 26px;
+  box-shadow: 0 10px 30px rgba(19, 32, 51, 0.05);
+}
+
+.prep-start-here h2 {
+  margin: 0 0 10px;
+  color: var(--ink-900);
+  font-size: 1.05rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.prep-start-here ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+}
+
+.prep-start-here li {
+  margin: 0;
+}
+
+.prep-start-here a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid var(--border);
+  color: #1458a8;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.prep-start-here a:hover,
+.prep-start-here a:focus-visible {
+  background: #e9f2ff;
+  text-decoration: underline;
+}
+
+/* Print button */
+.prep-print-bar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 0 16px;
+}
+
+.prep-print-button {
+  cursor: pointer;
+  min-width: 7.5rem;
+}
+
+/* On-this-page TOC */
+.prep-toc {
+  margin: 0 0 28px;
+  padding: 20px 22px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+}
+
+.prep-toc h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+}
+
+.prep-toc ul {
+  margin: 0;
+  padding-left: 1.15em;
+}
+
+.prep-toc li + li {
+  margin-top: 0.3em;
+}
+
+/* Task list checkboxes */
+.prep-content .task-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.8em 0 1.2em;
+}
+
+.prep-content .task-list-item {
+  position: relative;
+  margin: 0.55em 0;
+  padding-left: 2.1rem;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.prep-content .task-list-item input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin: 0;
+  accent-color: var(--blue-500);
+  cursor: pointer;
+}
+
+.prep-content .task-list-item > p {
+  margin: 0;
+}
+
+/* Household calculator */
+.prep-calc {
+  margin: 0 0 28px;
+  padding: 22px 24px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(19, 32, 51, 0.05);
+}
+
+.prep-calc h2 {
+  margin: 0 0 10px;
+  font-size: 1.35rem;
+}
+
+.prep-calc-bands {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10.5rem, 1fr));
+  gap: 12px;
+}
+
+.prep-calc-band,
+.prep-calc-days {
+  display: grid;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 650;
+  color: var(--ink-700);
+}
+
+.prep-calc input[type="number"] {
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  color: var(--ink-900);
+}
+
+.prep-calc fieldset {
+  margin: 0 0 16px;
+  padding: 0;
+  border: 0;
+}
+
+.prep-calc legend {
+  padding: 0 0 8px;
+  font-weight: 800;
+  color: var(--ink-900);
+}
+
+.prep-calc-days {
+  max-width: 12rem;
+  margin-bottom: 16px;
+}
+
+.prep-calc-button {
+  border: 0;
+  cursor: pointer;
+}
+
+.prep-calc-results {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.prep-calc-results ul {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.prep-calc-results li {
+  padding: 4px 0;
+  color: var(--ink-700);
+}
+
+/* Print */
+@media print {
+  .site-header,
+  .prep-nav,
+  .prep-start-here,
+  .prep-print-bar,
+  .prep-print-button,
+  .prep-calc,
+  .prep-toc,
+  .site-footer,
+  .nav-toggle {
+    display: none !important;
+  }
+
+  body,
+  .section-light,
+  .prep-page {
+    background: #fff !important;
+    color: #000;
+  }
+
+  .page-hero {
+    background: none !important;
+    color: #000;
+    padding: 0 0 12px;
+  }
+
+  .page-hero .eyebrow,
+  .prep-reviewed,
+  .prep-reviewed strong,
+  .page-hero p {
+    color: #000 !important;
+  }
+
+  .prep-page .page-hero h1 {
+    font-size: 1.8rem;
+    color: #000;
+  }
+
+  .section {
+    padding: 0;
+  }
+
+  .container,
+  .container.narrow {
+    width: 100%;
+    max-width: none;
+  }
+
+  .prep-content,
+  .notice,
+  .prose,
+  .side-panel {
+    box-shadow: none;
+    border: 0;
+    background: #fff;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .prep-disclaimer {
+    margin-bottom: 14px;
+    border: 1px solid #bbb;
+    background: #fff;
+    color: #000;
+  }
+
+  .prep-content a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  .table-wrap {
+    overflow: visible;
+    border-color: #444;
+  }
+
+  .prep-content th {
+    background: #eee;
+    color: #000;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .prep-content .task-list-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .prep-content .task-list-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 0.9rem;
+    height: 0.9rem;
+    min-width: 0.9rem;
+    border: 1.4pt solid #000;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+@media (max-width: 760px) {
+  .prep-start-here ul {
+    flex-direction: column;
+  }
+
+  .prep-start-here a {
+    width: 100%;
+  }
+
+  .prep-print-bar {
+    justify-content: stretch;
+  }
+
+  .prep-print-button {
+    width: 100%;
+  }
+}

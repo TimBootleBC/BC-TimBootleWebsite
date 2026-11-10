@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Practical, information-only guidance for a Charleston-area household of 4 to 6 people to get through the first days of an emergency, and to stay at home for up to two weeks if services are down.">
+  <meta name="description" content="Practical, information-only guidance for a Charleston-area household of 4 to 6 people, with a clear starting point for 72 hours, a two-week home supply, and a printable family plan.">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Household preparedness | Tim Bootle</title>
   <script src="/js/https-redirect.js"></script>
@@ -46,6 +46,7 @@
       <div class="prep-nav-menu" id="prep-nav-menu">
         <a href="/prep/" class="is-current" aria-current="page">Prep home</a>
         <a href="/prep/first-72-hours/">First 72 hours</a>
+        <a href="/prep/supply-checklist/">Supply checklist</a>
         <div class="prep-nav-group">
           <span class="prep-nav-label">Supplies</span>
           <div class="prep-nav-group-links">
@@ -83,25 +84,54 @@
     <div class="container narrow">
       <p class="eyebrow">Preparedness</p>
       <h1>Household preparedness</h1>
-      <p>Practical, information-only guidance for a Charleston-area household of 4 to 6 people to get through the first days of an emergency, and to stay at home for up to two weeks if services are down.</p>
+      <p class="prep-reviewed"><strong>Last reviewed:</strong> 10 November 2026</p>
+      <p>Practical, information-only guidance for a Charleston-area household of 4 to 6 people, with a clear starting point for 72 hours, a two-week home supply, and a printable family plan.</p>
     </div>
   </section>
 
   <section class="section section-light">
     <div class="container narrow">
+
       <aside class="prep-disclaimer notice" role="note">
         <p>This is general household information, not official emergency instructions. In an emergency, follow local officials, the National Weather Service, and call 911 if life is at risk.</p>
       </aside>
       <article class="prose prep-content">
-        <p>This section is a family reference, not a shop. It is here so you can see what to have, how much of it a household of 4 to 6 people actually needs, and where official help and warnings come from in the Charleston area.</p>
-        <p>Disasters in the Lowcountry rarely announce themselves with much warning you can use at the last minute. Hurricanes are the obvious seasonal risk, from 1 June to 30 November, but flooding, long power outages, and dangerous heat when the air conditioning fails can arrive with a storm or on an ordinary summer week. After a major event, it can take days for roads, water, power, and stores to work normally again. Local emergency managers have long asked residents to be ready to manage on their own for at least the first 72 hours. That is the right starting point. It is even better to be able to stay at home for about two weeks if you are not told to leave.</p>
-        <h2>Start with three decisions</h2>
-        <ol>
-        <li><strong>Know how you will hear official instructions.</strong> Sign up for county alerts, keep a NOAA weather radio, and understand Wireless Emergency Alerts on your phones. Details are on <a href="/prep/communications">Communications</a> and <a href="/prep/charleston-sc-resources">Charleston and South Carolina resources</a>.</li>
-        <li><strong>Decide, in writing, how you will stay or go.</strong> Look up your evacuation zone by address, pick routes and a meeting place, and pack a go-bag. See <a href="/prep/first-72-hours">The first 72 hours</a>, <a href="/prep/evacuation-and-go-bag">Evacuation and go-bag</a>, and the <a href="/prep/family-plan-and-checklists">family plan</a>.</li>
-        <li><strong>Stock the house, then the bag.</strong> Water, food, medicines, light, a way to charge a phone, and sanitation supplies at home cover most events. The bag is what you grab if you have to leave. Quantities for 4 to 6 people are on each supplies page.</li>
-        </ol>
-        <h2>What to read first</h2>
+        <nav class="prep-start-here prep-start-here-home" aria-label="Start here"><h2>Start here</h2>
+        <ul>
+        <li><a href="/prep/first-72-hours">Prepare for 72 hours</a></li>
+        <li><a href="/prep/supply-checklist">Build a two-week supply</a></li>
+        <li><a href="/prep/family-plan-and-checklists">Complete the family plan</a></li>
+        </ul></nav>
+        <aside class="prep-calc" id="prep-calculator">
+                <h2>Household supply calculator</h2>
+                <p>Planning figures only: <strong>1 gallon of water</strong> and <strong>2,000 calories</strong> per person per day. The calorie default matches the U.S. Nutrition Facts label figure (“2,000 calories a day is used for general nutrition advice”). It is not a personal prescription. Adjust using the <a href="/prep/food#calorie-needs">USDA ranges on the food page</a>.</p>
+                <form class="prep-calc-form" action="#" method="get">
+                  <fieldset>
+                    <legend>People by age band</legend>
+                    <div class="prep-calc-bands">
+                  <label class="prep-calc-band"><span>Under 2 years</span><input type="number" inputmode="numeric" min="0" step="1" value="0" data-band="under-2" name="under-2" aria-label="Under 2 years"></label>
+                  <label class="prep-calc-band"><span>Children 2–8</span><input type="number" inputmode="numeric" min="0" step="1" value="0" data-band="children-2-8" name="children-2-8" aria-label="Children 2–8"></label>
+                  <label class="prep-calc-band"><span>Children and teens 9–18</span><input type="number" inputmode="numeric" min="0" step="1" value="0" data-band="children-9-18" name="children-9-18" aria-label="Children and teens 9–18"></label>
+                  <label class="prep-calc-band"><span>Adults 19–50</span><input type="number" inputmode="numeric" min="0" step="1" value="0" data-band="adults-19-50" name="adults-19-50" aria-label="Adults 19–50"></label>
+                  <label class="prep-calc-band"><span>Adults 51 and older</span><input type="number" inputmode="numeric" min="0" step="1" value="0" data-band="adults-51-plus" name="adults-51-plus" aria-label="Adults 51 and older"></label>
+                    </div>
+                  </fieldset>
+                  <label class="prep-calc-days"><span>Number of days</span>
+                    <input type="number" inputmode="numeric" min="1" step="1" value="14" name="days" aria-label="Number of days">
+                  </label>
+                  <button type="button" class="button button-primary prep-calc-button" data-action="calculate">Calculate</button>
+                </form>
+                <div class="prep-calc-results" aria-live="polite">
+                  <p data-output="summary">Enter the number of people in each age band and the number of days.</p>
+                  <ul>
+                    <li>People: <strong data-output="people">0</strong></li>
+                    <li>Water: <strong data-output="water">—</strong></li>
+                    <li>Food: <strong data-output="calories">—</strong></li>
+                  </ul>
+                </div>
+              </aside>
+        <p>This is a family reference, not a shop. It is written for a household of 4 to 6 people in or near Charleston, South Carolina, where hurricanes, flooding, long power outages, and dangerous heat when the air conditioning fails are the usual risks. After a major event, it can take days for roads, water, power, and stores to work normally. Local emergency managers ask residents to manage on their own for at least the first 72 hours. Being able to stay at home for about two weeks, if you are not told to leave, covers far more real events.</p>
+        <h2>What to read next</h2>
         <div class="table-wrap"><table>
         <thead>
         <tr>
@@ -112,23 +142,27 @@
         <tbody>
         <tr>
         <td><a href="/prep/first-72-hours">The first 72 hours</a></td>
-        <td>Understand the 72-hour idea, the main household needs, and a 3-day versus 2-week baseline for 4–6 people</td>
+        <td>The 72-hour idea, the main household needs, and how that sits next to a two-week home stock</td>
+        </tr>
+        <tr>
+        <td><a href="/prep/supply-checklist">Supply checklist</a></td>
+        <td>A printable 3-day and 2-week tick list for 4 to 6 people</td>
         </tr>
         <tr>
         <td><a href="/prep/water">Water</a></td>
-        <td>How much to store, how to store it, and how to treat water if the tap is unsafe</td>
+        <td>How much to store, how to store it, and how to treat water for germs — not for fuel or chemical contamination</td>
         </tr>
         <tr>
         <td><a href="/prep/food">Food</a></td>
-        <td>A pantry that does not need a working stove or refrigerator, plus food safety when the power is out</td>
+        <td>A pantry of familiar meals, calorie ranges by age and activity, and food safety when the power is out</td>
         </tr>
         <tr>
         <td><a href="/prep/power-and-lighting">Power and lighting</a></td>
-        <td>Lights, batteries, power banks, generators, and carbon monoxide safety</td>
+        <td>Lights, power-bank capacity, runtime examples, generators, and carbon monoxide safety</td>
         </tr>
         <tr>
         <td><a href="/prep/heat-and-cooling">Heat and cooling</a></td>
-        <td>Staying safe in Lowcountry heat without air conditioning, and keeping warm in a rare cold snap</td>
+        <td>Heat without air conditioning, heat illness, and warmth in a rare cold outage</td>
         </tr>
         <tr>
         <td><a href="/prep/first-aid-and-medical">First aid and medical</a></td>
@@ -160,7 +194,7 @@
         </tr>
         <tr>
         <td><a href="/prep/family-plan-and-checklists">Family plan and checklists</a></td>
-        <td>A writable plan, fire escape steps, shelter-in-place, and printable checklists</td>
+        <td>A printable household plan, fire escape steps, and shelter-in-place</td>
         </tr>
         <tr>
         <td><a href="/prep/charleston-sc-resources">Charleston and South Carolina resources</a></td>
@@ -168,47 +202,56 @@
         </tr>
         </tbody>
         </table></div>
-        <h2>A realistic baseline for 4 to 6 people</h2>
-        <p>Official U.S. guidance uses <strong>1 gallon of water per person per day</strong> for drinking and sanitation. In very hot weather, people may need more. For a household of 4 to 6:</p>
+        <h2>Planning quantities for 4 to 6 people</h2>
+        <p>Official U.S. guidance uses <strong>1 gallon of water per person per day</strong> for drinking and sanitation. In very hot weather, <a href="https://www.ready.gov/water" target="_blank" rel="noopener noreferrer">Ready.gov</a> notes that needs can double, so treat the gallon as a floor.</p>
         <div class="table-wrap"><table>
         <thead>
         <tr>
         <th>Purpose</th>
-        <th>Water</th>
-        <th>Ready-to-eat food (planning figure)</th>
+        <th>Water, 4 people</th>
+        <th>Water, 6 people</th>
+        <th>Food at 2,000 kcal/person/day, 4 people</th>
+        <th>Food at 2,000 kcal/person/day, 6 people</th>
         </tr>
         </thead>
         <tbody>
         <tr>
         <td>3 days (evacuation or first 72 hours)</td>
-        <td>12–18 gallons</td>
-        <td>Roughly 18,000–27,000 calories, or 3 days of meals your family will actually eat</td>
+        <td>12 gallons</td>
+        <td>18 gallons</td>
+        <td>24,000 calories</td>
+        <td>36,000 calories</td>
         </tr>
         <tr>
         <td>2 weeks at home</td>
-        <td>56–84 gallons</td>
-        <td>On the order of 84,000–126,000 calories (about 1,500 calories per person per day), plus infant or medical diets if you need them</td>
+        <td>56 gallons</td>
+        <td>84 gallons</td>
+        <td>112,000 calories</td>
+        <td>168,000 calories</td>
         </tr>
         </tbody>
         </table></div>
-        <p>Add extra water and food for pets. Keep a 7-day supply of prescription medicines if you can, and do not let the household’s only flashlight live at the back of a junk drawer.</p>
-        <p>These numbers are planning tools, not a shopping list for a particular brand. Use food you already eat, rotate it, and keep the urgent items — medicines, documents, a headlamp, a charged power bank, and a small amount of cash — where anyone in the house can find them in the dark.</p>
+        <p>Add extra water and food for pets. Keep about a 7-day supply of prescription medicines if you can, as the <a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/survival-kit-supplies.html" target="_blank" rel="noopener noreferrer">Red Cross</a> recommends.</p>
+        <p>The food totals use a <strong>planning assumption of 2,000 calories per person per day</strong>. That is the general figure used on U.S. Nutrition Facts labels: “2,000 calories a day is used for general nutrition advice.” It is not a personal prescription. Needs vary by age, sex, height, weight, and activity; see the <a href="/prep/food#calorie-needs">USDA ranges on the food page</a>. Stock familiar meals first, then use the 2,000-calorie figure (or a personal USDA estimate) as a check. A small on-page calculator (people by age band and number of days, defaulting to 2,000 calories per person per day) is planned for a later site build.</p>
+        <p>Keep medicines, documents, a headlamp, a charged power bank, and a small amount of cash where anyone in the house can find them in the dark.</p>
         <h2>How official information fits together</h2>
         <ul>
         <li><strong>National Weather Service Charleston</strong> tells you what the weather is doing: watches, warnings, surge and flood risks, and tropical updates.</li>
         <li><strong>South Carolina Emergency Management Division</strong> and your <strong>county emergency management</strong> office tell you whether to evacuate, which zones are included, which routes to use, and when shelters are open.</li>
-        <li><strong>Ready.gov</strong> and the <strong>American Red Cross</strong> describe the household supplies and family plans that work in most U.S. communities.</li>
+        <li><strong>Ready.gov</strong>, the <strong>CDC</strong>, the <strong>EPA</strong>, and the <strong>American Red Cross</strong> describe household supplies and the treatment and safety rules behind this section.</li>
         </ul>
         <p>Always follow the instructions in an official alert or from local officials, even if they differ from a checklist on this site. If life is at risk, call <strong>911</strong>.</p>
         <h2>Sources &amp; further reading</h2>
         <ul>
         <li><a href="https://www.ready.gov/kit" target="_blank" rel="noopener noreferrer">Ready.gov: Build a Kit</a></li>
         <li><a href="https://www.ready.gov/plan" target="_blank" rel="noopener noreferrer">Ready.gov: Make a Plan</a></li>
+        <li><a href="https://www.ready.gov/water" target="_blank" rel="noopener noreferrer">Ready.gov: Water</a></li>
         <li><a href="https://www.redcross.org/get-help/how-to-prepare-for-emergencies/survival-kit-supplies.html" target="_blank" rel="noopener noreferrer">American Red Cross: Survival Kit Supplies</a></li>
         <li><a href="https://www.scemd.org/prepare/" target="_blank" rel="noopener noreferrer">South Carolina Emergency Management Division: Prepare</a></li>
         <li><a href="https://www.hurricane.sc/" target="_blank" rel="noopener noreferrer">SCEMD Hurricane Guide hub</a></li>
         <li><a href="https://www.weather.gov/chs" target="_blank" rel="noopener noreferrer">National Weather Service Charleston</a></li>
-        <li><a href="https://theprepared.com/prepping-basics/guides/emergency-preparedness-checklist-prepping-beginners/" target="_blank" rel="noopener noreferrer">The Prepared: beginner preparedness checklist</a> (independent background on 72 hours versus two weeks; this site does not adopt its product recommendations)</li>
+        <li><a href="https://www.fda.gov/food/nutrition-facts-label/calories-nutrition-facts-label" target="_blank" rel="noopener noreferrer">FDA: Calories on the Nutrition Facts Label</a></li>
+        <li><a href="https://www.nal.usda.gov/human-nutrition-and-food-safety/dri-calculator" target="_blank" rel="noopener noreferrer">USDA DRI Calculator</a></li>
         </ul>
       </article>
     </div>
@@ -220,9 +263,9 @@
     <div class="prep-footer-official">
       <p class="prep-footer-label">Always follow official guidance</p>
       <p class="prep-footer-links">
-          <a href="https://www.hurricane.sc/" rel="noopener noreferrer" target="_blank">hurricane.sc</a>
-          <a href="https://www.weather.gov/chs" rel="noopener noreferrer" target="_blank">NWS Charleston</a>
-          <a href="https://www.ready.gov/" rel="noopener noreferrer" target="_blank">Ready.gov</a>
+          <a href="https://www.hurricane.sc/" target="_blank" rel="noopener noreferrer">hurricane.sc</a>
+          <a href="https://www.weather.gov/chs" target="_blank" rel="noopener noreferrer">NWS Charleston</a>
+          <a href="https://www.ready.gov/" target="_blank" rel="noopener noreferrer">Ready.gov</a>
           <a href="/prep/charleston-sc-resources/">Local resources</a>
       </p>
     </div>
@@ -231,5 +274,6 @@
 </footer>
 <script src="/js/main.js"></script>
 <script src="/prep/nav.js"></script>
+<script src="/prep/calculator.js"></script>
 </body>
 </html>
