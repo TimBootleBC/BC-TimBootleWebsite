@@ -2,6 +2,13 @@
   const gallonsPerPerson = 1;
   const kcalPerPerson = 2000;
   const supplyDays = [3, 7, 30];
+  // Planning amounts from the AKC ~1 fl oz/lb/day rule, with a little margin.
+  const PET_OZ_PER_DAY = {
+    "pets-small": 32,   // 0.25 gal (1 quart)
+    "pets-medium": 64,  // 0.5 gal
+    "pets-large": 128,  // 1 gal
+  };
+  const OZ_PER_GALLON = 128;
 
   function toInt(value) {
     const n = parseInt(String(value), 10);
@@ -13,7 +20,8 @@
   }
 
   function formatGallons(n) {
-    return formatNumber(n) + (n === 1 ? " gallon" : " gallons");
+    const rounded = Math.round(n * 100) / 100;
+    return formatNumber(rounded) + (rounded === 1 ? " gallon" : " gallons");
   }
 
   function formatCalories(n) {
@@ -79,7 +87,11 @@
 
     const adultsInput = root.querySelector("[name='adults']");
     const childrenInput = root.querySelector("[name='children']");
-    const petsInput = root.querySelector("[name='pets']");
+    const petInputs = {
+      "pets-small": root.querySelector("[name='pets-small']"),
+      "pets-medium": root.querySelector("[name='pets-medium']"),
+      "pets-large": root.querySelector("[name='pets-large']"),
+    };
     const form = root.querySelector("form");
     const button = root.querySelector("[data-action='calculate']");
     const summaryEl = root.querySelector("[data-output='summary']");
@@ -90,12 +102,29 @@
       if (el) el.textContent = text;
     }
 
+    function petCounts() {
+      const counts = {};
+      let totalPets = 0;
+      let waterOzPerDay = 0;
+      Object.keys(PET_OZ_PER_DAY).forEach((name) => {
+        const n = toInt(petInputs[name] && petInputs[name].value);
+        counts[name] = n;
+        totalPets += n;
+        waterOzPerDay += n * PET_OZ_PER_DAY[name];
+      });
+      return { counts, totalPets, waterOzPerDay };
+    }
+
+    function gallonsFromOz(oz) {
+      return oz / OZ_PER_GALLON;
+    }
+
     function calculate() {
       const adults = toInt(adultsInput && adultsInput.value);
       const children = toInt(childrenInput && childrenInput.value);
-      const pets = toInt(petsInput && petsInput.value);
+      const pets = petCounts();
       const people = adults + children;
-      const hasPets = pets > 0;
+      const hasPets = pets.totalPets > 0;
 
       petRows.forEach((row) => {
         row.hidden = !hasPets;
@@ -103,7 +132,7 @@
 
       supplyDays.forEach((days) => {
         const waterPeople = people * days * gallonsPerPerson;
-        const waterPets = pets * days * gallonsPerPerson;
+        const waterPets = gallonsFromOz(pets.waterOzPerDay * days);
         const calories = people * days * kcalPerPerson;
         setCell("water-people-" + days, people ? formatGallons(waterPeople) : "—");
         setCell("water-pets-" + days, hasPets ? formatGallons(waterPets) : "—");
@@ -112,14 +141,15 @@
       });
 
       if (summaryEl) {
-        if (!people && !pets) {
-          summaryEl.textContent = "Enter the number of adults, children, and, if you have them, pets.";
+        if (!people && !hasPets) {
+          summaryEl.textContent = "Enter the number of adults, children, and, if you have them, pets by size.";
         } else if (!people) {
           summaryEl.textContent =
-            "For " + formatNumber(pets) + (pets === 1 ? " pet" : " pets") +
-            ", plan " + formatGallons(pets * 3) + " of water for 3 days, " +
-            formatGallons(pets * 7) + " for 7 days, and " +
-            formatGallons(pets * 30) + " for 30 days (at 1 gallon per pet per day). Add the food your animals already eat.";
+            "For " + formatNumber(pets.totalPets) + (pets.totalPets === 1 ? " pet" : " pets") +
+            ", plan " + formatGallons(gallonsFromOz(pets.waterOzPerDay * 3)) + " of water for 3 days, " +
+            formatGallons(gallonsFromOz(pets.waterOzPerDay * 7)) + " for 7 days, and " +
+            formatGallons(gallonsFromOz(pets.waterOzPerDay * 30)) +
+            " for 30 days, using the size-based planning amounts. Add the food your animals already eat.";
         } else {
           let text =
             "For " + formatNumber(people) + (people === 1 ? " person" : " people") +
@@ -129,17 +159,18 @@
             " for 30 days (at 1 gallon and 2,000 calories per person per day).";
           if (hasPets) {
             text +=
-              " Add " + formatGallons(pets * 3) + ", " + formatGallons(pets * 7) +
-              ", and " + formatGallons(pets * 30) + " of water for " +
-              formatNumber(pets) + (pets === 1 ? " pet" : " pets") +
-              " (1 gallon per pet per day). Pack the food your animals already eat.";
+              " Add " + formatGallons(gallonsFromOz(pets.waterOzPerDay * 3)) + ", " +
+              formatGallons(gallonsFromOz(pets.waterOzPerDay * 7)) +
+              ", and " + formatGallons(gallonsFromOz(pets.waterOzPerDay * 30)) + " of water for " +
+              formatNumber(pets.totalPets) + (pets.totalPets === 1 ? " pet" : " pets") +
+              ", using the size-based planning amounts. Pack the food your animals already eat.";
           }
           summaryEl.textContent = text;
         }
       }
     }
 
-    [adultsInput, childrenInput, petsInput].forEach((input) => {
+    [adultsInput, childrenInput].concat(Object.values(petInputs)).forEach((input) => {
       if (!input) return;
       input.addEventListener("input", calculate);
       input.addEventListener("change", calculate);
