@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A 3-, 7-, and 30-day household supply calculator for a family of four, with adjustable adult and child counts and optional small, medium, and large pets, using 1 gallon of water and 2,000 calories per person per day.">
+  <meta name="description" content="A 3- and 14-day household supply calculator for a family of four, with adjustable adult and child counts and optional small, medium, and large pets, using 1 gallon of water and 2,000 calories per person per day.">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <title>3–7–30 day supply calculator | Tim Bootle</title>
+  <title>3- and 14-day supply calculator | Tim Bootle</title>
   <script src="/js/https-redirect.js?v=5dd4466a4b"></script>
   <link rel="stylesheet" href="/css/styles.css?v=6287db2ec7">
   <link rel="stylesheet" href="/prep/prep.css?v=b85c90feac">
@@ -41,13 +41,13 @@
     <div class="container prep-nav-inner">
       <button class="prep-nav-toggle" type="button" aria-expanded="false" aria-controls="prep-nav-menu">
         <span class="prep-nav-toggle-label">Prep menu</span>
-        <strong>3–7–30 day supply calculator</strong>
+        <strong>3- and 14-day supply calculator</strong>
       </button>
       <div class="prep-nav-menu" id="prep-nav-menu">
         <a href="/prep/">Prep home</a>
         <a href="/prep/first-72-hours/">First 72 hours</a>
         <a href="/prep/supply-checklist/">Supply checklist</a>
-        <a href="/prep/supply-calculator/" class="is-current" aria-current="page">3–7–30 day calculator</a>
+        <a href="/prep/supply-calculator/" class="is-current" aria-current="page">3- and 14-day calculator</a>
         <a href="/prep/supplies/">Where to buy supplies</a>
         <a href="/prep/books/">Books</a>
         <div class="prep-nav-group">
@@ -88,9 +88,9 @@
   <section class="page-hero">
     <div class="container narrow">
       <p class="eyebrow">Preparedness</p>
-      <h1>3–7–30 day supply calculator</h1>
+      <h1>3- and 14-day supply calculator</h1>
       <p class="prep-reviewed"><strong>Last reviewed:</strong> 10 November 2026</p>
-      <p>A 3-, 7-, and 30-day household supply calculator for a family of four, with adjustable adult and child counts and optional small, medium, and large pets, using 1 gallon of water and 2,000 calories per person per day.</p>
+      <p>A 3- and 14-day household supply calculator for a family of four, with adjustable adult and child counts and optional small, medium, and large pets, using 1 gallon of water and 2,000 calories per person per day.</p>
     </div>
   </section>
 
@@ -109,7 +109,7 @@
         <li>Large (over 50 pounds): <strong>1 gallon</strong> per pet per day, enough at that rate for a dog up to about 128 pounds</li>
         </ul>
         <p>Heat and activity raise needs, so treat these as a floor, not a ration. The AKC figure is stated for dogs; the small amount is a generous planning figure for cats and other small pets. Pet food is not given a calorie figure on this site, so it is not totaled here — pack several days of the food your animals already eat, as described on the <a href="/prep/pets">pets page</a>.</p>
-        <p>Other kit items such as a flashlight or headlamp for each person, or a power bank for each person who relies on a phone, are per-person counts rather than per-person-per-day rates. They are on the <a href="/prep/supply-checklist">supply checklist</a> and are not multiplied across 3, 7, and 30 days here.</p>
+        <p>Other kit items such as a flashlight or headlamp for each person, or a power bank for each person who relies on a phone, are per-person counts rather than per-person-per-day rates. They are on the <a href="/prep/supply-checklist">supply checklist</a> and are not multiplied across 3 and 14 days here.</p>
         <aside class="prep-calc prep-supply-calc" id="prep-supply-calculator">
           <form class="prep-supply-calc-form" action="#" method="get">
             <fieldset>
@@ -148,34 +148,29 @@
                   <tr>
                     <th scope="col">Item</th>
                     <th scope="col">3 days</th>
-                    <th scope="col">7 days</th>
-                    <th scope="col">30 days</th>
+                    <th scope="col">14 days</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <th scope="row">Water, people</th>
                     <td data-out="water-people-3"></td>
-                    <td data-out="water-people-7"></td>
-                    <td data-out="water-people-30"></td>
+                    <td data-out="water-people-14"></td>
                   </tr>
                   <tr data-pets-row hidden>
                     <th scope="row">Water, pets</th>
                     <td data-out="water-pets-3"></td>
-                    <td data-out="water-pets-7"></td>
-                    <td data-out="water-pets-30"></td>
+                    <td data-out="water-pets-14"></td>
                   </tr>
                   <tr data-pets-row hidden>
                     <th scope="row">Water, total</th>
                     <td data-out="water-total-3"></td>
-                    <td data-out="water-total-7"></td>
-                    <td data-out="water-total-30"></td>
+                    <td data-out="water-total-14"></td>
                   </tr>
                   <tr>
                     <th scope="row">Food, people (2,000 kcal/person/day planning assumption)</th>
                     <td data-out="calories-3"></td>
-                    <td data-out="calories-7"></td>
-                    <td data-out="calories-30"></td>
+                    <td data-out="calories-14"></td>
                   </tr>
                 </tbody>
               </table></div>
@@ -215,6 +210,6 @@
 </footer>
 <script src="/js/main.js?v=2bb8b06bd0"></script>
 <script src="/prep/nav.js?v=fc103c07a9"></script>
-<script src="/prep/calculator.js?v=c01a6fbaa6"></script>
+<script src="/prep/calculator.js?v=3ad50ca013"></script>
 </body>
 </html>
