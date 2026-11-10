@@ -96,12 +96,6 @@
         <p>This is general household information, not official emergency instructions. In an emergency, follow local officials, the National Weather Service, and call 911 if life is at risk.</p>
       </aside>
       <article class="prose prep-content">
-        <nav class="prep-start-here" aria-label="Start here"><h2>Start here</h2>
-        <ul>
-        <li><a href="/prep/first-72-hours">Prepare for 72 hours</a></li>
-        <li><a href="/prep/supply-checklist">Build a two-week supply</a></li>
-        <li><a href="/prep/family-plan-and-checklists">Complete the family plan</a></li>
-        </ul></nav>
         <nav class="prep-toc" aria-label="On this page">
                 <h2>On this page</h2>
                 <ul>
@@ -115,8 +109,70 @@
                   <li><a href="#weather">Weather</a></li>
                 </ul>
               </nav>
+
         <p>Look up your evacuation zone, sign up for your county’s text alerts, and save the outage numbers for <em>your</em> electric and water utilities. Zone boundaries, shelter openings, sandbag sites, and some phone numbers change. Recheck official sites at the start of each hurricane season (1 June–30 November in the Atlantic).</p>
         <p>In a life-threatening emergency, call <strong>911</strong>. This page is a household reference, not a substitute for instructions from local officials or the National Weather Service.</p>
+        <aside class="prep-zone-lookup" style="margin: 1.5rem 0; padding: 1.25rem; border: 1px solid #e2e8f0; border-radius: 8px; background: #f8fafc;">
+          <h2 style="margin-top: 0;">Look up your evacuation zone</h2>
+          <p>Type a South Carolina coastal address. Queries the same public SCEMD layer as the official map.</p>
+          <form id="zone-form" style="display: flex; flex-direction: column; gap: 0.5rem; max-width: 32rem;">
+            <input id="zone-address" type="text" placeholder="e.g. 123 Main St, Hanahan SC" required autocomplete="off"
+                   style="padding: 0.6rem 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem;">
+            <button type="submit" style="padding: 0.6rem 1rem; background: #0369a1; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 1rem;">
+              Find zone
+            </button>
+          </form>
+          <div id="zone-result" style="margin-top: 1rem; min-height: 2.5rem;"></div>
+          <p style="font-size: 0.85rem; color: #64748b; margin-bottom: 0;">
+            Data from the public SCEMD ArcGIS service. Always confirm on the official 
+            <a href="https://www.scemd.org/prepare/know-your-zone/" target="_blank" rel="noopener noreferrer">Know Your Zone</a> map 
+            and follow local authorities. Zone boundaries can change.
+          </p>
+        </aside>
+
+        <script>
+        document.getElementById('zone-form').addEventListener('submit', async (e) => {
+          e.preventDefault();
+          const result = document.getElementById('zone-result');
+          const addr = document.getElementById('zone-address').value.trim();
+          if (!addr) return;
+          result.innerHTML = 'Looking up…';
+
+          try {
+            const geoUrl = `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(addr + ' South Carolina')}&format=json&limit=1&countrycodes=us`;
+            const geoRes = await fetch(geoUrl, { headers: { 'User-Agent': 'timbootle.com-zone-lookup/1.0' } });
+            const geoData = await geoRes.json();
+            if (!geoData.length) {
+              result.innerHTML = '<p>Address not found. Try a fuller address with city and SC.</p>';
+              return;
+            }
+            const { lat, lon, display_name } = geoData[0];
+
+            const zoneUrl = `https://services1.arcgis.com/VaY7cY9pvUYUP1Lf/ArcGIS/rest/services/SC_Hurricane_Evacuation_Zones/FeatureServer/0/query?` +
+              `geometry=${lon},${lat}&geometryType=esriGeometryPoint&inSR=4326&spatialRel=esriSpatialRelIntersects` +
+              `&outFields=Zone_,County,Cong,Notes&returnGeometry=false&f=json`;
+            const zoneRes = await fetch(zoneUrl);
+            const zoneData = await zoneRes.json();
+
+            if (!zoneData.features || !zoneData.features.length) {
+              result.innerHTML = `<p>No evacuation zone found (likely inland or outside mapped coastal zones).</p><p><small>${display_name}</small></p>`;
+              return;
+            }
+
+            const a = zoneData.features[0].attributes;
+            result.innerHTML = `
+              <div style="font-size: 1.75rem; font-weight: 600; color: #0369a1; margin-bottom: 0.5rem;">Zone ${a.Zone_ || '?'}</div>
+              <p style="margin: 0.25rem 0;"><strong>County:</strong> ${a.County || '—'}</p>
+              <p style="margin: 0.25rem 0;"><strong>Region:</strong> ${a.Cong || '—'}</p>
+              ${a.Notes ? `<p style="margin: 0.25rem 0;"><strong>Notes:</strong> ${a.Notes}</p>` : ''}
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #64748b;">Matched to: ${display_name}</p>
+            `;
+          } catch (err) {
+            result.innerHTML = `<p>Error: ${err.message}. Check your connection and try again.</p>`;
+          }
+        });
+        </script>
+
         <h2 id="statewide">Statewide</h2>
         <div class="table-wrap"><table>
         <thead>
@@ -260,18 +316,17 @@
         </tbody>
         </table></div>
         <p><strong>Social accounts:</strong> Official county news tells residents to follow <strong>Berkeley County Government on Facebook</strong> and <a href="https://www.berkeleycountysc.gov/" target="_blank" rel="noopener noreferrer">berkeleycountysc.gov</a>. A specific Facebook URL was not labeled on the EM pages opened this turn; use the link from the county website.</p>
-        <p><strong>Alert system name:</strong> Berkeley County Emergency Notification System (BCENS). Registering a cell phone or email is done through the Self Registration Portal.</p>
+        <p><strong>Alert system name:</strong> Berkeley County Emergency Notification System (BCENS).</p>
         <h3>How to opt in to BCENS text messages</h3>
-        <p>No official shortcode (text-a-keyword) option was published on the official pages opened this turn.</p>
+        <p>No official shortcode (text-a-keyword) option is published.</p>
         <ol>
-        <li>Open the Self Registration Portal published on the county FAQ: <a href="https://berkeleycounty.onthealert.com/" target="_blank" rel="noopener noreferrer">https://berkeleycounty.onthealert.com/</a>. (The county also maintains an <a href="https://berkeleycountysc.gov/emergency-alerts-signup/" target="_blank" rel="noopener noreferrer">Emergency Alerts Signup</a> page and a general <a href="https://berkeleycountysc.gov/alerts/" target="_blank" rel="noopener noreferrer">news/alerts email form</a>, which is not a substitute for BCENS.)</li>
-        <li>Register your <strong>address</strong> and the <strong>cell phone</strong> and/or <strong>email</strong> you want used. Landline numbers already in the 911 database are included; you still need the portal for a wireless phone or email.</li>
-        <li>By registering, you are <strong>automatically subscribed to all “emergency notifications”</strong> for that area, according to the <a href="https://berkeleycountysc.gov/dept/epd/emergency-notification-system-faq/" target="_blank" rel="noopener noreferrer">BCENS FAQ</a>.</li>
-        <li>On the same portal, you may also opt into <strong>weather announcements</strong> and <strong>public service announcements</strong>.</li>
-        <li>Update your address or unsubscribe later by logging back into the same portal.</li>
+        <li>The Self Registration Portal at https://berkeleycounty.onthealert.com/ is currently not loading (domain appears expired/down as of 10 November 2026). The county FAQ still lists it, but it does not respond.</li>
+        <li>In the meantime, use the county’s <a href="https://portal.berkeleycountysc.gov/" target="_blank" rel="noopener noreferrer">OneBerkeley Portal</a> for general news and email alerts, and monitor <a href="https://berkeleycountysc.gov/" target="_blank" rel="noopener noreferrer">berkeleycountysc.gov</a> plus official social accounts.</li>
+        <li>For true reverse-911 / BCENS registration, check the <a href="https://berkeleycountysc.gov/dept/epd/emergency-notification-system-faq/" target="_blank" rel="noopener noreferrer">BCENS FAQ</a> or call Emergency Management at (843) 719-4166 for the current signup method.</li>
+        <li>Landline numbers already in the 911 database are included; wireless phones and email still need registration when the portal is available.</li>
+        <li>Also enable Wireless Emergency Alerts on your phone and consider the <a href="https://www.scemd.org/stay-informed/mobile-applications/" target="_blank" rel="noopener noreferrer">SC Emergency Manager app</a>.</li>
         </ol>
-        <p>Alerts can be a phone call, an email, or a text, based on the contacts you register, and are sent to people whose registered address falls in the affected area. Caller ID on voice calls shows “Berkeley County.”</p>
-        <p><strong>App options:</strong> No separate official BCENS mobile app was named on the pages opened this turn. Use the web portal above, plus the <a href="https://www.scemd.org/stay-informed/mobile-applications/" target="_blank" rel="noopener noreferrer">SC Emergency Manager app</a>.</p>
+        <p>Alerts (when the system is working) can be a phone call, email, or text based on registered contacts, sent to addresses in the affected area. Caller ID on voice calls shows “Berkeley County.”</p>
         <p><strong>Evacuation zones:</strong> Look up the address on <a href="https://www.scemd.org/stay-informed/know-your-zone/" target="_blank" rel="noopener noreferrer">Know Your Zone</a>. Berkeley County uses <strong>different zone letters</strong> than Charleston County (the 2026 state plan annex describes parts of Berkeley with letters such as B, D, E, and F). A Charleston County letter will not automatically apply across the line.</p>
         <p><strong>Shelters:</strong> The county hurricane guide and official news announce shelter openings storm by storm, and mention texting <strong>SHELTER</strong> plus a ZIP code to <strong>43362</strong>. Monitor <a href="https://berkeleycountysc.gov/" target="_blank" rel="noopener noreferrer">berkeleycountysc.gov</a> and official alerts rather than assuming a past location is open.</p>
         <p><strong>Sandbags:</strong> Berkeley County has announced self-serve sandbag or sand-and-bag sites during storms, typically first-come, first-served; residents are told to bring a shovel and fill their own bags. Locations change. Check official news and the <a href="https://berkeleycountysc.gov/wp-content/uploads/docs/Hurricane-Guide-English.pdf" target="_blank" rel="noopener noreferrer">Hurricane Guide</a> (including sandbag use and disposal) when a storm approaches. Do not treat any past site list as permanently open.</p>
@@ -464,7 +519,6 @@
         <li><a href="https://charleston-sc.gov/3314/Alerts-and-Notifications" target="_blank" rel="noopener noreferrer">City of Charleston: Alerts and Notifications</a></li>
         <li><a href="https://berkeleycountysc.gov/dept/epd/" target="_blank" rel="noopener noreferrer">Berkeley County Emergency Management</a></li>
         <li><a href="https://berkeleycountysc.gov/dept/epd/emergency-notification-system-faq/" target="_blank" rel="noopener noreferrer">Berkeley County Emergency Notification System FAQ</a></li>
-        <li><a href="https://berkeleycounty.onthealert.com/" target="_blank" rel="noopener noreferrer">BCENS Self Registration Portal</a></li>
         <li><a href="https://berkeleycountysc.gov/wp-content/uploads/docs/Hurricane-Guide-English.pdf" target="_blank" rel="noopener noreferrer">Berkeley County Hurricane Guide (PDF)</a></li>
         <li><a href="https://www.dorchestercountysc.gov/government/public-safety/emergency-management" target="_blank" rel="noopener noreferrer">Dorchester County Emergency Management</a></li>
         <li><a href="https://www.smart911.com/smart911/ref/reg.action?pa=dorchestercountysc" target="_blank" rel="noopener noreferrer">Dorchester County Emergency Alerts (Smart911)</a></li>
