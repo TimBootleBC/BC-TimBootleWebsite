@@ -69,10 +69,16 @@
       }
     }
 
+    const fieldEvents = ["input", "change", "keyup", "blur"];
     bandInputs.concat(daysInput ? [daysInput] : []).forEach((input) => {
-      input.addEventListener("input", calculate);
-      input.addEventListener("change", calculate);
+      fieldEvents.forEach((evt) => input.addEventListener(evt, calculate));
     });
+    const householdForm = root.querySelector("form");
+    if (householdForm) {
+      fieldEvents.forEach((evt) => {
+        householdForm.addEventListener(evt, calculate, true);
+      });
+    }
     if (button) {
       button.addEventListener("click", calculate);
     }
@@ -127,7 +133,15 @@
       const hasPets = pets.totalPets > 0;
 
       petRows.forEach((row) => {
-        row.hidden = !hasPets;
+        if (hasPets) {
+          row.hidden = false;
+          row.removeAttribute("hidden");
+          row.style.display = "table-row";
+        } else {
+          row.hidden = true;
+          row.setAttribute("hidden", "");
+          row.style.display = "none";
+        }
       });
 
       supplyDays.forEach((days) => {
@@ -170,15 +184,22 @@
       }
     }
 
+    const fieldEvents = ["input", "change", "keyup", "blur"];
     [adultsInput, childrenInput].concat(Object.values(petInputs)).forEach((input) => {
       if (!input) return;
-      input.addEventListener("input", calculate);
-      input.addEventListener("change", calculate);
+      fieldEvents.forEach((evt) => input.addEventListener(evt, calculate));
     });
     if (form) {
       form.addEventListener("submit", (event) => {
         event.preventDefault();
         calculate();
+      });
+      fieldEvents.forEach((evt) => {
+        form.addEventListener(evt, (event) => {
+          if (event.target && event.target.matches("input")) {
+            calculate();
+          }
+        }, true);
       });
     }
     if (button) {
