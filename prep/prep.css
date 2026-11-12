@@ -277,6 +277,28 @@
     display: flex;
   }
 
+  /* The sticky panel sits under the 72px header. When the menu is open it is
+     taller than a phone screen, so cap it to the visible height and let it
+     scroll by itself; otherwise the lower links stay pinned off-screen. */
+  /* Block layout for the stacked mobile groups. As a grid, WebKit could skip
+     painting the group links' text inside the open panel. */
+  .prep-nav-group {
+    display: block;
+  }
+
+  .prep-nav-label {
+    display: block;
+    margin-bottom: 6px;
+  }
+
+  .prep-nav.is-menu-open {
+    max-height: calc(100vh - 72px);
+    max-height: calc(100dvh - 72px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+
   .prep-nav-menu > a,
   .prep-nav-group-links a {
     display: block;
