@@ -811,9 +811,22 @@
   }
 }
 
-/* Standalone /prep header: brand only, links to /prep/. Keep the tagline on phones. */
+/* Standalone /prep header: brand only, links to /prep/. Three-letter MFP mark. */
+.prep-page .prep-brand-mark {
+  width: 56px;
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+}
+
 @media (max-width: 760px) {
-  .prep-page .brand-text small {
-    display: block;
+  .prep-page .prep-brand-mark {
+    width: 48px;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+  }
+
+  .prep-page .brand-text strong {
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
   }
 }
