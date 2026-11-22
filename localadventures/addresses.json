@@ -5,7 +5,9 @@
       "address": "3030 Cypress Gardens Road, Moncks Corner, SC 29461",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Cypress+Gardens%2C+3030+Cypress+Gardens+Road%2C+Moncks+Corner%2C+SC+29461",
-      "label": "Cypress Gardens \u2014 3030 Cypress Gardens Road, Moncks Corner, SC 29461"
+      "label": "Cypress Gardens — 3030 Cypress Gardens Road, Moncks Corner, SC 29461",
+      "learn_more": "https://en.wikipedia.org/wiki/Cypress_Gardens_(South_Carolina)",
+      "learn_more_source": "wikipedia"
     }
   ],
   "2": [
@@ -14,7 +16,9 @@
       "address": "1098 Mepkin Abbey Road, Moncks Corner, SC 29461",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Mepkin+Abbey%2C+1098+Mepkin+Abbey+Road%2C+Moncks+Corner%2C+SC+29461",
-      "label": "Mepkin Abbey \u2014 1098 Mepkin Abbey Road, Moncks Corner, SC 29461"
+      "label": "Mepkin Abbey — 1098 Mepkin Abbey Road, Moncks Corner, SC 29461",
+      "learn_more": "https://mepkinabbey.org/",
+      "learn_more_source": "official"
     }
   ],
   "3": [
@@ -23,14 +27,18 @@
       "address": "6617 Maybank Highway, Wadmalaw Island, SC 29487",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Charleston+Tea+Garden%2C+6617+Maybank+Highway%2C+Wadmalaw+Island%2C+SC+29487",
-      "label": "Charleston Tea Garden \u2014 6617 Maybank Highway, Wadmalaw Island, SC 29487"
+      "label": "Charleston Tea Garden — 6617 Maybank Highway, Wadmalaw Island, SC 29487",
+      "learn_more": "https://www.charlestonteagarden.com/",
+      "learn_more_source": "official"
     },
     {
       "name": "Angel Oak",
       "address": "3688 Angel Oak Road, Johns Island, SC 29455",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Angel+Oak%2C+3688+Angel+Oak+Road%2C+Johns+Island%2C+SC+29455",
-      "label": "Angel Oak \u2014 3688 Angel Oak Road, Johns Island, SC 29455"
+      "label": "Angel Oak — 3688 Angel Oak Road, Johns Island, SC 29455",
+      "learn_more": "https://www.charleston-sc.gov/153/Angel-Oak/",
+      "learn_more_source": "official"
     }
   ],
   "4": [
@@ -39,7 +47,9 @@
       "address": "336 Sanctuary Road, Harleyville, SC 29448",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Francis+Beidler+Forest+visitor+center%2C+336+Sanctuary+Road%2C+Harleyville%2C+SC+29448",
-      "label": "Francis Beidler Forest visitor center \u2014 336 Sanctuary Road, Harleyville, SC 29448"
+      "label": "Francis Beidler Forest visitor center — 336 Sanctuary Road, Harleyville, SC 29448",
+      "learn_more": "https://www.audubon.org/beidler-forest/visit",
+      "learn_more_source": "official"
     }
   ],
   "5": [
@@ -48,7 +58,9 @@
       "address": "498 Bulls Island Road, Awendaw, SC 29429",
       "kind": "dock",
       "url": "https://www.google.com/maps/search/?api=1&query=Bulls+Island+ferry%2C+Garris+Landing%2C+498+Bulls+Island+Road%2C+Awendaw%2C+SC+29429",
-      "label": "Bulls Island ferry, Garris Landing \u2014 498 Bulls Island Road, Awendaw, SC 29429"
+      "label": "Bulls Island ferry, Garris Landing — 498 Bulls Island Road, Awendaw, SC 29429",
+      "learn_more": "https://www.fws.gov/refuge/cape-romain",
+      "learn_more_source": "official"
     }
   ],
   "6": [
@@ -57,7 +69,9 @@
       "address": "Old Sheldon Church Road, Yemassee, SC 29945",
       "kind": "named-place",
       "label": "Old Sheldon Church Ruins, Old Sheldon Church Road, Yemassee, SC 29945",
-      "url": "https://www.google.com/maps/search/?api=1&query=Old+Sheldon+Church+Ruins%2C+Old+Sheldon+Church+Road%2C+Yemassee%2C+SC+29945"
+      "url": "https://www.google.com/maps/search/?api=1&query=Old+Sheldon+Church+Ruins%2C+Old+Sheldon+Church+Road%2C+Yemassee%2C+SC+29945",
+      "learn_more": "https://en.wikipedia.org/wiki/Old_Sheldon_Church_Ruins",
+      "learn_more_source": "wikipedia"
     }
   ],
   "7": [
@@ -66,7 +80,9 @@
       "address": "Botany Bay Road, Edisto Island, SC 29438",
       "kind": "parking",
       "label": "Botany Bay Heritage Preserve entrance, Botany Bay Road, Edisto Island, SC 29438",
-      "url": "https://www.google.com/maps/search/?api=1&query=Botany+Bay+Heritage+Preserve+entrance%2C+Botany+Bay+Road%2C+Edisto+Island%2C+SC+29438"
+      "url": "https://www.google.com/maps/search/?api=1&query=Botany+Bay+Heritage+Preserve+entrance%2C+Botany+Bay+Road%2C+Edisto+Island%2C+SC+29438",
+      "learn_more": "https://public-lands-scdnr.hub.arcgis.com/pages/botany-bay-hp-wma",
+      "learn_more_source": "official"
     }
   ],
   "8": [
@@ -75,14 +91,18 @@
       "address": "Bay Street, Beaufort, SC 29902",
       "kind": "named-place",
       "label": "Henry C. Chambers Waterfront Park, Bay Street, Beaufort, SC 29902",
-      "url": "https://www.google.com/maps/search/?api=1&query=Henry+C.+Chambers+Waterfront+Park%2C+Bay+Street%2C+Beaufort%2C+SC+29902"
+      "url": "https://www.google.com/maps/search/?api=1&query=Henry+C.+Chambers+Waterfront+Park%2C+Bay+Street%2C+Beaufort%2C+SC+29902",
+      "learn_more": "https://www.nps.gov/places/henry-c-chambers-waterfront-park.htm",
+      "learn_more_source": "official"
     },
     {
       "name": "Penn Center",
       "address": "16 Penn Center Circle West, St. Helena Island, SC 29920",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Penn+Center%2C+16+Penn+Center+Circle+West%2C+St.+Helena+Island%2C+SC+29920",
-      "label": "Penn Center \u2014 16 Penn Center Circle West, St. Helena Island, SC 29920"
+      "label": "Penn Center — 16 Penn Center Circle West, St. Helena Island, SC 29920",
+      "learn_more": "https://www.penncenter.com/",
+      "learn_more_source": "official"
     }
   ],
   "9": [
@@ -91,7 +111,9 @@
       "address": "2555 Sea Island Parkway, Hunting Island, SC 29920",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Hunting+Island+State+Park%2C+2555+Sea+Island+Parkway%2C+Hunting+Island%2C+SC+29920",
-      "label": "Hunting Island State Park \u2014 2555 Sea Island Parkway, Hunting Island, SC 29920"
+      "label": "Hunting Island State Park — 2555 Sea Island Parkway, Hunting Island, SC 29920",
+      "learn_more": "https://southcarolinaparks.com/hunting-island",
+      "learn_more_source": "official"
     }
   ],
   "10": [
@@ -100,14 +122,16 @@
       "address": "531 Front Street, Georgetown, SC 29440",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Georgetown+Visitor+Center+%28Harborwalk%29%2C+531+Front+Street%2C+Georgetown%2C+SC+29440",
-      "label": "Georgetown Visitor Center (Harborwalk) \u2014 531 Front Street, Georgetown, SC 29440"
+      "label": "Georgetown Visitor Center (Harborwalk) — 531 Front Street, Georgetown, SC 29440"
     },
     {
       "name": "Hopsewee Plantation",
       "address": "494 Hopsewee Road, Georgetown, SC 29440",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Hopsewee+Plantation%2C+494+Hopsewee+Road%2C+Georgetown%2C+SC+29440",
-      "label": "Hopsewee Plantation \u2014 494 Hopsewee Road, Georgetown, SC 29440"
+      "label": "Hopsewee Plantation — 494 Hopsewee Road, Georgetown, SC 29440",
+      "learn_more": "https://hopsewee.com/",
+      "learn_more_source": "official"
     }
   ],
   "11": [
@@ -116,14 +140,18 @@
       "address": "1931 Brookgreen Drive, Murrells Inlet, SC 29576",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Brookgreen+Gardens%2C+1931+Brookgreen+Drive%2C+Murrells+Inlet%2C+SC+29576",
-      "label": "Brookgreen Gardens \u2014 1931 Brookgreen Drive, Murrells Inlet, SC 29576"
+      "label": "Brookgreen Gardens — 1931 Brookgreen Drive, Murrells Inlet, SC 29576",
+      "learn_more": "https://www.brookgreen.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Atalaya Castle, Huntington Beach State Park",
       "address": "16148 Ocean Highway, Murrells Inlet, SC 29576",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Atalaya+Castle%2C+Huntington+Beach+State+Park%2C+16148+Ocean+Highway%2C+Murrells+Inlet%2C+SC+29576",
-      "label": "Atalaya Castle, Huntington Beach State Park \u2014 16148 Ocean Highway, Murrells Inlet, SC 29576"
+      "label": "Atalaya Castle, Huntington Beach State Park — 16148 Ocean Highway, Murrells Inlet, SC 29576",
+      "learn_more": "https://southcarolinaparks.com/huntington-beach",
+      "learn_more_source": "official"
     }
   ],
   "12": [
@@ -132,7 +160,9 @@
       "address": "251 State Park Road, Santee, SC 29142",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Santee+State+Park%2C+251+State+Park+Road%2C+Santee%2C+SC+29142",
-      "label": "Santee State Park \u2014 251 State Park Road, Santee, SC 29142"
+      "label": "Santee State Park — 251 State Park Road, Santee, SC 29142",
+      "learn_more": "https://southcarolinaparks.com/santee",
+      "learn_more_source": "official"
     }
   ],
   "13": [
@@ -141,14 +171,18 @@
       "address": "822 W. Liberty Street, Sumter, SC 29150",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Swan+Lake+Iris+Gardens%2C+822+W.+Liberty+Street%2C+Sumter%2C+SC+29150",
-      "label": "Swan Lake Iris Gardens \u2014 822 W. Liberty Street, Sumter, SC 29150"
+      "label": "Swan Lake Iris Gardens — 822 W. Liberty Street, Sumter, SC 29150",
+      "learn_more": "https://www.sumtersc.gov/tourism/things-do/parks-trails/swan-lake-iris-gardens",
+      "learn_more_source": "official"
     },
     {
       "name": "Poinsett State Park",
       "address": "6660 Poinsett Park Road, Wedgefield, SC 29168",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Poinsett+State+Park%2C+6660+Poinsett+Park+Road%2C+Wedgefield%2C+SC+29168",
-      "label": "Poinsett State Park \u2014 6660 Poinsett Park Road, Wedgefield, SC 29168"
+      "label": "Poinsett State Park — 6660 Poinsett Park Road, Wedgefield, SC 29168",
+      "learn_more": "https://southcarolinaparks.com/poinsett",
+      "learn_more_source": "official"
     }
   ],
   "14": [
@@ -157,7 +191,9 @@
       "address": "100 National Park Road, Hopkins, SC 29061",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Congaree+National+Park%2C+Harry+Hampton+Visitor+Center%2C+100+National+Park+Road%2C+Hopkins%2C+SC+29061",
-      "label": "Congaree National Park, Harry Hampton Visitor Center \u2014 100 National Park Road, Hopkins, SC 29061"
+      "label": "Congaree National Park, Harry Hampton Visitor Center — 100 National Park Road, Hopkins, SC 29061",
+      "learn_more": "https://www.nps.gov/cong/",
+      "learn_more_source": "official"
     }
   ],
   "15": [
@@ -166,14 +202,18 @@
       "address": "500 Wildlife Parkway, Columbia, SC 29210",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Riverbanks+Zoo+main+entrance%2C+500+Wildlife+Parkway%2C+Columbia%2C+SC+29210",
-      "label": "Riverbanks Zoo main entrance \u2014 500 Wildlife Parkway, Columbia, SC 29210"
+      "label": "Riverbanks Zoo main entrance — 500 Wildlife Parkway, Columbia, SC 29210",
+      "learn_more": "https://www.riverbanks.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Riverbanks Botanical Garden entrance",
       "address": "1300 Botanical Parkway, West Columbia, SC 29169",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Riverbanks+Botanical+Garden+entrance%2C+1300+Botanical+Parkway%2C+West+Columbia%2C+SC+29169",
-      "label": "Riverbanks Botanical Garden entrance \u2014 1300 Botanical Parkway, West Columbia, SC 29169"
+      "label": "Riverbanks Botanical Garden entrance — 1300 Botanical Parkway, West Columbia, SC 29169",
+      "learn_more": "https://www.riverbanks.org/botanical-garden/",
+      "learn_more_source": "official"
     }
   ],
   "16": [
@@ -182,14 +222,16 @@
       "address": "301 Gervais Street, Columbia, SC 29201",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=South+Carolina+State+Museum%2C+301+Gervais+Street%2C+Columbia%2C+SC+29201",
-      "label": "South Carolina State Museum \u2014 301 Gervais Street, Columbia, SC 29201"
+      "label": "South Carolina State Museum — 301 Gervais Street, Columbia, SC 29201",
+      "learn_more": "https://scmuseum.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Soda City Market",
       "address": "1500 Main Street, Columbia, SC",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Soda+City+Market%2C+1500+Main+Street%2C+Columbia%2C+SC",
-      "label": "Soda City Market \u2014 1500 Main Street, Columbia, SC"
+      "label": "Soda City Market — 1500 Main Street, Columbia, SC"
     }
   ],
   "17": [
@@ -198,14 +240,18 @@
       "address": "7601 Skidaway Road, Savannah, GA 31406",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Wormsloe+State+Historic+Site%2C+7601+Skidaway+Road%2C+Savannah%2C+GA+31406",
-      "label": "Wormsloe State Historic Site \u2014 7601 Skidaway Road, Savannah, GA 31406"
+      "label": "Wormsloe State Historic Site — 7601 Skidaway Road, Savannah, GA 31406",
+      "learn_more": "https://gastateparks.org/Wormsloe",
+      "learn_more_source": "official"
     },
     {
       "name": "Bonaventure Cemetery",
       "address": "330 Bonaventure Road, Savannah, GA 31404",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Bonaventure+Cemetery%2C+330+Bonaventure+Road%2C+Savannah%2C+GA+31404",
-      "label": "Bonaventure Cemetery \u2014 330 Bonaventure Road, Savannah, GA 31404"
+      "label": "Bonaventure Cemetery — 330 Bonaventure Road, Savannah, GA 31404",
+      "learn_more": "https://www.bonaventurehistorical.org/",
+      "learn_more_source": "official"
     }
   ],
   "18": [
@@ -214,14 +260,18 @@
       "address": "Jones Street, Savannah, GA 31401",
       "kind": "named-place",
       "label": "Jones Street, Savannah, GA 31401",
-      "url": "https://www.google.com/maps/search/?api=1&query=Jones+Street%2C+Savannah%2C+GA+31401"
+      "url": "https://www.google.com/maps/search/?api=1&query=Jones+Street%2C+Savannah%2C+GA+31401",
+      "learn_more": "https://en.wikipedia.org/wiki/Jones_Street_(Savannah,_Georgia)",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Forsyth Park",
       "address": "Whitaker Street, Savannah, GA 31401",
       "kind": "named-place",
       "label": "Forsyth Park, Whitaker Street, Savannah, GA 31401",
-      "url": "https://www.google.com/maps/search/?api=1&query=Forsyth+Park%2C+Whitaker+Street%2C+Savannah%2C+GA+31401"
+      "url": "https://www.google.com/maps/search/?api=1&query=Forsyth+Park%2C+Whitaker+Street%2C+Savannah%2C+GA+31401",
+      "learn_more": "https://en.wikipedia.org/wiki/Forsyth_Park",
+      "learn_more_source": "wikipedia"
     }
   ],
   "19": [
@@ -230,14 +280,18 @@
       "address": "30 Meddin Drive, Tybee Island, GA 31328",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Tybee+Island+Light+Station%2C+30+Meddin+Drive%2C+Tybee+Island%2C+GA+31328",
-      "label": "Tybee Island Light Station \u2014 30 Meddin Drive, Tybee Island, GA 31328"
+      "label": "Tybee Island Light Station — 30 Meddin Drive, Tybee Island, GA 31328",
+      "learn_more": "https://www.tybeelighthouse.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Fort Pulaski National Monument",
       "address": "101 Fort Pulaski Road, Savannah, GA 31410",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Fort+Pulaski+National+Monument%2C+101+Fort+Pulaski+Road%2C+Savannah%2C+GA+31410",
-      "label": "Fort Pulaski National Monument \u2014 101 Fort Pulaski Road, Savannah, GA 31410"
+      "label": "Fort Pulaski National Monument — 101 Fort Pulaski Road, Savannah, GA 31410",
+      "learn_more": "https://www.nps.gov/fopu/",
+      "learn_more_source": "official"
     }
   ],
   "20": [
@@ -246,7 +300,9 @@
       "address": "18 Simmons Road, Hilton Head Island, SC 29926",
       "kind": "dock",
       "url": "https://www.google.com/maps/search/?api=1&query=Daufuskie+Island+ferry%2C+Broad+Creek+Marina%2C+18+Simmons+Road%2C+Hilton+Head+Island%2C+SC+29926",
-      "label": "Daufuskie Island ferry, Broad Creek Marina \u2014 18 Simmons Road, Hilton Head Island, SC 29926"
+      "label": "Daufuskie Island ferry, Broad Creek Marina — 18 Simmons Road, Hilton Head Island, SC 29926",
+      "learn_more": "https://islandheadhhi.com/daufuskie-island-ferry/",
+      "learn_more_source": "official"
     }
   ],
   "21": [
@@ -255,14 +311,18 @@
       "address": "149 Lighthouse Road, Hilton Head Island, SC 29928",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Harbour+Town+Lighthouse%2C+149+Lighthouse+Road%2C+Hilton+Head+Island%2C+SC+29928",
-      "label": "Harbour Town Lighthouse \u2014 149 Lighthouse Road, Hilton Head Island, SC 29928"
+      "label": "Harbour Town Lighthouse — 149 Lighthouse Road, Hilton Head Island, SC 29928",
+      "learn_more": "https://www.harbourtownlighthouse.com/",
+      "learn_more_source": "official"
     },
     {
       "name": "Pinckney Island National Wildlife Refuge",
       "address": "1 Pinckney Wildlife Refuge, Bluffton, SC 29910",
       "kind": "parking",
       "url": "https://www.google.com/maps/search/?api=1&query=Pinckney+Island+National+Wildlife+Refuge%2C+1+Pinckney+Wildlife+Refuge%2C+Bluffton%2C+SC+29910",
-      "label": "Pinckney Island National Wildlife Refuge \u2014 1 Pinckney Wildlife Refuge, Bluffton, SC 29910"
+      "label": "Pinckney Island National Wildlife Refuge — 1 Pinckney Wildlife Refuge, Bluffton, SC 29910",
+      "learn_more": "https://www.fws.gov/refuge/pinckney-island",
+      "learn_more_source": "official"
     }
   ],
   "22": [
@@ -271,14 +331,18 @@
       "address": "Beachview Drive, Jekyll Island, GA 31527",
       "kind": "parking",
       "label": "Driftwood Beach parking, Beachview Drive, Jekyll Island, GA 31527",
-      "url": "https://www.google.com/maps/search/?api=1&query=Driftwood+Beach+parking%2C+Beachview+Drive%2C+Jekyll+Island%2C+GA+31527"
+      "url": "https://www.google.com/maps/search/?api=1&query=Driftwood+Beach+parking%2C+Beachview+Drive%2C+Jekyll+Island%2C+GA+31527",
+      "learn_more": "https://www.jekyllisland.com/activities/beaches/driftwood-beach/",
+      "learn_more_source": "official"
     },
     {
       "name": "Georgia Sea Turtle Center",
       "address": "214 Stable Road, Jekyll Island, GA 31527",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Georgia+Sea+Turtle+Center%2C+214+Stable+Road%2C+Jekyll+Island%2C+GA+31527",
-      "label": "Georgia Sea Turtle Center \u2014 214 Stable Road, Jekyll Island, GA 31527"
+      "label": "Georgia Sea Turtle Center — 214 Stable Road, Jekyll Island, GA 31527",
+      "learn_more": "https://www.jekyllisland.com/activities/georgia-sea-turtle-center/",
+      "learn_more_source": "official"
     }
   ],
   "23": [
@@ -287,21 +351,27 @@
       "address": "101 12th Street, St. Simons Island, GA 31522",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=St.+Simons+Lighthouse+Museum%2C+101+12th+Street%2C+St.+Simons+Island%2C+GA+31522",
-      "label": "St. Simons Lighthouse Museum \u2014 101 12th Street, St. Simons Island, GA 31522"
+      "label": "St. Simons Lighthouse Museum — 101 12th Street, St. Simons Island, GA 31522",
+      "learn_more": "https://www.coastalgeorgiahistory.org/visit/st-simons-lighthouse-museum/",
+      "learn_more_source": "official"
     },
     {
       "name": "Christ Church Frederica",
       "address": "Frederica Road, St. Simons Island, GA",
       "kind": "named-place",
       "label": "Christ Church Frederica, Frederica Road, St. Simons Island, GA",
-      "url": "https://www.google.com/maps/search/?api=1&query=Christ+Church+Frederica%2C+Frederica+Road%2C+St.+Simons+Island%2C+GA"
+      "url": "https://www.google.com/maps/search/?api=1&query=Christ+Church+Frederica%2C+Frederica+Road%2C+St.+Simons+Island%2C+GA",
+      "learn_more": "https://ccfssi.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Fort Frederica National Monument",
       "address": "6515 Frederica Road, St. Simons Island, GA 31522",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Fort+Frederica+National+Monument%2C+6515+Frederica+Road%2C+St.+Simons+Island%2C+GA+31522",
-      "label": "Fort Frederica National Monument \u2014 6515 Frederica Road, St. Simons Island, GA 31522"
+      "label": "Fort Frederica National Monument — 6515 Frederica Road, St. Simons Island, GA 31522",
+      "learn_more": "https://www.nps.gov/fofr/",
+      "learn_more_source": "official"
     }
   ],
   "24": [
@@ -310,7 +380,9 @@
       "address": "113 St. Marys Street, St. Marys, GA 31558",
       "kind": "dock",
       "url": "https://www.google.com/maps/search/?api=1&query=Cumberland+Island+ferry%2C+Mainland+Visitor+Center%2C+113+St.+Marys+Street%2C+St.+Marys%2C+GA+31558",
-      "label": "Cumberland Island ferry, Mainland Visitor Center \u2014 113 St. Marys Street, St. Marys, GA 31558"
+      "label": "Cumberland Island ferry, Mainland Visitor Center — 113 St. Marys Street, St. Marys, GA 31558",
+      "learn_more": "https://www.nps.gov/cuis/",
+      "learn_more_source": "official"
     }
   ],
   "25": [
@@ -319,7 +391,9 @@
       "address": "4155 Suwannee Canal Road, Folkston, GA 31537",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Okefenokee+Suwannee+Canal+Visitor+Center%2C+4155+Suwannee+Canal+Road%2C+Folkston%2C+GA+31537",
-      "label": "Okefenokee Suwannee Canal Visitor Center \u2014 4155 Suwannee Canal Road, Folkston, GA 31537"
+      "label": "Okefenokee Suwannee Canal Visitor Center — 4155 Suwannee Canal Road, Folkston, GA 31537",
+      "learn_more": "https://www.fws.gov/refuge/okefenokee",
+      "learn_more_source": "official"
     }
   ],
   "26": [
@@ -328,14 +402,18 @@
       "address": "444 South Boundary Ave SW, Aiken, SC 29801",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Hitchcock+Woods%2C+444+South+Boundary+Ave+SW%2C+Aiken%2C+SC+29801",
-      "label": "Hitchcock Woods \u2014 444 South Boundary Ave SW, Aiken, SC 29801"
+      "label": "Hitchcock Woods — 444 South Boundary Ave SW, Aiken, SC 29801",
+      "learn_more": "https://www.hitchcockwoods.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Hopelands Gardens and Thoroughbred Racing Hall of Fame",
       "address": "135 Dupree Place, Aiken, SC 29801",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Hopelands+Gardens+and+Thoroughbred+Racing+Hall+of+Fame%2C+135+Dupree+Place%2C+Aiken%2C+SC+29801",
-      "label": "Hopelands Gardens and Thoroughbred Racing Hall of Fame \u2014 135 Dupree Place, Aiken, SC 29801"
+      "label": "Hopelands Gardens and Thoroughbred Racing Hall of Fame — 135 Dupree Place, Aiken, SC 29801",
+      "learn_more": "https://www.cityofaikensc.gov/parks-playgrounds-natural-areas/hopelands-gardens/",
+      "learn_more_source": "official"
     }
   ],
   "27": [
@@ -344,14 +422,18 @@
       "address": "1450 Greene Street, Augusta, GA 30901",
       "kind": "dock",
       "url": "https://www.google.com/maps/search/?api=1&query=Augusta+Canal+Discovery+Center%2C+1450+Greene+Street%2C+Augusta%2C+GA+30901",
-      "label": "Augusta Canal Discovery Center \u2014 1450 Greene Street, Augusta, GA 30901"
+      "label": "Augusta Canal Discovery Center — 1450 Greene Street, Augusta, GA 30901",
+      "learn_more": "https://www.augustacanal.com/",
+      "learn_more_source": "official"
     },
     {
       "name": "Augusta Riverwalk",
       "address": "Augusta, GA",
       "kind": "named-place",
       "label": "Augusta Riverwalk, Augusta, GA",
-      "url": "https://www.google.com/maps/search/?api=1&query=Augusta+Riverwalk%2C+Augusta%2C+GA"
+      "url": "https://www.google.com/maps/search/?api=1&query=Augusta+Riverwalk%2C+Augusta%2C+GA",
+      "learn_more": "https://www.augustaga.gov/facilities/facility/details/augustariverwalk-126",
+      "learn_more_source": "official"
     }
   ],
   "28": [
@@ -360,7 +442,9 @@
       "address": "1 Lodge Street, Asheville, NC 28803",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Biltmore+Estate%2C+1+Lodge+Street%2C+Asheville%2C+NC+28803",
-      "label": "Biltmore Estate \u2014 1 Lodge Street, Asheville, NC 28803"
+      "label": "Biltmore Estate — 1 Lodge Street, Asheville, NC 28803",
+      "learn_more": "https://www.biltmore.com/",
+      "learn_more_source": "official"
     }
   ],
   "29": [
@@ -369,14 +453,18 @@
       "address": "Blue Ridge Parkway Milepost 364",
       "kind": "named-place",
       "label": "Craggy Gardens Visitor Center, Blue Ridge Parkway Milepost 364",
-      "url": "https://www.google.com/maps/search/?api=1&query=Craggy+Gardens+Visitor+Center%2C+Blue+Ridge+Parkway+Milepost+364"
+      "url": "https://www.google.com/maps/search/?api=1&query=Craggy+Gardens+Visitor+Center%2C+Blue+Ridge+Parkway+Milepost+364",
+      "learn_more": "https://www.nps.gov/blri/planyourvisit/craggy-gardens.htm",
+      "learn_more_source": "official"
     },
     {
       "name": "Mount Mitchell State Park",
       "address": "2388 NC 128, Burnsville, NC 28714",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Mount+Mitchell+State+Park%2C+2388+NC+128%2C+Burnsville%2C+NC+28714",
-      "label": "Mount Mitchell State Park \u2014 2388 NC 128, Burnsville, NC 28714"
+      "label": "Mount Mitchell State Park — 2388 NC 128, Burnsville, NC 28714",
+      "learn_more": "https://www.ncparks.gov/state-parks/mount-mitchell-state-park",
+      "learn_more_source": "official"
     }
   ],
   "30": [
@@ -385,14 +473,18 @@
       "address": "100 Sierra Nevada Way, Mills River, NC 28732",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Sierra+Nevada+Brewing+Co.+Mills+River%2C+100+Sierra+Nevada+Way%2C+Mills+River%2C+NC+28732",
-      "label": "Sierra Nevada Brewing Co. Mills River \u2014 100 Sierra Nevada Way, Mills River, NC 28732"
+      "label": "Sierra Nevada Brewing Co. Mills River — 100 Sierra Nevada Way, Mills River, NC 28732",
+      "learn_more": "https://sierranevada.com/visit/mills-river",
+      "learn_more_source": "official"
     },
     {
       "name": "River Arts District",
       "address": "Clingman Avenue, Asheville, NC 28801",
       "kind": "named-place",
       "label": "River Arts District, Clingman Avenue, Asheville, NC 28801",
-      "url": "https://www.google.com/maps/search/?api=1&query=River+Arts+District%2C+Clingman+Avenue%2C+Asheville%2C+NC+28801"
+      "url": "https://www.google.com/maps/search/?api=1&query=River+Arts+District%2C+Clingman+Avenue%2C+Asheville%2C+NC+28801",
+      "learn_more": "https://www.riverartsdistrict.com/",
+      "learn_more_source": "official"
     }
   ],
   "31": [
@@ -401,14 +493,18 @@
       "address": "89 Buck Forest Road, Cedar Mountain, NC 28718",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=DuPont+State+Recreational+Forest+visitor+center%2C+89+Buck+Forest+Road%2C+Cedar+Mountain%2C+NC+28718",
-      "label": "DuPont State Recreational Forest visitor center \u2014 89 Buck Forest Road, Cedar Mountain, NC 28718"
+      "label": "DuPont State Recreational Forest visitor center — 89 Buck Forest Road, Cedar Mountain, NC 28718",
+      "learn_more": "https://www.ncagr.gov/divisions/nc-forest-service/state-forests/dupont-state-recreational-forest",
+      "learn_more_source": "official"
     },
     {
       "name": "Hooker Falls Access",
       "address": "Staton Road, Cedar Mountain, NC 28718",
       "kind": "parking",
       "label": "Hooker Falls Access, Staton Road, Cedar Mountain, NC 28718",
-      "url": "https://www.google.com/maps/search/?api=1&query=Hooker+Falls+Access%2C+Staton+Road%2C+Cedar+Mountain%2C+NC+28718"
+      "url": "https://www.google.com/maps/search/?api=1&query=Hooker+Falls+Access%2C+Staton+Road%2C+Cedar+Mountain%2C+NC+28718",
+      "learn_more": "https://en.wikipedia.org/wiki/Hooker_Falls",
+      "learn_more_source": "wikipedia"
     }
   ],
   "32": [
@@ -417,7 +513,9 @@
       "address": "7851 Pisgah Highway, Pisgah Forest, NC 28768",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Sliding+Rock+Recreation+Area%2C+7851+Pisgah+Highway%2C+Pisgah+Forest%2C+NC+28768",
-      "label": "Sliding Rock Recreation Area \u2014 7851 Pisgah Highway, Pisgah Forest, NC 28768"
+      "label": "Sliding Rock Recreation Area — 7851 Pisgah Highway, Pisgah Forest, NC 28768",
+      "learn_more": "https://www.fs.usda.gov/r08/northcarolina/recreation/sliding-rock-recreation-area",
+      "learn_more_source": "official"
     },
     {
       "name": "Looking Glass Falls parking",
@@ -426,7 +524,9 @@
       "lat": 35.29595238,
       "lng": -82.76789115,
       "label": "Looking Glass Falls parking, US 276 (map)",
-      "url": "https://www.google.com/maps/search/?api=1&query=35.29595238,-82.76789115"
+      "url": "https://www.google.com/maps/search/?api=1&query=35.29595238,-82.76789115",
+      "learn_more": "https://www.fs.usda.gov/r08/northcarolina/recreation/looking-glass-falls-scenic-area",
+      "learn_more_source": "official"
     }
   ],
   "33": [
@@ -435,7 +535,9 @@
       "address": "1800 Little River Road, Flat Rock, NC 28731",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Carl+Sandburg+Home+National+Historic+Site%2C+1800+Little+River+Road%2C+Flat+Rock%2C+NC+28731",
-      "label": "Carl Sandburg Home National Historic Site \u2014 1800 Little River Road, Flat Rock, NC 28731"
+      "label": "Carl Sandburg Home National Historic Site — 1800 Little River Road, Flat Rock, NC 28731",
+      "learn_more": "https://www.nps.gov/carl/",
+      "learn_more_source": "official"
     }
   ],
   "34": [
@@ -446,14 +548,18 @@
       "lat": 35.06883451,
       "lng": -83.23896368,
       "label": "Dry Falls parking, US 64 (map)",
-      "url": "https://www.google.com/maps/search/?api=1&query=35.06883451,-83.23896368"
+      "url": "https://www.google.com/maps/search/?api=1&query=35.06883451,-83.23896368",
+      "learn_more": "https://www.fs.usda.gov/r08/northcarolina/recreation/dry-falls",
+      "learn_more_source": "official"
     },
     {
       "name": "Bridal Veil Falls roadside pull-off",
       "address": "US 64, Highlands, NC",
       "kind": "parking",
       "label": "Bridal Veil Falls roadside pull-off, US 64, Highlands, NC",
-      "url": "https://www.google.com/maps/search/?api=1&query=Bridal+Veil+Falls+roadside+pull-off%2C+US+64%2C+Highlands%2C+NC"
+      "url": "https://www.google.com/maps/search/?api=1&query=Bridal+Veil+Falls+roadside+pull-off%2C+US+64%2C+Highlands%2C+NC",
+      "learn_more": "https://en.wikipedia.org/wiki/Bridal_Veil_Falls_(Macon_County)",
+      "learn_more_source": "wikipedia"
     }
   ],
   "35": [
@@ -464,14 +570,18 @@
       "lat": 35.02826627,
       "lng": -83.0108056,
       "label": "Whitewater Falls parking, Nantahala National Forest (map)",
-      "url": "https://www.google.com/maps/search/?api=1&query=35.02826627,-83.0108056"
+      "url": "https://www.google.com/maps/search/?api=1&query=35.02826627,-83.0108056",
+      "learn_more": "https://www.fs.usda.gov/r08/northcarolina/recreation/whitewater-falls",
+      "learn_more_source": "official"
     },
     {
       "name": "Gorges State Park visitor center",
       "address": "976 Grassy Ridge Road, Sapphire, NC 28774",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Gorges+State+Park+visitor+center%2C+976+Grassy+Ridge+Road%2C+Sapphire%2C+NC+28774",
-      "label": "Gorges State Park visitor center \u2014 976 Grassy Ridge Road, Sapphire, NC 28774"
+      "label": "Gorges State Park visitor center — 976 Grassy Ridge Road, Sapphire, NC 28774",
+      "learn_more": "https://www.ncparks.gov/state-parks/gorges-state-park",
+      "learn_more_source": "official"
     }
   ],
   "36": [
@@ -480,7 +590,9 @@
       "address": "2050 Blowing Rock Highway, Linville, NC 28646",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Grandfather+Mountain%2C+2050+Blowing+Rock+Highway%2C+Linville%2C+NC+28646",
-      "label": "Grandfather Mountain \u2014 2050 Blowing Rock Highway, Linville, NC 28646"
+      "label": "Grandfather Mountain — 2050 Blowing Rock Highway, Linville, NC 28646",
+      "learn_more": "https://grandfather.com/",
+      "learn_more_source": "official"
     }
   ],
   "37": [
@@ -489,14 +601,18 @@
       "address": "432 The Rock Road, Blowing Rock, NC 28605",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=The+Blowing+Rock%2C+432+The+Rock+Road%2C+Blowing+Rock%2C+NC+28605",
-      "label": "The Blowing Rock \u2014 432 The Rock Road, Blowing Rock, NC 28605"
+      "label": "The Blowing Rock — 432 The Rock Road, Blowing Rock, NC 28605",
+      "learn_more": "https://www.theblowingrock.com/",
+      "learn_more_source": "official"
     },
     {
       "name": "Flat Top Manor, Moses H. Cone Memorial Park",
       "address": "Blue Ridge Parkway Milepost 294, Blowing Rock, NC",
       "kind": "named-place",
       "label": "Flat Top Manor, Moses H. Cone Memorial Park, Blue Ridge Parkway Milepost 294, Blowing Rock, NC",
-      "url": "https://www.google.com/maps/search/?api=1&query=Flat+Top+Manor%2C+Moses+H.+Cone+Memorial+Park%2C+Blue+Ridge+Parkway+Milepost+294%2C+Blowing+Rock%2C+NC"
+      "url": "https://www.google.com/maps/search/?api=1&query=Flat+Top+Manor%2C+Moses+H.+Cone+Memorial+Park%2C+Blue+Ridge+Parkway+Milepost+294%2C+Blowing+Rock%2C+NC",
+      "learn_more": "https://www.nps.gov/blri/planyourvisit/moses-h-cone-memorial-park-mp-294.htm",
+      "learn_more_source": "official"
     }
   ],
   "38": [
@@ -505,14 +621,18 @@
       "address": "Old NC 105, Linville Gorge",
       "kind": "parking",
       "label": "Wiseman's View parking, Old NC 105, Linville Gorge",
-      "url": "https://www.google.com/maps/search/?api=1&query=Wiseman%27s+View+parking%2C+Old+NC+105%2C+Linville+Gorge"
+      "url": "https://www.google.com/maps/search/?api=1&query=Wiseman%27s+View+parking%2C+Old+NC+105%2C+Linville+Gorge",
+      "learn_more": "https://www.fs.usda.gov/r08/northcarolina/recreation/wisemans-view",
+      "learn_more_source": "official"
     },
     {
       "name": "Linville Caverns",
       "address": "19929 US 221 North, Marion, NC 28752",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Linville+Caverns%2C+19929+US+221+North%2C+Marion%2C+NC+28752",
-      "label": "Linville Caverns \u2014 19929 US 221 North, Marion, NC 28752"
+      "label": "Linville Caverns — 19929 US 221 North, Marion, NC 28752",
+      "learn_more": "https://www.linvillecaverns.com/",
+      "learn_more_source": "official"
     }
   ],
   "39": [
@@ -521,14 +641,18 @@
       "address": "226 Everett Street, Bryson City, NC 28713",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Great+Smoky+Mountains+Railroad%2C+Bryson+City+Depot%2C+226+Everett+Street%2C+Bryson+City%2C+NC+28713",
-      "label": "Great Smoky Mountains Railroad, Bryson City Depot \u2014 226 Everett Street, Bryson City, NC 28713"
+      "label": "Great Smoky Mountains Railroad, Bryson City Depot — 226 Everett Street, Bryson City, NC 28713",
+      "learn_more": "https://www.gsmr.com/",
+      "learn_more_source": "official"
     },
     {
       "name": "Deep Creek trailhead",
       "address": "end of Deep Creek Road, Bryson City, NC",
       "kind": "parking",
       "label": "Deep Creek trailhead, end of Deep Creek Road, Bryson City, NC",
-      "url": "https://www.google.com/maps/search/?api=1&query=Deep+Creek+trailhead%2C+end+of+Deep+Creek+Road%2C+Bryson+City%2C+NC"
+      "url": "https://www.google.com/maps/search/?api=1&query=Deep+Creek+trailhead%2C+end+of+Deep+Creek+Road%2C+Bryson+City%2C+NC",
+      "learn_more": "https://www.nps.gov/grsm/planyourvisit/deepcreek.htm",
+      "learn_more_source": "official"
     }
   ],
   "40": [
@@ -537,14 +661,18 @@
       "address": "1194 Newfound Gap Road, Cherokee, NC 28719",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Oconaluftee+Visitor+Center+and+Mountain+Farm+Museum%2C+1194+Newfound+Gap+Road%2C+Cherokee%2C+NC+28719",
-      "label": "Oconaluftee Visitor Center and Mountain Farm Museum \u2014 1194 Newfound Gap Road, Cherokee, NC 28719"
+      "label": "Oconaluftee Visitor Center and Mountain Farm Museum — 1194 Newfound Gap Road, Cherokee, NC 28719",
+      "learn_more": "https://www.nps.gov/grsm/planyourvisit/oconaluftee.htm",
+      "learn_more_source": "official"
     },
     {
       "name": "Mingo Falls trailhead",
       "address": "Big Cove Road, Cherokee, NC",
       "kind": "parking",
       "label": "Mingo Falls trailhead, Big Cove Road, Cherokee, NC",
-      "url": "https://www.google.com/maps/search/?api=1&query=Mingo+Falls+trailhead%2C+Big+Cove+Road%2C+Cherokee%2C+NC"
+      "url": "https://www.google.com/maps/search/?api=1&query=Mingo+Falls+trailhead%2C+Big+Cove+Road%2C+Cherokee%2C+NC",
+      "learn_more": "https://en.wikipedia.org/wiki/Mingo_Falls",
+      "learn_more_source": "wikipedia"
     }
   ],
   "41": [
@@ -553,7 +681,9 @@
       "address": "South Main Street, Greenville, SC 29601",
       "kind": "named-place",
       "label": "Falls Park on the Reedy, South Main Street, Greenville, SC 29601",
-      "url": "https://www.google.com/maps/search/?api=1&query=Falls+Park+on+the+Reedy%2C+South+Main+Street%2C+Greenville%2C+SC+29601"
+      "url": "https://www.google.com/maps/search/?api=1&query=Falls+Park+on+the+Reedy%2C+South+Main+Street%2C+Greenville%2C+SC+29601",
+      "learn_more": "https://www.greenvillesc.gov/falls-park",
+      "learn_more_source": "official"
     }
   ],
   "42": [
@@ -562,14 +692,18 @@
       "address": "8155 Geer Highway, Cleveland, SC 29635",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Caesars+Head+State+Park+visitor+center%2C+8155+Geer+Highway%2C+Cleveland%2C+SC+29635",
-      "label": "Caesars Head State Park visitor center \u2014 8155 Geer Highway, Cleveland, SC 29635"
+      "label": "Caesars Head State Park visitor center — 8155 Geer Highway, Cleveland, SC 29635",
+      "learn_more": "https://southcarolinaparks.com/caesars-head",
+      "learn_more_source": "official"
     },
     {
       "name": "Raven Cliff Falls trailhead",
       "address": "Geer Highway (US 276), Cleveland, SC",
       "kind": "parking",
       "label": "Raven Cliff Falls trailhead, Geer Highway (US 276), Cleveland, SC",
-      "url": "https://www.google.com/maps/search/?api=1&query=Raven+Cliff+Falls+trailhead%2C+Geer+Highway+%28US+276%29%2C+Cleveland%2C+SC"
+      "url": "https://www.google.com/maps/search/?api=1&query=Raven+Cliff+Falls+trailhead%2C+Geer+Highway+%28US+276%29%2C+Cleveland%2C+SC",
+      "learn_more": "https://www.sctrails.net/trails/trail/raven-cliff-falls",
+      "learn_more_source": "official"
     }
   ],
   "43": [
@@ -578,14 +712,18 @@
       "address": "158 E. Ellison Lane, Pickens, SC 29671",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Table+Rock+State+Park+visitor+center%2C+158+E.+Ellison+Lane%2C+Pickens%2C+SC+29671",
-      "label": "Table Rock State Park visitor center \u2014 158 E. Ellison Lane, Pickens, SC 29671"
+      "label": "Table Rock State Park visitor center — 158 E. Ellison Lane, Pickens, SC 29671",
+      "learn_more": "https://southcarolinaparks.com/table-rock",
+      "learn_more_source": "official"
     },
     {
       "name": "Sassafras Mountain observation tower parking",
       "address": "1391 F. Van Clayton Memorial Highway, Sunset, SC 29685",
       "kind": "parking",
       "url": "https://www.google.com/maps/search/?api=1&query=Sassafras+Mountain+observation+tower+parking%2C+1391+F.+Van+Clayton+Memorial+Highway%2C+Sunset%2C+SC+29685",
-      "label": "Sassafras Mountain observation tower parking \u2014 1391 F. Van Clayton Memorial Highway, Sunset, SC 29685"
+      "label": "Sassafras Mountain observation tower parking — 1391 F. Van Clayton Memorial Highway, Sunset, SC 29685",
+      "learn_more": "https://public-lands-scdnr.hub.arcgis.com/pages/sassafras-mountain-overlook",
+      "learn_more_source": "official"
     }
   ],
   "44": [
@@ -594,7 +732,9 @@
       "address": "5000 Whitewater Center Parkway, Charlotte, NC 28214",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=U.S.+National+Whitewater+Center%2C+5000+Whitewater+Center+Parkway%2C+Charlotte%2C+NC+28214",
-      "label": "U.S. National Whitewater Center \u2014 5000 Whitewater Center Parkway, Charlotte, NC 28214"
+      "label": "U.S. National Whitewater Center — 5000 Whitewater Center Parkway, Charlotte, NC 28214",
+      "learn_more": "https://whitewater.org/whitewater-center/",
+      "learn_more_source": "official"
     }
   ],
   "45": [
@@ -603,14 +743,18 @@
       "address": "400 East Martin Luther King Jr. Blvd., Charlotte, NC 28202",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=NASCAR+Hall+of+Fame%2C+400+East+Martin+Luther+King+Jr.+Blvd.%2C+Charlotte%2C+NC+28202",
-      "label": "NASCAR Hall of Fame \u2014 400 East Martin Luther King Jr. Blvd., Charlotte, NC 28202"
+      "label": "NASCAR Hall of Fame — 400 East Martin Luther King Jr. Blvd., Charlotte, NC 28202",
+      "learn_more": "https://www.nascarhall.com/",
+      "learn_more_source": "official"
     },
     {
       "name": "Charlotte Motor Speedway",
       "address": "5555 Concord Parkway South, Concord, NC 28027",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Charlotte+Motor+Speedway%2C+5555+Concord+Parkway+South%2C+Concord%2C+NC+28027",
-      "label": "Charlotte Motor Speedway \u2014 5555 Concord Parkway South, Concord, NC 28027"
+      "label": "Charlotte Motor Speedway — 5555 Concord Parkway South, Concord, NC 28027",
+      "learn_more": "https://www.charlottemotorspeedway.com/",
+      "learn_more_source": "official"
     }
   ],
   "46": [
@@ -619,7 +763,9 @@
       "address": "1 Samuel Spencer Drive, Spencer, NC 28159",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=North+Carolina+Transportation+Museum%2C+1+Samuel+Spencer+Drive%2C+Spencer%2C+NC+28159",
-      "label": "North Carolina Transportation Museum \u2014 1 Samuel Spencer Drive, Spencer, NC 28159"
+      "label": "North Carolina Transportation Museum — 1 Samuel Spencer Drive, Spencer, NC 28159",
+      "learn_more": "https://historicsites.nc.gov/all-sites-catalog/north-carolina-transportation-museum",
+      "learn_more_source": "official"
     }
   ],
   "47": [
@@ -628,7 +774,9 @@
       "address": "1 Battleship Road, Wilmington, NC 28401",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Battleship+North+Carolina%2C+1+Battleship+Road%2C+Wilmington%2C+NC+28401",
-      "label": "Battleship North Carolina \u2014 1 Battleship Road, Wilmington, NC 28401"
+      "label": "Battleship North Carolina — 1 Battleship Road, Wilmington, NC 28401",
+      "learn_more": "https://historicsites.nc.gov/all-sites/battleship-north-carolina",
+      "learn_more_source": "official"
     },
     {
       "name": "Wilmington Riverwalk",
@@ -644,14 +792,18 @@
       "address": "1610 Ft. Fisher Blvd. South, Kure Beach, NC 28449",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Fort+Fisher+State+Historic+Site%2C+1610+Ft.+Fisher+Blvd.+South%2C+Kure+Beach%2C+NC+28449",
-      "label": "Fort Fisher State Historic Site \u2014 1610 Ft. Fisher Blvd. South, Kure Beach, NC 28449"
+      "label": "Fort Fisher State Historic Site — 1610 Ft. Fisher Blvd. South, Kure Beach, NC 28449",
+      "learn_more": "https://historicsites.nc.gov/all-sites/fort-fisher",
+      "learn_more_source": "official"
     },
     {
       "name": "North Carolina Aquarium at Fort Fisher",
       "address": "900 Loggerhead Road, Kure Beach, NC 28449",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=North+Carolina+Aquarium+at+Fort+Fisher%2C+900+Loggerhead+Road%2C+Kure+Beach%2C+NC+28449",
-      "label": "North Carolina Aquarium at Fort Fisher \u2014 900 Loggerhead Road, Kure Beach, NC 28449"
+      "label": "North Carolina Aquarium at Fort Fisher — 900 Loggerhead Road, Kure Beach, NC 28449",
+      "learn_more": "https://www.ncaquariums.com/fort-fisher",
+      "learn_more_source": "official"
     }
   ],
   "49": [
@@ -660,7 +812,9 @@
       "address": "1301 Ferry Road, Southport, NC 28461",
       "kind": "dock",
       "url": "https://www.google.com/maps/search/?api=1&query=Bald+Head+Island+ferry%2C+Deep+Point+Marina%2C+1301+Ferry+Road%2C+Southport%2C+NC+28461",
-      "label": "Bald Head Island ferry, Deep Point Marina \u2014 1301 Ferry Road, Southport, NC 28461"
+      "label": "Bald Head Island ferry, Deep Point Marina — 1301 Ferry Road, Southport, NC 28461",
+      "learn_more": "https://www.baldheadislandferry.com/",
+      "learn_more_source": "official"
     }
   ],
   "50": [
@@ -669,7 +823,9 @@
       "address": "338 Jane Hurt Yarn Drive, Tallulah Falls, GA 30573",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Tallulah+Gorge+State+Park%2C+338+Jane+Hurt+Yarn+Drive%2C+Tallulah+Falls%2C+GA+30573",
-      "label": "Tallulah Gorge State Park \u2014 338 Jane Hurt Yarn Drive, Tallulah Falls, GA 30573"
+      "label": "Tallulah Gorge State Park — 338 Jane Hurt Yarn Drive, Tallulah Falls, GA 30573",
+      "learn_more": "https://gastateparks.org/TallulahGorge",
+      "learn_more_source": "official"
     }
   ],
   "51": [
@@ -678,14 +834,18 @@
       "address": "726 Bruckenstrasse, Helen, GA 30545",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Alpine+Helen+Welcome+Center%2C+726+Bruckenstrasse%2C+Helen%2C+GA+30545",
-      "label": "Alpine Helen Welcome Center \u2014 726 Bruckenstrasse, Helen, GA 30545"
+      "label": "Alpine Helen Welcome Center — 726 Bruckenstrasse, Helen, GA 30545",
+      "learn_more": "https://www.helenga.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Anna Ruby Falls Recreation Area",
       "address": "3455 Anna Ruby Falls Road, Helen, GA 30545",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Anna+Ruby+Falls+Recreation+Area%2C+3455+Anna+Ruby+Falls+Road%2C+Helen%2C+GA+30545",
-      "label": "Anna Ruby Falls Recreation Area \u2014 3455 Anna Ruby Falls Road, Helen, GA 30545"
+      "label": "Anna Ruby Falls Recreation Area — 3455 Anna Ruby Falls Road, Helen, GA 30545",
+      "learn_more": "https://www.fs.usda.gov/r08/chattahoochee-oconee/recreation/anna-ruby-falls-recreation-area",
+      "learn_more_source": "official"
     }
   ],
   "52": [
@@ -694,21 +854,27 @@
       "address": "1 Public Square, Dahlonega, GA 30533",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Dahlonega+Gold+Museum%2C+1+Public+Square%2C+Dahlonega%2C+GA+30533",
-      "label": "Dahlonega Gold Museum \u2014 1 Public Square, Dahlonega, GA 30533"
+      "label": "Dahlonega Gold Museum — 1 Public Square, Dahlonega, GA 30533",
+      "learn_more": "https://gastateparks.org/DahlonegaGoldMuseum",
+      "learn_more_source": "official"
     },
     {
       "name": "Wolf Mountain Vineyards",
       "address": "180 Wolf Mountain Trail, Dahlonega, GA 30533",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Wolf+Mountain+Vineyards%2C+180+Wolf+Mountain+Trail%2C+Dahlonega%2C+GA+30533",
-      "label": "Wolf Mountain Vineyards \u2014 180 Wolf Mountain Trail, Dahlonega, GA 30533"
+      "label": "Wolf Mountain Vineyards — 180 Wolf Mountain Trail, Dahlonega, GA 30533",
+      "learn_more": "https://www.wolfmountainvineyards.com/",
+      "learn_more_source": "official"
     },
     {
       "name": "Montaluce Winery",
       "address": "501 Hightower Church Road, Dahlonega, GA 30533",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Montaluce+Winery%2C+501+Hightower+Church+Road%2C+Dahlonega%2C+GA+30533",
-      "label": "Montaluce Winery \u2014 501 Hightower Church Road, Dahlonega, GA 30533"
+      "label": "Montaluce Winery — 501 Hightower Church Road, Dahlonega, GA 30533",
+      "learn_more": "https://www.montaluce.com/",
+      "learn_more_source": "official"
     }
   ],
   "53": [
@@ -717,7 +883,9 @@
       "address": "900 Stony Landing Road, Moncks Corner, SC 29461",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Old+Santee+Canal+Park%2C+900+Stony+Landing+Road%2C+Moncks+Corner%2C+SC+29461",
-      "label": "Old Santee Canal Park \u2014 900 Stony Landing Road, Moncks Corner, SC 29461"
+      "label": "Old Santee Canal Park — 900 Stony Landing Road, Moncks Corner, SC 29461",
+      "learn_more": "https://www.oldsanteecanalpark.org/",
+      "learn_more_source": "official"
     }
   ],
   "54": [
@@ -726,7 +894,9 @@
       "address": "5200 Savannah Highway, Ravenel, SC 29470",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Caw+Caw+Interpretive+Center%2C+5200+Savannah+Highway%2C+Ravenel%2C+SC+29470",
-      "label": "Caw Caw Interpretive Center \u2014 5200 Savannah Highway, Ravenel, SC 29470"
+      "label": "Caw Caw Interpretive Center — 5200 Savannah Highway, Ravenel, SC 29470",
+      "learn_more": "https://www.ccprc.com/listing/caw-caw-interpretive-center/26/",
+      "learn_more_source": "official"
     }
   ],
   "55": [
@@ -735,7 +905,9 @@
       "address": "1251 Park West Boulevard, Mount Pleasant, SC 29466",
       "kind": "parking",
       "url": "https://www.google.com/maps/search/?api=1&query=Laurel+Hill+County+Park+trailhead%2C+1251+Park+West+Boulevard%2C+Mount+Pleasant%2C+SC+29466",
-      "label": "Laurel Hill County Park trailhead \u2014 1251 Park West Boulevard, Mount Pleasant, SC 29466"
+      "label": "Laurel Hill County Park trailhead — 1251 Park West Boulevard, Mount Pleasant, SC 29466",
+      "learn_more": "https://www.ccprc.com/listing/laurel-hill-county-park/13/",
+      "learn_more_source": "official"
     }
   ],
   "56": [
@@ -744,7 +916,9 @@
       "address": "5435 SC-162, Hollywood, SC 29449",
       "kind": "parking",
       "url": "https://www.google.com/maps/search/?api=1&query=Dungannon+Plantation+Heritage+Preserve%2C+5435+SC-162%2C+Hollywood%2C+SC+29449",
-      "label": "Dungannon Plantation Heritage Preserve \u2014 5435 SC-162, Hollywood, SC 29449"
+      "label": "Dungannon Plantation Heritage Preserve — 5435 SC-162, Hollywood, SC 29449",
+      "learn_more": "https://public-lands-scdnr.hub.arcgis.com/pages/dungannon-plantation-hp-wma",
+      "learn_more_source": "official"
     }
   ],
   "57": [
@@ -753,7 +927,9 @@
       "address": "746 Givhans Ferry Road, Ridgeville, SC 29472",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Givhans+Ferry+State+Park%2C+746+Givhans+Ferry+Road%2C+Ridgeville%2C+SC+29472",
-      "label": "Givhans Ferry State Park \u2014 746 Givhans Ferry Road, Ridgeville, SC 29472"
+      "label": "Givhans Ferry State Park — 746 Givhans Ferry Road, Ridgeville, SC 29472",
+      "learn_more": "https://southcarolinaparks.com/givhans-ferry",
+      "learn_more_source": "official"
     }
   ],
   "58": [
@@ -762,7 +938,9 @@
       "address": "1750 East Ashley Avenue, Folly Beach, SC 29439",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Lighthouse+Inlet+Heritage+Preserve%2C+1750+East+Ashley+Avenue%2C+Folly+Beach%2C+SC+29439",
-      "label": "Lighthouse Inlet Heritage Preserve \u2014 1750 East Ashley Avenue, Folly Beach, SC 29439"
+      "label": "Lighthouse Inlet Heritage Preserve — 1750 East Ashley Avenue, Folly Beach, SC 29439",
+      "learn_more": "https://www.ccprc.com/listing/lighthouse-inlet-heritage-preserve/14/",
+      "learn_more_source": "official"
     }
   ],
   "59": [
@@ -771,7 +949,9 @@
       "address": "5821 Highway 17 North, Awendaw, SC 29429",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Sewee+Visitor+and+Environmental+Education+Center%2C+5821+Highway+17+North%2C+Awendaw%2C+SC+29429",
-      "label": "Sewee Visitor and Environmental Education Center \u2014 5821 Highway 17 North, Awendaw, SC 29429"
+      "label": "Sewee Visitor and Environmental Education Center — 5821 Highway 17 North, Awendaw, SC 29429",
+      "learn_more": "https://www.fs.usda.gov/r08/francismarionsumter/recreation/sewee-visitor-and-environmental-education-center",
+      "learn_more_source": "official"
     }
   ],
   "60": [
@@ -780,7 +960,9 @@
       "address": "I'on Swamp Road (FS Road 228), Awendaw, SC",
       "kind": "parking",
       "label": "I'on Swamp Interpretive Trail trailhead, I'on Swamp Road (FS Road 228), Awendaw, SC",
-      "url": "https://www.google.com/maps/search/?api=1&query=I%27on+Swamp+Interpretive+Trail+trailhead%2C+I%27on+Swamp+Road+%28FS+Road+228%29%2C+Awendaw%2C+SC"
+      "url": "https://www.google.com/maps/search/?api=1&query=I%27on+Swamp+Interpretive+Trail+trailhead%2C+I%27on+Swamp+Road+%28FS+Road+228%29%2C+Awendaw%2C+SC",
+      "learn_more": "https://www.fs.usda.gov/r08/francismarionsumter/recreation/trails/ion-swamp-interpretive-trail",
+      "learn_more_source": "official"
     }
   ],
   "61": [
@@ -791,7 +973,9 @@
       "lat": 33.00113021,
       "lng": -79.60968341,
       "label": "Sewee Shell Ring Boardwalk trailhead, Salt Pond Road (FS Road 243), Awendaw, SC (map)",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.00113021,-79.60968341"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.00113021,-79.60968341",
+      "learn_more": "https://www.fs.usda.gov/r08/francismarionsumter/recreation/sewee-shell-ring-boardwalk",
+      "learn_more_source": "official"
     }
   ],
   "62": [
@@ -800,7 +984,9 @@
       "address": "Rosa Green Road, Awendaw, SC",
       "kind": "parking",
       "label": "Awendaw Canoe Launch Trailhead, Rosa Green Road, Awendaw, SC",
-      "url": "https://www.google.com/maps/search/?api=1&query=Awendaw+Canoe+Launch+Trailhead%2C+Rosa+Green+Road%2C+Awendaw%2C+SC"
+      "url": "https://www.google.com/maps/search/?api=1&query=Awendaw+Canoe+Launch+Trailhead%2C+Rosa+Green+Road%2C+Awendaw%2C+SC",
+      "learn_more": "https://www.palmettotrail.org/trails/trail/awendaw-passage",
+      "learn_more_source": "official"
     }
   ],
   "63": [
@@ -809,7 +995,9 @@
       "address": "US Highway 17, Awendaw, SC",
       "kind": "parking",
       "label": "Swamp Fox Passage eastern trailhead, US Highway 17 just beyond Steed Creek Road, Awendaw, SC",
-      "url": "https://www.google.com/maps/search/?api=1&query=Swamp+Fox+Passage+eastern+trailhead%2C+US+Highway+17+just+beyond+Steed+Creek+Road%2C+Awendaw%2C+SC"
+      "url": "https://www.google.com/maps/search/?api=1&query=Swamp+Fox+Passage+eastern+trailhead%2C+US+Highway+17+just+beyond+Steed+Creek+Road%2C+Awendaw%2C+SC",
+      "learn_more": "https://www.palmettotrail.org/trails/trail/swamp-fox-passage",
+      "learn_more_source": "official"
     }
   ],
   "64": [
@@ -818,7 +1006,9 @@
       "address": "8675 Willtown Road, Hollywood, SC 29449",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Ernest+F.+Hollings+ACE+Basin+National+Wildlife+Refuge%2C+8675+Willtown+Road%2C+Hollywood%2C+SC+29449",
-      "label": "Ernest F. Hollings ACE Basin National Wildlife Refuge \u2014 8675 Willtown Road, Hollywood, SC 29449"
+      "label": "Ernest F. Hollings ACE Basin National Wildlife Refuge — 8675 Willtown Road, Hollywood, SC 29449",
+      "learn_more": "https://www.fws.gov/refuge/ernest-f-hollings-ace-basin",
+      "learn_more_source": "official"
     }
   ],
   "65": [
@@ -827,7 +1017,9 @@
       "address": "2662 Mullet Hall Road, Johns Island, SC 29455",
       "kind": "street",
       "url": "https://www.google.com/maps/search/?api=1&query=Mullet+Hall+Equestrian+Center%2C+2662+Mullet+Hall+Road%2C+Johns+Island%2C+SC+29455",
-      "label": "Mullet Hall Equestrian Center \u2014 2662 Mullet Hall Road, Johns Island, SC 29455"
+      "label": "Mullet Hall Equestrian Center — 2662 Mullet Hall Road, Johns Island, SC 29455",
+      "learn_more": "https://www.ccprc.com/parks/parks-trails/johns-island-county-park/mullet-hall-equestrian-center/",
+      "learn_more_source": "official"
     }
   ],
   "66": [
@@ -835,8 +1027,10 @@
       "name": "Bonneau Ferry WMA main entrance",
       "address": "Highway 402, Cordesville, SC 29434",
       "kind": "parking",
-      "label": "Bonneau Ferry WMA main entrance \u2014 Highway 402, Cordesville, SC 29434",
-      "url": "https://www.google.com/maps/search/?api=1&query=Bonneau+Ferry+WMA+main+entrance+%E2%80%94+Highway+402%2C+Cordesville%2C+SC+29434"
+      "label": "Bonneau Ferry WMA main entrance — Highway 402, Cordesville, SC 29434",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bonneau+Ferry+WMA+main+entrance+%E2%80%94+Highway+402%2C+Cordesville%2C+SC+29434",
+      "learn_more": "https://public-lands-scdnr.hub.arcgis.com/pages/bonneau-ferry-wma",
+      "learn_more_source": "official"
     }
   ],
   "67": [
@@ -845,7 +1039,9 @@
       "address": "Strawberry Chapel Road, Moncks Corner, SC",
       "kind": "parking",
       "label": "Childsbury Towne Heritage Preserve parking, Strawberry Chapel Road, Moncks Corner, SC",
-      "url": "https://www.google.com/maps/search/?api=1&query=Childsbury+Towne+Heritage+Preserve+parking%2C+Strawberry+Chapel+Road%2C+Moncks+Corner%2C+SC"
+      "url": "https://www.google.com/maps/search/?api=1&query=Childsbury+Towne+Heritage+Preserve+parking%2C+Strawberry+Chapel+Road%2C+Moncks+Corner%2C+SC",
+      "learn_more": "https://www.sctrails.net/trails/trail/childsbury-towne-heritage-preserve",
+      "learn_more_source": "official"
     }
   ],
   "68": [
@@ -853,15 +1049,19 @@
       "name": "Bettis Boat Landing",
       "address": "3000 Railroad Avenue, Hanahan, SC 29410",
       "kind": "street",
-      "label": "Bettis Boat Landing \u2014 3000 Railroad Avenue, Hanahan, SC 29410",
-      "url": "https://www.google.com/maps/search/?api=1&query=Bettis+Boat+Landing+%E2%80%94+3000+Railroad+Avenue%2C+Hanahan%2C+SC+29410"
+      "label": "Bettis Boat Landing — 3000 Railroad Avenue, Hanahan, SC 29410",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bettis+Boat+Landing+%E2%80%94+3000+Railroad+Avenue%2C+Hanahan%2C+SC+29410",
+      "learn_more": "https://www.cityofhanahan.com/recreation-parks/park/bettis-boat-landing",
+      "learn_more_source": "official"
     },
     {
       "name": "Venice Avenue Park",
       "address": "Venice Avenue, Hanahan, SC 29410",
       "kind": "parking",
       "label": "Venice Avenue Park, Venice Avenue, Hanahan, SC 29410",
-      "url": "https://www.google.com/maps/search/?api=1&query=Venice+Avenue+Park%2C+Venice+Avenue%2C+Hanahan%2C+SC+29410"
+      "url": "https://www.google.com/maps/search/?api=1&query=Venice+Avenue+Park%2C+Venice+Avenue%2C+Hanahan%2C+SC+29410",
+      "learn_more": "https://www.berkeleyoutdoorlife.com/goose-creek-reservoir-blueway",
+      "learn_more_source": "official"
     }
   ],
   "69": [
@@ -870,7 +1070,9 @@
       "address": "Highway SC 503 (Bushy Park Road), Goose Creek, SC 29445",
       "kind": "parking",
       "label": "Bushy Park Boat Landing, Highway SC 503 (Bushy Park Road), Goose Creek, SC 29445",
-      "url": "https://www.google.com/maps/search/?api=1&query=Bushy+Park+Boat+Landing%2C+Highway+SC+503+%28Bushy+Park+Road%29%2C+Goose+Creek%2C+SC+29445"
+      "url": "https://www.google.com/maps/search/?api=1&query=Bushy+Park+Boat+Landing%2C+Highway+SC+503+%28Bushy+Park+Road%29%2C+Goose+Creek%2C+SC+29445",
+      "learn_more": "https://www.berkeleyoutdoorlife.com/bushy-park-foster-creek-blueway",
+      "learn_more_source": "official"
     }
   ],
   "70": [
@@ -879,7 +1081,9 @@
       "address": "Cypress Gardens Road, Moncks Corner, SC 29461",
       "kind": "parking",
       "label": "Cypress Gardens Boat Landing, Cypress Gardens Road, Moncks Corner, SC 29461",
-      "url": "https://www.google.com/maps/search/?api=1&query=Cypress+Gardens+Boat+Landing%2C+Cypress+Gardens+Road%2C+Moncks+Corner%2C+SC+29461"
+      "url": "https://www.google.com/maps/search/?api=1&query=Cypress+Gardens+Boat+Landing%2C+Cypress+Gardens+Road%2C+Moncks+Corner%2C+SC+29461",
+      "learn_more": "https://www.berkeleyoutdoorlife.com/durham-creek-back-river-blueway",
+      "learn_more_source": "official"
     }
   ],
   "71": [
@@ -888,7 +1092,9 @@
       "address": "SC Highway 402, Moncks Corner, SC 29461",
       "kind": "parking",
       "label": "Rembert C. Dennis Landing (Wadboo Landing), SC Highway 402, Moncks Corner, SC 29461",
-      "url": "https://www.google.com/maps/search/?api=1&query=Rembert+C.+Dennis+Landing+%28Wadboo+Landing%29%2C+SC+Highway+402%2C+Moncks+Corner%2C+SC+29461"
+      "url": "https://www.google.com/maps/search/?api=1&query=Rembert+C.+Dennis+Landing+%28Wadboo+Landing%29%2C+SC+Highway+402%2C+Moncks+Corner%2C+SC+29461",
+      "learn_more": "https://www.berkeleyoutdoorlife.com/lower-wadboo-blueway",
+      "learn_more_source": "official"
     }
   ],
   "72": [
@@ -917,7 +1123,9 @@
       "lat": 32.965,
       "lng": -80.0419,
       "label": "Otranto Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.965000,-80.041900"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.965000,-80.041900",
+      "learn_more": "https://en.wikipedia.org/wiki/Otranto_Plantation",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "The Yamasee War at Goose Creek, 1715",
@@ -935,7 +1143,9 @@
       "lat": 32.97575,
       "lng": -80.03305,
       "label": "St. James, Goose Creek historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.975750,-80.033050"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.975750,-80.033050",
+      "learn_more": "https://en.wikipedia.org/wiki/St._James_Church_(Goose_Creek,_South_Carolina)",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Goose Creek Church",
@@ -944,7 +1154,9 @@
       "lat": 32.977033,
       "lng": -80.0328,
       "label": "Goose Creek Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.977033,-80.032800"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.977033,-80.032800",
+      "learn_more": "https://en.wikipedia.org/wiki/St._James_Church_(Goose_Creek,_South_Carolina)",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Howe Hall Plantation / Howe Hall Elementary School",
@@ -989,7 +1201,9 @@
       "lat": 32.995983,
       "lng": -80.02855,
       "label": "Boochawee Hall historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.995983,-80.028550"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.995983,-80.028550",
+      "learn_more": "https://www.hmdb.org/m.asp?m=29492",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Button Hall",
@@ -1007,7 +1221,9 @@
       "lat": 32.999233,
       "lng": -80.040667,
       "label": "Goose Creek historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.999233,-80.040667"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.999233,-80.040667",
+      "learn_more": "https://en.wikipedia.org/wiki/Goose_Creek,_South_Carolina",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Eighteen Mile House Tavern",
@@ -1088,7 +1304,9 @@
       "lat": 33.037367,
       "lng": -80.033567,
       "label": "Medway and Medway Plantation historical markers",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.037367,-80.033567"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.037367,-80.033567",
+      "learn_more": "https://en.wikipedia.org/wiki/Medway_(Mount_Holly,_South_Carolina)",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Springfield Plantation",
@@ -1106,7 +1324,9 @@
       "lat": 32.9988,
       "lng": -80.014267,
       "label": "Howe Hall Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.998800,-80.014267"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.998800,-80.014267",
+      "learn_more": "https://www.hmdb.org/m.asp?m=29524",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Liberty Hall Plantation",
@@ -1115,7 +1335,9 @@
       "lat": 32.9998,
       "lng": -80.0106,
       "label": "Liberty Hall Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.999800,-80.010600"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.999800,-80.010600",
+      "learn_more": "https://www.hmdb.org/m.asp?m=29490",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Otranto Indigo Vat",
@@ -1124,7 +1346,9 @@
       "lat": 32.98385,
       "lng": -79.9325,
       "label": "Otranto Indigo Vat historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.983850,-79.932500"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.983850,-79.932500",
+      "learn_more": "https://en.wikipedia.org/wiki/Otranto_Plantation_Indigo_Vats",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "St. James, Goose Creek Chapel of Ease / Bethlehem Baptist Church",
@@ -1160,7 +1384,9 @@
       "lat": 33.1548,
       "lng": -80.1698,
       "label": "Wassamassaw historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.154800,-80.169800"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.154800,-80.169800",
+      "learn_more": "https://www.hmdb.org/m.asp?m=29135",
+      "learn_more_source": "hmdb"
     }
   ],
   "73": [
@@ -1189,7 +1415,9 @@
       "lat": 33.140867,
       "lng": -80.019183,
       "label": "Mulberry Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.140867,-80.019183"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.140867,-80.019183",
+      "learn_more": "https://en.wikipedia.org/wiki/Mulberry_Plantation_(Moncks_Corner,_South_Carolina)",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Lewisfield Plantation",
@@ -1198,7 +1426,9 @@
       "lat": 33.16765,
       "lng": -80.0148,
       "label": "Lewisfield Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.167650,-80.014800"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.167650,-80.014800",
+      "learn_more": "https://en.wikipedia.org/wiki/Lewisfield_Plantation",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Berkeley County Hospital",
@@ -1225,7 +1455,9 @@
       "lat": 33.230783,
       "lng": -80.036667,
       "label": "Pinopolis historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.230783,-80.036667"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.230783,-80.036667",
+      "learn_more": "https://en.wikipedia.org/wiki/Pinopolis,_South_Carolina",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Berkeley Training High School",
@@ -1234,7 +1466,9 @@
       "lat": 33.200833,
       "lng": -79.994883,
       "label": "Berkeley Training High School historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.200833,-79.994883"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.200833,-79.994883",
+      "learn_more": "https://www.hmdb.org/m.asp?m=41606",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Old Moncks Corner",
@@ -1261,7 +1495,9 @@
       "lat": 33.192067,
       "lng": -79.9963,
       "label": "Dixie Training School / Berkely Training High School historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.192067,-79.996300"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.192067,-79.996300",
+      "learn_more": "https://www.hmdb.org/m.asp?m=29133",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Nisbett House",
@@ -1279,7 +1515,9 @@
       "lat": 33.189017,
       "lng": -79.992067,
       "label": "Fairlawn Plantation / Fort Fairlawn historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.189017,-79.992067"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.189017,-79.992067",
+      "learn_more": "https://www.hmdb.org/m.asp?m=53881",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Santee Canal {Marker #2}",
@@ -1297,7 +1535,9 @@
       "lat": 33.2105,
       "lng": -79.980517,
       "label": "Santee Canal historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.210500,-79.980517"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.210500,-79.980517",
+      "learn_more": "https://en.wikipedia.org/wiki/Santee_Canal",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Biggin Church Ruins",
@@ -1306,7 +1546,9 @@
       "lat": 33.212983,
       "lng": -79.96635,
       "label": "Biggin Church Ruins historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.212983,-79.966350"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.212983,-79.966350",
+      "learn_more": "https://en.wikipedia.org/wiki/Biggin_Church_Ruins",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Cherry Hill Classroom",
@@ -1324,7 +1566,9 @@
       "lat": 33.195783,
       "lng": -79.953383,
       "label": "Wadboo Barony historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.195783,-79.953383"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.195783,-79.953383",
+      "learn_more": "https://www.hmdb.org/m.asp?m=23066",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Cordesville Rosenwald School",
@@ -1360,7 +1604,9 @@
       "lat": 33.09585,
       "lng": -79.93305,
       "label": "Strawberry Chapel historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.095850,-79.933050"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.095850,-79.933050",
+      "learn_more": "https://en.wikipedia.org/wiki/Strawberry_Chapel_and_Childsbury_Town_Site",
+      "learn_more_source": "wikipedia"
     }
   ],
   "74": [
@@ -1416,7 +1662,9 @@
       "lat": 33.080883,
       "lng": -79.83585,
       "label": "Pompion Hill Chapel historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.080883,-79.835850"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.080883,-79.835850",
+      "learn_more": "https://en.wikipedia.org/wiki/Pompion_Hill_Chapel",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "New Hope Methodist Church",
@@ -1443,7 +1691,9 @@
       "lat": 33.114117,
       "lng": -79.804283,
       "label": "Silk Hope Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.114117,-79.804283"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.114117,-79.804283",
+      "learn_more": "https://www.hmdb.org/m.asp?m=23548",
+      "learn_more_source": "hmdb"
     }
   ],
   "75": [
@@ -1454,7 +1704,9 @@
       "lat": 33.262717,
       "lng": -79.965283,
       "label": "Rehoboth Methodist Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.262717,-79.965283"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.262717,-79.965283",
+      "learn_more": "https://www.hmdb.org/m.asp?m=29335",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Laurel Hill School",
@@ -1463,7 +1715,9 @@
       "lat": 33.34705,
       "lng": -79.8146,
       "label": "Laurel Hill School historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.347050,-79.814600"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.347050,-79.814600",
+      "learn_more": "https://www.hmdb.org/m.asp?m=270272",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "L. Mendel Rivers House",
@@ -1481,7 +1735,9 @@
       "lat": 33.405767,
       "lng": -79.91685,
       "label": "St. Stephen's Episcopal Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.405767,-79.916850"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.405767,-79.916850",
+      "learn_more": "https://en.wikipedia.org/wiki/St._Stephen%27s_Episcopal_Church_(St._Stephen,_South_Carolina)",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "St. Stephen Colored School / St. Stephen High School",
@@ -1526,7 +1782,9 @@
       "lat": 33.430733,
       "lng": -80.024283,
       "label": "Maham Plantation / Col. Hezekiah Maham historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.430733,-80.024283"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.430733,-80.024283",
+      "learn_more": "https://www.hmdb.org/m.asp?m=270287",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "The Village of Pineville",
@@ -1598,7 +1856,9 @@
       "lat": 33.323083,
       "lng": -80.1623,
       "label": "Moss Grove historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.323083,-80.162300"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.323083,-80.162300",
+      "learn_more": "https://www.hmdb.org/m.asp?m=22563",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Friendship Methodist Church",
@@ -1607,7 +1867,9 @@
       "lat": 33.2994,
       "lng": -80.166683,
       "label": "Friendship Methodist Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.299400,-80.166683"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.299400,-80.166683",
+      "learn_more": "https://www.hmdb.org/m.asp?m=55867",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Spring Hill Methodist Church",
@@ -1616,7 +1878,9 @@
       "lat": 33.231617,
       "lng": -80.324567,
       "label": "Spring Hill Methodist Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.231617,-80.324567"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.231617,-80.324567",
+      "learn_more": "https://www.hmdb.org/m.asp?m=29703",
+      "learn_more_source": "hmdb"
     }
   ],
   "76": [
@@ -1672,7 +1936,9 @@
       "lat": 33.269533,
       "lng": -79.668667,
       "label": "Old Jamestown historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.269533,-79.668667"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.269533,-79.668667",
+      "learn_more": "https://www.hmdb.org/m.asp?m=23149",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Battle of Lenud's Ferry",
@@ -1681,7 +1947,9 @@
       "lat": 33.297283,
       "lng": -79.6844,
       "label": "Battle of Lenud's Ferry historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.297283,-79.684400"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.297283,-79.684400",
+      "learn_more": "https://en.wikipedia.org/wiki/Battle_of_Lenud%27s_Ferry",
+      "learn_more_source": "wikipedia"
     }
   ],
   "77": [
@@ -1719,7 +1987,9 @@
       "lat": 32.774867,
       "lng": -79.929283,
       "label": "Huguenot Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.774867,-79.929283"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.774867,-79.929283",
+      "learn_more": "https://en.wikipedia.org/wiki/Huguenot_Church",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Constitutional Convention of 1868",
@@ -1764,7 +2034,9 @@
       "lat": 32.7785,
       "lng": -79.931383,
       "label": "Carolina Art Association / James S. Gibbes Memorial Art Gallery historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.778500,-79.931383"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778500,-79.931383",
+      "learn_more": "https://www.hmdb.org/m.asp?m=206021",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Institute Hall / \"The Union is Dissolved!\"",
@@ -1773,7 +2045,9 @@
       "lat": 32.7784,
       "lng": -79.931217,
       "label": "Institute Hall / \"The Union is Dissolved!\" historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.778400,-79.931217"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778400,-79.931217",
+      "learn_more": "https://www.hmdb.org/m.asp?m=39371",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Fireproof Building",
@@ -1782,7 +2056,9 @@
       "lat": 32.77735,
       "lng": -79.931,
       "label": "Fireproof Building historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.777350,-79.931000"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.777350,-79.931000",
+      "learn_more": "https://en.wikipedia.org/wiki/Fireproof_Building",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "St. Michael's Church",
@@ -1818,7 +2094,9 @@
       "lat": 32.7777,
       "lng": -79.9284,
       "label": "Slave Trading Complex historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.777700,-79.928400"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.777700,-79.928400",
+      "learn_more": "https://www.hmdb.org/m.asp?m=242255",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Slave Trading Complex",
@@ -1827,7 +2105,9 @@
       "lat": 32.7784,
       "lng": -79.9286,
       "label": "Slave Trading Complex historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.778400,-79.928600"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778400,-79.928600",
+      "learn_more": "https://www.hmdb.org/m.asp?m=242255",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Pinckney Mansion",
@@ -1856,7 +2136,9 @@
       "lat": 32.7788,
       "lng": -79.92945,
       "label": "St. Philip's Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.778800,-79.929450"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778800,-79.929450",
+      "learn_more": "https://en.wikipedia.org/wiki/St._Philip%27s_Church_(Charleston,_South_Carolina)",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "St. John's Church",
@@ -1955,7 +2237,9 @@
       "lat": 32.7834,
       "lng": -79.93685,
       "label": "College of Charleston historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.783400,-79.936850"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.783400,-79.936850",
+      "learn_more": "https://en.wikipedia.org/wiki/College_of_Charleston",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Septima Clark Birthplace",
@@ -1973,7 +2257,9 @@
       "lat": 32.7807,
       "lng": -79.9349,
       "label": "Charleston Riot of 1919 historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.780700,-79.934900"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.780700,-79.934900",
+      "learn_more": "https://en.wikipedia.org/wiki/Charleston_riot_of_1919",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "K.K. Beth Elohim",
@@ -2003,12 +2289,12 @@
       "url": "https://www.google.com/maps/search/?api=1&query=32.783050,-79.930450"
     },
     {
-      "name": "Blake-Grimk\u00e9 House",
+      "name": "Blake-Grimké House",
       "address": "32.786933,-79.929267",
       "kind": "coordinates",
       "lat": 32.786933,
       "lng": -79.929267,
-      "label": "Blake-Grimk\u00e9 House historical marker",
+      "label": "Blake-Grimké House historical marker",
       "url": "https://www.google.com/maps/search/?api=1&query=32.786933,-79.929267"
     }
   ],
@@ -2086,12 +2372,12 @@
       "url": "https://www.google.com/maps/search/?api=1&query=32.793983,-79.945733"
     },
     {
-      "name": "Weston-Grimk\u00e9 Homesite",
+      "name": "Weston-Grimké Homesite",
       "address": "32.789117,-79.941983",
       "kind": "coordinates",
       "lat": 32.789117,
       "lng": -79.941983,
-      "label": "Weston-Grimk\u00e9 Homesite historical marker",
+      "label": "Weston-Grimké Homesite historical marker",
       "url": "https://www.google.com/maps/search/?api=1&query=32.789117,-79.941983"
     },
     {
@@ -2110,7 +2396,9 @@
       "lat": 32.790117,
       "lng": -79.95545,
       "label": "Gadsden Green historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.790117,-79.955450"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.790117,-79.955450",
+      "learn_more": "https://en.wikipedia.org/wiki/Gadsden_Green_Homes",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Burke High School",
@@ -2128,7 +2416,9 @@
       "lat": 32.792783,
       "lng": -79.953083,
       "label": "Harmon Field / Cannon Street All-Stars historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.792783,-79.953083"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.792783,-79.953083",
+      "learn_more": "https://www.hmdb.org/m.asp?m=133635",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Hampton Park Terrace",
@@ -2137,7 +2427,9 @@
       "lat": 32.798833,
       "lng": -79.9514,
       "label": "Hampton Park Terrace historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.798833,-79.951400"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.798833,-79.951400",
+      "learn_more": "https://en.wikipedia.org/wiki/Hampton_Park_Terrace",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "James Simons Elementary School / Desegregation of Charleston Schools",
@@ -2193,7 +2485,9 @@
       "lat": 32.838378,
       "lng": -80.049444,
       "label": "St. Andrew's Parish Church and Skirmish at St. Andrew's Parish Church historical markers",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.838378,-80.049444"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.838378,-80.049444",
+      "learn_more": "https://en.wikipedia.org/wiki/Old_St._Andrew%27s_Parish_Church",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "U.S. Vegetable Laboratory",
@@ -2211,7 +2505,9 @@
       "lat": 32.797383,
       "lng": -80.0327,
       "label": "South Carolina Canal & Rail Road Company Original Track Location in Charleston historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.797383,-80.032700"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.797383,-80.032700",
+      "learn_more": "https://en.wikipedia.org/wiki/South_Carolina_Canal_and_Railroad_Company",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "British Fortifications",
@@ -2276,7 +2572,9 @@
       "lat": 32.759817,
       "lng": -80.001233,
       "label": "Fort Pemberton historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.759817,-80.001233"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.759817,-80.001233",
+      "learn_more": "https://en.wikipedia.org/wiki/Fort_Pemberton_(South_Carolina)",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Saint James Episcopal Church",
@@ -2321,7 +2619,9 @@
       "lat": 32.737783,
       "lng": -79.907167,
       "label": "Battery Cheves historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.737783,-79.907167"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.737783,-79.907167",
+      "learn_more": "https://en.wikipedia.org/wiki/Battery_Cheves",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Battery Haskell",
@@ -2348,7 +2648,9 @@
       "lat": 32.72655,
       "lng": -79.93815,
       "label": "Redoubt Number 3 historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.726550,-79.938150"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.726550,-79.938150",
+      "learn_more": "https://www.hmdb.org/m.asp?m=30586",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Riversville / Battle of Secessionville",
@@ -2366,7 +2668,9 @@
       "lat": 32.707883,
       "lng": -79.953467,
       "label": "Battery Number 5 historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.707883,-79.953467"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.707883,-79.953467",
+      "learn_more": "https://www.hmdb.org/m.asp?m=30551",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Hunter's Volunteers",
@@ -2429,7 +2733,9 @@
       "lat": 32.68525,
       "lng": -79.959583,
       "label": "Mosquito Beach historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.685250,-79.959583"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.685250,-79.959583",
+      "learn_more": "https://en.wikipedia.org/wiki/Mosquito_Beach_Historic_District",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Seashore Farmers' Lodge No. 767",
@@ -2438,7 +2744,9 @@
       "lat": 32.681267,
       "lng": -79.967317,
       "label": "Seashore Farmers' Lodge No. 767 historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.681267,-79.967317"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.681267,-79.967317",
+      "learn_more": "https://en.wikipedia.org/wiki/Seashore_Farmers%27_Lodge_No._767",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Camp of Wild's \"African Brigade,\" 1863-1864 / Wild's Brigade Cemetery",
@@ -2539,7 +2847,9 @@
       "lat": 32.6771,
       "lng": -80.04075,
       "label": "The Progressive Club historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.677100,-80.040750"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.677100,-80.040750",
+      "learn_more": "https://en.wikipedia.org/wiki/The_Progressive_Club",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "John's Island Presbyterian Church",
@@ -2548,7 +2858,9 @@
       "lat": 32.685683,
       "lng": -80.0821,
       "label": "John's Island Presbyterian Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.685683,-80.082100"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.685683,-80.082100",
+      "learn_more": "https://en.wikipedia.org/wiki/John%27s_Island_Presbyterian_Church",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Rockville Elementary School",
@@ -2604,7 +2916,9 @@
       "lat": 32.748717,
       "lng": -80.182533,
       "label": "St. Paul's Stono / St. Paul's Churchyard historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.748717,-80.182533"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.748717,-80.182533",
+      "learn_more": "https://www.hmdb.org/m.asp?m=39900",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Plainsfield Plantation",
@@ -2622,7 +2936,9 @@
       "lat": 32.572683,
       "lng": -80.284317,
       "label": "Edisto Island Baptist Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.572683,-80.284317"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.572683,-80.284317",
+      "learn_more": "https://en.wikipedia.org/wiki/Edisto_Island_Baptist_Church",
+      "learn_more_source": "wikipedia"
     }
   ],
   "84": [
@@ -2633,7 +2949,9 @@
       "lat": 32.816767,
       "lng": -79.88075,
       "label": "Maybank Green / Hobcaw Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.816767,-79.880750"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.816767,-79.880750",
+      "learn_more": "https://www.hmdb.org/m.asp?m=37965",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Jacob Bond I'on (1782-1859)",
@@ -2651,7 +2969,9 @@
       "lat": 32.789317,
       "lng": -79.8782,
       "label": "Mount Pleasant Presbyterian Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.789317,-79.878200"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.789317,-79.878200",
+      "learn_more": "https://www.hmdb.org/m.asp?m=39620",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "War of 1812 Encampment, Laing School, and Friendship A.M.E. Church",
@@ -2669,7 +2989,9 @@
       "lat": 32.793617,
       "lng": -79.856233,
       "label": "Rifle Range Road historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.793617,-79.856233"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.793617,-79.856233",
+      "learn_more": "https://www.hmdb.org/m.asp?m=19116",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "CS H. L. Hunley and Battle of Fort Sullivan",
@@ -2705,7 +3027,9 @@
       "lat": 32.841683,
       "lng": -79.816717,
       "label": "Laing School historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.841683,-79.816717"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.841683,-79.816717",
+      "learn_more": "https://www.hmdb.org/m.asp?m=39428",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Boone Hall Plantation",
@@ -2732,7 +3056,9 @@
       "lat": 32.841383,
       "lng": -79.79775,
       "label": "Cook's Old Field Cemetery / Copahee Plantation and Hamlin Beach historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.841383,-79.797750"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.841383,-79.797750",
+      "learn_more": "https://www.hmdb.org/m.asp?m=52763",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Sweetgrass Baskets",
@@ -2741,7 +3067,9 @@
       "lat": 32.854567,
       "lng": -79.801233,
       "label": "Sweetgrass Baskets historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.854567,-79.801233"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.854567,-79.801233",
+      "learn_more": "https://www.hmdb.org/m.asp?m=39038",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Laurel Hill Plantation",
@@ -2815,7 +3143,9 @@
       "lat": 32.867283,
       "lng": -79.967683,
       "label": "Navy Yard Officers' Quarters historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.867283,-79.967683"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.867283,-79.967683",
+      "learn_more": "https://en.wikipedia.org/wiki/Charleston_Navy_Yard_Officers%27_Quarters_Historic_District",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Naval Hospital District",
@@ -2851,7 +3181,9 @@
       "lat": 32.8155,
       "lng": -79.9507,
       "label": "Magnolia Cemetery historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.815500,-79.950700"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.815500,-79.950700",
+      "learn_more": "https://en.wikipedia.org/wiki/Magnolia_Cemetery_(Charleston,_South_Carolina)",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Jenkins Orphanage",
@@ -2860,7 +3192,9 @@
       "lat": 32.846933,
       "lng": -79.996467,
       "label": "Jenkins Orphanage historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.846933,-79.996467"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.846933,-79.996467",
+      "learn_more": "https://en.wikipedia.org/wiki/Jenkins_Orphanage",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Windsor Hill Plantation",
@@ -2869,7 +3203,9 @@
       "lat": 32.923867,
       "lng": -80.089833,
       "label": "Windsor Hill Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.923867,-80.089833"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.923867,-80.089833",
+      "learn_more": "https://www.hmdb.org/m.asp?m=39360",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Inland Rice Fields, ca. 1701-1865",
@@ -2923,7 +3259,9 @@
       "lat": 33.010533,
       "lng": -80.15735,
       "label": "Lincolnville historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.010533,-80.157350"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.010533,-80.157350",
+      "learn_more": "https://en.wikipedia.org/wiki/Lincolnville,_South_Carolina",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Wesley Methodist Church and Lincolnville School / Lincolnville Elementary School",
@@ -2961,7 +3299,9 @@
       "lat": 32.92765,
       "lng": -79.714517,
       "label": "Old Wappetaw Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.927650,-79.714517"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.927650,-79.714517",
+      "learn_more": "https://www.hmdb.org/m.asp?m=16308",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Archibald Rutledge Birthplace and Point Plantation",
@@ -2979,7 +3319,9 @@
       "lat": 33.085367,
       "lng": -79.460583,
       "label": "McClellanville historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.085367,-79.460583"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.085367,-79.460583",
+      "learn_more": "https://en.wikipedia.org/wiki/McClellanville,_South_Carolina",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "St. James Santee Parish Church",
@@ -3044,7 +3386,9 @@
       "lat": 32.950133,
       "lng": -80.171,
       "label": "Old Dorchester historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.950133,-80.171000"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.950133,-80.171000",
+      "learn_more": "https://www.hmdb.org/m.asp?m=22721",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Bacon's Bridge / \"The Hill\"",
@@ -3053,7 +3397,9 @@
       "lat": 32.9593,
       "lng": -80.2009,
       "label": "Bacon's Bridge / \"The Hill\" historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.959300,-80.200900"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.959300,-80.200900",
+      "learn_more": "https://www.hmdb.org/m.asp?m=224503",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Old White Meeting House and Cemetery",
@@ -3062,7 +3408,9 @@
       "lat": 32.966067,
       "lng": -80.19555,
       "label": "Old White Meeting House and Cemetery historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.966067,-80.195550"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.966067,-80.195550",
+      "learn_more": "https://en.wikipedia.org/wiki/Old_White_Meeting_House_Ruins_and_Cemetery",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Newington Plantation",
@@ -3071,7 +3419,9 @@
       "lat": 32.983217,
       "lng": -80.204617,
       "label": "Newington Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.983217,-80.204617"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.983217,-80.204617",
+      "learn_more": "https://en.wikipedia.org/wiki/Newington_Plantation",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Stallsville",
@@ -3125,7 +3475,9 @@
       "lat": 33.017933,
       "lng": -80.17975,
       "label": "Timrod Library historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.017933,-80.179750"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.017933,-80.179750",
+      "learn_more": "https://www.hmdb.org/m.asp?m=224637",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Guerin's Pharmacy, Jewish Life, and Summerville Water Works",
@@ -3163,7 +3515,9 @@
       "lat": 33.1034,
       "lng": -80.273283,
       "label": "Cypress Methodist Camp Ground historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.103400,-80.273283"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.103400,-80.273283",
+      "learn_more": "https://en.wikipedia.org/wiki/Cypress_Methodist_Camp_Ground",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Ridgeville",
@@ -3172,7 +3526,9 @@
       "lat": 33.0955,
       "lng": -80.31535,
       "label": "Ridgeville historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.095500,-80.315350"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.095500,-80.315350",
+      "learn_more": "https://en.wikipedia.org/wiki/Ridgeville,_South_Carolina",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Four Holes Indian Community and Four Holes Public School / Four Holes Freedom School",
@@ -3217,7 +3573,9 @@
       "lat": 33.214567,
       "lng": -80.447817,
       "label": "Harleyville historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.214567,-80.447817"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.214567,-80.447817",
+      "learn_more": "https://en.wikipedia.org/wiki/Harleyville,_South_Carolina",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Kennedy-Jenkins Hill High School",
@@ -3235,7 +3593,9 @@
       "lat": 33.20475,
       "lng": -80.4823,
       "label": "St. Paul Camp Ground historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.204750,-80.482300"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.204750,-80.482300",
+      "learn_more": "https://en.wikipedia.org/wiki/St._Paul_Camp_Ground",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Shady Grove Camp Ground",
@@ -3262,7 +3622,9 @@
       "lat": 33.185983,
       "lng": -80.573367,
       "label": "Town of St. George historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.185983,-80.573367"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.185983,-80.573367",
+      "learn_more": "https://en.wikipedia.org/wiki/St._George,_South_Carolina",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "St. George Rosenwald School",
@@ -3280,7 +3642,9 @@
       "lat": 33.195133,
       "lng": -80.612183,
       "label": "Badham House / Dorchester Lumber Company historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.195133,-80.612183"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.195133,-80.612183",
+      "learn_more": "https://www.hmdb.org/m.asp?m=65964",
+      "learn_more_source": "hmdb"
     },
     {
       "name": "Appleby's Methodist Church",
@@ -3289,7 +3653,9 @@
       "lat": 33.1369,
       "lng": -80.6517,
       "label": "Appleby's Methodist Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.136900,-80.651700"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.136900,-80.651700",
+      "learn_more": "https://en.wikipedia.org/wiki/Appleby%27s_Methodist_Church",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Koger-Murray-Carroll House",
