@@ -62,7 +62,8 @@
         "wildlife",
         "swamp",
         "day-trip"
-      ]
+      ],
+      "slug": "cypress-gardens"
     },
     "2": {
       "title": "Mepkin Abbey & Botanical Gardens",
@@ -71,7 +72,8 @@
         "gardens",
         "history",
         "day-trip"
-      ]
+      ],
+      "slug": "mepkin-abbey-and-botanical-gardens"
     },
     "3": {
       "title": "Charleston Tea Garden & Angel Oak Tree",
@@ -79,7 +81,8 @@
         "gardens",
         "history",
         "day-trip"
-      ]
+      ],
+      "slug": "charleston-tea-garden-angel-oak"
     },
     "4": {
       "title": "Francis Beidler Forest",
@@ -89,7 +92,8 @@
         "wildlife",
         "swamp",
         "day-trip"
-      ]
+      ],
+      "slug": "francis-beidler-forest"
     },
     "5": {
       "title": "Bulls Island & Boneyard Beach",
@@ -102,7 +106,8 @@
         "photography",
         "coastal",
         "day-trip"
-      ]
+      ],
+      "slug": "bulls-island-and-boneyard-beach"
     },
     "6": {
       "title": "Old Sheldon Church Ruins & ACE Basin",
@@ -111,7 +116,8 @@
         "scenic-drive",
         "photography",
         "day-trip"
-      ]
+      ],
+      "slug": "old-sheldon-church-ruins-and-ace-basin"
     },
     "7": {
       "title": "Botany Bay Heritage Preserve",
@@ -123,7 +129,8 @@
         "history",
         "coastal",
         "day-trip"
-      ]
+      ],
+      "slug": "botany-bay-heritage-preserve"
     },
     "8": {
       "title": "Historic Beaufort Waterfront & Penn Center",
@@ -131,7 +138,8 @@
         "history",
         "coastal",
         "day-trip"
-      ]
+      ],
+      "slug": "historic-beaufort-waterfront-penn-center"
     },
     "9": {
       "title": "Hunting Island State Park & Lighthouse",
@@ -143,7 +151,8 @@
         "lighthouse",
         "coastal",
         "day-trip"
-      ]
+      ],
+      "slug": "hunting-island-state-park-lighthouse"
     },
     "10": {
       "title": "Historic Georgetown Harborwalk & Hopsewee Plantation",
@@ -151,7 +160,8 @@
         "history",
         "coastal",
         "day-trip"
-      ]
+      ],
+      "slug": "historic-georgetown-harborwalk-hopsewee"
     },
     "11": {
       "title": "Brookgreen Gardens & Atalaya Castle",
@@ -162,7 +172,8 @@
         "history",
         "coastal",
         "day-trip"
-      ]
+      ],
+      "slug": "brookgreen-gardens-and-atalaya-castle"
     },
     "12": {
       "title": "Santee State Park & Lake Marion Limestone Caves",
@@ -172,7 +183,8 @@
         "wildlife",
         "swamp",
         "day-trip"
-      ]
+      ],
+      "slug": "santee-state-park-lake-marion"
     },
     "13": {
       "title": "Swan Lake Iris Gardens & Poinsett State Park",
@@ -182,7 +194,8 @@
         "wildlife",
         "gardens",
         "day-trip"
-      ]
+      ],
+      "slug": "swan-lake-iris-gardens-poinsett"
     },
     "14": {
       "title": "Congaree National Park",
@@ -194,7 +207,8 @@
         "wildlife",
         "swamp",
         "day-trip"
-      ]
+      ],
+      "slug": "congaree-national-park"
     },
     "15": {
       "title": "Riverbanks Zoo & Botanical Garden",
@@ -203,7 +217,8 @@
         "gardens",
         "history",
         "day-trip"
-      ]
+      ],
+      "slug": "riverbanks-zoo-and-botanical-garden"
     },
     "16": {
       "title": "South Carolina State Museum & Soda City Market",
@@ -212,7 +227,8 @@
         "museum",
         "food-drink",
         "day-trip"
-      ]
+      ],
+      "slug": "south-carolina-state-museum-soda-city"
     },
     "17": {
       "title": "Wormsloe Historic Site & Bonaventure Cemetery",
@@ -221,7 +237,8 @@
         "history",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "wormsloe-historic-site-bonaventure"
     },
     "18": {
       "title": "Savannah Historic Squares & Forsyth Park",
@@ -229,7 +246,8 @@
         "gardens",
         "history",
         "overnight"
-      ]
+      ],
+      "slug": "savannah-historic-squares-and-forsyth-park"
     },
     "19": {
       "title": "Tybee Island Light Station & Fort Pulaski",
@@ -239,7 +257,8 @@
         "lighthouse",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "tybee-island-light-station-fort-pulaski"
     },
     "20": {
       "title": "Daufuskie Island Golf Cart Excursion",
@@ -248,7 +267,8 @@
         "history",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "daufuskie-island-golf-cart-excursion"
     },
     "21": {
       "title": "Harbour Town Lighthouse & Pinckney Island Wildlife Refuge",
@@ -260,7 +280,8 @@
         "biking",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "harbour-town-lighthouse-pinckney-island"
     },
     "22": {
       "title": "Jekyll Island Driftwood Beach & Sea Turtle Center",
@@ -271,7 +292,8 @@
         "history",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "jekyll-island-driftwood-beach-sea-turtle-center"
     },
     "23": {
       "title": "St. Simons Island Lighthouse & Fort Frederica",
@@ -280,7 +302,8 @@
         "lighthouse",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "st-simons-island-lighthouse-fort-frederica"
     },
     "24": {
       "title": "Cumberland Island National Seashore",
@@ -293,7 +316,8 @@
         "history",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "cumberland-island-national-seashore"
     },
     "25": {
       "title": "Okefenokee Swamp Boat Tour",
@@ -305,7 +329,8 @@
         "wildlife",
         "swamp",
         "overnight"
-      ]
+      ],
+      "slug": "okefenokee-swamp-boat-tour"
     },
     "26": {
       "title": "Hitchcock Woods & Hopelands Gardens",
@@ -314,7 +339,8 @@
         "birding",
         "gardens",
         "overnight"
-      ]
+      ],
+      "slug": "hitchcock-woods-and-hopelands-gardens"
     },
     "27": {
       "title": "Augusta Canal Heritage Boat Tour & Riverwalk",
@@ -322,7 +348,8 @@
         "boat-tour",
         "history",
         "overnight"
-      ]
+      ],
+      "slug": "augusta-canal-heritage-boat-tour-riverwalk"
     },
     "28": {
       "title": "Biltmore Estate & Antler Hill Village",
@@ -332,7 +359,8 @@
         "food-drink",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "biltmore-estate-and-antler-hill-village"
     },
     "29": {
       "title": "Blue Ridge Parkway – Craggy Gardens & Mount Mitchell",
@@ -342,7 +370,8 @@
         "scenic-drive",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "blue-ridge-parkway-craggy-gardens-mount-mitchell"
     },
     "30": {
       "title": "Sierra Nevada Brewing Co. & River Arts District",
@@ -350,7 +379,8 @@
         "food-drink",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "sierra-nevada-brewing-river-arts-district"
     },
     "31": {
       "title": "DuPont State Recreational Forest",
@@ -359,7 +389,8 @@
         "waterfalls",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "dupont-state-recreational-forest"
     },
     "32": {
       "title": "Sliding Rock & Looking Glass Falls",
@@ -367,7 +398,8 @@
         "waterfalls",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "sliding-rock-and-looking-glass-falls"
     },
     "33": {
       "title": "Carl Sandburg Home National Historic Site",
@@ -377,7 +409,8 @@
         "history",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "carl-sandburg-home"
     },
     "34": {
       "title": "Dry Falls & Bridal Veil Falls",
@@ -387,7 +420,8 @@
         "scenic-drive",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "dry-falls-and-bridal-veil-falls"
     },
     "35": {
       "title": "Whitewater Falls & Gorges State Park",
@@ -396,7 +430,8 @@
         "waterfalls",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "whitewater-falls-and-gorges-state-park"
     },
     "36": {
       "title": "Grandfather Mountain & Mile High Swinging Bridge",
@@ -406,7 +441,8 @@
         "wildlife",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "grandfather-mountain-and-mile-high-swinging-bridge"
     },
     "37": {
       "title": "The Blowing Rock & Moses H. Cone Memorial Park",
@@ -415,7 +451,8 @@
         "history",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "the-blowing-rock-moses-h-cone"
     },
     "38": {
       "title": "Linville Gorge & Linville Caverns",
@@ -423,7 +460,8 @@
         "hiking",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "linville-gorge-and-linville-caverns"
     },
     "39": {
       "title": "Great Smoky Mountains Railroad & Deep Creek Waterfalls",
@@ -432,7 +470,8 @@
         "waterfalls",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "great-smoky-mountains-railroad-deep-creek"
     },
     "40": {
       "title": "Oconaluftee Elk Viewing & Mingo Falls",
@@ -443,7 +482,8 @@
         "history",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "oconaluftee-elk-viewing-and-mingo-falls"
     },
     "41": {
       "title": "Falls Park on the Reedy & Swamp Rabbit Trail",
@@ -453,7 +493,8 @@
         "food-drink",
         "biking",
         "overnight"
-      ]
+      ],
+      "slug": "falls-park-on-the-reedy-swamp-rabbit-trail"
     },
     "42": {
       "title": "Caesars Head State Park & Raven Cliff Falls",
@@ -463,7 +504,8 @@
         "waterfalls",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "caesars-head-raven-cliff-falls"
     },
     "43": {
       "title": "Table Rock State Park & Sassafras Mountain",
@@ -474,7 +516,8 @@
         "scenic-drive",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "table-rock-sassafras-mountain"
     },
     "44": {
       "title": "U.S. National Whitewater Center",
@@ -483,14 +526,16 @@
         "paddling",
         "kayak",
         "overnight"
-      ]
+      ],
+      "slug": "us-national-whitewater-center"
     },
     "45": {
       "title": "NASCAR Hall of Fame & Charlotte Motor Speedway",
       "tags": [
         "museum",
         "overnight"
-      ]
+      ],
+      "slug": "nascar-hall-of-fame-charlotte-motor-speedway"
     },
     "46": {
       "title": "North Carolina Transportation Museum",
@@ -498,7 +543,8 @@
         "history",
         "museum",
         "overnight"
-      ]
+      ],
+      "slug": "north-carolina-transportation-museum"
     },
     "47": {
       "title": "Battleship North Carolina & Wilmington Riverwalk",
@@ -507,7 +553,8 @@
         "museum",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "battleship-north-carolina-wilmington-riverwalk"
     },
     "48": {
       "title": "Fort Fisher State Historic Site & NC Aquarium",
@@ -517,7 +564,8 @@
         "history",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "fort-fisher-nc-aquarium"
     },
     "49": {
       "title": "Bald Head Island Day Ferry",
@@ -528,7 +576,8 @@
         "biking",
         "coastal",
         "overnight"
-      ]
+      ],
+      "slug": "bald-head-island-day-ferry"
     },
     "50": {
       "title": "Tallulah Gorge State Park",
@@ -537,7 +586,8 @@
         "waterfalls",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "tallulah-gorge-state-park"
     },
     "51": {
       "title": "Helen Alpine Village & Anna Ruby Falls",
@@ -546,7 +596,8 @@
         "waterfalls",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "helen-alpine-village-and-anna-ruby-falls"
     },
     "52": {
       "title": "Dahlonega Gold Museum & North Georgia Wineries",
@@ -556,7 +607,8 @@
         "food-drink",
         "mountains",
         "overnight"
-      ]
+      ],
+      "slug": "dahlonega-gold-museum-north-georgia-wineries"
     },
     "53": {
       "title": "Old Santee Canal Park",
@@ -568,7 +620,8 @@
         "wildlife",
         "swamp",
         "day-trip"
-      ]
+      ],
+      "slug": "old-santee-canal-park"
     },
     "54": {
       "title": "Caw Caw Interpretive Center",
@@ -579,7 +632,8 @@
         "history",
         "swamp",
         "day-trip"
-      ]
+      ],
+      "slug": "caw-caw-interpretive-center"
     },
     "55": {
       "title": "Laurel Hill County Park",
@@ -589,7 +643,8 @@
         "wildlife",
         "biking",
         "day-trip"
-      ]
+      ],
+      "slug": "laurel-hill-county-park"
     },
     "56": {
       "title": "Dungannon Plantation Heritage Preserve",
@@ -599,7 +654,8 @@
         "wildlife",
         "swamp",
         "day-trip"
-      ]
+      ],
+      "slug": "dungannon-plantation-heritage-preserve"
     },
     "57": {
       "title": "Givhans Ferry State Park",
@@ -609,7 +665,8 @@
         "paddling",
         "kayak",
         "day-trip"
-      ]
+      ],
+      "slug": "givhans-ferry-state-park"
     },
     "58": {
       "title": "Lighthouse Inlet Heritage Preserve",
@@ -621,7 +678,8 @@
         "lighthouse",
         "coastal",
         "day-trip"
-      ]
+      ],
+      "slug": "lighthouse-inlet-heritage-preserve"
     },
     "59": {
       "title": "Sewee Visitor and Environmental Education Center",
@@ -631,7 +689,8 @@
         "wildlife",
         "photography",
         "day-trip"
-      ]
+      ],
+      "slug": "sewee-visitor-center"
     },
     "60": {
       "title": "I'on Swamp Interpretive Trail",
@@ -642,7 +701,8 @@
         "history",
         "swamp",
         "day-trip"
-      ]
+      ],
+      "slug": "ion-swamp-interpretive-trail"
     },
     "61": {
       "title": "Sewee Shell Ring Boardwalk",
@@ -652,7 +712,8 @@
         "history",
         "coastal",
         "day-trip"
-      ]
+      ],
+      "slug": "sewee-shell-ring-boardwalk"
     },
     "62": {
       "title": "Awendaw Passage, Palmetto Trail",
@@ -662,7 +723,8 @@
         "biking",
         "coastal",
         "day-trip"
-      ]
+      ],
+      "slug": "awendaw-passage-palmetto-trail"
     },
     "63": {
       "title": "Swamp Fox Passage, Palmetto Trail",
@@ -671,7 +733,8 @@
         "birding",
         "biking",
         "day-trip"
-      ]
+      ],
+      "slug": "swamp-fox-passage-palmetto-trail"
     },
     "64": {
       "title": "Ernest F. Hollings ACE Basin National Wildlife Refuge",
@@ -681,7 +744,8 @@
         "wildlife",
         "history",
         "day-trip"
-      ]
+      ],
+      "slug": "ace-basin-national-wildlife-refuge"
     },
     "65": {
       "title": "Mullet Hall Trails, Johns Island County Park",
@@ -689,7 +753,8 @@
         "hiking",
         "birding",
         "day-trip"
-      ]
+      ],
+      "slug": "mullet-hall-trails-johns-island"
     },
     "66": {
       "title": "Bonneau Ferry Wildlife Management Area",
@@ -700,7 +765,8 @@
         "history",
         "biking",
         "day-trip"
-      ]
+      ],
+      "slug": "bonneau-ferry-wma"
     },
     "67": {
       "title": "Childsbury Towne Heritage Preserve",
@@ -708,7 +774,8 @@
         "hiking",
         "history",
         "day-trip"
-      ]
+      ],
+      "slug": "childsbury-towne-heritage-preserve"
     },
     "68": {
       "title": "Goose Creek Reservoir Blueway",
@@ -718,7 +785,8 @@
         "kayak",
         "wildlife",
         "day-trip"
-      ]
+      ],
+      "slug": "goose-creek-reservoir-blueway"
     },
     "69": {
       "title": "Bushy Park / Foster Creek Blueway",
@@ -728,7 +796,8 @@
         "kayak",
         "wildlife",
         "day-trip"
-      ]
+      ],
+      "slug": "bushy-park-foster-creek-blueway"
     },
     "70": {
       "title": "Durham Creek / Back River Blueway",
@@ -738,7 +807,8 @@
         "kayak",
         "wildlife",
         "day-trip"
-      ]
+      ],
+      "slug": "durham-creek-back-river-blueway"
     },
     "71": {
       "title": "Lower Wadboo Creek Blueway",
@@ -748,7 +818,8 @@
         "kayak",
         "wildlife",
         "day-trip"
-      ]
+      ],
+      "slug": "lower-wadboo-creek-blueway"
     },
     "72": {
       "title": "Berkeley Historical Markers: Goose Creek, Hanahan, and Mount Holly",
@@ -756,7 +827,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-goose-creek-hanahan-mount-holly"
     },
     "73": {
       "title": "Berkeley Historical Markers: Moncks Corner, Pinopolis, and the Cooper River",
@@ -764,7 +836,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-moncks-corner-pinopolis-cooper-river"
     },
     "74": {
       "title": "Berkeley Historical Markers: Huger, Wando, and East Cooper",
@@ -772,7 +845,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-huger-wando-east-cooper"
     },
     "75": {
       "title": "Berkeley Historical Markers: St. Stephen, Pineville, and Cross",
@@ -780,7 +854,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-st-stephen-pineville-cross"
     },
     "76": {
       "title": "Berkeley Historical Markers: Jamestown and Wambaw Creek",
@@ -788,7 +863,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-jamestown-wambaw-creek"
     },
     "77": {
       "title": "Charleston Peninsula Walking Tour: South of Broad and the Waterfront",
@@ -796,7 +872,8 @@
         "history",
         "walking-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-south-of-broad-waterfront"
     },
     "78": {
       "title": "Charleston Peninsula Walking Tour: King Street and the College",
@@ -804,7 +881,8 @@
         "history",
         "walking-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-king-street-and-the-college"
     },
     "79": {
       "title": "Charleston Peninsula Walking Tour: Upper Peninsula and the East Side",
@@ -812,7 +890,8 @@
         "history",
         "walking-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-upper-peninsula-east-side"
     },
     "80": {
       "title": "Charleston Historical Markers: West Ashley",
@@ -820,7 +899,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-west-ashley"
     },
     "81": {
       "title": "Charleston Historical Markers: James Island and Folly Beach",
@@ -828,7 +908,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-james-island-folly-beach"
     },
     "82": {
       "title": "Charleston Historical Markers: Johns Island and Wadmalaw",
@@ -836,7 +917,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-johns-island-wadmalaw"
     },
     "83": {
       "title": "Charleston Historical Markers: the Stono and Edisto",
@@ -844,7 +926,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-stono-and-edisto"
     },
     "84": {
       "title": "Charleston Historical Markers: Mount Pleasant and the Barrier Islands",
@@ -852,7 +935,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-mount-pleasant-barrier-islands"
     },
     "85": {
       "title": "Charleston Historical Markers: North Charleston, Ladson, and Lincolnville",
@@ -860,7 +944,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-north-charleston-ladson-lincolnville"
     },
     "86": {
       "title": "Charleston Historical Markers: McClellanville and Awendaw",
@@ -868,7 +953,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-mcclellanville-awendaw"
     },
     "87": {
       "title": "Dorchester Historical Markers: Summerville and Old Dorchester",
@@ -876,7 +962,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-summerville-old-dorchester"
     },
     "88": {
       "title": "Dorchester Historical Markers: St. George, Harleyville, and Ridgeville",
@@ -884,7 +971,8 @@
         "history",
         "driving-tour",
         "day-trip"
-      ]
+      ],
+      "slug": "history-st-george-harleyville-ridgeville"
     }
   }
 }

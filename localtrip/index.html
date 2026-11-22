@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>Local Trip | Tim Bootle</title>
+  <script src="../js/https-redirect.js"></script>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .pick-card {
+      max-width: 36rem;
+      margin: 12vh auto 0;
+      padding: 32px 28px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 24px rgba(19, 32, 51, 0.06);
+      text-align: center;
+    }
+    .pick-card h1 { margin: 0 0 12px; font-size: 1.75rem; }
+    .pick-card p { margin: 0 0 18px; color: var(--ink-500); }
+    .pick-card a { color: var(--blue-500); font-weight: 700; text-decoration: none; }
+    .pick-card a:hover { text-decoration: underline; }
+  </style>
+  <script>
+    (function () {
+      var TAG = "day-trip";
+      var FALLBACK = ["cypress-gardens", "mepkin-abbey-and-botanical-gardens", "charleston-tea-garden-angel-oak", "francis-beidler-forest", "bulls-island-and-boneyard-beach", "old-sheldon-church-ruins-and-ace-basin", "botany-bay-heritage-preserve", "historic-beaufort-waterfront-penn-center", "hunting-island-state-park-lighthouse", "historic-georgetown-harborwalk-hopsewee", "brookgreen-gardens-and-atalaya-castle", "santee-state-park-lake-marion", "swan-lake-iris-gardens-poinsett", "congaree-national-park", "riverbanks-zoo-and-botanical-garden", "south-carolina-state-museum-soda-city", "old-santee-canal-park", "caw-caw-interpretive-center", "laurel-hill-county-park", "dungannon-plantation-heritage-preserve", "givhans-ferry-state-park", "lighthouse-inlet-heritage-preserve", "sewee-visitor-center", "ion-swamp-interpretive-trail", "sewee-shell-ring-boardwalk", "awendaw-passage-palmetto-trail", "swamp-fox-passage-palmetto-trail", "ace-basin-national-wildlife-refuge", "mullet-hall-trails-johns-island", "bonneau-ferry-wma", "childsbury-towne-heritage-preserve", "goose-creek-reservoir-blueway", "bushy-park-foster-creek-blueway", "durham-creek-back-river-blueway", "lower-wadboo-creek-blueway", "history-goose-creek-hanahan-mount-holly", "history-moncks-corner-pinopolis-cooper-river", "history-huger-wando-east-cooper", "history-st-stephen-pineville-cross", "history-jamestown-wambaw-creek", "history-south-of-broad-waterfront", "history-king-street-and-the-college", "history-upper-peninsula-east-side", "history-west-ashley", "history-james-island-folly-beach", "history-johns-island-wadmalaw", "history-stono-and-edisto", "history-mount-pleasant-barrier-islands", "history-north-charleston-ladson-lincolnville", "history-mcclellanville-awendaw", "history-summerville-old-dorchester", "history-st-george-harleyville-ridgeville"];
+      var SELF = "/localtrip/";
+
+      function go(slugs) {
+        if (!slugs || !slugs.length) {
+          window.location.replace("/localadventures/");
+          return;
+        }
+        var i = Math.floor(Math.random() * slugs.length);
+        window.location.replace("/localadventures/" + slugs[i] + "/");
+      }
+
+      function fromTags(data) {
+        var slugs = [];
+        var trips = (data && data.trips) || {};
+        Object.keys(trips).forEach(function (id) {
+          var trip = trips[id];
+          if (!trip || !trip.slug || !trip.tags) return;
+          if (trip.tags.indexOf(TAG) !== -1) slugs.push(trip.slug);
+        });
+        return slugs;
+      }
+
+      fetch("/localadventures/tags.json", { cache: "no-store" })
+        .then(function (res) {
+          if (!res.ok) throw new Error("tags");
+          return res.json();
+        })
+        .then(function (data) {
+          var slugs = fromTags(data);
+          go(slugs.length ? slugs : FALLBACK);
+        })
+        .catch(function () { go(FALLBACK); });
+
+      window.addEventListener("DOMContentLoaded", function () {
+        var link = document.getElementById("pick-another");
+        if (link) link.setAttribute("href", SELF);
+      });
+    })();
+  </script>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="pick-card">
+        <h1>Picking a trip…</h1>
+        <p>Opening a random local day trip.</p>
+        <p><a id="pick-another" href="/localtrip/">Pick another</a></p>
+        <noscript>
+          <p><a href="/localadventures/">Browse all local adventures</a></p>
+        </noscript>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
