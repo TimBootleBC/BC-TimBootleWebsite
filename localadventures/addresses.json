@@ -1480,15 +1480,6 @@
       "url": "https://www.google.com/maps/search/?api=1&query=33.202000,-79.990100"
     },
     {
-      "name": "Stony Landing Plantation",
-      "address": "33.1971,-79.992983",
-      "kind": "coordinates",
-      "lat": 33.1971,
-      "lng": -79.992983,
-      "label": "Stony Landing Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.197100,-79.992983"
-    },
-    {
       "name": "Dixie Training School / Berkely Training High School",
       "address": "33.192067,-79.9963",
       "kind": "coordinates",
@@ -1518,26 +1509,6 @@
       "url": "https://www.google.com/maps/search/?api=1&query=33.189017,-79.992067",
       "learn_more": "https://www.hmdb.org/m.asp?m=53881",
       "learn_more_source": "hmdb"
-    },
-    {
-      "name": "Santee Canal {Marker #2}",
-      "address": "33.193883,-79.974",
-      "kind": "coordinates",
-      "lat": 33.193883,
-      "lng": -79.974,
-      "label": "Santee Canal {Marker #2} historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.193883,-79.974000"
-    },
-    {
-      "name": "Santee Canal",
-      "address": "33.2105,-79.980517",
-      "kind": "coordinates",
-      "lat": 33.2105,
-      "lng": -79.980517,
-      "label": "Santee Canal historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.210500,-79.980517",
-      "learn_more": "https://en.wikipedia.org/wiki/Santee_Canal",
-      "learn_more_source": "wikipedia"
     },
     {
       "name": "Biggin Church Ruins",
@@ -1587,28 +1558,6 @@
       "lng": -79.957667,
       "label": "Francis Marion historical marker",
       "url": "https://www.google.com/maps/search/?api=1&query=33.165883,-79.957667"
-    },
-    {
-      "name": "Mepkin Plantation",
-      "address": "33.114883,-79.94405",
-      "kind": "coordinates",
-      "lat": 33.114883,
-      "lng": -79.94405,
-      "label": "Mepkin Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.114883,-79.944050",
-      "learn_more": "https://mepkinabbey.org/",
-      "learn_more_source": "official"
-    },
-    {
-      "name": "Strawberry Chapel",
-      "address": "33.09585,-79.93305",
-      "kind": "coordinates",
-      "lat": 33.09585,
-      "lng": -79.93305,
-      "label": "Strawberry Chapel historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.095850,-79.933050",
-      "learn_more": "https://en.wikipedia.org/wiki/Strawberry_Chapel_and_Childsbury_Town_Site",
-      "learn_more_source": "wikipedia"
     }
   ],
   "74": [
@@ -2886,17 +2835,6 @@
       "lng": -80.1833,
       "label": "Rockville Elementary School historical marker",
       "url": "https://www.google.com/maps/search/?api=1&query=32.640633,-80.183300"
-    },
-    {
-      "name": "Charleston Tea Plantation",
-      "address": "32.6181,-80.1851",
-      "kind": "coordinates",
-      "lat": 32.6181,
-      "lng": -80.1851,
-      "label": "Charleston Tea Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.618100,-80.185100",
-      "learn_more": "https://www.charlestonteagarden.com/",
-      "learn_more_source": "official"
     }
   ],
   "83": [
