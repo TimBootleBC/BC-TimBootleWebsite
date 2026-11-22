@@ -829,5 +829,66 @@
       "url": "https://www.google.com/maps/search/?api=1&query=Mullet+Hall+Equestrian+Center%2C+2662+Mullet+Hall+Road%2C+Johns+Island%2C+SC+29455",
       "label": "Mullet Hall Equestrian Center \u2014 2662 Mullet Hall Road, Johns Island, SC 29455"
     }
+  ],
+  "66": [
+    {
+      "name": "Bonneau Ferry WMA main entrance",
+      "address": "Highway 402, Cordesville, SC 29434",
+      "kind": "parking",
+      "label": "Bonneau Ferry WMA main entrance \u2014 Highway 402, Cordesville, SC 29434",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bonneau+Ferry+WMA+main+entrance+%E2%80%94+Highway+402%2C+Cordesville%2C+SC+29434"
+    }
+  ],
+  "67": [
+    {
+      "name": "Childsbury Towne Heritage Preserve parking",
+      "address": "Strawberry Chapel Road, Moncks Corner, SC",
+      "kind": "parking",
+      "label": "Childsbury Towne Heritage Preserve parking, Strawberry Chapel Road, Moncks Corner, SC",
+      "url": "https://www.google.com/maps/search/?api=1&query=Childsbury+Towne+Heritage+Preserve+parking%2C+Strawberry+Chapel+Road%2C+Moncks+Corner%2C+SC"
+    }
+  ],
+  "68": [
+    {
+      "name": "Bettis Boat Landing",
+      "address": "3000 Railroad Avenue, Hanahan, SC 29410",
+      "kind": "street",
+      "label": "Bettis Boat Landing \u2014 3000 Railroad Avenue, Hanahan, SC 29410",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bettis+Boat+Landing+%E2%80%94+3000+Railroad+Avenue%2C+Hanahan%2C+SC+29410"
+    },
+    {
+      "name": "Venice Avenue Park",
+      "address": "Venice Avenue, Hanahan, SC 29410",
+      "kind": "parking",
+      "label": "Venice Avenue Park, Venice Avenue, Hanahan, SC 29410",
+      "url": "https://www.google.com/maps/search/?api=1&query=Venice+Avenue+Park%2C+Venice+Avenue%2C+Hanahan%2C+SC+29410"
+    }
+  ],
+  "69": [
+    {
+      "name": "Bushy Park Boat Landing",
+      "address": "Highway SC 503 (Bushy Park Road), Goose Creek, SC 29445",
+      "kind": "parking",
+      "label": "Bushy Park Boat Landing, Highway SC 503 (Bushy Park Road), Goose Creek, SC 29445",
+      "url": "https://www.google.com/maps/search/?api=1&query=Bushy+Park+Boat+Landing%2C+Highway+SC+503+%28Bushy+Park+Road%29%2C+Goose+Creek%2C+SC+29445"
+    }
+  ],
+  "70": [
+    {
+      "name": "Cypress Gardens Boat Landing",
+      "address": "Cypress Gardens Road, Moncks Corner, SC 29461",
+      "kind": "parking",
+      "label": "Cypress Gardens Boat Landing, Cypress Gardens Road, Moncks Corner, SC 29461",
+      "url": "https://www.google.com/maps/search/?api=1&query=Cypress+Gardens+Boat+Landing%2C+Cypress+Gardens+Road%2C+Moncks+Corner%2C+SC+29461"
+    }
+  ],
+  "71": [
+    {
+      "name": "Rembert C. Dennis Landing (Wadboo Landing)",
+      "address": "SC Highway 402, Moncks Corner, SC 29461",
+      "kind": "parking",
+      "label": "Rembert C. Dennis Landing (Wadboo Landing), SC Highway 402, Moncks Corner, SC 29461",
+      "url": "https://www.google.com/maps/search/?api=1&query=Rembert+C.+Dennis+Landing+%28Wadboo+Landing%29%2C+SC+Highway+402%2C+Moncks+Corner%2C+SC+29461"
+    }
   ]
 }

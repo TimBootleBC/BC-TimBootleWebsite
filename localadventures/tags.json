@@ -5,6 +5,7 @@
     "waterfalls",
     "beach",
     "paddling",
+    "kayak",
     "boat-tour",
     "wildlife",
     "gardens",
@@ -45,7 +46,8 @@
     "coastal": "Coastal",
     "day-trip": "Day trip",
     "overnight": "Overnight",
-    "accessible": "Accessible"
+    "accessible": "Accessible",
+    "kayak": "Kayak"
   },
   "trips": {
     "1": {
@@ -184,6 +186,7 @@
         "hiking",
         "birding",
         "paddling",
+        "kayak",
         "wildlife",
         "swamp",
         "day-trip"
@@ -293,6 +296,7 @@
       "tags": [
         "birding",
         "paddling",
+        "kayak",
         "boat-tour",
         "wildlife",
         "swamp",
@@ -473,6 +477,7 @@
       "tags": [
         "hiking",
         "paddling",
+        "kayak",
         "overnight"
       ]
     },
@@ -555,6 +560,7 @@
         "hiking",
         "birding",
         "paddling",
+        "kayak",
         "wildlife",
         "swamp",
         "day-trip"
@@ -597,6 +603,7 @@
         "hiking",
         "birding",
         "paddling",
+        "kayak",
         "day-trip"
       ]
     },
@@ -677,6 +684,65 @@
       "tags": [
         "hiking",
         "birding",
+        "day-trip"
+      ]
+    },
+    "66": {
+      "title": "Bonneau Ferry Wildlife Management Area",
+      "tags": [
+        "hiking",
+        "birding",
+        "wildlife",
+        "history",
+        "biking",
+        "day-trip"
+      ]
+    },
+    "67": {
+      "title": "Childsbury Towne Heritage Preserve",
+      "tags": [
+        "hiking",
+        "history",
+        "day-trip"
+      ]
+    },
+    "68": {
+      "title": "Goose Creek Reservoir Blueway",
+      "tags": [
+        "birding",
+        "paddling",
+        "kayak",
+        "wildlife",
+        "day-trip"
+      ]
+    },
+    "69": {
+      "title": "Bushy Park / Foster Creek Blueway",
+      "tags": [
+        "birding",
+        "paddling",
+        "kayak",
+        "wildlife",
+        "day-trip"
+      ]
+    },
+    "70": {
+      "title": "Durham Creek / Back River Blueway",
+      "tags": [
+        "birding",
+        "paddling",
+        "kayak",
+        "wildlife",
+        "day-trip"
+      ]
+    },
+    "71": {
+      "title": "Lower Wadboo Creek Blueway",
+      "tags": [
+        "birding",
+        "paddling",
+        "kayak",
+        "wildlife",
         "day-trip"
       ]
     }
