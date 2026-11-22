@@ -1,0 +1,647 @@
+{
+  "vocabulary": [
+    "hiking",
+    "birding",
+    "waterfalls",
+    "beach",
+    "paddling",
+    "boat-tour",
+    "wildlife",
+    "gardens",
+    "history",
+    "museum",
+    "scenic-drive",
+    "photography",
+    "food-drink",
+    "lighthouse",
+    "camping",
+    "biking",
+    "swamp",
+    "mountains",
+    "coastal",
+    "day-trip",
+    "overnight",
+    "accessible"
+  ],
+  "labels": {
+    "hiking": "Hiking",
+    "birding": "Birding",
+    "waterfalls": "Waterfalls",
+    "beach": "Beach",
+    "paddling": "Paddling",
+    "boat-tour": "Boat tour",
+    "wildlife": "Wildlife",
+    "gardens": "Gardens",
+    "history": "History",
+    "museum": "Museum",
+    "scenic-drive": "Scenic drive",
+    "photography": "Photography",
+    "food-drink": "Food & drink",
+    "lighthouse": "Lighthouse",
+    "camping": "Camping",
+    "biking": "Biking",
+    "swamp": "Swamp",
+    "mountains": "Mountains",
+    "coastal": "Coastal",
+    "day-trip": "Day trip",
+    "overnight": "Overnight",
+    "accessible": "Accessible"
+  },
+  "trips": {
+    "1": {
+      "title": "Cypress Gardens",
+      "tags": [
+        "paddling",
+        "swamp",
+        "wildlife",
+        "day-trip"
+      ]
+    },
+    "2": {
+      "title": "Mepkin Abbey & Botanical Gardens",
+      "tags": [
+        "hiking",
+        "gardens",
+        "history",
+        "day-trip"
+      ]
+    },
+    "3": {
+      "title": "Charleston Tea Garden & Angel Oak Tree",
+      "tags": [
+        "gardens",
+        "history",
+        "day-trip"
+      ]
+    },
+    "4": {
+      "title": "Francis Beidler Forest",
+      "tags": [
+        "hiking",
+        "swamp",
+        "wildlife",
+        "day-trip"
+      ]
+    },
+    "5": {
+      "title": "Bulls Island & Boneyard Beach",
+      "tags": [
+        "boat-tour",
+        "hiking",
+        "beach",
+        "wildlife",
+        "coastal",
+        "day-trip"
+      ]
+    },
+    "6": {
+      "title": "Old Sheldon Church Ruins & ACE Basin",
+      "tags": [
+        "photography",
+        "history",
+        "scenic-drive",
+        "day-trip"
+      ]
+    },
+    "7": {
+      "title": "Botany Bay Heritage Preserve",
+      "tags": [
+        "hiking",
+        "beach",
+        "history",
+        "coastal",
+        "day-trip"
+      ]
+    },
+    "8": {
+      "title": "Historic Beaufort Waterfront & Penn Center",
+      "tags": [
+        "history",
+        "coastal",
+        "day-trip"
+      ]
+    },
+    "9": {
+      "title": "Hunting Island State Park & Lighthouse",
+      "tags": [
+        "hiking",
+        "lighthouse",
+        "history",
+        "coastal",
+        "day-trip"
+      ]
+    },
+    "10": {
+      "title": "Historic Georgetown Harborwalk & Hopsewee Plantation",
+      "tags": [
+        "history",
+        "coastal",
+        "day-trip"
+      ]
+    },
+    "11": {
+      "title": "Brookgreen Gardens & Atalaya Castle",
+      "tags": [
+        "gardens",
+        "history",
+        "coastal",
+        "day-trip"
+      ]
+    },
+    "12": {
+      "title": "Santee State Park & Lake Marion Limestone Caves",
+      "tags": [
+        "hiking",
+        "swamp",
+        "day-trip"
+      ]
+    },
+    "13": {
+      "title": "Swan Lake Iris Gardens & Poinsett State Park",
+      "tags": [
+        "hiking",
+        "gardens",
+        "birding",
+        "wildlife",
+        "day-trip"
+      ]
+    },
+    "14": {
+      "title": "Congaree National Park",
+      "tags": [
+        "hiking",
+        "paddling",
+        "swamp",
+        "wildlife",
+        "day-trip"
+      ]
+    },
+    "15": {
+      "title": "Riverbanks Zoo & Botanical Garden",
+      "tags": [
+        "wildlife",
+        "gardens",
+        "history",
+        "day-trip"
+      ]
+    },
+    "16": {
+      "title": "South Carolina State Museum & Soda City Market",
+      "tags": [
+        "museum",
+        "history",
+        "food-drink",
+        "day-trip"
+      ]
+    },
+    "17": {
+      "title": "Wormsloe Historic Site & Bonaventure Cemetery",
+      "tags": [
+        "hiking",
+        "history",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "18": {
+      "title": "Savannah Historic Squares & Forsyth Park",
+      "tags": [
+        "history",
+        "gardens",
+        "overnight"
+      ]
+    },
+    "19": {
+      "title": "Tybee Island Light Station & Fort Pulaski",
+      "tags": [
+        "lighthouse",
+        "history",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "20": {
+      "title": "Daufuskie Island Golf Cart Excursion",
+      "tags": [
+        "boat-tour",
+        "history",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "21": {
+      "title": "Harbour Town Lighthouse & Pinckney Island Wildlife Refuge",
+      "tags": [
+        "lighthouse",
+        "hiking",
+        "biking",
+        "birding",
+        "wildlife",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "22": {
+      "title": "Jekyll Island Driftwood Beach & Sea Turtle Center",
+      "tags": [
+        "beach",
+        "wildlife",
+        "history",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "23": {
+      "title": "St. Simons Island Lighthouse & Fort Frederica",
+      "tags": [
+        "lighthouse",
+        "history",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "24": {
+      "title": "Cumberland Island National Seashore",
+      "tags": [
+        "boat-tour",
+        "hiking",
+        "beach",
+        "wildlife",
+        "history",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "25": {
+      "title": "Okefenokee Swamp Boat Tour",
+      "tags": [
+        "boat-tour",
+        "paddling",
+        "swamp",
+        "wildlife",
+        "overnight"
+      ]
+    },
+    "26": {
+      "title": "Hitchcock Woods & Hopelands Gardens",
+      "tags": [
+        "hiking",
+        "gardens",
+        "overnight"
+      ]
+    },
+    "27": {
+      "title": "Augusta Canal Heritage Boat Tour & Riverwalk",
+      "tags": [
+        "boat-tour",
+        "history",
+        "overnight"
+      ]
+    },
+    "28": {
+      "title": "Biltmore Estate & Antler Hill Village",
+      "tags": [
+        "history",
+        "gardens",
+        "food-drink",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "29": {
+      "title": "Blue Ridge Parkway – Craggy Gardens & Mount Mitchell",
+      "tags": [
+        "hiking",
+        "scenic-drive",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "30": {
+      "title": "Sierra Nevada Brewing Co. & River Arts District",
+      "tags": [
+        "food-drink",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "31": {
+      "title": "DuPont State Recreational Forest",
+      "tags": [
+        "hiking",
+        "waterfalls",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "32": {
+      "title": "Sliding Rock & Looking Glass Falls",
+      "tags": [
+        "waterfalls",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "33": {
+      "title": "Carl Sandburg Home National Historic Site",
+      "tags": [
+        "hiking",
+        "history",
+        "wildlife",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "34": {
+      "title": "Dry Falls & Bridal Veil Falls",
+      "tags": [
+        "hiking",
+        "waterfalls",
+        "scenic-drive",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "35": {
+      "title": "Whitewater Falls & Gorges State Park",
+      "tags": [
+        "hiking",
+        "waterfalls",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "36": {
+      "title": "Grandfather Mountain & Mile High Swinging Bridge",
+      "tags": [
+        "hiking",
+        "wildlife",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "37": {
+      "title": "The Blowing Rock & Moses H. Cone Memorial Park",
+      "tags": [
+        "hiking",
+        "history",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "38": {
+      "title": "Linville Gorge & Linville Caverns",
+      "tags": [
+        "hiking",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "39": {
+      "title": "Great Smoky Mountains Railroad & Deep Creek Waterfalls",
+      "tags": [
+        "hiking",
+        "waterfalls",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "40": {
+      "title": "Oconaluftee Elk Viewing & Mingo Falls",
+      "tags": [
+        "hiking",
+        "waterfalls",
+        "wildlife",
+        "history",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "41": {
+      "title": "Falls Park on the Reedy & Swamp Rabbit Trail",
+      "tags": [
+        "hiking",
+        "biking",
+        "waterfalls",
+        "food-drink",
+        "overnight"
+      ]
+    },
+    "42": {
+      "title": "Caesars Head State Park & Raven Cliff Falls",
+      "tags": [
+        "hiking",
+        "waterfalls",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "43": {
+      "title": "Table Rock State Park & Sassafras Mountain",
+      "tags": [
+        "hiking",
+        "waterfalls",
+        "scenic-drive",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "44": {
+      "title": "U.S. National Whitewater Center",
+      "tags": [
+        "paddling",
+        "hiking",
+        "overnight"
+      ]
+    },
+    "45": {
+      "title": "NASCAR Hall of Fame & Charlotte Motor Speedway",
+      "tags": [
+        "museum",
+        "overnight"
+      ]
+    },
+    "46": {
+      "title": "North Carolina Transportation Museum",
+      "tags": [
+        "museum",
+        "history",
+        "overnight"
+      ]
+    },
+    "47": {
+      "title": "Battleship North Carolina & Wilmington Riverwalk",
+      "tags": [
+        "history",
+        "museum",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "48": {
+      "title": "Fort Fisher State Historic Site & NC Aquarium",
+      "tags": [
+        "history",
+        "wildlife",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "49": {
+      "title": "Bald Head Island Day Ferry",
+      "tags": [
+        "boat-tour",
+        "lighthouse",
+        "biking",
+        "coastal",
+        "overnight"
+      ]
+    },
+    "50": {
+      "title": "Tallulah Gorge State Park",
+      "tags": [
+        "hiking",
+        "waterfalls",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "51": {
+      "title": "Helen Alpine Village & Anna Ruby Falls",
+      "tags": [
+        "hiking",
+        "waterfalls",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "52": {
+      "title": "Dahlonega Gold Museum & North Georgia Wineries",
+      "tags": [
+        "museum",
+        "history",
+        "food-drink",
+        "mountains",
+        "overnight"
+      ]
+    },
+    "53": {
+      "title": "Old Santee Canal Park",
+      "tags": [
+        "hiking",
+        "paddling",
+        "swamp",
+        "birding",
+        "wildlife",
+        "day-trip"
+      ]
+    },
+    "54": {
+      "title": "Caw Caw Interpretive Center",
+      "tags": [
+        "hiking",
+        "birding",
+        "wildlife",
+        "swamp",
+        "history",
+        "day-trip"
+      ]
+    },
+    "55": {
+      "title": "Laurel Hill County Park",
+      "tags": [
+        "hiking",
+        "biking",
+        "day-trip"
+      ]
+    },
+    "56": {
+      "title": "Dungannon Plantation Heritage Preserve",
+      "tags": [
+        "hiking",
+        "birding",
+        "wildlife",
+        "swamp",
+        "day-trip"
+      ]
+    },
+    "57": {
+      "title": "Givhans Ferry State Park",
+      "tags": [
+        "hiking",
+        "paddling",
+        "day-trip"
+      ]
+    },
+    "58": {
+      "title": "Lighthouse Inlet Heritage Preserve",
+      "tags": [
+        "hiking",
+        "lighthouse",
+        "beach",
+        "coastal",
+        "day-trip"
+      ]
+    },
+    "59": {
+      "title": "Sewee Visitor and Environmental Education Center",
+      "tags": [
+        "hiking",
+        "wildlife",
+        "day-trip"
+      ]
+    },
+    "60": {
+      "title": "I'on Swamp Interpretive Trail",
+      "tags": [
+        "hiking",
+        "swamp",
+        "history",
+        "day-trip"
+      ]
+    },
+    "61": {
+      "title": "Sewee Shell Ring Boardwalk",
+      "tags": [
+        "hiking",
+        "history",
+        "coastal",
+        "day-trip"
+      ]
+    },
+    "62": {
+      "title": "Awendaw Passage, Palmetto Trail",
+      "tags": [
+        "hiking",
+        "biking",
+        "coastal",
+        "day-trip"
+      ]
+    },
+    "63": {
+      "title": "Swamp Fox Passage, Palmetto Trail",
+      "tags": [
+        "hiking",
+        "biking",
+        "day-trip"
+      ]
+    },
+    "64": {
+      "title": "Ernest F. Hollings ACE Basin National Wildlife Refuge",
+      "tags": [
+        "hiking",
+        "birding",
+        "wildlife",
+        "history",
+        "day-trip"
+      ]
+    },
+    "65": {
+      "title": "Mullet Hall Trails, Johns Island County Park",
+      "tags": [
+        "hiking",
+        "day-trip"
+      ]
+    }
+  }
+}

@@ -710,5 +710,124 @@
       "url": "https://www.google.com/maps/search/?api=1&query=Montaluce+Winery%2C+501+Hightower+Church+Road%2C+Dahlonega%2C+GA+30533",
       "label": "Montaluce Winery \u2014 501 Hightower Church Road, Dahlonega, GA 30533"
     }
+  ],
+  "53": [
+    {
+      "name": "Old Santee Canal Park",
+      "address": "900 Stony Landing Road, Moncks Corner, SC 29461",
+      "kind": "street",
+      "url": "https://www.google.com/maps/search/?api=1&query=Old+Santee+Canal+Park%2C+900+Stony+Landing+Road%2C+Moncks+Corner%2C+SC+29461",
+      "label": "Old Santee Canal Park \u2014 900 Stony Landing Road, Moncks Corner, SC 29461"
+    }
+  ],
+  "54": [
+    {
+      "name": "Caw Caw Interpretive Center",
+      "address": "5200 Savannah Highway, Ravenel, SC 29470",
+      "kind": "street",
+      "url": "https://www.google.com/maps/search/?api=1&query=Caw+Caw+Interpretive+Center%2C+5200+Savannah+Highway%2C+Ravenel%2C+SC+29470",
+      "label": "Caw Caw Interpretive Center \u2014 5200 Savannah Highway, Ravenel, SC 29470"
+    }
+  ],
+  "55": [
+    {
+      "name": "Laurel Hill County Park trailhead",
+      "address": "1251 Park West Boulevard, Mount Pleasant, SC 29466",
+      "kind": "parking",
+      "url": "https://www.google.com/maps/search/?api=1&query=Laurel+Hill+County+Park+trailhead%2C+1251+Park+West+Boulevard%2C+Mount+Pleasant%2C+SC+29466",
+      "label": "Laurel Hill County Park trailhead \u2014 1251 Park West Boulevard, Mount Pleasant, SC 29466"
+    }
+  ],
+  "56": [
+    {
+      "name": "Dungannon Plantation Heritage Preserve",
+      "address": "5435 SC-162, Hollywood, SC 29449",
+      "kind": "parking",
+      "url": "https://www.google.com/maps/search/?api=1&query=Dungannon+Plantation+Heritage+Preserve%2C+5435+SC-162%2C+Hollywood%2C+SC+29449",
+      "label": "Dungannon Plantation Heritage Preserve \u2014 5435 SC-162, Hollywood, SC 29449"
+    }
+  ],
+  "57": [
+    {
+      "name": "Givhans Ferry State Park",
+      "address": "746 Givhans Ferry Road, Ridgeville, SC 29472",
+      "kind": "street",
+      "url": "https://www.google.com/maps/search/?api=1&query=Givhans+Ferry+State+Park%2C+746+Givhans+Ferry+Road%2C+Ridgeville%2C+SC+29472",
+      "label": "Givhans Ferry State Park \u2014 746 Givhans Ferry Road, Ridgeville, SC 29472"
+    }
+  ],
+  "58": [
+    {
+      "name": "Lighthouse Inlet Heritage Preserve",
+      "address": "1750 East Ashley Avenue, Folly Beach, SC 29439",
+      "kind": "street",
+      "url": "https://www.google.com/maps/search/?api=1&query=Lighthouse+Inlet+Heritage+Preserve%2C+1750+East+Ashley+Avenue%2C+Folly+Beach%2C+SC+29439",
+      "label": "Lighthouse Inlet Heritage Preserve \u2014 1750 East Ashley Avenue, Folly Beach, SC 29439"
+    }
+  ],
+  "59": [
+    {
+      "name": "Sewee Visitor and Environmental Education Center",
+      "address": "5821 Highway 17 North, Awendaw, SC 29429",
+      "kind": "street",
+      "url": "https://www.google.com/maps/search/?api=1&query=Sewee+Visitor+and+Environmental+Education+Center%2C+5821+Highway+17+North%2C+Awendaw%2C+SC+29429",
+      "label": "Sewee Visitor and Environmental Education Center \u2014 5821 Highway 17 North, Awendaw, SC 29429"
+    }
+  ],
+  "60": [
+    {
+      "name": "I'on Swamp Interpretive Trail trailhead",
+      "address": "I'on Swamp Road (FS Road 228), Awendaw, SC",
+      "kind": "parking",
+      "label": "I'on Swamp Interpretive Trail trailhead, I'on Swamp Road (FS Road 228), Awendaw, SC",
+      "url": "https://www.google.com/maps/search/?api=1&query=I%27on+Swamp+Interpretive+Trail+trailhead%2C+I%27on+Swamp+Road+%28FS+Road+228%29%2C+Awendaw%2C+SC"
+    }
+  ],
+  "61": [
+    {
+      "name": "Sewee Shell Ring Boardwalk trailhead",
+      "address": "Salt Pond Road (FS Road 243), Awendaw, SC",
+      "kind": "coordinates",
+      "lat": 33.00113021,
+      "lng": -79.60968341,
+      "label": "Sewee Shell Ring Boardwalk trailhead, Salt Pond Road (FS Road 243), Awendaw, SC (map)",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.00113021,-79.60968341"
+    }
+  ],
+  "62": [
+    {
+      "name": "Awendaw Canoe Launch Trailhead",
+      "address": "Rosa Green Road, Awendaw, SC",
+      "kind": "parking",
+      "label": "Awendaw Canoe Launch Trailhead, Rosa Green Road, Awendaw, SC",
+      "url": "https://www.google.com/maps/search/?api=1&query=Awendaw+Canoe+Launch+Trailhead%2C+Rosa+Green+Road%2C+Awendaw%2C+SC"
+    }
+  ],
+  "63": [
+    {
+      "name": "Swamp Fox Passage eastern trailhead",
+      "address": "US Highway 17, Awendaw, SC",
+      "kind": "parking",
+      "label": "Swamp Fox Passage eastern trailhead, US Highway 17 just beyond Steed Creek Road, Awendaw, SC",
+      "url": "https://www.google.com/maps/search/?api=1&query=Swamp+Fox+Passage+eastern+trailhead%2C+US+Highway+17+just+beyond+Steed+Creek+Road%2C+Awendaw%2C+SC"
+    }
+  ],
+  "64": [
+    {
+      "name": "Ernest F. Hollings ACE Basin National Wildlife Refuge",
+      "address": "8675 Willtown Road, Hollywood, SC 29449",
+      "kind": "street",
+      "url": "https://www.google.com/maps/search/?api=1&query=Ernest+F.+Hollings+ACE+Basin+National+Wildlife+Refuge%2C+8675+Willtown+Road%2C+Hollywood%2C+SC+29449",
+      "label": "Ernest F. Hollings ACE Basin National Wildlife Refuge \u2014 8675 Willtown Road, Hollywood, SC 29449"
+    }
+  ],
+  "65": [
+    {
+      "name": "Mullet Hall Equestrian Center",
+      "address": "2662 Mullet Hall Road, Johns Island, SC 29455",
+      "kind": "street",
+      "url": "https://www.google.com/maps/search/?api=1&query=Mullet+Hall+Equestrian+Center%2C+2662+Mullet+Hall+Road%2C+Johns+Island%2C+SC+29455",
+      "label": "Mullet Hall Equestrian Center \u2014 2662 Mullet Hall Road, Johns Island, SC 29455"
+    }
   ]
 }

@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Brookgreen Gardens &amp; Atalaya Castle — a local adventure from Hanahan, SC.">
+  <meta name="keywords" content="gardens, history, coastal, day-trip">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Trip 11: Brookgreen Gardens &amp; Atalaya Castle | Tim Bootle</title>
   <script src="../../js/https-redirect.js"></script>
@@ -67,6 +68,26 @@
     }
     .adventure-card p:last-child { margin-bottom: 0; }
     .trip-back { margin: 0 0 22px; }
+    .tag-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      list-style: none;
+      margin: 12px 0 0;
+      padding: 0;
+    }
+    .tag-chips li {
+      margin: 0;
+      padding: 3px 9px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #eef2f6;
+      color: var(--ink-500);
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+      line-height: 1.4;
+    }
+
     .map-stops {
       margin: 12px 0 14px;
       padding: 0;
@@ -78,6 +99,19 @@
     .page-hero .hero-meta { color: #c6d1de; margin: 18px 0 0; }
 
   </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TouristTrip",
+  "name": "Brookgreen Gardens & Atalaya Castle",
+  "keywords": [
+    "gardens",
+    "history",
+    "coastal",
+    "day-trip"
+  ]
+}
+  </script>
 </head>
 <body>
 <header class="site-header">
@@ -118,8 +152,8 @@
 
   <section class="section section-light">
     <div class="container narrow">
-      <p class="trip-back"><a class="text-link" href="../index.html">All 52 local adventures</a></p>
-      <article class="adventure-card">
+      <p class="trip-back"><a class="text-link" href="../index.html">All local adventures</a></p>
+      <article class="adventure-card" data-tags="gardens, history, coastal, day-trip">
         <p>Wander 9,100 acres of botanical sculpture gardens and tour the 1930s Moorish-style winter estate right across Highway 17 at Huntington Beach State Park.</p>
         
 <ul class="map-stops">
@@ -127,6 +161,8 @@
   <li><a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Atalaya+Castle%2C+Huntington+Beach+State+Park%2C+16148+Ocean+Highway%2C+Murrells+Inlet%2C+SC+29576" target="_blank" rel="noopener noreferrer">Atalaya Castle, Huntington Beach State Park — 16148 Ocean Highway, Murrells Inlet, SC 29576</a></li>
 </ul>
 <p><a class="text-link" href="https://www.youtube.com/results?search_query=Brookgreen+Gardens+and+Atalaya+Castle+SC" rel="noopener noreferrer" target="_blank">Videos on YouTube</a></p>
+<ul class="tag-chips" aria-label="Activity tags"><li>Gardens</li><li>History</li><li>Coastal</li><li>Day trip</li></ul>
+
       </article>
       
     </div>
