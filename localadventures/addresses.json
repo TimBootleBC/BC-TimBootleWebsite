@@ -890,5 +890,2424 @@
       "label": "Rembert C. Dennis Landing (Wadboo Landing), SC Highway 402, Moncks Corner, SC 29461",
       "url": "https://www.google.com/maps/search/?api=1&query=Rembert+C.+Dennis+Landing+%28Wadboo+Landing%29%2C+SC+Highway+402%2C+Moncks+Corner%2C+SC+29461"
     }
+  ],
+  "72": [
+    {
+      "name": "Bowen's Corner",
+      "address": "32.937067,-80.00845",
+      "kind": "coordinates",
+      "lat": 32.937067,
+      "lng": -80.00845,
+      "label": "Bowen's Corner historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.937067,-80.008450"
+    },
+    {
+      "name": "Steepbrook Plantation",
+      "address": "32.9335,-80.02835",
+      "kind": "coordinates",
+      "lat": 32.9335,
+      "lng": -80.02835,
+      "label": "Steepbrook Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.933500,-80.028350"
+    },
+    {
+      "name": "Otranto Plantation",
+      "address": "32.965,-80.0419",
+      "kind": "coordinates",
+      "lat": 32.965,
+      "lng": -80.0419,
+      "label": "Otranto Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.965000,-80.041900"
+    },
+    {
+      "name": "The Yamasee War at Goose Creek, 1715",
+      "address": "32.971817,-80.030733",
+      "kind": "coordinates",
+      "lat": 32.971817,
+      "lng": -80.030733,
+      "label": "The Yamasee War at Goose Creek, 1715 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.971817,-80.030733"
+    },
+    {
+      "name": "St. James, Goose Creek",
+      "address": "32.97575,-80.03305",
+      "kind": "coordinates",
+      "lat": 32.97575,
+      "lng": -80.03305,
+      "label": "St. James, Goose Creek historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.975750,-80.033050"
+    },
+    {
+      "name": "Goose Creek Church",
+      "address": "32.977033,-80.0328",
+      "kind": "coordinates",
+      "lat": 32.977033,
+      "lng": -80.0328,
+      "label": "Goose Creek Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.977033,-80.032800"
+    },
+    {
+      "name": "Howe Hall Plantation / Howe Hall Elementary School",
+      "address": "32.979567,-80.0281",
+      "kind": "coordinates",
+      "lat": 32.979567,
+      "lng": -80.0281,
+      "label": "Howe Hall Plantation / Howe Hall Elementary School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.979567,-80.028100"
+    },
+    {
+      "name": "Etiwan Village",
+      "address": "32.979817,-80.02945",
+      "kind": "coordinates",
+      "lat": 32.979817,
+      "lng": -80.02945,
+      "label": "Etiwan Village historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.979817,-80.029450"
+    },
+    {
+      "name": "Goose Creek Bridge",
+      "address": "32.980833,-80.032683",
+      "kind": "coordinates",
+      "lat": 32.980833,
+      "lng": -80.032683,
+      "label": "Goose Creek Bridge historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.980833,-80.032683"
+    },
+    {
+      "name": "The Oaks",
+      "address": "32.98385,-80.035583",
+      "kind": "coordinates",
+      "lat": 32.98385,
+      "lng": -80.035583,
+      "label": "The Oaks historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.983850,-80.035583"
+    },
+    {
+      "name": "Boochawee Hall",
+      "address": "32.995983,-80.02855",
+      "kind": "coordinates",
+      "lat": 32.995983,
+      "lng": -80.02855,
+      "label": "Boochawee Hall historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.995983,-80.028550"
+    },
+    {
+      "name": "Button Hall",
+      "address": "33.003417,-80.03575",
+      "kind": "coordinates",
+      "lat": 33.003417,
+      "lng": -80.03575,
+      "label": "Button Hall historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.003417,-80.035750"
+    },
+    {
+      "name": "Goose Creek",
+      "address": "32.999233,-80.040667",
+      "kind": "coordinates",
+      "lat": 32.999233,
+      "lng": -80.040667,
+      "label": "Goose Creek historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.999233,-80.040667"
+    },
+    {
+      "name": "Eighteen Mile House Tavern",
+      "address": "33.002767,-80.042533",
+      "kind": "coordinates",
+      "lat": 33.002767,
+      "lng": -80.042533,
+      "label": "Eighteen Mile House Tavern historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.002767,-80.042533"
+    },
+    {
+      "name": "Broom Hall Plantation",
+      "address": "33.002567,-80.064683",
+      "kind": "coordinates",
+      "lat": 33.002567,
+      "lng": -80.064683,
+      "label": "Broom Hall Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.002567,-80.064683"
+    },
+    {
+      "name": "French Huguenot Plantation / Freedman's Plantation",
+      "address": "33.002,-80.08235",
+      "kind": "coordinates",
+      "lat": 33.002,
+      "lng": -80.08235,
+      "label": "French Huguenot Plantation / Freedman's Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.002000,-80.082350"
+    },
+    {
+      "name": "Crowfield Plantation",
+      "address": "33.0035,-80.0779",
+      "kind": "coordinates",
+      "lat": 33.0035,
+      "lng": -80.0779,
+      "label": "Crowfield Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.003500,-80.077900"
+    },
+    {
+      "name": "Casey (Caice)",
+      "address": "33.019883,-80.042883",
+      "kind": "coordinates",
+      "lat": 33.019883,
+      "lng": -80.042883,
+      "label": "Casey (Caice) historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.019883,-80.042883"
+    },
+    {
+      "name": "Early Indian Trading Paths / The Goose Creek Men",
+      "address": "33.027733,-80.035533",
+      "kind": "coordinates",
+      "lat": 33.027733,
+      "lng": -80.035533,
+      "label": "Early Indian Trading Paths / The Goose Creek Men historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.027733,-80.035533"
+    },
+    {
+      "name": "Mount Holly Station",
+      "address": "33.02905,-80.035",
+      "kind": "coordinates",
+      "lat": 33.02905,
+      "lng": -80.035,
+      "label": "Mount Holly Station historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.029050,-80.035000"
+    },
+    {
+      "name": "Thorgood Plantation / Mount Holly Plantation",
+      "address": "33.03875,-80.034967",
+      "kind": "coordinates",
+      "lat": 33.03875,
+      "lng": -80.034967,
+      "label": "Thorgood Plantation / Mount Holly Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.038750,-80.034967"
+    },
+    {
+      "name": "Medway and Medway Plantation",
+      "address": "33.037367,-80.033567",
+      "kind": "coordinates",
+      "lat": 33.037367,
+      "lng": -80.033567,
+      "label": "Medway and Medway Plantation historical markers",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.037367,-80.033567"
+    },
+    {
+      "name": "Springfield Plantation",
+      "address": "33.023967,-80.02665",
+      "kind": "coordinates",
+      "lat": 33.023967,
+      "lng": -80.02665,
+      "label": "Springfield Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.023967,-80.026650"
+    },
+    {
+      "name": "Howe Hall Plantation",
+      "address": "32.9988,-80.014267",
+      "kind": "coordinates",
+      "lat": 32.9988,
+      "lng": -80.014267,
+      "label": "Howe Hall Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.998800,-80.014267"
+    },
+    {
+      "name": "Liberty Hall Plantation",
+      "address": "32.9998,-80.0106",
+      "kind": "coordinates",
+      "lat": 32.9998,
+      "lng": -80.0106,
+      "label": "Liberty Hall Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.999800,-80.010600"
+    },
+    {
+      "name": "Otranto Indigo Vat",
+      "address": "32.98385,-79.9325",
+      "kind": "coordinates",
+      "lat": 32.98385,
+      "lng": -79.9325,
+      "label": "Otranto Indigo Vat historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.983850,-79.932500"
+    },
+    {
+      "name": "St. James, Goose Creek Chapel of Ease / Bethlehem Baptist Church",
+      "address": "33.06935,-80.023183",
+      "kind": "coordinates",
+      "lat": 33.06935,
+      "lng": -80.023183,
+      "label": "St. James, Goose Creek Chapel of Ease / Bethlehem Baptist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.069350,-80.023183"
+    },
+    {
+      "name": "Oakley School",
+      "address": "33.123,-80.0187",
+      "kind": "coordinates",
+      "lat": 33.123,
+      "lng": -80.0187,
+      "label": "Oakley School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.123000,-80.018700"
+    },
+    {
+      "name": "Carnes Crossroads",
+      "address": "33.0552,-80.103",
+      "kind": "coordinates",
+      "lat": 33.0552,
+      "lng": -80.103,
+      "label": "Carnes Crossroads historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.055200,-80.103000"
+    },
+    {
+      "name": "Wassamassaw",
+      "address": "33.1548,-80.1698",
+      "kind": "coordinates",
+      "lat": 33.1548,
+      "lng": -80.1698,
+      "label": "Wassamassaw historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.154800,-80.169800"
+    }
+  ],
+  "73": [
+    {
+      "name": "Spring Grove Plantation",
+      "address": "33.078217,-80.010667",
+      "kind": "coordinates",
+      "lat": 33.078217,
+      "lng": -80.010667,
+      "label": "Spring Grove Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.078217,-80.010667"
+    },
+    {
+      "name": "Varner Town Indian Community",
+      "address": "33.0711,-80.086967",
+      "kind": "coordinates",
+      "lat": 33.0711,
+      "lng": -80.086967,
+      "label": "Varner Town Indian Community historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.071100,-80.086967"
+    },
+    {
+      "name": "Mulberry Plantation",
+      "address": "33.140867,-80.019183",
+      "kind": "coordinates",
+      "lat": 33.140867,
+      "lng": -80.019183,
+      "label": "Mulberry Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.140867,-80.019183"
+    },
+    {
+      "name": "Lewisfield Plantation",
+      "address": "33.16765,-80.0148",
+      "kind": "coordinates",
+      "lat": 33.16765,
+      "lng": -80.0148,
+      "label": "Lewisfield Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.167650,-80.014800"
+    },
+    {
+      "name": "Berkeley County Hospital",
+      "address": "33.196767,-80.014883",
+      "kind": "coordinates",
+      "lat": 33.196767,
+      "lng": -80.014883,
+      "label": "Berkeley County Hospital historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.196767,-80.014883"
+    },
+    {
+      "name": "St. John's Church",
+      "address": "33.211033,-80.04375",
+      "kind": "coordinates",
+      "lat": 33.211033,
+      "lng": -80.04375,
+      "label": "St. John's Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.211033,-80.043750"
+    },
+    {
+      "name": "Pinopolis",
+      "address": "33.230783,-80.036667",
+      "kind": "coordinates",
+      "lat": 33.230783,
+      "lng": -80.036667,
+      "label": "Pinopolis historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.230783,-80.036667"
+    },
+    {
+      "name": "Berkeley Training High School",
+      "address": "33.200833,-79.994883",
+      "kind": "coordinates",
+      "lat": 33.200833,
+      "lng": -79.994883,
+      "label": "Berkeley Training High School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.200833,-79.994883"
+    },
+    {
+      "name": "Old Moncks Corner",
+      "address": "33.202,-79.9901",
+      "kind": "coordinates",
+      "lat": 33.202,
+      "lng": -79.9901,
+      "label": "Old Moncks Corner historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.202000,-79.990100"
+    },
+    {
+      "name": "Stony Landing Plantation",
+      "address": "33.1971,-79.992983",
+      "kind": "coordinates",
+      "lat": 33.1971,
+      "lng": -79.992983,
+      "label": "Stony Landing Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.197100,-79.992983"
+    },
+    {
+      "name": "Dixie Training School / Berkely Training High School",
+      "address": "33.192067,-79.9963",
+      "kind": "coordinates",
+      "lat": 33.192067,
+      "lng": -79.9963,
+      "label": "Dixie Training School / Berkely Training High School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.192067,-79.996300"
+    },
+    {
+      "name": "Nisbett House",
+      "address": "33.186267,-80.000267",
+      "kind": "coordinates",
+      "lat": 33.186267,
+      "lng": -80.000267,
+      "label": "Nisbett House historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.186267,-80.000267"
+    },
+    {
+      "name": "Fairlawn Plantation / Fort Fairlawn",
+      "address": "33.189017,-79.992067",
+      "kind": "coordinates",
+      "lat": 33.189017,
+      "lng": -79.992067,
+      "label": "Fairlawn Plantation / Fort Fairlawn historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.189017,-79.992067"
+    },
+    {
+      "name": "Santee Canal {Marker #2}",
+      "address": "33.193883,-79.974",
+      "kind": "coordinates",
+      "lat": 33.193883,
+      "lng": -79.974,
+      "label": "Santee Canal {Marker #2} historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.193883,-79.974000"
+    },
+    {
+      "name": "Santee Canal",
+      "address": "33.2105,-79.980517",
+      "kind": "coordinates",
+      "lat": 33.2105,
+      "lng": -79.980517,
+      "label": "Santee Canal historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.210500,-79.980517"
+    },
+    {
+      "name": "Biggin Church Ruins",
+      "address": "33.212983,-79.96635",
+      "kind": "coordinates",
+      "lat": 33.212983,
+      "lng": -79.96635,
+      "label": "Biggin Church Ruins historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.212983,-79.966350"
+    },
+    {
+      "name": "Cherry Hill Classroom",
+      "address": "33.228767,-79.943",
+      "kind": "coordinates",
+      "lat": 33.228767,
+      "lng": -79.943,
+      "label": "Cherry Hill Classroom historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.228767,-79.943000"
+    },
+    {
+      "name": "Wadboo Barony",
+      "address": "33.195783,-79.953383",
+      "kind": "coordinates",
+      "lat": 33.195783,
+      "lng": -79.953383,
+      "label": "Wadboo Barony historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.195783,-79.953383"
+    },
+    {
+      "name": "Cordesville Rosenwald School",
+      "address": "33.1779,-79.954633",
+      "kind": "coordinates",
+      "lat": 33.1779,
+      "lng": -79.954633,
+      "label": "Cordesville Rosenwald School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.177900,-79.954633"
+    },
+    {
+      "name": "Francis Marion",
+      "address": "33.165883,-79.957667",
+      "kind": "coordinates",
+      "lat": 33.165883,
+      "lng": -79.957667,
+      "label": "Francis Marion historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.165883,-79.957667"
+    },
+    {
+      "name": "Mepkin Plantation",
+      "address": "33.114883,-79.94405",
+      "kind": "coordinates",
+      "lat": 33.114883,
+      "lng": -79.94405,
+      "label": "Mepkin Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.114883,-79.944050"
+    },
+    {
+      "name": "Strawberry Chapel",
+      "address": "33.09585,-79.93305",
+      "kind": "coordinates",
+      "lat": 33.09585,
+      "lng": -79.93305,
+      "label": "Strawberry Chapel historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.095850,-79.933050"
+    }
+  ],
+  "74": [
+    {
+      "name": "Quintyne Plantation",
+      "address": "32.900633,-79.9173",
+      "kind": "coordinates",
+      "lat": 32.900633,
+      "lng": -79.9173,
+      "label": "Quintyne Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.900633,-79.917300"
+    },
+    {
+      "name": "White House Plantation",
+      "address": "32.8462,-79.94415",
+      "kind": "coordinates",
+      "lat": 32.8462,
+      "lng": -79.94415,
+      "label": "White House Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.846200,-79.944150"
+    },
+    {
+      "name": "Etiwan Island",
+      "address": "32.864,-79.90185",
+      "kind": "coordinates",
+      "lat": 32.864,
+      "lng": -79.90185,
+      "label": "Etiwan Island historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.864000,-79.901850"
+    },
+    {
+      "name": "St. Thomas Church",
+      "address": "32.961,-79.856717",
+      "kind": "coordinates",
+      "lat": 32.961,
+      "lng": -79.856717,
+      "label": "St. Thomas Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.961000,-79.856717"
+    },
+    {
+      "name": "Brabant Plantation",
+      "address": "33.0202,-79.853317",
+      "kind": "coordinates",
+      "lat": 33.0202,
+      "lng": -79.853317,
+      "label": "Brabant Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.020200,-79.853317"
+    },
+    {
+      "name": "Pompion Hill Chapel",
+      "address": "33.080883,-79.83585",
+      "kind": "coordinates",
+      "lat": 33.080883,
+      "lng": -79.83585,
+      "label": "Pompion Hill Chapel historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.080883,-79.835850"
+    },
+    {
+      "name": "New Hope Methodist Church",
+      "address": "33.0892,-79.816817",
+      "kind": "coordinates",
+      "lat": 33.0892,
+      "lng": -79.816817,
+      "label": "New Hope Methodist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.089200,-79.816817"
+    },
+    {
+      "name": "Quenby Bridge",
+      "address": "33.094267,-79.807967",
+      "kind": "coordinates",
+      "lat": 33.094267,
+      "lng": -79.807967,
+      "label": "Quenby Bridge historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.094267,-79.807967"
+    },
+    {
+      "name": "Silk Hope Plantation",
+      "address": "33.114117,-79.804283",
+      "kind": "coordinates",
+      "lat": 33.114117,
+      "lng": -79.804283,
+      "label": "Silk Hope Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.114117,-79.804283"
+    }
+  ],
+  "75": [
+    {
+      "name": "Rehoboth Methodist Church",
+      "address": "33.262717,-79.965283",
+      "kind": "coordinates",
+      "lat": 33.262717,
+      "lng": -79.965283,
+      "label": "Rehoboth Methodist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.262717,-79.965283"
+    },
+    {
+      "name": "Laurel Hill School",
+      "address": "33.34705,-79.8146",
+      "kind": "coordinates",
+      "lat": 33.34705,
+      "lng": -79.8146,
+      "label": "Laurel Hill School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.347050,-79.814600"
+    },
+    {
+      "name": "L. Mendel Rivers House",
+      "address": "33.404517,-79.916667",
+      "kind": "coordinates",
+      "lat": 33.404517,
+      "lng": -79.916667,
+      "label": "L. Mendel Rivers House historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.404517,-79.916667"
+    },
+    {
+      "name": "St. Stephen's Episcopal Church",
+      "address": "33.405767,-79.91685",
+      "kind": "coordinates",
+      "lat": 33.405767,
+      "lng": -79.91685,
+      "label": "St. Stephen's Episcopal Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.405767,-79.916850"
+    },
+    {
+      "name": "St. Stephen Colored School / St. Stephen High School",
+      "address": "33.4,-79.92675",
+      "kind": "coordinates",
+      "lat": 33.4,
+      "lng": -79.92675,
+      "label": "St. Stephen Colored School / St. Stephen High School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.400000,-79.926750"
+    },
+    {
+      "name": "St. Stephen (White) High School",
+      "address": "33.404967,-79.926167",
+      "kind": "coordinates",
+      "lat": 33.404967,
+      "lng": -79.926167,
+      "label": "St. Stephen (White) High School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.404967,-79.926167"
+    },
+    {
+      "name": "Thomas Walter",
+      "address": "33.438833,-79.985",
+      "kind": "coordinates",
+      "lat": 33.438833,
+      "lng": -79.985,
+      "label": "Thomas Walter historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.438833,-79.985000"
+    },
+    {
+      "name": "S.C.O.P.E. Freedom House",
+      "address": "33.4273,-79.9907",
+      "kind": "coordinates",
+      "lat": 33.4273,
+      "lng": -79.9907,
+      "label": "S.C.O.P.E. Freedom House historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.427300,-79.990700"
+    },
+    {
+      "name": "Maham Plantation / Col. Hezekiah Maham",
+      "address": "33.430733,-80.024283",
+      "kind": "coordinates",
+      "lat": 33.430733,
+      "lng": -80.024283,
+      "label": "Maham Plantation / Col. Hezekiah Maham historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.430733,-80.024283"
+    },
+    {
+      "name": "The Village of Pineville",
+      "address": "33.426933,-80.029067",
+      "kind": "coordinates",
+      "lat": 33.426933,
+      "lng": -80.029067,
+      "label": "The Village of Pineville historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.426933,-80.029067"
+    },
+    {
+      "name": "Maude E. Callen Clinic",
+      "address": "33.4399,-80.060667",
+      "kind": "coordinates",
+      "lat": 33.4399,
+      "lng": -80.060667,
+      "label": "Maude E. Callen Clinic historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.439900,-80.060667"
+    },
+    {
+      "name": "Francis Marion",
+      "address": "33.453867,-80.086567",
+      "kind": "coordinates",
+      "lat": 33.453867,
+      "lng": -80.086567,
+      "label": "Francis Marion historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.453867,-80.086567"
+    },
+    {
+      "name": "Belle Isle Plantation",
+      "address": "33.4393,-80.0876",
+      "kind": "coordinates",
+      "lat": 33.4393,
+      "lng": -80.0876,
+      "label": "Belle Isle Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.439300,-80.087600"
+    },
+    {
+      "name": "Thomas Sumter's Store",
+      "address": "33.377125,-80.221508",
+      "kind": "coordinates",
+      "lat": 33.377125,
+      "lng": -80.221508,
+      "label": "Thomas Sumter's Store historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.377125,-80.221508"
+    },
+    {
+      "name": "Martin's Tavern / The Cherokee Path",
+      "address": "33.34485,-80.14265",
+      "kind": "coordinates",
+      "lat": 33.34485,
+      "lng": -80.14265,
+      "label": "Martin's Tavern / The Cherokee Path historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.344850,-80.142650"
+    },
+    {
+      "name": "Cross Post Office",
+      "address": "33.329917,-80.153167",
+      "kind": "coordinates",
+      "lat": 33.329917,
+      "lng": -80.153167,
+      "label": "Cross Post Office historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.329917,-80.153167"
+    },
+    {
+      "name": "Moss Grove",
+      "address": "33.323083,-80.1623",
+      "kind": "coordinates",
+      "lat": 33.323083,
+      "lng": -80.1623,
+      "label": "Moss Grove historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.323083,-80.162300"
+    },
+    {
+      "name": "Friendship Methodist Church",
+      "address": "33.2994,-80.166683",
+      "kind": "coordinates",
+      "lat": 33.2994,
+      "lng": -80.166683,
+      "label": "Friendship Methodist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.299400,-80.166683"
+    },
+    {
+      "name": "Spring Hill Methodist Church",
+      "address": "33.231617,-80.324567",
+      "kind": "coordinates",
+      "lat": 33.231617,
+      "lng": -80.324567,
+      "label": "Spring Hill Methodist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.231617,-80.324567"
+    }
+  ],
+  "76": [
+    {
+      "name": "Skirmish at Wells's Plantation",
+      "address": "33.019983,-79.72635",
+      "kind": "coordinates",
+      "lat": 33.019983,
+      "lng": -79.72635,
+      "label": "Skirmish at Wells's Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.019983,-79.726350"
+    },
+    {
+      "name": "Wambaw Plantation",
+      "address": "33.143967,-79.615017",
+      "kind": "coordinates",
+      "lat": 33.143967,
+      "lng": -79.615017,
+      "label": "Wambaw Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.143967,-79.615017"
+    },
+    {
+      "name": "Skirmish at Wambaw Bridge / Skirmish at Wambaw Creek",
+      "address": "33.20735,-79.46875",
+      "kind": "coordinates",
+      "lat": 33.20735,
+      "lng": -79.46875,
+      "label": "Skirmish at Wambaw Bridge / Skirmish at Wambaw Creek historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.207350,-79.468750"
+    },
+    {
+      "name": "Skirmish at Wambaw Bridge",
+      "address": "33.212,-79.469383",
+      "kind": "coordinates",
+      "lat": 33.212,
+      "lng": -79.469383,
+      "label": "Skirmish at Wambaw Bridge historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.212000,-79.469383"
+    },
+    {
+      "name": "Skirmish at Tidyman's Plantation",
+      "address": "33.221133,-79.505",
+      "kind": "coordinates",
+      "lat": 33.221133,
+      "lng": -79.505,
+      "label": "Skirmish at Tidyman's Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.221133,-79.505000"
+    },
+    {
+      "name": "Old Jamestown",
+      "address": "33.269533,-79.668667",
+      "kind": "coordinates",
+      "lat": 33.269533,
+      "lng": -79.668667,
+      "label": "Old Jamestown historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.269533,-79.668667"
+    },
+    {
+      "name": "Battle of Lenud's Ferry",
+      "address": "33.297283,-79.6844",
+      "kind": "coordinates",
+      "lat": 33.297283,
+      "lng": -79.6844,
+      "label": "Battle of Lenud's Ferry historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.297283,-79.684400"
+    }
+  ],
+  "77": [
+    {
+      "name": "Stevens-Lather House / Birthplace of Preservation",
+      "address": "32.770483,-79.930767",
+      "kind": "coordinates",
+      "lat": 32.770483,
+      "lng": -79.930767,
+      "label": "Stevens-Lather House / Birthplace of Preservation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.770483,-79.930767"
+    },
+    {
+      "name": "The Seizure of the Planter",
+      "address": "32.773083,-79.927283",
+      "kind": "coordinates",
+      "lat": 32.773083,
+      "lng": -79.927283,
+      "label": "The Seizure of the Planter historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.773083,-79.927283"
+    },
+    {
+      "name": "Thomas Smith",
+      "address": "32.774617,-79.927283",
+      "kind": "coordinates",
+      "lat": 32.774617,
+      "lng": -79.927283,
+      "label": "Thomas Smith historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.774617,-79.927283"
+    },
+    {
+      "name": "Huguenot Church",
+      "address": "32.774867,-79.929283",
+      "kind": "coordinates",
+      "lat": 32.774867,
+      "lng": -79.929283,
+      "label": "Huguenot Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.774867,-79.929283"
+    },
+    {
+      "name": "Constitutional Convention of 1868",
+      "address": "32.775583,-79.931033",
+      "kind": "coordinates",
+      "lat": 32.775583,
+      "lng": -79.931033,
+      "label": "Constitutional Convention of 1868 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.775583,-79.931033"
+    },
+    {
+      "name": "U.S. Courthouse and Post Office / Briggs V. Elliott",
+      "address": "32.775917,-79.931417",
+      "kind": "coordinates",
+      "lat": 32.775917,
+      "lng": -79.931417,
+      "label": "U.S. Courthouse and Post Office / Briggs V. Elliott historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.775917,-79.931417"
+    },
+    {
+      "name": "John Rutledge Home",
+      "address": "32.7763,-79.93365",
+      "kind": "coordinates",
+      "lat": 32.7763,
+      "lng": -79.93365,
+      "label": "John Rutledge Home historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.776300,-79.933650"
+    },
+    {
+      "name": "Jonathan Jasper Wright Law Office",
+      "address": "32.777967,-79.9325",
+      "kind": "coordinates",
+      "lat": 32.777967,
+      "lng": -79.9325,
+      "label": "Jonathan Jasper Wright Law Office historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.777967,-79.932500"
+    },
+    {
+      "name": "Carolina Art Association / James S. Gibbes Memorial Art Gallery",
+      "address": "32.7785,-79.931383",
+      "kind": "coordinates",
+      "lat": 32.7785,
+      "lng": -79.931383,
+      "label": "Carolina Art Association / James S. Gibbes Memorial Art Gallery historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778500,-79.931383"
+    },
+    {
+      "name": "Institute Hall / \"The Union is Dissolved!\"",
+      "address": "32.7784,-79.931217",
+      "kind": "coordinates",
+      "lat": 32.7784,
+      "lng": -79.931217,
+      "label": "Institute Hall / \"The Union is Dissolved!\" historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778400,-79.931217"
+    },
+    {
+      "name": "Fireproof Building",
+      "address": "32.77735,-79.931",
+      "kind": "coordinates",
+      "lat": 32.77735,
+      "lng": -79.931,
+      "label": "Fireproof Building historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.777350,-79.931000"
+    },
+    {
+      "name": "St. Michael's Church",
+      "address": "32.77615,-79.930917",
+      "kind": "coordinates",
+      "lat": 32.77615,
+      "lng": -79.930917,
+      "label": "St. Michael's Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.776150,-79.930917"
+    },
+    {
+      "name": "Old Bank Building",
+      "address": "32.7767,-79.9295",
+      "kind": "coordinates",
+      "lat": 32.7767,
+      "lng": -79.9295,
+      "label": "Old Bank Building historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.776700,-79.929500"
+    },
+    {
+      "name": "The Grand Lodge of Ancient Freemasons of South Carolina",
+      "address": "32.77695,-79.929233",
+      "kind": "coordinates",
+      "lat": 32.77695,
+      "lng": -79.929233,
+      "label": "The Grand Lodge of Ancient Freemasons of South Carolina historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.776950,-79.929233"
+    },
+    {
+      "name": "Slave Trading Complex",
+      "address": "32.7777,-79.9284",
+      "kind": "coordinates",
+      "lat": 32.7777,
+      "lng": -79.9284,
+      "label": "Slave Trading Complex historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.777700,-79.928400"
+    },
+    {
+      "name": "Slave Trading Complex",
+      "address": "32.7784,-79.9286",
+      "kind": "coordinates",
+      "lat": 32.7784,
+      "lng": -79.9286,
+      "label": "Slave Trading Complex historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778400,-79.928600"
+    },
+    {
+      "name": "Pinckney Mansion",
+      "address": "32.77805,-79.9277",
+      "kind": "coordinates",
+      "lat": 32.77805,
+      "lng": -79.9277,
+      "label": "Pinckney Mansion historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778050,-79.927700"
+    },
+    {
+      "name": "Slave Auctions",
+      "address": "32.777,-79.926917",
+      "kind": "coordinates",
+      "lat": 32.777,
+      "lng": -79.926917,
+      "label": "Slave Auctions historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.777000,-79.926917"
+    }
+  ],
+  "78": [
+    {
+      "name": "St. Philip's Church",
+      "address": "32.7788,-79.92945",
+      "kind": "coordinates",
+      "lat": 32.7788,
+      "lng": -79.92945,
+      "label": "St. Philip's Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778800,-79.929450"
+    },
+    {
+      "name": "St. John's Church",
+      "address": "32.7788,-79.9346",
+      "kind": "coordinates",
+      "lat": 32.7788,
+      "lng": -79.9346,
+      "label": "St. John's Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.778800,-79.934600"
+    },
+    {
+      "name": "Pollitzer House",
+      "address": "32.779917,-79.938533",
+      "kind": "coordinates",
+      "lat": 32.779917,
+      "lng": -79.938533,
+      "label": "Pollitzer House historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.779917,-79.938533"
+    },
+    {
+      "name": "Memminger House / McAlister Funeral Home",
+      "address": "32.779883,-79.940783",
+      "kind": "coordinates",
+      "lat": 32.779883,
+      "lng": -79.940783,
+      "label": "Memminger House / McAlister Funeral Home historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.779883,-79.940783"
+    },
+    {
+      "name": "Pinehaven Tuberculosis Hospital / Charleston County Hospital",
+      "address": "32.782033,-79.9505",
+      "kind": "coordinates",
+      "lat": 32.782033,
+      "lng": -79.9505,
+      "label": "Pinehaven Tuberculosis Hospital / Charleston County Hospital historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.782033,-79.950500"
+    },
+    {
+      "name": "Cannon Street Hospital / McClennan-Banks Memorial Hospital",
+      "address": "32.7878,-79.949533",
+      "kind": "coordinates",
+      "lat": 32.7878,
+      "lng": -79.949533,
+      "label": "Cannon Street Hospital / McClennan-Banks Memorial Hospital historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.787800,-79.949533"
+    },
+    {
+      "name": "Hospital Strike of 1969",
+      "address": "32.7861,-79.9469",
+      "kind": "coordinates",
+      "lat": 32.7861,
+      "lng": -79.9469,
+      "label": "Hospital Strike of 1969 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.786100,-79.946900"
+    },
+    {
+      "name": "Old Bethel Methodist Church",
+      "address": "32.784283,-79.94195",
+      "kind": "coordinates",
+      "lat": 32.784283,
+      "lng": -79.94195,
+      "label": "Old Bethel Methodist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.784283,-79.941950"
+    },
+    {
+      "name": "Plymouth Church / Plymouth Parsonage",
+      "address": "32.78295,-79.9404",
+      "kind": "coordinates",
+      "lat": 32.78295,
+      "lng": -79.9404,
+      "label": "Plymouth Church / Plymouth Parsonage historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.782950,-79.940400"
+    },
+    {
+      "name": "The Siege of Charleston, 1780",
+      "address": "32.78645,-79.936633",
+      "kind": "coordinates",
+      "lat": 32.78645,
+      "lng": -79.936633,
+      "label": "The Siege of Charleston, 1780 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.786450,-79.936633"
+    },
+    {
+      "name": "Charleston Public Water System",
+      "address": "32.7861,-79.9357",
+      "kind": "coordinates",
+      "lat": 32.7861,
+      "lng": -79.9357,
+      "label": "Charleston Public Water System historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.786100,-79.935700"
+    },
+    {
+      "name": "College of Charleston",
+      "address": "32.7834,-79.93685",
+      "kind": "coordinates",
+      "lat": 32.7834,
+      "lng": -79.93685,
+      "label": "College of Charleston historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.783400,-79.936850"
+    },
+    {
+      "name": "Septima Clark Birthplace",
+      "address": "32.781467,-79.936283",
+      "kind": "coordinates",
+      "lat": 32.781467,
+      "lng": -79.936283,
+      "label": "Septima Clark Birthplace historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.781467,-79.936283"
+    },
+    {
+      "name": "Charleston Riot of 1919",
+      "address": "32.7807,-79.9349",
+      "kind": "coordinates",
+      "lat": 32.7807,
+      "lng": -79.9349,
+      "label": "Charleston Riot of 1919 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.780700,-79.934900"
+    },
+    {
+      "name": "K.K. Beth Elohim",
+      "address": "32.7822,-79.93265",
+      "kind": "coordinates",
+      "lat": 32.7822,
+      "lng": -79.93265,
+      "label": "K.K. Beth Elohim historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.782200,-79.932650"
+    },
+    {
+      "name": "Trinity Methodist Church Original Site / William Hammett",
+      "address": "32.7828,-79.9308",
+      "kind": "coordinates",
+      "lat": 32.7828,
+      "lng": -79.9308,
+      "label": "Trinity Methodist Church Original Site / William Hammett historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.782800,-79.930800"
+    },
+    {
+      "name": "William Rhett House",
+      "address": "32.78305,-79.93045",
+      "kind": "coordinates",
+      "lat": 32.78305,
+      "lng": -79.93045,
+      "label": "William Rhett House historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.783050,-79.930450"
+    },
+    {
+      "name": "Blake-Grimk\u00e9 House",
+      "address": "32.786933,-79.929267",
+      "kind": "coordinates",
+      "lat": 32.786933,
+      "lng": -79.929267,
+      "label": "Blake-Grimk\u00e9 House historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.786933,-79.929267"
+    }
+  ],
+  "79": [
+    {
+      "name": "British Evacuation of Charleston",
+      "address": "32.79005,-79.926833",
+      "kind": "coordinates",
+      "lat": 32.79005,
+      "lng": -79.926833,
+      "label": "British Evacuation of Charleston historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.790050,-79.926833"
+    },
+    {
+      "name": "Federal Building",
+      "address": "32.78785,-79.934933",
+      "kind": "coordinates",
+      "lat": 32.78785,
+      "lng": -79.934933,
+      "label": "Federal Building historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.787850,-79.934933"
+    },
+    {
+      "name": "Hampstead Cemetery",
+      "address": "32.7934,-79.936083",
+      "kind": "coordinates",
+      "lat": 32.7934,
+      "lng": -79.936083,
+      "label": "Hampstead Cemetery historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.793400,-79.936083"
+    },
+    {
+      "name": "Hampstead Village / Hampstead Mall",
+      "address": "32.7961,-79.936",
+      "kind": "coordinates",
+      "lat": 32.7961,
+      "lng": -79.936,
+      "label": "Hampstead Village / Hampstead Mall historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.796100,-79.936000"
+    },
+    {
+      "name": "Cigar Factory / \"We Shall Overcome\"",
+      "address": "32.796883,-79.9347",
+      "kind": "coordinates",
+      "lat": 32.796883,
+      "lng": -79.9347,
+      "label": "Cigar Factory / \"We Shall Overcome\" historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.796883,-79.934700"
+    },
+    {
+      "name": "C.A. Brown High School",
+      "address": "32.798033,-79.936417",
+      "kind": "coordinates",
+      "lat": 32.798033,
+      "lng": -79.936417,
+      "label": "C.A. Brown High School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.798033,-79.936417"
+    },
+    {
+      "name": "Lincoln Theatre / Little Jerusalem",
+      "address": "32.793217,-79.941517",
+      "kind": "coordinates",
+      "lat": 32.793217,
+      "lng": -79.941517,
+      "label": "Lincoln Theatre / Little Jerusalem historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.793217,-79.941517"
+    },
+    {
+      "name": "Calvary Episcopal Church",
+      "address": "32.793983,-79.945733",
+      "kind": "coordinates",
+      "lat": 32.793983,
+      "lng": -79.945733,
+      "label": "Calvary Episcopal Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.793983,-79.945733"
+    },
+    {
+      "name": "Weston-Grimk\u00e9 Homesite",
+      "address": "32.789117,-79.941983",
+      "kind": "coordinates",
+      "lat": 32.789117,
+      "lng": -79.941983,
+      "label": "Weston-Grimk\u00e9 Homesite historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.789117,-79.941983"
+    },
+    {
+      "name": "The Parsonage / Miss Izard's School",
+      "address": "32.7879,-79.95125",
+      "kind": "coordinates",
+      "lat": 32.7879,
+      "lng": -79.95125,
+      "label": "The Parsonage / Miss Izard's School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.787900,-79.951250"
+    },
+    {
+      "name": "Gadsden Green",
+      "address": "32.790117,-79.95545",
+      "kind": "coordinates",
+      "lat": 32.790117,
+      "lng": -79.95545,
+      "label": "Gadsden Green historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.790117,-79.955450"
+    },
+    {
+      "name": "Burke High School",
+      "address": "32.792717,-79.953733",
+      "kind": "coordinates",
+      "lat": 32.792717,
+      "lng": -79.953733,
+      "label": "Burke High School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.792717,-79.953733"
+    },
+    {
+      "name": "Harmon Field / Cannon Street All-Stars",
+      "address": "32.792783,-79.953083",
+      "kind": "coordinates",
+      "lat": 32.792783,
+      "lng": -79.953083,
+      "label": "Harmon Field / Cannon Street All-Stars historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.792783,-79.953083"
+    },
+    {
+      "name": "Hampton Park Terrace",
+      "address": "32.798833,-79.9514",
+      "kind": "coordinates",
+      "lat": 32.798833,
+      "lng": -79.9514,
+      "label": "Hampton Park Terrace historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.798833,-79.951400"
+    },
+    {
+      "name": "James Simons Elementary School / Desegregation of Charleston Schools",
+      "address": "32.800517,-79.949717",
+      "kind": "coordinates",
+      "lat": 32.800517,
+      "lng": -79.949717,
+      "label": "James Simons Elementary School / Desegregation of Charleston Schools historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.800517,-79.949717"
+    },
+    {
+      "name": "John L. Dart Library",
+      "address": "32.805167,-79.950933",
+      "kind": "coordinates",
+      "lat": 32.805167,
+      "lng": -79.950933,
+      "label": "John L. Dart Library historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.805167,-79.950933"
+    },
+    {
+      "name": "First Memorial Day",
+      "address": "32.800317,-79.9578",
+      "kind": "coordinates",
+      "lat": 32.800317,
+      "lng": -79.9578,
+      "label": "First Memorial Day historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.800317,-79.957800"
+    },
+    {
+      "name": "Gibbes Landing",
+      "address": "32.804367,-79.9603",
+      "kind": "coordinates",
+      "lat": 32.804367,
+      "lng": -79.9603,
+      "label": "Gibbes Landing historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.804367,-79.960300"
+    }
+  ],
+  "80": [
+    {
+      "name": "Drayton Hall / Drayton Family",
+      "address": "32.864667,-80.082783",
+      "kind": "coordinates",
+      "lat": 32.864667,
+      "lng": -80.082783,
+      "label": "Drayton Hall / Drayton Family historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.864667,-80.082783"
+    },
+    {
+      "name": "St. Andrew's Parish Church and Skirmish at St. Andrew's Parish Church",
+      "address": "32.838378,-80.049444",
+      "kind": "coordinates",
+      "lat": 32.838378,
+      "lng": -80.049444,
+      "label": "St. Andrew's Parish Church and Skirmish at St. Andrew's Parish Church historical markers",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.838378,-80.049444"
+    },
+    {
+      "name": "U.S. Vegetable Laboratory",
+      "address": "32.794883,-80.068633",
+      "kind": "coordinates",
+      "lat": 32.794883,
+      "lng": -80.068633,
+      "label": "U.S. Vegetable Laboratory historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.794883,-80.068633"
+    },
+    {
+      "name": "South Carolina Canal & Rail Road Company Original Track Location in Charleston",
+      "address": "32.797383,-80.0327",
+      "kind": "coordinates",
+      "lat": 32.797383,
+      "lng": -80.0327,
+      "label": "South Carolina Canal & Rail Road Company Original Track Location in Charleston historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.797383,-80.032700"
+    },
+    {
+      "name": "British Fortifications",
+      "address": "32.771217,-79.999633",
+      "kind": "coordinates",
+      "lat": 32.771217,
+      "lng": -79.999633,
+      "label": "British Fortifications historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.771217,-79.999633"
+    },
+    {
+      "name": "Byrnes Downs",
+      "address": "32.77985,-79.987933",
+      "kind": "coordinates",
+      "lat": 32.77985,
+      "lng": -79.987933,
+      "label": "Byrnes Downs historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.779850,-79.987933"
+    },
+    {
+      "name": "Maryville",
+      "address": "32.7951,-79.993",
+      "kind": "coordinates",
+      "lat": 32.7951,
+      "lng": -79.993,
+      "label": "Maryville historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.795100,-79.993000"
+    },
+    {
+      "name": "Frederick Deming Jr. Industrial School",
+      "address": "32.795467,-79.989333",
+      "kind": "coordinates",
+      "lat": 32.795467,
+      "lng": -79.989333,
+      "label": "Frederick Deming Jr. Industrial School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.795467,-79.989333"
+    },
+    {
+      "name": "Charles Towne / Old Town Plantation",
+      "address": "32.8076,-79.9864",
+      "kind": "coordinates",
+      "lat": 32.8076,
+      "lng": -79.9864,
+      "label": "Charles Towne / Old Town Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.807600,-79.986400"
+    }
+  ],
+  "81": [
+    {
+      "name": "Battery Haig",
+      "address": "32.7764,-80.035733",
+      "kind": "coordinates",
+      "lat": 32.7764,
+      "lng": -80.035733,
+      "label": "Battery Haig historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.776400,-80.035733"
+    },
+    {
+      "name": "Fort Pemberton",
+      "address": "32.759817,-80.001233",
+      "kind": "coordinates",
+      "lat": 32.759817,
+      "lng": -80.001233,
+      "label": "Fort Pemberton historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.759817,-80.001233"
+    },
+    {
+      "name": "Saint James Episcopal Church",
+      "address": "32.735083,-79.97635",
+      "kind": "coordinates",
+      "lat": 32.735083,
+      "lng": -79.97635,
+      "label": "Saint James Episcopal Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.735083,-79.976350"
+    },
+    {
+      "name": "Payne Reformed Methodist Union Episcopal Church",
+      "address": "32.733,-79.963283",
+      "kind": "coordinates",
+      "lat": 32.733,
+      "lng": -79.963283,
+      "label": "Payne Reformed Methodist Union Episcopal Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.733000,-79.963283"
+    },
+    {
+      "name": "Battle of Dills Bluff",
+      "address": "32.74985,-79.946883",
+      "kind": "coordinates",
+      "lat": 32.74985,
+      "lng": -79.946883,
+      "label": "Battle of Dills Bluff historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.749850,-79.946883"
+    },
+    {
+      "name": "Simeon Pinckney Homestead",
+      "address": "32.746567,-79.9079",
+      "kind": "coordinates",
+      "lat": 32.746567,
+      "lng": -79.9079,
+      "label": "Simeon Pinckney Homestead historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.746567,-79.907900"
+    },
+    {
+      "name": "Battery Cheves",
+      "address": "32.737783,-79.907167",
+      "kind": "coordinates",
+      "lat": 32.737783,
+      "lng": -79.907167,
+      "label": "Battery Cheves historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.737783,-79.907167"
+    },
+    {
+      "name": "Battery Haskell",
+      "address": "32.728617,-79.9108",
+      "kind": "coordinates",
+      "lat": 32.728617,
+      "lng": -79.9108,
+      "label": "Battery Haskell historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.728617,-79.910800"
+    },
+    {
+      "name": "Three Trees School",
+      "address": "32.728183,-79.9383",
+      "kind": "coordinates",
+      "lat": 32.728183,
+      "lng": -79.9383,
+      "label": "Three Trees School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.728183,-79.938300"
+    },
+    {
+      "name": "Redoubt Number 3",
+      "address": "32.72655,-79.93815",
+      "kind": "coordinates",
+      "lat": 32.72655,
+      "lng": -79.93815,
+      "label": "Redoubt Number 3 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.726550,-79.938150"
+    },
+    {
+      "name": "Riversville / Battle of Secessionville",
+      "address": "32.706083,-79.938983",
+      "kind": "coordinates",
+      "lat": 32.706083,
+      "lng": -79.938983,
+      "label": "Riversville / Battle of Secessionville historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.706083,-79.938983"
+    },
+    {
+      "name": "Battery Number 5",
+      "address": "32.707883,-79.953467",
+      "kind": "coordinates",
+      "lat": 32.707883,
+      "lng": -79.953467,
+      "label": "Battery Number 5 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.707883,-79.953467"
+    },
+    {
+      "name": "Hunter's Volunteers",
+      "address": "32.71465,-79.968267",
+      "kind": "coordinates",
+      "lat": 32.71465,
+      "lng": -79.968267,
+      "label": "Hunter's Volunteers historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.714650,-79.968267"
+    },
+    {
+      "name": "Little Rock Golf Club",
+      "address": "32.7113,-79.9716",
+      "kind": "coordinates",
+      "lat": 32.7113,
+      "lng": -79.9716,
+      "label": "Little Rock Golf Club historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.711300,-79.971600"
+    },
+    {
+      "name": "Coastal Patrol Base #8",
+      "address": "32.713983,-79.97905",
+      "kind": "coordinates",
+      "lat": 32.713983,
+      "lng": -79.97905,
+      "label": "Coastal Patrol Base #8 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.713983,-79.979050"
+    },
+    {
+      "name": "W. Gresham Meggett School",
+      "address": "32.7067,-79.9762",
+      "kind": "coordinates",
+      "lat": 32.7067,
+      "lng": -79.9762,
+      "label": "W. Gresham Meggett School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.706700,-79.976200"
+    },
+    {
+      "name": "Skirmish at Grimball's Plantation",
+      "address": "32.704967,-79.9774",
+      "kind": "coordinates",
+      "lat": 32.704967,
+      "lng": -79.9774,
+      "label": "Skirmish at Grimball's Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.704967,-79.977400"
+    },
+    {
+      "name": "Beefield Community",
+      "address": "32.693133,-79.965117",
+      "kind": "coordinates",
+      "lat": 32.693133,
+      "lng": -79.965117,
+      "label": "Beefield Community historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.693133,-79.965117"
+    },
+    {
+      "name": "Mosquito Beach",
+      "address": "32.68525,-79.959583",
+      "kind": "coordinates",
+      "lat": 32.68525,
+      "lng": -79.959583,
+      "label": "Mosquito Beach historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.685250,-79.959583"
+    },
+    {
+      "name": "Seashore Farmers' Lodge No. 767",
+      "address": "32.681267,-79.967317",
+      "kind": "coordinates",
+      "lat": 32.681267,
+      "lng": -79.967317,
+      "label": "Seashore Farmers' Lodge No. 767 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.681267,-79.967317"
+    },
+    {
+      "name": "Camp of Wild's \"African Brigade,\" 1863-1864 / Wild's Brigade Cemetery",
+      "address": "32.65825,-79.9421",
+      "kind": "coordinates",
+      "lat": 32.65825,
+      "lng": -79.9421,
+      "label": "Camp of Wild's \"African Brigade,\" 1863-1864 / Wild's Brigade Cemetery historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.658250,-79.942100"
+    },
+    {
+      "name": "\"Porgy House\"",
+      "address": "32.655333,-79.940867",
+      "kind": "coordinates",
+      "lat": 32.655333,
+      "lng": -79.940867,
+      "label": "\"Porgy House\" historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.655333,-79.940867"
+    }
+  ],
+  "82": [
+    {
+      "name": "St. Mark's Union Methodist Episcopal Church",
+      "address": "32.8018,-80.1128",
+      "kind": "coordinates",
+      "lat": 32.8018,
+      "lng": -80.1128,
+      "label": "St. Mark's Union Methodist Episcopal Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.801800,-80.112800"
+    },
+    {
+      "name": "New Bethel African Methodist Episcopal Church",
+      "address": "32.802033,-80.1188",
+      "kind": "coordinates",
+      "lat": 32.802033,
+      "lng": -80.1188,
+      "label": "New Bethel African Methodist Episcopal Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.802033,-80.118800"
+    },
+    {
+      "name": "Tobin-Boyd Elementary School",
+      "address": "32.807933,-80.131467",
+      "kind": "coordinates",
+      "lat": 32.807933,
+      "lng": -80.131467,
+      "label": "Tobin-Boyd Elementary School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.807933,-80.131467"
+    },
+    {
+      "name": "Belvidere School Site",
+      "address": "32.7681,-80.118",
+      "kind": "coordinates",
+      "lat": 32.7681,
+      "lng": -80.118,
+      "label": "Belvidere School Site historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.768100,-80.118000"
+    },
+    {
+      "name": "St. John's Episcopal Church",
+      "address": "32.717633,-80.085783",
+      "kind": "coordinates",
+      "lat": 32.717633,
+      "lng": -80.085783,
+      "label": "St. John's Episcopal Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.717633,-80.085783"
+    },
+    {
+      "name": "Fenwick Plantation",
+      "address": "32.7465,-80.0405",
+      "kind": "coordinates",
+      "lat": 32.7465,
+      "lng": -80.0405,
+      "label": "Fenwick Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.746500,-80.040500"
+    },
+    {
+      "name": "Fenwick Indigo Vats",
+      "address": "32.747617,-80.033",
+      "kind": "coordinates",
+      "lat": 32.747617,
+      "lng": -80.033,
+      "label": "Fenwick Indigo Vats historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.747617,-80.033000"
+    },
+    {
+      "name": "Federal Expedition on John's Island / Battle of Burden's Causeway",
+      "address": "32.718467,-80.021583",
+      "kind": "coordinates",
+      "lat": 32.718467,
+      "lng": -80.021583,
+      "label": "Federal Expedition on John's Island / Battle of Burden's Causeway historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.718467,-80.021583"
+    },
+    {
+      "name": "The Progressive Club",
+      "address": "32.6771,-80.04075",
+      "kind": "coordinates",
+      "lat": 32.6771,
+      "lng": -80.04075,
+      "label": "The Progressive Club historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.677100,-80.040750"
+    },
+    {
+      "name": "John's Island Presbyterian Church",
+      "address": "32.685683,-80.0821",
+      "kind": "coordinates",
+      "lat": 32.685683,
+      "lng": -80.0821,
+      "label": "John's Island Presbyterian Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.685683,-80.082100"
+    },
+    {
+      "name": "Rockville Elementary School",
+      "address": "32.640633,-80.1833",
+      "kind": "coordinates",
+      "lat": 32.640633,
+      "lng": -80.1833,
+      "label": "Rockville Elementary School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.640633,-80.183300"
+    },
+    {
+      "name": "Charleston Tea Plantation",
+      "address": "32.6181,-80.1851",
+      "kind": "coordinates",
+      "lat": 32.6181,
+      "lng": -80.1851,
+      "label": "Charleston Tea Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.618100,-80.185100"
+    }
+  ],
+  "83": [
+    {
+      "name": "Grave of Colonel William A. Washington",
+      "address": "32.795417,-80.136217",
+      "kind": "coordinates",
+      "lat": 32.795417,
+      "lng": -80.136217,
+      "label": "Grave of Colonel William A. Washington historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.795417,-80.136217"
+    },
+    {
+      "name": "The Stono Rebellion",
+      "address": "32.785183,-80.147167",
+      "kind": "coordinates",
+      "lat": 32.785183,
+      "lng": -80.147167,
+      "label": "The Stono Rebellion historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.785183,-80.147167"
+    },
+    {
+      "name": "St. Paul's Parish Church",
+      "address": "32.8333,-80.2788",
+      "kind": "coordinates",
+      "lat": 32.8333,
+      "lng": -80.2788,
+      "label": "St. Paul's Parish Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.833300,-80.278800"
+    },
+    {
+      "name": "St. Paul's Stono / St. Paul's Churchyard",
+      "address": "32.748717,-80.182533",
+      "kind": "coordinates",
+      "lat": 32.748717,
+      "lng": -80.182533,
+      "label": "St. Paul's Stono / St. Paul's Churchyard historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.748717,-80.182533"
+    },
+    {
+      "name": "Plainsfield Plantation",
+      "address": "32.72065,-80.184583",
+      "kind": "coordinates",
+      "lat": 32.72065,
+      "lng": -80.184583,
+      "label": "Plainsfield Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.720650,-80.184583"
+    },
+    {
+      "name": "Edisto Island Baptist Church",
+      "address": "32.572683,-80.284317",
+      "kind": "coordinates",
+      "lat": 32.572683,
+      "lng": -80.284317,
+      "label": "Edisto Island Baptist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.572683,-80.284317"
+    }
+  ],
+  "84": [
+    {
+      "name": "Maybank Green / Hobcaw Plantation",
+      "address": "32.816767,-79.88075",
+      "kind": "coordinates",
+      "lat": 32.816767,
+      "lng": -79.88075,
+      "label": "Maybank Green / Hobcaw Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.816767,-79.880750"
+    },
+    {
+      "name": "Jacob Bond I'on (1782-1859)",
+      "address": "32.81185,-79.8794",
+      "kind": "coordinates",
+      "lat": 32.81185,
+      "lng": -79.8794,
+      "label": "Jacob Bond I'on (1782-1859) historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.811850,-79.879400"
+    },
+    {
+      "name": "Mount Pleasant Presbyterian Church",
+      "address": "32.789317,-79.8782",
+      "kind": "coordinates",
+      "lat": 32.789317,
+      "lng": -79.8782,
+      "label": "Mount Pleasant Presbyterian Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.789317,-79.878200"
+    },
+    {
+      "name": "War of 1812 Encampment, Laing School, and Friendship A.M.E. Church",
+      "address": "32.786039,-79.873572",
+      "kind": "coordinates",
+      "lat": 32.786039,
+      "lng": -79.873572,
+      "label": "War of 1812 Encampment, Laing School, and Friendship A.M.E. Church historical markers",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.786039,-79.873572"
+    },
+    {
+      "name": "Rifle Range Road",
+      "address": "32.793617,-79.856233",
+      "kind": "coordinates",
+      "lat": 32.793617,
+      "lng": -79.856233,
+      "label": "Rifle Range Road historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.793617,-79.856233"
+    },
+    {
+      "name": "CS H. L. Hunley and Battle of Fort Sullivan",
+      "address": "32.759158,-79.8566",
+      "kind": "coordinates",
+      "lat": 32.759158,
+      "lng": -79.8566,
+      "label": "CS H. L. Hunley and Battle of Fort Sullivan historical markers",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.759158,-79.856600"
+    },
+    {
+      "name": "Sullivans Island Quartermaster Dock",
+      "address": "32.759783,-79.85155",
+      "kind": "coordinates",
+      "lat": 32.759783,
+      "lng": -79.85155,
+      "label": "Sullivans Island Quartermaster Dock historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.759783,-79.851550"
+    },
+    {
+      "name": "Lord Cornwallis",
+      "address": "32.776867,-79.808017",
+      "kind": "coordinates",
+      "lat": 32.776867,
+      "lng": -79.808017,
+      "label": "Lord Cornwallis historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.776867,-79.808017"
+    },
+    {
+      "name": "Laing School",
+      "address": "32.841683,-79.816717",
+      "kind": "coordinates",
+      "lat": 32.841683,
+      "lng": -79.816717,
+      "label": "Laing School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.841683,-79.816717"
+    },
+    {
+      "name": "Boone Hall Plantation",
+      "address": "32.846383,-79.816933",
+      "kind": "coordinates",
+      "lat": 32.846383,
+      "lng": -79.816933,
+      "label": "Boone Hall Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.846383,-79.816933"
+    },
+    {
+      "name": "Christ Church, Snee Farm, and Confederate Lines",
+      "address": "32.844583,-79.813689",
+      "kind": "coordinates",
+      "lat": 32.844583,
+      "lng": -79.813689,
+      "label": "Christ Church, Snee Farm, and Confederate Lines historical markers",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.844583,-79.813689"
+    },
+    {
+      "name": "Cook's Old Field Cemetery / Copahee Plantation and Hamlin Beach",
+      "address": "32.841383,-79.79775",
+      "kind": "coordinates",
+      "lat": 32.841383,
+      "lng": -79.79775,
+      "label": "Cook's Old Field Cemetery / Copahee Plantation and Hamlin Beach historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.841383,-79.797750"
+    },
+    {
+      "name": "Sweetgrass Baskets",
+      "address": "32.854567,-79.801233",
+      "kind": "coordinates",
+      "lat": 32.854567,
+      "lng": -79.801233,
+      "label": "Sweetgrass Baskets historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.854567,-79.801233"
+    },
+    {
+      "name": "Laurel Hill Plantation",
+      "address": "32.8617,-79.797583",
+      "kind": "coordinates",
+      "lat": 32.8617,
+      "lng": -79.797583,
+      "label": "Laurel Hill Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.861700,-79.797583"
+    }
+  ],
+  "85": [
+    {
+      "name": "French Botanical Garden",
+      "address": "32.900733,-80.02975",
+      "kind": "coordinates",
+      "lat": 32.900733,
+      "lng": -80.02975,
+      "label": "French Botanical Garden historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.900733,-80.029750"
+    },
+    {
+      "name": "Louie Tenement",
+      "address": "32.8817,-79.999217",
+      "kind": "coordinates",
+      "lat": 32.8817,
+      "lng": -79.999217,
+      "label": "Louie Tenement historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.881700,-79.999217"
+    },
+    {
+      "name": "Liberty Hill",
+      "address": "32.880417,-79.99645",
+      "kind": "coordinates",
+      "lat": 32.880417,
+      "lng": -79.99645,
+      "label": "Liberty Hill historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.880417,-79.996450"
+    },
+    {
+      "name": "Charleston Station",
+      "address": "32.874467,-79.99795",
+      "kind": "coordinates",
+      "lat": 32.874467,
+      "lng": -79.99795,
+      "label": "Charleston Station historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.874467,-79.997950"
+    },
+    {
+      "name": "St. Peter's A.M.E. Church",
+      "address": "32.878,-79.9938",
+      "kind": "coordinates",
+      "lat": 32.878,
+      "lng": -79.9938,
+      "label": "St. Peter's A.M.E. Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.878000,-79.993800"
+    },
+    {
+      "name": "Park Circle",
+      "address": "32.880317,-79.985367",
+      "kind": "coordinates",
+      "lat": 32.880317,
+      "lng": -79.985367,
+      "label": "Park Circle historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.880317,-79.985367"
+    },
+    {
+      "name": "Navy Yard Officers' Quarters",
+      "address": "32.867283,-79.967683",
+      "kind": "coordinates",
+      "lat": 32.867283,
+      "lng": -79.967683,
+      "label": "Navy Yard Officers' Quarters historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.867283,-79.967683"
+    },
+    {
+      "name": "Naval Hospital District",
+      "address": "32.8639,-79.97585",
+      "kind": "coordinates",
+      "lat": 32.8639,
+      "lng": -79.97585,
+      "label": "Naval Hospital District historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.863900,-79.975850"
+    },
+    {
+      "name": "Marine Barracks",
+      "address": "32.862317,-79.973667",
+      "kind": "coordinates",
+      "lat": 32.862317,
+      "lng": -79.973667,
+      "label": "Marine Barracks historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.862317,-79.973667"
+    },
+    {
+      "name": "Union Heights / Howard Heights",
+      "address": "32.838733,-79.961817",
+      "kind": "coordinates",
+      "lat": 32.838733,
+      "lng": -79.961817,
+      "label": "Union Heights / Howard Heights historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.838733,-79.961817"
+    },
+    {
+      "name": "Magnolia Cemetery",
+      "address": "32.8155,-79.9507",
+      "kind": "coordinates",
+      "lat": 32.8155,
+      "lng": -79.9507,
+      "label": "Magnolia Cemetery historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.815500,-79.950700"
+    },
+    {
+      "name": "Jenkins Orphanage",
+      "address": "32.846933,-79.996467",
+      "kind": "coordinates",
+      "lat": 32.846933,
+      "lng": -79.996467,
+      "label": "Jenkins Orphanage historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.846933,-79.996467"
+    },
+    {
+      "name": "Windsor Hill Plantation",
+      "address": "32.923867,-80.089833",
+      "kind": "coordinates",
+      "lat": 32.923867,
+      "lng": -80.089833,
+      "label": "Windsor Hill Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.923867,-80.089833"
+    },
+    {
+      "name": "Inland Rice Fields, ca. 1701-1865",
+      "address": "32.941467,-80.076183",
+      "kind": "coordinates",
+      "lat": 32.941467,
+      "lng": -80.076183,
+      "label": "Inland Rice Fields, ca. 1701-1865 historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.941467,-80.076183"
+    },
+    {
+      "name": "The Elms Plantation",
+      "address": "32.983417,-80.060067",
+      "kind": "coordinates",
+      "lat": 32.983417,
+      "lng": -80.060067,
+      "label": "The Elms Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.983417,-80.060067"
+    },
+    {
+      "name": "The Elms",
+      "address": "32.9797,-80.073",
+      "kind": "coordinates",
+      "lat": 32.9797,
+      "lng": -80.073,
+      "label": "The Elms historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.979700,-80.073000"
+    },
+    {
+      "name": "Mt. Zion Baptist Church",
+      "address": "33.010967,-80.136717",
+      "kind": "coordinates",
+      "lat": 33.010967,
+      "lng": -80.136717,
+      "label": "Mt. Zion Baptist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.010967,-80.136717"
+    },
+    {
+      "name": "Ebenezer A.M.E. Church",
+      "address": "33.01025,-80.1532",
+      "kind": "coordinates",
+      "lat": 33.01025,
+      "lng": -80.1532,
+      "label": "Ebenezer A.M.E. Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.010250,-80.153200"
+    },
+    {
+      "name": "Lincolnville",
+      "address": "33.010533,-80.15735",
+      "kind": "coordinates",
+      "lat": 33.010533,
+      "lng": -80.15735,
+      "label": "Lincolnville historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.010533,-80.157350"
+    },
+    {
+      "name": "Wesley Methodist Church and Lincolnville School / Lincolnville Elementary School",
+      "address": "33.009142,-80.157825",
+      "kind": "coordinates",
+      "lat": 33.009142,
+      "lng": -80.157825,
+      "label": "Wesley Methodist Church and Lincolnville School / Lincolnville Elementary School historical markers",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.009142,-80.157825"
+    },
+    {
+      "name": "Lincolnville Jail",
+      "address": "33.007817,-80.15535",
+      "kind": "coordinates",
+      "lat": 33.007817,
+      "lng": -80.15535,
+      "label": "Lincolnville Jail historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.007817,-80.155350"
+    },
+    {
+      "name": "Bible Sojourn Society Cemetery",
+      "address": "33.0034,-80.1537",
+      "kind": "coordinates",
+      "lat": 33.0034,
+      "lng": -80.1537,
+      "label": "Bible Sojourn Society Cemetery historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.003400,-80.153700"
+    }
+  ],
+  "86": [
+    {
+      "name": "Old Wappetaw Church",
+      "address": "32.92765,-79.714517",
+      "kind": "coordinates",
+      "lat": 32.92765,
+      "lng": -79.714517,
+      "label": "Old Wappetaw Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.927650,-79.714517"
+    },
+    {
+      "name": "Archibald Rutledge Birthplace and Point Plantation",
+      "address": "33.083142,-79.459483",
+      "kind": "coordinates",
+      "lat": 33.083142,
+      "lng": -79.459483,
+      "label": "Archibald Rutledge Birthplace and Point Plantation historical markers",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.083142,-79.459483"
+    },
+    {
+      "name": "McClellanville",
+      "address": "33.085367,-79.460583",
+      "kind": "coordinates",
+      "lat": 33.085367,
+      "lng": -79.460583,
+      "label": "McClellanville historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.085367,-79.460583"
+    },
+    {
+      "name": "St. James Santee Parish Church",
+      "address": "33.171717,-79.465433",
+      "kind": "coordinates",
+      "lat": 33.171717,
+      "lng": -79.465433,
+      "label": "St. James Santee Parish Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.171717,-79.465433"
+    },
+    {
+      "name": "Thomas Pinckney 1750-1828 / St. James, Santee",
+      "address": "33.17775,-79.414883",
+      "kind": "coordinates",
+      "lat": 33.17775,
+      "lng": -79.414883,
+      "label": "Thomas Pinckney 1750-1828 / St. James, Santee historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.177750,-79.414883"
+    }
+  ],
+  "87": [
+    {
+      "name": "Archdale Hall",
+      "address": "32.89985,-80.102183",
+      "kind": "coordinates",
+      "lat": 32.89985,
+      "lng": -80.102183,
+      "label": "Archdale Hall historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.899850,-80.102183"
+    },
+    {
+      "name": "Middleton Place / Arthur Middleton",
+      "address": "32.899683,-80.140683",
+      "kind": "coordinates",
+      "lat": 32.899683,
+      "lng": -80.140683,
+      "label": "Middleton Place / Arthur Middleton historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.899683,-80.140683"
+    },
+    {
+      "name": "Fort Dorchester",
+      "address": "32.94755,-80.1701",
+      "kind": "coordinates",
+      "lat": 32.94755,
+      "lng": -80.1701,
+      "label": "Fort Dorchester historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.947550,-80.170100"
+    },
+    {
+      "name": "Parish Church of St. George, Dorchester",
+      "address": "32.949117,-80.170117",
+      "kind": "coordinates",
+      "lat": 32.949117,
+      "lng": -80.170117,
+      "label": "Parish Church of St. George, Dorchester historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.949117,-80.170117"
+    },
+    {
+      "name": "Old Dorchester",
+      "address": "32.950133,-80.171",
+      "kind": "coordinates",
+      "lat": 32.950133,
+      "lng": -80.171,
+      "label": "Old Dorchester historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.950133,-80.171000"
+    },
+    {
+      "name": "Bacon's Bridge / \"The Hill\"",
+      "address": "32.9593,-80.2009",
+      "kind": "coordinates",
+      "lat": 32.9593,
+      "lng": -80.2009,
+      "label": "Bacon's Bridge / \"The Hill\" historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.959300,-80.200900"
+    },
+    {
+      "name": "Old White Meeting House and Cemetery",
+      "address": "32.966067,-80.19555",
+      "kind": "coordinates",
+      "lat": 32.966067,
+      "lng": -80.19555,
+      "label": "Old White Meeting House and Cemetery historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.966067,-80.195550"
+    },
+    {
+      "name": "Newington Plantation",
+      "address": "32.983217,-80.204617",
+      "kind": "coordinates",
+      "lat": 32.983217,
+      "lng": -80.204617,
+      "label": "Newington Plantation historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.983217,-80.204617"
+    },
+    {
+      "name": "Stallsville",
+      "address": "32.995117,-80.185417",
+      "kind": "coordinates",
+      "lat": 32.995117,
+      "lng": -80.185417,
+      "label": "Stallsville historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=32.995117,-80.185417"
+    },
+    {
+      "name": "Pinehurst Tea Farm",
+      "address": "33.004833,-80.194367",
+      "kind": "coordinates",
+      "lat": 33.004833,
+      "lng": -80.194367,
+      "label": "Pinehurst Tea Farm historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.004833,-80.194367"
+    },
+    {
+      "name": "Pine Forest Inn",
+      "address": "33.009583,-80.191883",
+      "kind": "coordinates",
+      "lat": 33.009583,
+      "lng": -80.191883,
+      "label": "Pine Forest Inn historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.009583,-80.191883"
+    },
+    {
+      "name": "Old Town Hall",
+      "address": "33.01125,-80.187783",
+      "kind": "coordinates",
+      "lat": 33.01125,
+      "lng": -80.187783,
+      "label": "Old Town Hall historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.011250,-80.187783"
+    },
+    {
+      "name": "Summerville High School / Coach John McKissick (1926-2019)",
+      "address": "33.011117,-80.181883",
+      "kind": "coordinates",
+      "lat": 33.011117,
+      "lng": -80.181883,
+      "label": "Summerville High School / Coach John McKissick (1926-2019) historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.011117,-80.181883"
+    },
+    {
+      "name": "Timrod Library",
+      "address": "33.017933,-80.17975",
+      "kind": "coordinates",
+      "lat": 33.017933,
+      "lng": -80.17975,
+      "label": "Timrod Library historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.017933,-80.179750"
+    },
+    {
+      "name": "Guerin's Pharmacy, Jewish Life, and Summerville Water Works",
+      "address": "33.019628,-80.175339",
+      "kind": "coordinates",
+      "lat": 33.019628,
+      "lng": -80.175339,
+      "label": "Guerin's Pharmacy, Jewish Life, and Summerville Water Works historical markers",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.019628,-80.175339"
+    },
+    {
+      "name": "Alston Graded School / Alston High School",
+      "address": "33.022533,-80.1756",
+      "kind": "coordinates",
+      "lat": 33.022533,
+      "lng": -80.1756,
+      "label": "Alston Graded School / Alston High School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.022533,-80.175600"
+    },
+    {
+      "name": "Murray United Methodist Church",
+      "address": "33.032667,-80.245583",
+      "kind": "coordinates",
+      "lat": 33.032667,
+      "lng": -80.245583,
+      "label": "Murray United Methodist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.032667,-80.245583"
+    }
+  ],
+  "88": [
+    {
+      "name": "Cypress Methodist Camp Ground",
+      "address": "33.1034,-80.273283",
+      "kind": "coordinates",
+      "lat": 33.1034,
+      "lng": -80.273283,
+      "label": "Cypress Methodist Camp Ground historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.103400,-80.273283"
+    },
+    {
+      "name": "Ridgeville",
+      "address": "33.0955,-80.31535",
+      "kind": "coordinates",
+      "lat": 33.0955,
+      "lng": -80.31535,
+      "label": "Ridgeville historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.095500,-80.315350"
+    },
+    {
+      "name": "Four Holes Indian Community and Four Holes Public School / Four Holes Freedom School",
+      "address": "33.0674,-80.3767",
+      "kind": "coordinates",
+      "lat": 33.0674,
+      "lng": -80.3767,
+      "label": "Four Holes Indian Community and Four Holes Public School / Four Holes Freedom School historical markers",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.067400,-80.376700"
+    },
+    {
+      "name": "Four Holes Swamp Bridge / Harley's Tavern",
+      "address": "33.1427,-80.3525",
+      "kind": "coordinates",
+      "lat": 33.1427,
+      "lng": -80.3525,
+      "label": "Four Holes Swamp Bridge / Harley's Tavern historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.142700,-80.352500"
+    },
+    {
+      "name": "Dorchester",
+      "address": "33.138867,-80.39575",
+      "kind": "coordinates",
+      "lat": 33.138867,
+      "lng": -80.39575,
+      "label": "Dorchester historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.138867,-80.395750"
+    },
+    {
+      "name": "Dorchester Cemetery",
+      "address": "33.1553,-80.3879",
+      "kind": "coordinates",
+      "lat": 33.1553,
+      "lng": -80.3879,
+      "label": "Dorchester Cemetery historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.155300,-80.387900"
+    },
+    {
+      "name": "Harleyville",
+      "address": "33.214567,-80.447817",
+      "kind": "coordinates",
+      "lat": 33.214567,
+      "lng": -80.447817,
+      "label": "Harleyville historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.214567,-80.447817"
+    },
+    {
+      "name": "Kennedy-Jenkins Hill High School",
+      "address": "33.21275,-80.452233",
+      "kind": "coordinates",
+      "lat": 33.21275,
+      "lng": -80.452233,
+      "label": "Kennedy-Jenkins Hill High School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.212750,-80.452233"
+    },
+    {
+      "name": "St. Paul Camp Ground",
+      "address": "33.20475,-80.4823",
+      "kind": "coordinates",
+      "lat": 33.20475,
+      "lng": -80.4823,
+      "label": "St. Paul Camp Ground historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.204750,-80.482300"
+    },
+    {
+      "name": "Shady Grove Camp Ground",
+      "address": "33.276567,-80.59615",
+      "kind": "coordinates",
+      "lat": 33.276567,
+      "lng": -80.59615,
+      "label": "Shady Grove Camp Ground historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.276567,-80.596150"
+    },
+    {
+      "name": "St. George Public High School",
+      "address": "33.1884,-80.574917",
+      "kind": "coordinates",
+      "lat": 33.1884,
+      "lng": -80.574917,
+      "label": "St. George Public High School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.188400,-80.574917"
+    },
+    {
+      "name": "Town of St. George",
+      "address": "33.185983,-80.573367",
+      "kind": "coordinates",
+      "lat": 33.185983,
+      "lng": -80.573367,
+      "label": "Town of St. George historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.185983,-80.573367"
+    },
+    {
+      "name": "St. George Rosenwald School",
+      "address": "33.187083,-80.582517",
+      "kind": "coordinates",
+      "lat": 33.187083,
+      "lng": -80.582517,
+      "label": "St. George Rosenwald School historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.187083,-80.582517"
+    },
+    {
+      "name": "Badham House / Dorchester Lumber Company",
+      "address": "33.195133,-80.612183",
+      "kind": "coordinates",
+      "lat": 33.195133,
+      "lng": -80.612183,
+      "label": "Badham House / Dorchester Lumber Company historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.195133,-80.612183"
+    },
+    {
+      "name": "Appleby's Methodist Church",
+      "address": "33.1369,-80.6517",
+      "kind": "coordinates",
+      "lat": 33.1369,
+      "lng": -80.6517,
+      "label": "Appleby's Methodist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.136900,-80.651700"
+    },
+    {
+      "name": "Koger-Murray-Carroll House",
+      "address": "33.1286,-80.6353",
+      "kind": "coordinates",
+      "lat": 33.1286,
+      "lng": -80.6353,
+      "label": "Koger-Murray-Carroll House historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.128600,-80.635300"
+    },
+    {
+      "name": "Grover Methodist Church",
+      "address": "33.1062,-80.593917",
+      "kind": "coordinates",
+      "lat": 33.1062,
+      "lng": -80.593917,
+      "label": "Grover Methodist Church historical marker",
+      "url": "https://www.google.com/maps/search/?api=1&query=33.106200,-80.593917"
+    }
   ]
 }

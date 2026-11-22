@@ -20,6 +20,8 @@
     "swamp",
     "mountains",
     "coastal",
+    "walking-tour",
+    "driving-tour",
     "day-trip",
     "overnight",
     "accessible"
@@ -47,7 +49,9 @@
     "day-trip": "Day trip",
     "overnight": "Overnight",
     "accessible": "Accessible",
-    "kayak": "Kayak"
+    "kayak": "Kayak",
+    "walking-tour": "Walking tour",
+    "driving-tour": "Driving tour"
   },
   "trips": {
     "1": {
@@ -743,6 +747,142 @@
         "paddling",
         "kayak",
         "wildlife",
+        "day-trip"
+      ]
+    },
+    "72": {
+      "title": "Berkeley Historical Markers: Goose Creek, Hanahan, and Mount Holly",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "73": {
+      "title": "Berkeley Historical Markers: Moncks Corner, Pinopolis, and the Cooper River",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "74": {
+      "title": "Berkeley Historical Markers: Huger, Wando, and East Cooper",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "75": {
+      "title": "Berkeley Historical Markers: St. Stephen, Pineville, and Cross",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "76": {
+      "title": "Berkeley Historical Markers: Jamestown and Wambaw Creek",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "77": {
+      "title": "Charleston Peninsula Walking Tour: South of Broad and the Waterfront",
+      "tags": [
+        "history",
+        "walking-tour",
+        "day-trip"
+      ]
+    },
+    "78": {
+      "title": "Charleston Peninsula Walking Tour: King Street and the College",
+      "tags": [
+        "history",
+        "walking-tour",
+        "day-trip"
+      ]
+    },
+    "79": {
+      "title": "Charleston Peninsula Walking Tour: Upper Peninsula and the East Side",
+      "tags": [
+        "history",
+        "walking-tour",
+        "day-trip"
+      ]
+    },
+    "80": {
+      "title": "Charleston Historical Markers: West Ashley",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "81": {
+      "title": "Charleston Historical Markers: James Island and Folly Beach",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "82": {
+      "title": "Charleston Historical Markers: Johns Island and Wadmalaw",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "83": {
+      "title": "Charleston Historical Markers: the Stono and Edisto",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "84": {
+      "title": "Charleston Historical Markers: Mount Pleasant and the Barrier Islands",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "85": {
+      "title": "Charleston Historical Markers: North Charleston, Ladson, and Lincolnville",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "86": {
+      "title": "Charleston Historical Markers: McClellanville and Awendaw",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "87": {
+      "title": "Dorchester Historical Markers: Summerville and Old Dorchester",
+      "tags": [
+        "history",
+        "driving-tour",
+        "day-trip"
+      ]
+    },
+    "88": {
+      "title": "Dorchester Historical Markers: St. George, Harleyville, and Ridgeville",
+      "tags": [
+        "history",
+        "driving-tour",
         "day-trip"
       ]
     }
