@@ -51,9 +51,10 @@
     "1": {
       "title": "Cypress Gardens",
       "tags": [
+        "birding",
         "paddling",
-        "swamp",
         "wildlife",
+        "swamp",
         "day-trip"
       ]
     },
@@ -78,18 +79,21 @@
       "title": "Francis Beidler Forest",
       "tags": [
         "hiking",
-        "swamp",
+        "birding",
         "wildlife",
+        "swamp",
         "day-trip"
       ]
     },
     "5": {
       "title": "Bulls Island & Boneyard Beach",
       "tags": [
-        "boat-tour",
         "hiking",
+        "birding",
         "beach",
+        "boat-tour",
         "wildlife",
+        "photography",
         "coastal",
         "day-trip"
       ]
@@ -97,9 +101,9 @@
     "6": {
       "title": "Old Sheldon Church Ruins & ACE Basin",
       "tags": [
-        "photography",
         "history",
         "scenic-drive",
+        "photography",
         "day-trip"
       ]
     },
@@ -107,7 +111,9 @@
       "title": "Botany Bay Heritage Preserve",
       "tags": [
         "hiking",
+        "birding",
         "beach",
+        "wildlife",
         "history",
         "coastal",
         "day-trip"
@@ -125,8 +131,10 @@
       "title": "Hunting Island State Park & Lighthouse",
       "tags": [
         "hiking",
-        "lighthouse",
+        "birding",
+        "wildlife",
         "history",
+        "lighthouse",
         "coastal",
         "day-trip"
       ]
@@ -142,6 +150,8 @@
     "11": {
       "title": "Brookgreen Gardens & Atalaya Castle",
       "tags": [
+        "birding",
+        "wildlife",
         "gardens",
         "history",
         "coastal",
@@ -152,6 +162,8 @@
       "title": "Santee State Park & Lake Marion Limestone Caves",
       "tags": [
         "hiking",
+        "birding",
+        "wildlife",
         "swamp",
         "day-trip"
       ]
@@ -160,9 +172,9 @@
       "title": "Swan Lake Iris Gardens & Poinsett State Park",
       "tags": [
         "hiking",
-        "gardens",
         "birding",
         "wildlife",
+        "gardens",
         "day-trip"
       ]
     },
@@ -170,9 +182,10 @@
       "title": "Congaree National Park",
       "tags": [
         "hiking",
+        "birding",
         "paddling",
-        "swamp",
         "wildlife",
+        "swamp",
         "day-trip"
       ]
     },
@@ -188,8 +201,8 @@
     "16": {
       "title": "South Carolina State Museum & Soda City Market",
       "tags": [
-        "museum",
         "history",
+        "museum",
         "food-drink",
         "day-trip"
       ]
@@ -206,16 +219,17 @@
     "18": {
       "title": "Savannah Historic Squares & Forsyth Park",
       "tags": [
-        "history",
         "gardens",
+        "history",
         "overnight"
       ]
     },
     "19": {
       "title": "Tybee Island Light Station & Fort Pulaski",
       "tags": [
-        "lighthouse",
+        "birding",
         "history",
+        "lighthouse",
         "coastal",
         "overnight"
       ]
@@ -232,11 +246,11 @@
     "21": {
       "title": "Harbour Town Lighthouse & Pinckney Island Wildlife Refuge",
       "tags": [
-        "lighthouse",
         "hiking",
-        "biking",
         "birding",
         "wildlife",
+        "lighthouse",
+        "biking",
         "coastal",
         "overnight"
       ]
@@ -244,6 +258,7 @@
     "22": {
       "title": "Jekyll Island Driftwood Beach & Sea Turtle Center",
       "tags": [
+        "birding",
         "beach",
         "wildlife",
         "history",
@@ -254,8 +269,8 @@
     "23": {
       "title": "St. Simons Island Lighthouse & Fort Frederica",
       "tags": [
-        "lighthouse",
         "history",
+        "lighthouse",
         "coastal",
         "overnight"
       ]
@@ -263,9 +278,10 @@
     "24": {
       "title": "Cumberland Island National Seashore",
       "tags": [
-        "boat-tour",
         "hiking",
+        "birding",
         "beach",
+        "boat-tour",
         "wildlife",
         "history",
         "coastal",
@@ -275,10 +291,11 @@
     "25": {
       "title": "Okefenokee Swamp Boat Tour",
       "tags": [
-        "boat-tour",
+        "birding",
         "paddling",
-        "swamp",
+        "boat-tour",
         "wildlife",
+        "swamp",
         "overnight"
       ]
     },
@@ -286,6 +303,7 @@
       "title": "Hitchcock Woods & Hopelands Gardens",
       "tags": [
         "hiking",
+        "birding",
         "gardens",
         "overnight"
       ]
@@ -301,8 +319,8 @@
     "28": {
       "title": "Biltmore Estate & Antler Hill Village",
       "tags": [
-        "history",
         "gardens",
+        "history",
         "food-drink",
         "mountains",
         "overnight"
@@ -312,6 +330,7 @@
       "title": "Blue Ridge Parkway – Craggy Gardens & Mount Mitchell",
       "tags": [
         "hiking",
+        "birding",
         "scenic-drive",
         "mountains",
         "overnight"
@@ -346,8 +365,8 @@
       "title": "Carl Sandburg Home National Historic Site",
       "tags": [
         "hiking",
-        "history",
         "wildlife",
+        "history",
         "mountains",
         "overnight"
       ]
@@ -375,6 +394,7 @@
       "title": "Grandfather Mountain & Mile High Swinging Bridge",
       "tags": [
         "hiking",
+        "birding",
         "wildlife",
         "mountains",
         "overnight"
@@ -421,9 +441,9 @@
       "title": "Falls Park on the Reedy & Swamp Rabbit Trail",
       "tags": [
         "hiking",
-        "biking",
         "waterfalls",
         "food-drink",
+        "biking",
         "overnight"
       ]
     },
@@ -431,6 +451,7 @@
       "title": "Caesars Head State Park & Raven Cliff Falls",
       "tags": [
         "hiking",
+        "birding",
         "waterfalls",
         "mountains",
         "overnight"
@@ -440,6 +461,7 @@
       "title": "Table Rock State Park & Sassafras Mountain",
       "tags": [
         "hiking",
+        "birding",
         "waterfalls",
         "scenic-drive",
         "mountains",
@@ -449,8 +471,8 @@
     "44": {
       "title": "U.S. National Whitewater Center",
       "tags": [
-        "paddling",
         "hiking",
+        "paddling",
         "overnight"
       ]
     },
@@ -464,8 +486,8 @@
     "46": {
       "title": "North Carolina Transportation Museum",
       "tags": [
-        "museum",
         "history",
+        "museum",
         "overnight"
       ]
     },
@@ -481,8 +503,9 @@
     "48": {
       "title": "Fort Fisher State Historic Site & NC Aquarium",
       "tags": [
-        "history",
+        "birding",
         "wildlife",
+        "history",
         "coastal",
         "overnight"
       ]
@@ -490,6 +513,7 @@
     "49": {
       "title": "Bald Head Island Day Ferry",
       "tags": [
+        "birding",
         "boat-tour",
         "lighthouse",
         "biking",
@@ -518,8 +542,8 @@
     "52": {
       "title": "Dahlonega Gold Museum & North Georgia Wineries",
       "tags": [
-        "museum",
         "history",
+        "museum",
         "food-drink",
         "mountains",
         "overnight"
@@ -529,10 +553,10 @@
       "title": "Old Santee Canal Park",
       "tags": [
         "hiking",
-        "paddling",
-        "swamp",
         "birding",
+        "paddling",
         "wildlife",
+        "swamp",
         "day-trip"
       ]
     },
@@ -542,8 +566,8 @@
         "hiking",
         "birding",
         "wildlife",
-        "swamp",
         "history",
+        "swamp",
         "day-trip"
       ]
     },
@@ -551,6 +575,8 @@
       "title": "Laurel Hill County Park",
       "tags": [
         "hiking",
+        "birding",
+        "wildlife",
         "biking",
         "day-trip"
       ]
@@ -569,6 +595,7 @@
       "title": "Givhans Ferry State Park",
       "tags": [
         "hiking",
+        "birding",
         "paddling",
         "day-trip"
       ]
@@ -577,8 +604,10 @@
       "title": "Lighthouse Inlet Heritage Preserve",
       "tags": [
         "hiking",
-        "lighthouse",
+        "birding",
         "beach",
+        "wildlife",
+        "lighthouse",
         "coastal",
         "day-trip"
       ]
@@ -587,7 +616,9 @@
       "title": "Sewee Visitor and Environmental Education Center",
       "tags": [
         "hiking",
+        "birding",
         "wildlife",
+        "photography",
         "day-trip"
       ]
     },
@@ -595,8 +626,10 @@
       "title": "I'on Swamp Interpretive Trail",
       "tags": [
         "hiking",
-        "swamp",
+        "birding",
+        "wildlife",
         "history",
+        "swamp",
         "day-trip"
       ]
     },
@@ -604,6 +637,7 @@
       "title": "Sewee Shell Ring Boardwalk",
       "tags": [
         "hiking",
+        "birding",
         "history",
         "coastal",
         "day-trip"
@@ -613,6 +647,7 @@
       "title": "Awendaw Passage, Palmetto Trail",
       "tags": [
         "hiking",
+        "birding",
         "biking",
         "coastal",
         "day-trip"
@@ -622,6 +657,7 @@
       "title": "Swamp Fox Passage, Palmetto Trail",
       "tags": [
         "hiking",
+        "birding",
         "biking",
         "day-trip"
       ]
@@ -640,6 +676,7 @@
       "title": "Mullet Hall Trails, Johns Island County Park",
       "tags": [
         "hiking",
+        "birding",
         "day-trip"
       ]
     }
