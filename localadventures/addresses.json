@@ -1595,7 +1595,9 @@
       "lat": 33.114883,
       "lng": -79.94405,
       "label": "Mepkin Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=33.114883,-79.944050"
+      "url": "https://www.google.com/maps/search/?api=1&query=33.114883,-79.944050",
+      "learn_more": "https://mepkinabbey.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Strawberry Chapel",
@@ -2016,7 +2018,9 @@
       "lat": 32.7763,
       "lng": -79.93365,
       "label": "John Rutledge Home historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.776300,-79.933650"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.776300,-79.933650",
+      "learn_more": "https://en.wikipedia.org/wiki/John_Rutledge_House",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Jonathan Jasper Wright Law Office",
@@ -2067,7 +2071,9 @@
       "lat": 32.77615,
       "lng": -79.930917,
       "label": "St. Michael's Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.776150,-79.930917"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.776150,-79.930917",
+      "learn_more": "https://www.stmichaelschurch.net/",
+      "learn_more_source": "official"
     },
     {
       "name": "Old Bank Building",
@@ -2201,7 +2207,9 @@
       "lat": 32.784283,
       "lng": -79.94195,
       "label": "Old Bethel Methodist Church historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.784283,-79.941950"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.784283,-79.941950",
+      "learn_more": "https://en.wikipedia.org/wiki/Old_Bethel_United_Methodist_Church",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "Plymouth Church / Plymouth Parsonage",
@@ -2268,7 +2276,9 @@
       "lat": 32.7822,
       "lng": -79.93265,
       "label": "K.K. Beth Elohim historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.782200,-79.932650"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.782200,-79.932650",
+      "learn_more": "https://www.kkbe.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Trinity Methodist Church Original Site / William Hammett",
@@ -2342,7 +2352,9 @@
       "lat": 32.796883,
       "lng": -79.9347,
       "label": "Cigar Factory / \"We Shall Overcome\" historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.796883,-79.934700"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.796883,-79.934700",
+      "learn_more": "https://en.wikipedia.org/wiki/Cigar_Factory",
+      "learn_more_source": "wikipedia"
     },
     {
       "name": "C.A. Brown High School",
@@ -2476,7 +2488,9 @@
       "lat": 32.864667,
       "lng": -80.082783,
       "label": "Drayton Hall / Drayton Family historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.864667,-80.082783"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.864667,-80.082783",
+      "learn_more": "https://draytonhall.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "St. Andrew's Parish Church and Skirmish at St. Andrew's Parish Church",
@@ -2552,7 +2566,9 @@
       "lat": 32.8076,
       "lng": -79.9864,
       "label": "Charles Towne / Old Town Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.807600,-79.986400"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.807600,-79.986400",
+      "learn_more": "https://southcarolinaparks.com/charles-towne-landing",
+      "learn_more_source": "official"
     }
   ],
   "81": [
@@ -2878,7 +2894,9 @@
       "lat": 32.6181,
       "lng": -80.1851,
       "label": "Charleston Tea Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.618100,-80.185100"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.618100,-80.185100",
+      "learn_more": "https://www.charlestonteagarden.com/",
+      "learn_more_source": "official"
     }
   ],
   "83": [
@@ -3038,7 +3056,9 @@
       "lat": 32.846383,
       "lng": -79.816933,
       "label": "Boone Hall Plantation historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.846383,-79.816933"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.846383,-79.816933",
+      "learn_more": "https://boonehallplantation.com/",
+      "learn_more_source": "official"
     },
     {
       "name": "Christ Church, Snee Farm, and Confederate Lines",
@@ -3047,7 +3067,9 @@
       "lat": 32.844583,
       "lng": -79.813689,
       "label": "Christ Church, Snee Farm, and Confederate Lines historical markers",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.844583,-79.813689"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.844583,-79.813689",
+      "learn_more": "https://www.nps.gov/chpi/",
+      "learn_more_source": "official"
     },
     {
       "name": "Cook's Old Field Cemetery / Copahee Plantation and Hamlin Beach",
@@ -3359,7 +3381,9 @@
       "lat": 32.899683,
       "lng": -80.140683,
       "label": "Middleton Place / Arthur Middleton historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.899683,-80.140683"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.899683,-80.140683",
+      "learn_more": "https://www.middletonplace.org/",
+      "learn_more_source": "official"
     },
     {
       "name": "Fort Dorchester",
@@ -3368,7 +3392,9 @@
       "lat": 32.94755,
       "lng": -80.1701,
       "label": "Fort Dorchester historical marker",
-      "url": "https://www.google.com/maps/search/?api=1&query=32.947550,-80.170100"
+      "url": "https://www.google.com/maps/search/?api=1&query=32.947550,-80.170100",
+      "learn_more": "https://southcarolinaparks.com/colonial-dorchester",
+      "learn_more_source": "official"
     },
     {
       "name": "Parish Church of St. George, Dorchester",
