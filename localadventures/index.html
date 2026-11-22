@@ -95,6 +95,148 @@
     .map-stops li { margin: 0 0 8px; }
     .map-stops li:last-child { margin-bottom: 0; }
 
+    .trip-filter {
+      margin: 0 0 28px;
+      padding: 16px 16px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      box-shadow: 0 10px 24px rgba(19, 32, 51, 0.06);
+    }
+    .trip-filter-legend {
+      margin: 0 0 10px;
+      font-weight: 700;
+      font-size: 1.02rem;
+      letter-spacing: -0.01em;
+    }
+    .trip-filter-search {
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 0 0 12px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink-900);
+      font: inherit;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    .trip-filter-search:focus {
+      outline: 2px solid var(--blue-500);
+      outline-offset: 2px;
+      border-color: var(--blue-500);
+    }
+    .trip-filter-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 0 0 12px;
+      padding: 0;
+      border: 0;
+    }
+    .trip-filter-tags legend {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+    }
+    .trip-filter-tags label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 8px 12px;
+      min-height: 44px;
+      box-sizing: border-box;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #eef2f6;
+      color: var(--ink-700);
+      font-size: 0.9rem;
+      line-height: 1.3;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .trip-filter-tags label:has(input:focus-visible) {
+      outline: 2px solid var(--blue-500);
+      outline-offset: 2px;
+    }
+    .trip-filter-tags label:has(input:checked) {
+      background: #e9f2ff;
+      border-color: var(--blue-500);
+      color: var(--ink-900);
+      font-weight: 700;
+    }
+    .trip-filter-tags input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+      accent-color: var(--blue-500);
+      flex-shrink: 0;
+    }
+    .trip-filter-count-text {
+      font-weight: 400;
+      color: var(--ink-500);
+    }
+    .trip-filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px 16px;
+    }
+    .trip-filter-clear {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 8px 16px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--ink-900);
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .trip-filter-clear:hover {
+      background: #eef2f6;
+    }
+    .trip-filter-clear:focus-visible {
+      outline: 2px solid var(--blue-500);
+      outline-offset: 2px;
+    }
+    .trip-filter-status {
+      margin: 0;
+      color: var(--ink-700);
+      font-size: 0.95rem;
+    }
+    .trip-filter-empty {
+      margin: 0 0 22px;
+      padding: 16px 18px;
+      border: 1px dashed var(--border);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      color: var(--ink-700);
+    }
+    .adventure-card .tag-chips li.is-filter-chip {
+      cursor: pointer;
+    }
+    .adventure-card .tag-chips li.is-filter-chip:hover,
+    .adventure-card .tag-chips li.is-filter-chip:focus-visible {
+      background: #e9f2ff;
+      border-color: var(--blue-500);
+      color: var(--ink-900);
+    }
+    .adventure-card .tag-chips li.is-filter-chip:focus-visible {
+      outline: 2px solid var(--blue-500);
+      outline-offset: 2px;
+    }
+
+
 
   </style>
 </head>
@@ -141,6 +283,40 @@
         <li><a href="#day-trips">Day trips</a></li>
         <li><a href="#weekend-getaways">Weekend getaways</a></li>
       </ul>
+
+      <form class="trip-filter" id="trip-filter" role="search">
+        <p class="trip-filter-legend" id="trip-filter-heading">Find a trip</p>
+        <label class="sr-only" for="trip-filter-query">Search trips by name, place, or description</label>
+        <input class="trip-filter-search" id="trip-filter-query" type="search" name="q" placeholder="Search by name, town, or description" autocomplete="off" enterkeyhint="search">
+        <fieldset class="trip-filter-tags">
+          <legend>Filter by activity. A trip must match every box you tick.</legend>
+        <label><input type="checkbox" name="tag" value="hiking"> Hiking <span class="trip-filter-count-text">(41)</span></label>
+        <label><input type="checkbox" name="tag" value="birding"> Birding <span class="trip-filter-count-text">(34)</span></label>
+        <label><input type="checkbox" name="tag" value="waterfalls"> Waterfalls <span class="trip-filter-count-text">(11)</span></label>
+        <label><input type="checkbox" name="tag" value="beach"> Beach <span class="trip-filter-count-text">(5)</span></label>
+        <label><input type="checkbox" name="tag" value="paddling"> Paddling <span class="trip-filter-count-text">(6)</span></label>
+        <label><input type="checkbox" name="tag" value="boat-tour"> Boat tour <span class="trip-filter-count-text">(6)</span></label>
+        <label><input type="checkbox" name="tag" value="wildlife"> Wildlife <span class="trip-filter-count-text">(26)</span></label>
+        <label><input type="checkbox" name="tag" value="gardens"> Gardens <span class="trip-filter-count-text">(8)</span></label>
+        <label><input type="checkbox" name="tag" value="history"> History <span class="trip-filter-count-text">(30)</span></label>
+        <label><input type="checkbox" name="tag" value="museum"> Museum <span class="trip-filter-count-text">(5)</span></label>
+        <label><input type="checkbox" name="tag" value="scenic-drive"> Scenic drive <span class="trip-filter-count-text">(4)</span></label>
+        <label><input type="checkbox" name="tag" value="photography"> Photography <span class="trip-filter-count-text">(3)</span></label>
+        <label><input type="checkbox" name="tag" value="food-drink"> Food &amp; drink <span class="trip-filter-count-text">(5)</span></label>
+        <label><input type="checkbox" name="tag" value="lighthouse"> Lighthouse <span class="trip-filter-count-text">(6)</span></label>
+        <label><input type="checkbox" name="tag" value="biking"> Biking <span class="trip-filter-count-text">(6)</span></label>
+        <label><input type="checkbox" name="tag" value="swamp"> Swamp <span class="trip-filter-count-text">(9)</span></label>
+        <label><input type="checkbox" name="tag" value="mountains"> Mountains <span class="trip-filter-count-text">(18)</span></label>
+        <label><input type="checkbox" name="tag" value="coastal"> Coastal <span class="trip-filter-count-text">(19)</span></label>
+        <label><input type="checkbox" name="tag" value="day-trip"> Day trip <span class="trip-filter-count-text">(29)</span></label>
+        <label><input type="checkbox" name="tag" value="overnight"> Overnight <span class="trip-filter-count-text">(36)</span></label>
+        </fieldset>
+        <div class="trip-filter-bar">
+          <button class="trip-filter-clear" type="reset">Clear</button>
+          <p class="trip-filter-status" id="trip-filter-status" aria-live="polite">Showing 65 of 65</p>
+        </div>
+      </form>
+      <p class="trip-filter-empty" id="trip-filter-empty" hidden>No trips match those filters. Clear them to see the full list.</p>
 
       <div class="section-heading" id="day-trips">
         <h2>Day trips</h2>
@@ -492,7 +668,7 @@
       <div class="section-heading" id="weekend-getaways">
         <h2>Weekend getaways</h2>
       </div>
-      <p>Each weekend getaway includes recommended hotels and two or three adventures.</p>
+      <p class="weekend-intro">Each weekend getaway includes recommended hotels and two or three adventures.</p>
       <ul class="stacked-list weekend-toc">
         <li><a href="#weekend-1">Savannah &amp; Tybee Island, GA</a></li>
 <li><a href="#weekend-2">Hilton Head &amp; Car-Free Daufuskie Island, SC</a></li>
@@ -1013,5 +1189,6 @@
   </div>
 </footer>
 <script src="../js/main.js"></script>
+<script src="filter.js"></script>
 </body>
 </html>
