@@ -3,183 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Greece Itinerary – Skiathos & Skopelos</title>
+<title>Greece Itinerary – Skiathos & Skopelos (Detailed)</title>
 <style>
-  :root {
-    --bg: #0f1419;
-    --card: #1a2332;
-    --text: #e8eef7;
-    --muted: #8b9bb4;
-    --accent: #3d8bfd;
-    --accent-soft: rgba(61,139,253,0.15);
-    --border: #2a3548;
-  }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-    padding: 2rem 1rem;
-  }
-  .container {
-    max-width: 780px;
-    margin: 0 auto;
-  }
-  h1 {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-    letter-spacing: -0.02em;
-  }
-  .subtitle {
-    color: var(--muted);
-    font-size: 1.05rem;
-    margin-bottom: 2rem;
-  }
-  h2 {
-    font-size: 1.35rem;
-    margin: 2.5rem 0 1rem;
-    padding-bottom: 0.4rem;
-    border-bottom: 1px solid var(--border);
-  }
-  h3 {
-    font-size: 1.1rem;
-    margin: 1.5rem 0 0.5rem;
-    color: var(--accent);
-  }
-  p { margin-bottom: 0.9rem; }
-  ul, ol { margin: 0.5rem 0 1rem 1.4rem; }
-  li { margin-bottom: 0.4rem; }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.25rem 1.4rem;
-    margin: 1rem 0;
-  }
-  .meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem 1.5rem;
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-bottom: 1.5rem;
-  }
-  .tag {
-    background: var(--accent-soft);
-    color: var(--accent);
-    padding: 0.15rem 0.55rem;
-    border-radius: 999px;
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-  .day-block {
-    margin-bottom: 1.75rem;
-  }
-  .note {
-    background: rgba(255,193,7,0.08);
-    border-left: 3px solid #ffc107;
-    padding: 0.75rem 1rem;
-    margin: 1rem 0;
-    border-radius: 0 6px 6px 0;
-    font-size: 0.95rem;
-  }
-  footer {
-    margin-top: 3rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--border);
-    color: var(--muted);
-    font-size: 0.85rem;
-    text-align: center;
-  }
-  @media (max-width: 600px) {
-    body { padding: 1.25rem 0.75rem; }
-    h1 { font-size: 1.65rem; }
-  }
+  :root { --bg:#0f1419; --card:#1a2332; --text:#e8eef7; --muted:#8b9bb4; --accent:#3d8bfd; --accent-soft:rgba(61,139,253,0.15); --border:#2a3548; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; padding:2rem 1rem; }
+  .container { max-width:820px; margin:0 auto; }
+  h1 { font-size:2.1rem; font-weight:700; margin-bottom:0.25rem; letter-spacing:-0.02em; }
+  .subtitle { color:var(--muted); font-size:1.05rem; margin-bottom:1.5rem; }
+  h2 { font-size:1.4rem; margin:2.8rem 0 1rem; padding-bottom:0.4rem; border-bottom:1px solid var(--border); }
+  h3 { font-size:1.15rem; margin:1.8rem 0 0.6rem; color:var(--accent); }
+  h4 { font-size:1rem; margin:1.2rem 0 0.4rem; }
+  p { margin-bottom:0.9rem; }
+  ul, ol { margin:0.4rem 0 1rem 1.4rem; }
+  li { margin-bottom:0.45rem; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:1.25rem 1.4rem; margin:1rem 0; }
+  .meta { display:flex; flex-wrap:wrap; gap:0.6rem 1.2rem; color:var(--muted); font-size:0.88rem; margin-bottom:1.5rem; }
+  .tag { background:var(--accent-soft); color:var(--accent); padding:0.15rem 0.55rem; border-radius:999px; font-size:0.78rem; font-weight:500; }
+  .note { background:rgba(255,193,7,0.08); border-left:3px solid #ffc107; padding:0.75rem 1rem; margin:1rem 0; border-radius:0 6px 6px 0; font-size:0.95rem; }
+  .video-list { margin:0.5rem 0 1rem 0; }
+  .video-list li { margin-bottom:0.6rem; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  footer { margin-top:3rem; padding-top:1.5rem; border-top:1px solid var(--border); color:var(--muted); font-size:0.85rem; text-align:center; }
+  @media (max-width:600px) { body { padding:1.25rem 0.75rem; } h1 { font-size:1.65rem; } }
 </style>
 </head>
 <body>
 <div class="container">
   <h1>Greece – Skiathos & Skopelos</h1>
-  <p class="subtitle">Slower-paced 20–21 day itinerary focused on the Sporades islands, with a short Athens stop for the Acropolis.</p>
+  <p class="subtitle">Detailed 20–21 day slower-paced plan: short Athens for the Acropolis only, then long bases on the Sporades islands. 3-star hotels, private/self-guided only, cleaner air priority.</p>
 
   <div class="meta">
     <span class="tag">3 bases</span>
-    <span class="tag">3-star hotels</span>
+    <span class="tag">3-star</span>
     <span class="tag">Private / self-guided</span>
-    <span class="tag">Cleaner air priority</span>
-    <span class="tag">Shoulder season preferred</span>
+    <span class="tag">Cleaner air</span>
+    <span class="tag">Shoulder season</span>
+    <span class="tag">Mamma Mia sites</span>
   </div>
 
-  <h2>Overview</h2>
+  <h2>Overview & Preferences</h2>
   <div class="card">
-    <p><strong>Structure:</strong> Athens (2–3 nights for Acropolis only) → Skiathos (7–8 nights) → Skopelos (6–7 nights) → return.</p>
-    <p><strong>Preferences reflected:</strong> Minimal city time, fewer hotel changes, 3-star accommodations, private guides or self-guided only (no group tours), and priority on cleaner island air.</p>
-    <p><strong>Best timing:</strong> Mid-May to mid-June or early–mid September (good weather, open services, better air quality, fewer crowds).</p>
+    <p><strong>Structure:</strong> Athens (2–3 nights, Acropolis focus only) → Skiathos (7–8 nights) → Skopelos (6–7 nights) → return. Minimal hotel changes, slow pace, no group tours.</p>
+    <p><strong>Air quality:</strong> Sporades islands typically Good–Moderate AQI with sea breezes, better than Athens. Keep Athens short. Shoulder season (mid-May–mid-June or early–mid September) improves conditions further and reduces crowds.</p>
+    <p><strong>Timing:</strong> Best mid-May to mid-June or early–mid September. Services open, weather good, fewer crowds than peak July–August.</p>
   </div>
 
-  <h2>Air Quality Notes</h2>
-  <p>Skiathos and Skopelos typically show Good to Moderate AQI, generally better than Athens, with open sea breezes. Athens is kept short; the Acropolis is elevated. Shoulder season further improves conditions.</p>
+  <h2>Watch First – High-Quality Videos</h2>
+  <p>These give a strong sense of the places (view counts approximate as of late 2026):</p>
+  <ul class="video-list">
+    <li><strong>Skiathos overview (4K, ~140k–500k+ views):</strong> <a href="https://www.youtube.com/watch?v=WrM3vTu74ho" target="_blank">SKIATHOS 4K – Top Places & Secret Beaches</a> (Robert Polasek / Touch of Greece). Comprehensive.</li>
+    <li><strong>Skiathos Airport low landings (millions of views):</strong> <a href="https://www.youtube.com/watch?v=kkLy7_wze9A" target="_blank">SKIATHOS 2018 – LOW LANDINGS & JETBLASTS</a> (~18.8M views). Famous “European St. Maarten.” Also search “Skiathos landings” for recent compilations.</li>
+    <li><strong>Skiathos walking tour:</strong> <a href="https://www.youtube.com/watch?v=eFVeb_iALD4" target="_blank">Skiathos Greece Feels Like Italy – 4K HDR Walking Tour</a>.</li>
+    <li><strong>Skopelos Mamma Mia 4K (~110k views):</strong> <a href="https://www.youtube.com/watch?v=dovTLvgPln0" target="_blank">SKOPELOS 4K – Fairytale locations of MAMMA MIA!</a> (Tomáš Polášek). Covers Agios Ioannis, Kastani, beaches, town.</li>
+    <li><strong>Skopelos overview:</strong> Search “SKOPELOS 4K Touch of Greece” or “36 Beaches of SKOPELOS” for high-view 4K guides.</li>
+    <li><strong>Acropolis:</strong> <a href="https://www.youtube.com/watch?v=8ZDnv110iWo" target="_blank">The Acropolis of Athens Explained with Reconstructions</a> (~1.5M views). Or BBC 360° / Rick Steves clips for context.</li>
+    <li><strong>Mamma Mia boat trip example:</strong> Search “Mamma Mia Boat Trip Skiathos to Skopelos” for recent vlogs (~10k–80k views).</li>
+  </ul>
 
   <h2>Detailed Itinerary</h2>
 
-  <div class="day-block">
-    <h3>Days 1–3: Athens (Acropolis focus)</h3>
-    <p>Arrive Charleston → Athens (business class preferred; economy for price comparison). Private transfer to a solid 3-star in Plaka or Koukaki.</p>
-    <ul>
-      <li><strong>Day 1:</strong> Arrival and light evening near the Acropolis if energy allows.</li>
-      <li><strong>Day 2:</strong> Early private licensed guide for the Acropolis + Acropolis Museum (book timed tickets). Rest of day free.</li>
-      <li><strong>Day 3:</strong> Optional short private drive to Cape Sounion for sunset, or free morning, then transfer toward the next leg (flight or ferry connection).</li>
-    </ul>
-    <div class="note">Keep this segment tight. No broader city sightseeing.</div>
-  </div>
+  <h3>Days 1–3: Athens (Acropolis only)</h3>
+  <p>Long-haul from Charleston to ATH (business class preferred; compare economy). Private transfer to a solid 3-star in Plaka or Koukaki (walkable to Acropolis area).</p>
+  <ul>
+    <li><strong>Day 1:</strong> Arrival. Light evening near the Acropolis if energy allows. Rest.</li>
+    <li><strong>Day 2:</strong> Early private licensed archaeological guide for Acropolis + Acropolis Museum. Book timed tickets in advance (or let the guide handle them). Go early to avoid heat/crowds. Rest of day free — no broader sightseeing.</li>
+    <li><strong>Day 3:</strong> Optional short private drive to Cape Sounion (Temple of Poseidon) for sunset, or free morning. Then transfer toward Skiathos (flight preferred).</li>
+  </ul>
+  <div class="note">Keep Athens tight. Acropolis is elevated with some breeze; still prioritize short stay for air quality. Private guide strongly recommended — brings the site alive and handles tickets/timing.</div>
 
-  <div class="day-block">
-    <h3>Days 4–11: Skiathos base (7–8 nights)</h3>
-    <p>Fly Athens → Skiathos (JSI, ~40–50 min) or ferry via Volos. Private transfer to hotel.</p>
-    <p><strong>Hotel style:</strong> Comfortable 3-star in or near Skiathos Town for walkability to the port, Old Town, and restaurants (examples: Meltemi by the harbor, Casa Blue, or similar well-reviewed options). Expect roughly $100–180/night in shoulder season. Koukounaries-area options available if preferring closer beach access.</p>
-    <ul>
-      <li>First 1–2 days: Settle in, stroll the Old Port and Agios Nikolaos Clock Tower area (self-guided).</li>
-      <li>Beach days: Koukounaries, Lalaria (boat access), or others — self-guided or local boat taxi.</li>
-      <li>One private boat day to Skopelos for Mamma Mia highlights (Agios Ioannis Kastri chapel, Kastani Beach, etc.). Private skippered options run from Skiathos Old Port.</li>
-      <li>Free days for rest, swimming, and local tavernas.</li>
-    </ul>
-    <p>Ferries to Skopelos are frequent in season (~30–70 minutes depending on vessel; Glossa port is often faster).</p>
-  </div>
+  <h3>Days 4–11: Skiathos base (7–8 nights)</h3>
+  <p>Fly ATH → JSI (Skiathos, ~40–50 min). Or ferry via Volos. Private transfer to hotel.</p>
+  <p><strong>Where to stay:</strong> Comfortable 3-star in or near Skiathos Town for walkability to the Old Port, restaurants, and ferry. Examples of well-reviewed options: Aspronissos (adults-only, near town), Hotel Rene, or similar highly rated 3-stars. Average 3-star around $100–150/night in shoulder season. Beach-area options (e.g., near Koukounaries) if preferring direct beach access, but town is more convenient for port/boats.</p>
+  <ul>
+    <li>Days 4–5: Settle. Walk the Old Port, Bourtzi fortress, Old Town alleys, Agios Nikolaos Clock Tower area (self-guided). Easy bus or taxi to nearby beaches (Megali Ammos, etc.).</li>
+    <li>Beach days: Koukounaries (famous long sandy beach), Lalaria (white pebbles + rock arch, boat access only), or quieter north/west coast spots. Local buses run the south coast. Boat taxis available.</li>
+    <li>One full private (or small-group) boat day to Skopelos for Mamma Mia highlights: Agios Ioannis Kastri chapel (climb ~110–200 steps), Kastani Beach, possibly others. Many operators leave from Skiathos Old Port; private skippered options preferred. Duration typically 7–8 hours.</li>
+    <li>Free days: swimming, tavernas, rest. Optional short boat to nearby islets or more beaches.</li>
+  </ul>
+  <p><strong>Ferries to Skopelos:</strong> Multiple daily in season (Seajets conventional ferry ~1h to Skopelos Town; Aegean Flying Dolphins hydrofoil faster, often to Glossa ~15–55 min). Book ahead in peak; check weather. Glossa port is closer to northern sites.</p>
 
-  <div class="day-block">
-    <h3>Days 12–18: Skopelos base (6–7 nights)</h3>
-    <p>Ferry from Skiathos (book ahead). Transfer to hotel.</p>
-    <p><strong>Hotel style:</strong> Comfortable 3-star in or near Skopelos Town (Chora), close to the main port. Options such as Aeolos, Rigas, Aperitton, or similar well-reviewed places. Similar rate range to Skiathos.</p>
-    <ul>
-      <li>Settle and explore the whitewashed town and harbor self-guided.</li>
-      <li>Beaches and coves (Panormos, Kastani if not already visited, or quieter spots).</li>
-      <li>Optional private boat or local skipper for additional coastal time.</li>
-      <li>Slow days: walking, swimming, seaside dinners. The island is quieter and greener than Skiathos.</li>
-    </ul>
-  </div>
+  <h3>Days 12–18: Skopelos base (6–7 nights)</h3>
+  <p>Ferry from Skiathos (book ahead). Transfer to hotel.</p>
+  <p><strong>Where to stay:</strong> Comfortable 3-star in or near Skopelos Town (Chora) for harbor access and walkability. Well-reviewed examples: Aperitton, Amalia, Alkistis, or similar. Rate range similar to Skiathos. Panormos-area options if preferring beach proximity (e.g., Panormos Beach Hotel).</p>
+  <ul>
+    <li>Settle and explore the whitewashed town, harbor, and alleys self-guided. Climb for views.</li>
+    <li>Beaches: Panormos, Milia, Kastani (if not already done), Stafilos, quieter coves. Many accessible by bus or short taxi/boat.</li>
+    <li>Optional private boat or local skipper for additional coastal time, swimming, or northern sites.</li>
+    <li>Slow days: walking, swimming, seaside dinners (try local tyropita / cheese pie). Skopelos is greener, quieter, and more traditional than Skiathos.</li>
+    <li>If interested in Glossa / northern villages: short trip or base flexibility.</li>
+  </ul>
 
-  <div class="day-block">
-    <h3>Days 19–21: Return</h3>
-    <p>Ferry or short flight back toward Athens. One night in Athens if needed for the international departure (private transfer to ATH), or connect from Skiathos depending on schedules. Private transfer for the final leg.</p>
-  </div>
+  <h3>Days 19–21: Return</h3>
+  <p>Ferry or flight back toward Athens. One night in Athens if needed for the long-haul departure (private transfer to ATH), or connect from Skiathos depending on schedules. Private transfers throughout.</p>
 
-  <h2>Logistics Summary</h2>
+  <h2>Logistics & Practical Notes</h2>
   <div class="card">
     <ul>
-      <li><strong>Flights:</strong> Long-haul business class preferred (with economy comparison). Intra-Greece short hops on small aircraft.</li>
-      <li><strong>Guides:</strong> Private licensed guide only for the Acropolis. Everything else self-guided or private boat/skipper.</li>
-      <li><strong>Transport:</strong> Private airport/port transfers. Ferries between the islands are straightforward.</li>
-      <li><strong>Accommodations:</strong> Well-reviewed 3-star properties with air-conditioning and good location or easy taxi access.</li>
+      <li><strong>Flights:</strong> Long-haul business preferred (economy comparison). Intra-Greece short hops on small aircraft to JSI. Check luggage limits.</li>
+      <li><strong>Guides:</strong> Private licensed guide only for Acropolis. Everything else self-guided or private boat/skipper. No group tours.</li>
+      <li><strong>Transport:</strong> Private airport/port transfers. Local buses on both islands for beaches. Ferries frequent in season between Skiathos and Skopelos (book ahead). Taxis available.</li>
+      <li><strong>Accommodations:</strong> Well-reviewed 3-star properties with A/C and good location or easy access. Confirm shoulder-season rates and cancellation.</li>
+      <li><strong>Boats:</strong> Private or small private-charter options for Mamma Mia / coastal days. Public boat taxis for beaches like Lalaria.</li>
+      <li><strong>Air quality / health:</strong> Islands generally cleaner. Monitor AQI apps. Early morning Acropolis visit helps. Stay hydrated; bring mask if sensitive in Athens.</li>
     </ul>
   </div>
 
   <h2>What This Plan Prioritizes</h2>
-  <p>The Acropolis (must-see), extended time on the Sporades with fewer hotel changes, cleaner island air, and a relaxed pace. It deliberately skips higher-volume destinations such as Santorini, Meteora, Delphi, and Crete in favor of settling in.</p>
+  <p>Must-see Acropolis with minimal city time, extended relaxed stays on the cleaner-air Sporades (Skiathos + Skopelos), Mamma Mia highlights via private boat, fewer hotel changes, and a slow pace. Deliberately skips higher-volume spots (Santorini, Meteora, Delphi, Crete) to avoid constant movement.</p>
 
   <footer>
-    Greece itinerary notes · Skiathos & Skopelos focus
+    Detailed Greece itinerary · Skiathos & Skopelos focus · Standalone notes
   </footer>
 </div>
 </body>
